@@ -1,0 +1,189 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>forms</title>
+        <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600' rel='stylesheet' type='text/css'>
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha256-7s5uDGW3AHqw6xtJmNNtr+OBRJUlgkNJEo78P4b0yRw= sha512-nNo+yCHEyn0smMxSswnf/OnX6/KwJuZTlNZBjauKhTK0c+zT+q5JOCx0UFhXQ6rJR9jg6Es8gPuD2uZcYDLqSw==" crossorigin="anonymous">
+        <link rel="stylesheet" href="../style/global.css">
+
+    </head>
+    <body>
+
+    <div class="container sign-up"> 
+        <div class="row">
+            <div class="info-container col-sm-5">
+                <div class="info_bubble">
+                    <div class="info_icon"></div>
+                    <h1>SIGN UP TODAY</h1>
+                    <p> You're moments away from getting started on your safety net</p>
+
+                    <div class="info_questions">
+                    <h2>Questions </h2>
+                    <p>We're here to help Contact us: </p>
+                    <p>080 1234 - 4569 </p>
+                    <p> support@fino.com</p>
+                    <p>FAQ's</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-7">
+                <form class="modal multi-step" id="demo-modal-3">
+                <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title step-1" data-step="1">Step 1</h4>
+                    <h4 class="modal-title step-2" data-step="2">Step 2</h4>
+                    <h4 class="modal-title step-3" data-step="3`">Step 3</h4>
+                    <h4 class="modal-title step-4" data-step="4">Final Step</h4>
+                    <div class="m-progress">
+                        <div class="m-progress-bar-wrapper">
+                            <div class="m-progress-bar">
+                            </div>
+                        </div>
+                        <div class="m-progress-stats">
+                            <span class="m-progress-current">
+                            </span>
+                            /
+                            <span class="m-progress-total">4</span>
+                        </div>
+                        <div class="m-progress-complete">
+                            Completed
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-body step-1" data-step="1">
+                            <div >
+                            <h3 class="text-center"> Basic information
+                            </h3>
+                            <p class="text-center"> We use this information to create your account. Please enter the same name you use to file taxex.
+                            </p>
+                            <label for="" class="si-menu-label">First Name</label>
+                            <input type="text" placeholder="First Name">
+                            <label for="" class="si-menu-label">Last Name</label>
+                            <input type="text" placeholder="Last Name">
+                            <label for="" class="si-menu-label">Email Address</label>
+                            <input type="email" placeholder="Email Address">
+                            <label for="" class="si-menu-label">Password</label>
+                            <input type="password" placeholder="Password">
+                            </div >
+                        
+                </div>
+                <div class="modal-body step-2" data-step="2">
+                            <div >
+                            <h3 class="text-center"> Contact information
+                            </h3>
+                            <p class="text-center"> 
+                            To sign up for a FinoTrust account you must have a valid mailing address. We will never sell this information to anyone. Ever.
+                            </p>
+                            
+                            <label for="" class="si-menu-label">Address Line 1</label>
+                            <input type="text" placeholder="Address Line 1">
+                            <label for="" class="si-menu-label">Address Line 2</label>
+                            <input type="text" placeholder="Address Line 1">
+                            <label for="" class="si-menu-label">City</label>
+                            <input type="email" placeholder="City">
+                            <label for="" class="si-menu-label">State</label>
+                            <input type="password" placeholder="State">
+                            <label for="" class="si-menu-label">ZIP Code</label>
+                            <input type="password" placeholder="ZIP Code">
+                            <label for="" class="si-menu-label">Phone Number</label>
+                            <input type="password" placeholder="Phone Number">
+                            <select class="form-control si-menu-input" style="margin-top:10px; margin-bottom:15px" >
+                            <option >How did you hear about us?</option>
+                            <option >Friends</option>
+                            <option >Facebook / Twitter / Quora</option>
+                            <option >Mobile Advertising</option>
+                            <option >Other</option>
+                            <option >Online</option>
+
+                            </select>
+                            </div >
+                </div>
+                
+                <div class="modal-body step-3" data-step="3">
+                            <div >
+                            <h3 class="text-center"> Identity information
+                            </h3>
+                            <p class="text-center"> 
+                            FinoTrust is a financial institution just like a bank or a brokerage firm, so we must comply with the USA PATRIOT ACT. This requires us to verify your identity. We will not run a credit check.
+                            </p>
+                            <label for="" class="si-menu-label">PAN Number</label>
+                            <input type="text" placeholder="PAN Number">
+                            <label for="" class="si-menu-label">Date of birth</label>
+                            <input type="date" placeholder="DOB">
+                            <label for="" class="si-menu-label">Gender</label>
+                            <form>
+                            <input type="radio" name="sex" value="male" checked> Male
+                            
+                            <input type="radio" name="sex" value="female"> Female
+                            </form> 
+
+
+                            </div >
+                
+                
+                </div>
+                <div class="modal-body step-4" data-step="4">
+                            <div >
+                            <h3 class="text-center"> Regulatory Questions
+                            </h3>
+                            <p class="text-center"> 
+                            We are required toask these regulatory questions. Most customers answers no.
+                            </p>
+                            <label for="political" class="si-menu-label">Are you a politically exposed person</label>
+                            <form>
+                            <input type="radio" value="yes" name="political" > Yes
+                            
+                            <input type="radio" value="no" name="political"> No
+                           </form>
+
+                                                    
+                            <label for="residency_tax" class="si-menu-label">What is your residency for Tax Status? </label>
+                            <form>
+                            <input type="radio" value="1" name="residency_tax" id="indian">  <label for="indian">Indian</label>
+                            <input type="radio" value="2" name="residency_tax"> NRI - Repatriation 
+                            <input type="radio" value="3" name="residency_tax" > NRI - Non Repatriation 
+                            </form>
+
+                        
+
+
+                        </div >
+            
+            </div>
+            <div class="modal-footer footer-below">
+                <button type="button" class="btn btn-primary step step-1" data-step="1" onclick="sendEvent('#demo-modal-3', 2)">Next</button>
+                <button type="button" class="btn btn-primary step step-2" data-step="2" onclick="sendEvent('#demo-modal-3', 1)">Back</button>
+                <button type="button" class="btn btn-primary step step-3" data-step="3" onclick="sendEvent('#demo-modal-3', 2)">Back</button>
+                <button type="button" class="btn btn-primary step step-2" data-step="2" onclick="sendEvent('#demo-modal-3', 3)">Next</button>
+                <button type="button" class="btn btn-primary step step-3" data-step="3" onclick="sendEvent('#demo-modal-3', 4)">Next</button>
+                <button type="button" class="btn btn-primary step step-4" data-step="3" onclick="sendEvent('#demo-modal-3', 3)">Back</button>
+
+            </div>
+        </div>
+</form>
+    <!-- Scroll to Top Button (Only visible on small and extra-small screen sizes) -->
+    <div class="scroll-top page-scroll visible-xs visible-sm">
+        <a class="btn btn-primary" href="#page-top">
+            <i class="fa fa-chevron-up"></i>
+        </a>
+    </div>
+
+            </div>
+        </div>
+    </div>
+    
+    <script type="text/javascript">
+        sendEvent = function(sel, step) {
+        $(sel).trigger('next.m.' + step);
+    }
+    </script> 
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>  
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha256-KXn5puMvxCw+dAYznun+drMdG1IFl3agK0p/pqT9KAo= sha512-2e8qq0ETcfWRI4HJBzQiA3UoyFk6tbNyG+qSaIBZLyW9Xf3sWZHN/lxe9fTh1U45DpPf07yj94KsUHHWe4Yk1A==" crossorigin="anonymous"></script>	 
+	<script src="../js/script.js"></script>
+    <script src="../js/multi-step-modal.js"></script>
+
+    </body>
+</html>
