@@ -1,0 +1,11 @@
+@mixin fontsb($size){
+	font: 600 $size+px Open Sans;
+}
+
+@mixin fontm($size){
+	font: 400 $size+px Open Sans;
+}
+
+@mixin fontl($size){
+	font: 300 $size+px Open Sans;
+}

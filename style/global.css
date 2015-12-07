@@ -1,0 +1,666 @@
+/* line 5, ../../../../../../Ruby22/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* line 22, ../../../../../../Ruby22/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+html {
+  line-height: 1;
+}
+
+/* line 24, ../../../../../../Ruby22/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 26, ../../../../../../Ruby22/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 28, ../../../../../../Ruby22/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 30, ../../../../../../Ruby22/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 103, ../../../../../../Ruby22/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 32, ../../../../../../Ruby22/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 116, ../../../../../../Ruby22/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block;
+}
+
+/* line 1, ../sass/_onboard.scss */
+body {
+  font: 300 16px Open Sans;
+}
+
+/* line 4, ../sass/_onboard.scss */
+p {
+  font: 400 20px Open Sans;
+}
+
+/* line 7, ../sass/_onboard.scss */
+a, a:focus {
+  outline: 0;
+}
+
+/* line 11, ../sass/_onboard.scss */
+.step-labels.nav-tabs li {
+  border: none;
+}
+/* line 14, ../sass/_onboard.scss */
+.step-labels.nav-tabs li.active > a, .step-labels.nav-tabs li.active > a:hover, .step-labels.nav-tabs li.active > a:focus {
+  border: none;
+  color: #1F93EF;
+  font-size: 15px;
+}
+/* line 22, ../sass/_onboard.scss */
+.step-labels.nav-tabs li a, .step-labels.nav-tabs li a:hover {
+  border: none;
+  color: #999;
+  background-color: transparent;
+}
+
+/* Progress Bar */
+/* line 32, ../sass/_onboard.scss */
+.progress {
+  height: 2px;
+}
+/* line 34, ../sass/_onboard.scss */
+.progress .progress-bar {
+  background-color: #1F93EF;
+}
+
+/* line 39, ../sass/_onboard.scss */
+section.intro {
+  text-align: center;
+  margin: 25px 0px;
+}
+/* line 42, ../sass/_onboard.scss */
+section.intro h1 {
+  font: 400 36px Open Sans;
+}
+/* line 45, ../sass/_onboard.scss */
+section.intro p {
+  font: 300 16px Open Sans;
+  line-height: 30px;
+}
+
+/* line 51, ../sass/_onboard.scss */
+section.plan_info .panel {
+  margin: 0px;
+}
+/* line 54, ../sass/_onboard.scss */
+section.plan_info .panel-heading {
+  background-color: #1F93EF;
+  color: #fff;
+  text-align: right;
+  padding: 10px 35px;
+}
+/* line 59, ../sass/_onboard.scss */
+section.plan_info .panel-heading h2 {
+  display: inline-block;
+  float: left;
+  font: 300 36px Open Sans;
+}
+/* line 64, ../sass/_onboard.scss */
+section.plan_info .panel-heading span, section.plan_info .panel-heading label {
+  font: 300 22px Open Sans;
+}
+/* line 68, ../sass/_onboard.scss */
+section.plan_info .panel-heading label {
+  display: block;
+}
+/* line 73, ../sass/_onboard.scss */
+section.plan_info p {
+  display: inline-block;
+  text-align: center;
+  padding: 0px 20px;
+}
+
+/* End section info */
+/* Begin Accordion */
+/* line 83, ../sass/_onboard.scss */
+.panel_accordion .panel-default .row {
+  margin-right: 0px;
+  margin-left: 0px;
+}
+/* line 87, ../sass/_onboard.scss */
+.panel_accordion .panel-default .panel-heading {
+  cursor: pointer;
+  background-color: transparent;
+  padding: 0px;
+  position: relative;
+}
+/* line 92, ../sass/_onboard.scss */
+.panel_accordion .panel-default .panel-heading p {
+  padding: 20px 10px 20px 35px;
+  font: 300 18px Open Sans;
+}
+/* line 96, ../sass/_onboard.scss */
+.panel_accordion .panel-default .panel-heading p span input[type="text"] {
+  border: none;
+  background-color: transparent;
+  border-bottom: 1px solid #000;
+  width: 95px;
+}
+/* line 105, ../sass/_onboard.scss */
+.panel_accordion .panel-default .panel-heading p .target-amount, .panel_accordion .panel-default .panel-heading p .target-time {
+  position: relative;
+  cursor: pointer;
+  display: inline-block;
+}
+/* line 111, ../sass/_onboard.scss */
+.panel_accordion .panel-default .panel-heading p span.edit {
+  position: absolute;
+  color: #cccccc;
+  font-size: 14px;
+  top: -25px;
+  left: 51px;
+}
+/* line 118, ../sass/_onboard.scss */
+.panel_accordion .panel-default .panel-heading p span.edit-time {
+  left: 10px;
+}
+/* line 123, ../sass/_onboard.scss */
+.panel_accordion .panel-default .panel-heading span.down_arrow {
+  position: absolute;
+  color: #000;
+  left: 88%;
+  font-size: 22px;
+  top: 10px;
+}
+/* line 131, ../sass/_onboard.scss */
+.panel_accordion .panel-default .goal_metainfo {
+  background-color: #F9F9F9;
+  padding: 15px 0px;
+}
+/* line 134, ../sass/_onboard.scss */
+.panel_accordion .panel-default .goal_metainfo label {
+  font: 300 16px Open Sans;
+  margin-left: 80px;
+  display: block;
+}
+/* line 138, ../sass/_onboard.scss */
+.panel_accordion .panel-default .goal_metainfo label:nth-of-type(2) {
+  font: 400 18px Open Sans;
+}
+/* line 146, ../sass/_onboard.scss */
+.panel_accordion .panel-default .glyphicon {
+  color: #1F93EF;
+  font-size: 32px;
+  padding: 10px;
+  left: 20px;
+}
+/* line 153, ../sass/_onboard.scss */
+.panel_accordion .panel-default .goal_content .panel-body {
+  border-top-color: transparent;
+}
+/* line 155, ../sass/_onboard.scss */
+.panel_accordion .panel-default .goal_content .panel-body.selected_row {
+  background-color: #f2ffe5;
+}
+/* line 158, ../sass/_onboard.scss */
+.panel_accordion .panel-default .goal_content .panel-body #amchart_legend {
+  position: relative;
+}
+
+/* End Accordion */
+/* line 2, ../sass/_innerpages.scss */
+.manage_account h1 {
+  line-height: 35px;
+  padding: 0px;
+  color: #17406B;
+  font: 600 21px Open Sans;
+}
+/* line 9, ../sass/_innerpages.scss */
+.manage_account .account_controls .deposit_div {
+  font: 400 14px Open Sans;
+}
+/* line 11, ../sass/_innerpages.scss */
+.manage_account .account_controls .deposit_div .deposit_box {
+  width: 100px;
+  float: left;
+  position: relative;
+}
+/* line 16, ../sass/_innerpages.scss */
+.manage_account .account_controls .deposit_div .deposit_box form {
+  padding: 15px 0px;
+}
+/* line 18, ../sass/_innerpages.scss */
+.manage_account .account_controls .deposit_div .deposit_box form label {
+  padding-bottom: 10px;
+}
+/* line 23, ../sass/_innerpages.scss */
+.manage_account .account_controls .deposit_div .deposit_box .show_form {
+  display: block;
+}
+/* line 26, ../sass/_innerpages.scss */
+.manage_account .account_controls .deposit_div .deposit_box .dropdown span.caret {
+  margin-left: 75px;
+}
+/* line 30, ../sass/_innerpages.scss */
+.manage_account .account_controls .deposit_div .deposit-form {
+  position: absolute;
+  box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.5);
+  z-index: 10;
+  border-radius: 5px;
+  padding: 10px;
+  top: 40px;
+  display: none;
+  background-color: #fff;
+}
+/* line 39, ../sass/_innerpages.scss */
+.manage_account .account_controls .deposit_div .deposit-form ul {
+  width: 100%;
+}
+/* line 44, ../sass/_innerpages.scss */
+.manage_account .account_controls .deposit_div .btn-info {
+  margin-right: 5px;
+}
+/* line 47, ../sass/_innerpages.scss */
+.manage_account .account_controls .deposit_div button[type="submit"] {
+  width: 100%;
+}
+/* line 50, ../sass/_innerpages.scss */
+.manage_account .account_controls .deposit_div .deposit_button {
+  background-color: #7FB800;
+  color: #fff;
+}
+
+/* Overview */
+/* line 60, ../sass/_innerpages.scss */
+.panel-default {
+  margin-top: 30px;
+}
+
+/* line 65, ../sass/_innerpages.scss */
+.overview_account .earnings > div {
+  float: left;
+}
+/* line 67, ../sass/_innerpages.scss */
+.overview_account .earnings > div h3 {
+  font: 300 14px Open Sans;
+}
+/* line 70, ../sass/_innerpages.scss */
+.overview_account .earnings > div h1 {
+  font: 400 32px Open Sans;
+}
+/* line 73, ../sass/_innerpages.scss */
+.overview_account .earnings > div h4 {
+  font: 300 12px Open Sans;
+}
+/* line 77, ../sass/_innerpages.scss */
+.overview_account .earnings .glyphicon {
+  float: left;
+  padding-right: 10px;
+  cursor: pointer;
+}
+/* line 85, ../sass/_innerpages.scss */
+.overview_account .losses p {
+  font: 300 14px Open Sans;
+}
+/* line 88, ../sass/_innerpages.scss */
+.overview_account .losses p:first-child {
+  color: #1F93EF;
+}
+/* line 93, ../sass/_innerpages.scss */
+.overview_account #earning_info {
+  display: none;
+}
+
+/* retirement Plan */
+/* line 101, ../sass/_innerpages.scss */
+.retirement_plan_actions #retirement_info {
+  display: none;
+}
+/* line 104, ../sass/_innerpages.scss */
+.retirement_plan_actions > div.edit_plan {
+  padding: 0px;
+}
+/* line 106, ../sass/_innerpages.scss */
+.retirement_plan_actions > div.edit_plan span {
+  cursor: pointer;
+}
+/* line 109, ../sass/_innerpages.scss */
+.retirement_plan_actions > div.edit_plan h2 {
+  margin: 0px 15px 0px 10px;
+  font: 600 16px Open Sans;
+}
+/* line 113, ../sass/_innerpages.scss */
+.retirement_plan_actions > div.edit_plan button {
+  border-color: #1F93EF;
+  color: #1F93EF;
+}
+/* line 116, ../sass/_innerpages.scss */
+.retirement_plan_actions > div.edit_plan button:hover {
+  background-color: #1F93EF;
+  color: #fff;
+}
+/* line 122, ../sass/_innerpages.scss */
+.retirement_plan_actions .deposit {
+  text-align: right;
+}
+/* line 124, ../sass/_innerpages.scss */
+.retirement_plan_actions .deposit p {
+  font: 300 14px Open Sans;
+  padding-bottom: 5px;
+}
+/* line 128, ../sass/_innerpages.scss */
+.retirement_plan_actions .deposit button {
+  border-color: #7FB800;
+  color: #7FB800;
+}
+/* line 131, ../sass/_innerpages.scss */
+.retirement_plan_actions .deposit button:hover {
+  background-color: #7FB800;
+  color: #fff;
+}
+/* line 138, ../sass/_innerpages.scss */
+.retirement_plan_actions button {
+  padding: 2px 12px;
+}
+/* line 144, ../sass/_innerpages.scss */
+.retirement_plan_actions .deposit_status a {
+  color: #999;
+  display: block;
+  padding: 10px 0px;
+  font: 300 14px Open Sans;
+}
+
+/* basket_balance */
+/* line 155, ../sass/_innerpages.scss */
+.basket_balance {
+  display: none;
+}
+
+/* POrtfolio Page */
+/* line 164, ../sass/_innerpages.scss */
+.portfolio .panel .panel-fake-heading {
+  background-color: transparent;
+  padding: 10px 15px;
+  border-bottom: 1px solid #DDD;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+}
+/* line 171, ../sass/_innerpages.scss */
+.portfolio .panel .panel-fake-heading p {
+  font: 300 14px Open Sans;
+}
+/* line 176, ../sass/_innerpages.scss */
+.portfolio .panel .panel-body p {
+  font: 300 14px Open Sans;
+}
+/* line 180, ../sass/_innerpages.scss */
+.portfolio .panel .panel-body .portfolio_small_info table {
+  width: 100%;
+  margin-top: 20px;
+}
+/* line 185, ../sass/_innerpages.scss */
+.portfolio .panel .panel-body .portfolio_small_info td {
+  font: 400 14px Open Sans;
+  padding-bottom: 10px;
+}
+/* line 189, ../sass/_innerpages.scss */
+.portfolio .panel .panel-body .portfolio_small_info button {
+  color: #1F93EF;
+  border-color: #1F93EF;
+  width: 80%;
+}
+/* line 193, ../sass/_innerpages.scss */
+.portfolio .panel .panel-body .portfolio_small_info button:hover {
+  background-color: #1F93EF;
+  color: #fff;
+}
+/* line 201, ../sass/_innerpages.scss */
+.portfolio .panel .panel-body .rebalance .panel-body > div > span {
+  font: 300 14px Open Sans;
+}
+/* line 207, ../sass/_innerpages.scss */
+.portfolio .panel .panel-body .rebalance .panel-body > p {
+  font: 300 12px Open Sans;
+  padding: 5px 15px;
+}
+/* line 211, ../sass/_innerpages.scss */
+.portfolio .panel .panel-body .rebalance .panel-body .drift_amount {
+  color: #1F93EF;
+}
+/* line 215, ../sass/_innerpages.scss */
+.portfolio .panel .panel-body .portfolio_large_info {
+  /* end of table */
+}
+/* line 217, ../sass/_innerpages.scss */
+.portfolio .panel .panel-body .portfolio_large_info table {
+  width: 100%;
+}
+/* line 219, ../sass/_innerpages.scss */
+.portfolio .panel .panel-body .portfolio_large_info table th {
+  font: 300 12px Open Sans;
+}
+/* line 221, ../sass/_innerpages.scss */
+.portfolio .panel .panel-body .portfolio_large_info table th:first-child {
+  width: 350px;
+}
+/* line 225, ../sass/_innerpages.scss */
+.portfolio .panel .panel-body .portfolio_large_info table td, .portfolio .panel .panel-body .portfolio_large_info table td p, .portfolio .panel .panel-body .portfolio_large_info table td a {
+  font: 400 12px Open Sans;
+  color: #696969;
+  text-decoration: none;
+  padding-bottom: 5px;
+  line-height: auto;
+}
+/* line 232, ../sass/_innerpages.scss */
+.portfolio .panel .panel-body .portfolio_large_info table td {
+  padding: 4px 0px;
+  vertical-align: middle;
+}
+/* line 236, ../sass/_innerpages.scss */
+.portfolio .panel .panel-body .portfolio_large_info table tfoot {
+  border-top: 1px solid #cccccc;
+}
+/* line 238, ../sass/_innerpages.scss */
+.portfolio .panel .panel-body .portfolio_large_info table tfoot td {
+  padding-top: 15px;
+}
+/* line 243, ../sass/_innerpages.scss */
+.portfolio .panel .panel-body .portfolio_large_info table td a {
+  display: inline-block;
+}
+/* line 245, ../sass/_innerpages.scss */
+.portfolio .panel .panel-body .portfolio_large_info table td a:hover {
+  color: #3f3f3f;
+  text-indent: 5px;
+  text-decoration: none;
+}
+/* line 252, ../sass/_innerpages.scss */
+.portfolio .panel .panel-body .portfolio_large_info table .td_contain_two p, .portfolio .panel .panel-body .portfolio_large_info table .td_contain_two div {
+  float: left;
+}
+/* line 255, ../sass/_innerpages.scss */
+.portfolio .panel .panel-body .portfolio_large_info table .td_contain_two div {
+  padding: 10px 0px;
+  width: 40px;
+  background-color: green;
+}
+/* line 260, ../sass/_innerpages.scss */
+.portfolio .panel .panel-body .portfolio_large_info table .td_contain_two p {
+  padding: 6px 15px 6px 4px;
+}
+/* line 266, ../sass/_innerpages.scss */
+.portfolio .panel .panel-body .portfolio_large_info .modal_container {
+  margin-top: 30px;
+}
+/* line 268, ../sass/_innerpages.scss */
+.portfolio .panel .panel-body .portfolio_large_info .modal_container .modal-header h1 {
+  color: #1F93EF;
+  font: 600 16px Open Sans;
+}
+/* line 272, ../sass/_innerpages.scss */
+.portfolio .panel .panel-body .portfolio_large_info .modal_container .modal-footer {
+  text-align: center;
+}
+/* line 274, ../sass/_innerpages.scss */
+.portfolio .panel .panel-body .portfolio_large_info .modal_container .modal-footer button {
+  background-color: #1F93EF;
+  color: #fff;
+}
+/* line 281, ../sass/_innerpages.scss */
+.portfolio .panel .panel-body .portfolio_large_info .modal_container .btn-group {
+  width: 100%;
+}
+/* line 283, ../sass/_innerpages.scss */
+.portfolio .panel .panel-body .portfolio_large_info .modal_container .btn-group button {
+  width: 33%;
+}
+/* line 285, ../sass/_innerpages.scss */
+.portfolio .panel .panel-body .portfolio_large_info .modal_container .btn-group button:hover {
+  background-color: #fff;
+}
+/* line 287, ../sass/_innerpages.scss */
+.portfolio .panel .panel-body .portfolio_large_info .modal_container .btn-group button:hover h5, .portfolio .panel .panel-body .portfolio_large_info .modal_container .btn-group button:hover h6 {
+  color: #1F93EF;
+}
+/* line 291, ../sass/_innerpages.scss */
+.portfolio .panel .panel-body .portfolio_large_info .modal_container .btn-group button h5, .portfolio .panel .panel-body .portfolio_large_info .modal_container .btn-group button h6 {
+  font: 300 12px Open Sans;
+  color: #686868;
+  padding: 4px 0px;
+}
+
+/* Performance */
+/* line 308, ../sass/_innerpages.scss */
+.box {
+  display: none;
+  width: 80%;
+  margin-top: 35px;
+  margin-left: 30px;
+}
+
+/* line 316, ../sass/_innerpages.scss */
+.performance .panel a, .performance .panel a:hover {
+  text-decoration: none;
+  font: 400 14px Open Sans;
+}
+/* line 320, ../sass/_innerpages.scss */
+.performance .panel table {
+  min-width: 70%;
+  margin-top: 25px;
+}
+/* line 323, ../sass/_innerpages.scss */
+.performance .panel table td {
+  border-bottom: 1px solid #DDD;
+  padding: 10px 0px;
+}
+/* line 326, ../sass/_innerpages.scss */
+.performance .panel table td a, .performance .panel table td a:hover {
+  color: #1F93EF;
+}
+/* line 333, ../sass/_innerpages.scss */
+.performance .panel .right-side-graph table th {
+  font: 600 14px Open Sans;
+}
+/* line 336, ../sass/_innerpages.scss */
+.performance .panel .right-side-graph table td {
+  font: 400 14px Open Sans;
+}
+/* line 340, ../sass/_innerpages.scss */
+.performance .panel .right-side-graph p {
+  font: 400 14px Open Sans;
+}
+/* line 343, ../sass/_innerpages.scss */
+.performance .panel .right-side-graph h1 {
+  font: 600 14px Open Sans;
+  margin-bottom: 20px;
+}
+/* line 347, ../sass/_innerpages.scss */
+.performance .panel .right-side-graph .order {
+  margin-top: 30px;
+}
+/* line 349, ../sass/_innerpages.scss */
+.performance .panel .right-side-graph .order div {
+  margin: 10px 0px;
+}
+/* line 351, ../sass/_innerpages.scss */
+.performance .panel .right-side-graph .order div button {
+  margin-right: 10px;
+}
+
+/* Common Styles */
+/* line 2, ../sass/_commonstyles.scss */
+.flclear:after {
+  clear: both;
+  display: table;
+  content: "";
+}
+
+/* line 7, ../sass/_commonstyles.scss */
+.summary_plan_detailed_info {
+  margin-top: 30px;
+}
+/* line 9, ../sass/_commonstyles.scss */
+.summary_plan_detailed_info p {
+  font: 300 14px Open Sans;
+  margin: 10px 0px;
+  display: inline-block;
+}
+/* line 14, ../sass/_commonstyles.scss */
+.summary_plan_detailed_info p span {
+  color: #1F93EF;
+}
+/* line 18, ../sass/_commonstyles.scss */
+.summary_plan_detailed_info div.dropdown {
+  display: inline-block;
+  margin-left: 5px;
+}
+/* line 22, ../sass/_commonstyles.scss */
+.summary_plan_detailed_info th, .summary_plan_detailed_info td {
+  padding-bottom: 5px;
+}
+/* line 25, ../sass/_commonstyles.scss */
+.summary_plan_detailed_info td {
+  font: 300 14px Open Sans;
+}
+/* line 28, ../sass/_commonstyles.scss */
+.summary_plan_detailed_info th {
+  font: 400 16px Open Sans;
+  padding-right: 40px;
+  min-width: 215px;
+}
+/* line 33, ../sass/_commonstyles.scss */
+.summary_plan_detailed_info table.total tr th {
+  padding: 5px 0px;
+}

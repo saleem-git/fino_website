@@ -1,0 +1,167 @@
+body{
+	@include fontl(16);
+}
+p{
+	@include fontm(20);
+}
+a,a:focus{
+	outline: 0;
+}
+.step-labels.nav-tabs{
+	li{
+		border: none;
+		&.active{
+			&>a,&>a:hover,&>a:focus{
+			border: none;
+			color: #1F93EF;
+			font-size: 15px;			
+		}
+
+
+		}
+		a,a:hover{
+			border:none;
+			color: #999;
+			background-color: transparent;
+		}
+		
+	}
+}
+
+/* Progress Bar */
+.progress{
+	height: 2px;
+	.progress-bar{
+		background-color:#1F93EF;
+	}
+}
+
+section.intro{
+	text-align:center;
+	margin: 25px 0px;
+	h1{
+	@include fontm(36);
+	}
+	p{
+		@include fontl(16);
+		line-height: 30px;
+	}
+	} 
+section.plan_info{
+	.panel{
+		margin: 0px;
+	}
+	.panel-heading{
+		background-color: #1F93EF;
+		color: #fff;
+		text-align: right;
+		padding: 10px 35px;
+		h2{
+		display: inline-block;
+		float: left;
+		@include fontl(36);
+	}
+	span,label{
+		@include fontl(22);
+
+	}
+	label{
+		display: block;
+	}
+	}
+
+	p {
+		display: inline-block;
+		text-align: center;
+		padding: 0px 20px;
+		
+	}
+}
+/* End section info */
+/* Begin Accordion */
+.panel_accordion .panel-default{
+	.row{
+		margin-right: 0px;
+		margin-left: 0px;
+	}
+	.panel-heading{
+		cursor: pointer;
+		background-color:transparent;
+		padding:0px;
+		position: relative;
+		p{
+			padding:20px 10px 20px 35px;
+			@include fontl(18);
+			span {
+			input[type="text"]{
+				border: none;
+				background-color: transparent;
+				border-bottom: 1px solid #000;
+				width: 95px;
+			}
+			
+			
+		}
+		.target-amount,.target-time{
+				position: relative;
+				cursor: pointer;
+				display: inline-block;
+				
+			}
+			span.edit{
+				position: absolute;
+				color: rgb(204, 204, 204);
+				font-size: 14px;
+				top: -25px;
+				left: 51px;				
+			}
+			span.edit-time{				
+				left: 10px;				
+			}
+			
+		}
+		span.down_arrow{
+			position: absolute;
+			color: #000;
+			left: 88%;
+			font-size: 22px;
+			top: 10px;			
+		}
+	}
+	.goal_metainfo {
+		background-color: #F9F9F9;
+		padding: 15px 0px;
+		label{
+			@include fontl(16);
+			margin-left: 80px;
+			display: block;
+			&:nth-of-type(2){
+				@include fontm(18);
+			}
+		}
+
+	}
+	.glyph_fino{
+	}
+	.glyphicon{
+		color: #1F93EF;
+		font-size: 32px;
+		padding: 10px;
+		left: 20px;
+	}
+	.goal_content{
+		.panel-body{
+			border-top-color: transparent;
+			&.selected_row{
+				background-color:#f2ffe5;
+			}
+			#amchart_legend{
+				position: relative;
+				
+			}
+		}
+	}
+	
+
+}
+/* End Accordion */

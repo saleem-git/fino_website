@@ -1,0 +1,360 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>On Boarding</title>
+        <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600' rel='stylesheet' type='text/css'>
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha256-7s5uDGW3AHqw6xtJmNNtr+OBRJUlgkNJEo78P4b0yRw= sha512-nNo+yCHEyn0smMxSswnf/OnX6/KwJuZTlNZBjauKhTK0c+zT+q5JOCx0UFhXQ6rJR9jg6Es8gPuD2uZcYDLqSw==" crossorigin="anonymous">
+        <link rel="stylesheet" href="style/global.css">
+        <link rel="stylesheet" href="style/header.css">
+       
+    </head>
+    <body>
+	   	<header> 
+		    <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-fixed-top"  >
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#page-top"><img src="./images/logo_img.jpg " ></a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="hidden">
+                        <a href="#page-top"></a>
+                    </li>
+   <!--                 <li class="page-scroll">
+                        <a href="#portfolio">Why Fino</a>
+                    </li>
+                    <li class="page-scroll">
+                        <a href="#about">What We Do</a>
+                    </li>
+                    <li class="page-scroll">
+                        <a href="#contact">About Us</a>
+                    </li>
+                    <li class="page-scroll">
+                        <a href="#contact">Pricing</a>
+                    </li>
+                    <li class="page-scroll">
+                        <a href="#contact">FAQs</a>
+                    </li>-->
+					<li><a class="page-scroll cd-signin" href="#0">Sign in</a></li>
+					<li><a class="page-scroll cd-signup" href="#0">Sign up</a></li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+   
+
+		</header>
+	   	<div class="container">
+		   	<ul class="nav nav-tabs nav-justified step-labels">
+			   	<li role="navigation" class="active" ><a data-toggle="tab" href="#goal"> Goal Recommendations</a></li>
+			   	<li role="navigation" ><a data-toggle="tab" href="#account"> Account Details</a></li>
+			   	<li role="navigation" ><a data-toggle="tab" href="#identity"> Identity Verification</a></li>
+		   	</ul>
+		   	 <div class="progress">
+				  <div class="progress-bar" role="progressbar" aria-valuenow="70"
+				  aria-valuemin="0" aria-valuemax="100" style="width:33%">
+				    <span class="sr-only">70% Complete</span>
+				  </div>
+			</div>
+			<section class="intro">
+				<h1>Select your first goal to begin</h1>
+				<p class="goal">We've recommended 3 goals based on your age and income.</p>
+			</section>
+			<section class="plan_info">
+				<div class="panel panel-header">
+				  <div class="panel-heading">
+					  <h2>Your Plan</h2>
+					  <p class="age"><span>25</span>
+					  <label >Age</label>
+					  </p>
+					  <p class="income">
+					  <span>200,000</span>
+					 
+					  <label>Annual Income</label>
+					  </p>
+				  </div>				 
+				</div>
+			</section>
+		   	<div class="tab-content">
+			  <div id="goal" class="tab-pane fade in active">
+			   <!-- Begin accordion -->
+			   	<div class="panel-group panel_accordion " id="accordion" role="tablist" aria-multiselectable="true">
+				  <div class="panel panel-default ">
+				    <div class="panel-heading row" role="tab" id="headingOne" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+					    <div class="goal_metainfo col-sm-12 col-md-4"> 
+					      <h4 class="glyph_fino pull-left">
+					      <span class="glyphicon glyphicon-piggy-bank" ></span>
+					      </h4>
+					      <label>PRIORITY 1</label>
+					      <label> Safety Net </label>
+					    </div>
+					    <p class="col-sm-12 col-md-8" >Target of Rs <span class="target-amount">24,000 <span class="glyphicon glyphicon-pencil edit"></span> </span>   <span style="display:none"><input type="text" name="income" maxlength="9"> </span> for <span class="target-time">6  <span class="glyphicon glyphicon-pencil edit edit-time"></span></span>  <span style="display:none"><input type="text" name="time" maxlength="2"> </span> 
+					    months of unplanned expenses</p>
+					    <span id="arrow" class="glyphicon glyphicon-menu-down down_arrow"> </span>
+				    </div>
+				    <div id="collapseOne" class="panel-collapse collapse goal_content" role="tabpanel" aria-labelledby="headingOne">
+				      <div class="panel-body">
+				        <div class="col-sm-4">
+		        			<div id="chartdiv" style="width: 80%; height: 210px;" ></div>
+				         </div>
+				         <div class="col-sm-8">Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et.</div>
+				      </div> 
+
+				      <div class="panel-body selected_row">
+				        <div class="col-sm-4">
+		        			<div id="chartdiv2" style="width: 80%; height: 210px;" ></div>
+				         </div>
+				         <div class="col-sm-8">Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et.</div>
+				      </div>
+
+				      <div class="panel-body">
+				        <div class="col-sm-4">
+		        			<div id="chartdiv3" style="width: 80%; height: 210px;" ></div>
+				         </div>
+				         <div class="col-sm-8">Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et.
+				         <div id="amchart_legend"></div>
+				         </div>
+				      </div>
+				    </div>
+				  </div>
+				  <div class="panel panel-default">
+				    <div class="panel-heading row" role="tab" id="headingTwo" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+				      <div class="goal_metainfo col-sm-12 col-md-4"> 
+					      <h4 class="glyph_fino pull-left">
+					      <span class="glyphicon glyphicon-piggy-bank" ></span>
+					      </h4>
+					      <label>PRIORITY 2</label>
+					      <label> Retirement </label>
+					    </div>
+					    <p class="col-sm-12 col-md-8" >Target of Rs <span class="target-amount">24,000 <span class="glyphicon glyphicon-pencil edit"></span> </span> <span style="display:none"><input type="text" name="income" maxlength="9"> </span>  for  <span class="target-time">6  <span class="glyphicon glyphicon-pencil edit edit-time"></span></span>  <span style="display:none"><input type="text" name="time" maxlength="2"> </span> 
+					    months of unplanned expenses</p>
+					    <span id="arrow" class="glyphicon glyphicon-menu-down down_arrow"> </span>
+				    </div>
+				    <div id="collapseTwo" class="panel-collapse collapse goal_content" role="tabpanel" aria-labelledby="headingTwo">
+				      <div class="panel-body">
+				        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+				      </div>
+				    </div>
+				  </div>
+				  <div class="panel panel-default">
+				    <div class="panel-heading row" role="tab" id="headingThree" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+				       <div class="goal_metainfo col-sm-12 col-md-4"> 
+					      <h4 class="glyph_fino pull-left">
+					      <span class="glyphicon glyphicon-piggy-bank" ></span>
+					      </h4>
+					      <label>PRIORITY 2</label>
+					      <label> Retirement </label>
+					    </div>
+					    <p class="col-sm-12 col-md-8" >Target of Rs <span class="target-amount"> 24,000 <span class="glyphicon glyphicon-pencil edit"></span> </span> <span style="display:none"><input type="text" name="income" maxlength="9"> </span>  for  
+					     <span class="target-time">6  <span class="glyphicon glyphicon-pencil edit edit-time"></span></span>  <span style="display:none"><input type="text" name="time" maxlength="2"> </span> 
+					    months of unplanned expenses</p>
+					    <span id="arrow" class="glyphicon glyphicon-menu-down down_arrow"> </span>
+				    </div>
+				    <div id="collapseThree" class="panel-collapse collapse goal_content" role="tabpanel" aria-labelledby="headingThree">
+				      <div class="panel-body">
+				        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+				      </div>
+				    </div>
+				  </div>
+				</div>
+
+
+			   <!-- End Accordion -->
+			  </div>
+			  <div id="account" class="tab-pane fade">
+			    <h3>Menu 1</h3>
+			    <p>Some content in menu 1.</p>
+			  </div>
+			  <div id="identity" class="tab-pane fade">
+			    <h3>Menu 2</h3>
+			    <p>Some content in menu 2.</p>
+			  </div>
+		</div>
+		</div>
+
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>  
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha256-KXn5puMvxCw+dAYznun+drMdG1IFl3agK0p/pqT9KAo= sha512-2e8qq0ETcfWRI4HJBzQiA3UoyFk6tbNyG+qSaIBZLyW9Xf3sWZHN/lxe9fTh1U45DpPf07yj94KsUHHWe4Yk1A==" crossorigin="anonymous"></script>	 
+	<script src="js/script.js"></script>
+	 <!-- For Am chart -->
+		<script type="text/javascript" src="http://www.amcharts.com/lib/3/amcharts.js"></script>
+		<script type="text/javascript" src="http://cdn.amcharts.com/lib/3/pie.js"></script>
+		<script type="text/javascript" src="http://www.amcharts.com/lib/3/themes/light.js"></script>
+        <!-- amCharts javascript code -->
+		<script type="text/javascript">
+			AmCharts.makeChart("chartdiv",
+				{
+					"type": "pie",
+					"balloonText": "[[title]]<br><span style='font-size:14px'><b>[[value]]</b> ([[percents]]%)</span>",
+					"labelsEnabled": true,
+					"titleField": "category",
+					"valueField": "column-1",
+					"labelRadius": -30,
+					"labelText": " [[percents]]%",
+					"fontSize": 10,
+					"legend": {
+						"enabled": false,
+						"align": "center",
+						"markerType": "circle",
+						"position":"absolute"
+					},
+					"titles": [],
+						"colors": [
+							"#67b7dc",
+							"#84b761",
+							"#cc4748",						
+							"#913167"
+						],
+					"sequencedAnimation": false,
+					"startEffect": "easeOutSine",
+					"titleField": "country",
+					"valueField": "litres",
+					"percentPrecision": 0,
+					"pathToImages": "http://cdn.amcharts.com/lib/3/images/",
+					"theme": "light",
+					"allLabels": [],					
+					"dataProvider": [
+						{
+							"country": "Czech Republic",
+							"litres": "356"
+						},
+						{
+							"country": "Ireland",
+							"litres": 131
+						},
+						{
+							"country": "Germany",
+							"litres": 115.
+						},
+						{
+							"country": "Australia",
+							"litres": 109
+						}
+						
+					]
+				}
+			);
+
+AmCharts.makeChart("chartdiv2",
+				{
+					"type": "pie",
+					"balloonText": "[[title]]<br><span style='font-size:14px'><b>[[value]]</b> ([[percents]]%)</span>",
+					"labelsEnabled": true,
+					"titleField": "category",
+					"valueField": "column-1",
+					"labelRadius": -30,
+					"labelText": " [[percents]]%",
+					"fontSize": 12,
+					"legend": {
+						"enabled": false,
+						"align": "center",
+						"markerType": "circle",
+						"position":"absolute"
+					},
+					"titles": [],
+						"colors": [
+							"#67b7dc",
+							"#84b761",
+							"#cc4748",						
+							"#913167"
+						],
+					"sequencedAnimation": false,
+					"startEffect": "easeOutSine",
+					"titleField": "country",
+					"valueField": "litres",
+					"percentPrecision": 0,
+					"pathToImages": "http://cdn.amcharts.com/lib/3/images/",
+					"theme": "light",
+					"allLabels": [],					
+					"dataProvider": [
+						{
+							"country": "Czech Republic",
+							"litres": "356"
+						},
+						{
+							"country": "Ireland",
+							"litres": 131
+						},
+						{
+							"country": "Germany",
+							"litres": 115.
+						},
+						{
+							"country": "Australia",
+							"litres": 109
+						}
+						
+					]
+				}
+			);
+
+AmCharts.makeChart("chartdiv3",
+				{
+					"type": "pie",
+					"balloonText": "[[title]]<br><span style='font-size:14px'><b>[[value]]</b> ([[percents]]%)</span>",
+					"labelsEnabled": true,
+					"titleField": "category",
+					"valueField": "column-1",
+					"labelRadius": -30,
+					"labelText": " [[percents]]%",
+					"fontSize": 10,					 
+					"legend": {
+						"enabled": true,
+						"align": "left",
+						"markerType": "circle",
+						"divId":"amchart_legend",
+					},
+					"titles": [],
+						"colors": [
+							"#67b7dc",
+							"#84b761",
+							"#cc4748",						
+							"#913167"
+						],
+					"sequencedAnimation": false,
+					"startEffect": "easeOutSine",
+					"titleField": "country",
+					"valueField": "litres",
+					"percentPrecision": 0,
+					"pathToImages": "http://cdn.amcharts.com/lib/3/images/",
+					"theme": "light",
+					"allLabels": [],					
+					"dataProvider": [
+						{
+							"country": "Czech Republic",
+							"litres": "356"
+						},
+						{
+							"country": "Ireland",
+							"litres": 131
+						},
+						{
+							"country": "Germany",
+							"litres": 115.
+						},
+						{
+							"country": "Australia",
+							"litres": 109
+						}
+						
+					]
+				}
+			);
+		</script>
+	
+	</body>
+</html>

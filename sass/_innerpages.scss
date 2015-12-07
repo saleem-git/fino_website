@@ -1,0 +1,359 @@
+.manage_account{
+	h1{
+			line-height: 35px;
+			padding: 0px;
+			color: #17406B;
+			@include fontsb(21);
+		}
+	.account_controls{
+		.deposit_div{
+			@include fontm(14);
+			.deposit_box{
+				width: 100px;
+				float: left;
+				position: relative;
+				
+				form{
+					padding: 15px 0px;
+					label{
+						padding-bottom: 10px;
+					}
+				}	
+					
+				.show_form{
+					display: block;
+				}	
+				.dropdown span.caret{
+					margin-left: 75px;
+				}
+			}
+			.deposit-form{
+				position: absolute;
+				box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.5);
+				z-index: 10;
+				border-radius: 5px;
+				padding: 10px;
+				top: 40px;		
+				display: none;	
+				background-color:#fff;
+				ul{
+					width: 100%;
+				}	
+			}
+			
+			.btn-info{
+				margin-right: 5px;
+			}
+			button[type="submit"]{
+				width: 100%;
+			}
+			.deposit_button{
+				background-color: #7FB800;
+				color: #fff;
+			}
+		}
+
+	}
+}
+
+/* Overview */
+.panel-default{
+	margin-top:30px;
+}
+.overview_account{
+	.earnings{
+		&>div{
+			float: left;
+			h3{
+				@include fontl(14);
+			}		
+			h1{
+				@include fontm(32);
+			}	
+			h4{
+				@include fontl(12);
+			}
+		}
+		.glyphicon{
+				float: left;
+				padding-right:10px;
+				cursor: pointer;
+			}
+	
+	}
+	.losses{
+		p {
+			@include fontl(14);
+
+			&:first-child{
+				color: #1F93EF;
+			}
+		}
+	}
+	#earning_info{
+		display: none;
+	}
+}
+
+
+/* retirement Plan */
+.retirement_plan_actions{
+	#retirement_info{
+		display: none;
+	}
+	&>div.edit_plan {
+		padding:0px;
+		span{
+			cursor: pointer;
+		}
+		h2{
+			margin: 0px 15px 0px 10px;
+			@include fontsb(16);
+		}
+		button{
+			border-color:#1F93EF;
+			color: #1F93EF;
+			&:hover {
+				background-color: #1F93EF;
+				color: #fff;
+			}
+		}		
+	}
+	.deposit{
+		text-align: right;
+			p{
+				@include fontl(14);
+				padding-bottom: 5px;
+			}
+			button{
+				border-color:#7FB800;
+				color: #7FB800;
+				&:hover {
+					background-color: #7FB800;
+					color: #fff;
+				}
+			}
+			
+		}
+	button {
+			padding: 2px 12px;		
+			
+		}
+
+		.deposit_status{
+			a{
+				color: #999;
+				display: block;
+				padding: 10px 0px;
+				@include fontl(14);
+			}
+		}
+
+}
+
+/* basket_balance */
+.basket_balance{
+	display:none;
+}
+
+
+
+/* POrtfolio Page */
+.portfolio{
+	.panel {
+		.panel-fake-heading{
+			background-color:transparent;
+			padding: 10px 15px;
+			border-bottom: 1px solid #DDD;
+			border-top-left-radius: 3px;
+			border-top-right-radius: 3px;
+
+			p{
+				@include fontl(14);
+			}
+		}
+		.panel-body{
+			p {
+				@include fontl(14);
+			}
+			.portfolio_small_info {
+				table{
+					width: 100%;
+					margin-top: 20px;
+
+				}
+				td{
+					@include fontm(14);
+					padding-bottom: 10px;
+				}
+				button {
+					color: #1F93EF;
+					border-color: #1F93EF;
+					width: 80%;
+					&:hover{
+						background-color:#1F93EF;
+						color: #fff;
+					}
+				}
+			}
+			.rebalance .panel-body{
+				&>div {
+					&>span {
+						@include fontl(14);
+					}
+
+					
+				}
+				&>p{
+						@include fontl(12);
+						padding: 5px 15px;
+					}
+				.drift_amount{
+					color: #1F93EF; 
+				}
+			}
+			.portfolio_large_info{
+				
+				table {
+					width: 100%;
+					th {
+						@include fontl(12);
+						&:first-child{
+							width: 350px;
+						}
+					}
+					td,td p, td a {
+						@include fontm(12);
+						color: #696969;
+						text-decoration: none;
+						padding-bottom:5px;
+						line-height: auto;											
+					}
+					td{
+						padding: 4px 0px;
+						vertical-align: middle;
+					}
+					tfoot {
+						border-top: 1px solid rgb(204, 204, 204);
+						td {
+							padding-top: 15px;
+						}
+					}
+
+					td a{
+						display: inline-block;
+						&:hover {
+							color: #3f3f3f;
+							text-indent: 5px; 
+							text-decoration: none;
+						}
+					}
+					.td_contain_two{
+						p,div{
+							float: left;							
+						}
+						div{
+							padding:10px 0px;
+							width: 40px;
+							background-color:green;
+						}
+						p{
+							padding: 6px 15px 6px 4px;
+						}
+					}
+					
+				}/* end of table */
+				.modal_container{
+					margin-top: 30px;
+					.modal-header h1{
+						color: #1F93EF;
+						@include fontsb(16);
+					}
+					.modal-footer{							
+						text-align: center;
+						button{
+							background-color:#1F93EF;
+							color: #fff;
+
+							
+						}
+					}
+					.btn-group {
+						width: 100%;
+						button{
+						width: 33%;
+						&:hover{
+							background-color:#fff;	
+								h5,h6 {
+									color: #1F93EF;
+								}
+								}
+						h5,h6{
+								@include fontl(12);
+								color: #686868;
+								padding: 4px 0px;				
+
+							}
+					}
+					}
+
+					
+				}
+			}
+		}
+	}
+}
+
+/* Performance */
+.box{
+	    display: none;		
+		width:80%;	
+		margin-top: 35px;
+		margin-left: 30px;
+    }
+.performance{
+	.panel {
+		a,a:hover{
+			text-decoration: none;
+			@include fontm(14);			
+		}
+		table {
+			min-width: 70%;
+			margin-top: 25px;
+			td{
+				border-bottom:1px solid #DDD;
+				padding: 10px 0px;
+				a,a:hover {
+					color: #1F93EF;
+				}	
+			}
+		}
+		.right-side-graph{
+			table {
+				th {
+					@include fontsb(14);
+				}
+				td {
+					@include fontm(14);
+				}
+			}
+			p{
+				@include fontm(14);
+			}
+			h1 {
+				@include fontsb(14);
+				margin-bottom: 20px;
+			}
+			.order{
+				margin-top: 30px;
+				div{
+					margin: 10px 0px;
+					button{
+						margin-right: 10px;
+					}
+				}
+			}
+		}
+	}
+
+}

@@ -1,0 +1,314 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Portfolio</title>
+        <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600' rel='stylesheet' type='text/css'>
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha256-7s5uDGW3AHqw6xtJmNNtr+OBRJUlgkNJEo78P4b0yRw= sha512-nNo+yCHEyn0smMxSswnf/OnX6/KwJuZTlNZBjauKhTK0c+zT+q5JOCx0UFhXQ6rJR9jg6Es8gPuD2uZcYDLqSw==" crossorigin="anonymous">
+        <link rel="stylesheet" href="../style/global.css">
+        <link rel="stylesheet" href="../style/header.css">
+    </head>
+    <body>
+    <header> 
+        <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-fixed-top"  >
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#page-top"><img src="../images/logo_img.jpg " ></a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="hidden">
+                        <a href="#page-top"></a>
+                    </li>
+   <!--                 <li class="page-scroll">
+                        <a href="#portfolio">Why Fino</a>
+                    </li>
+                    <li class="page-scroll">
+                        <a href="#about">What We Do</a>
+                    </li>
+                    <li class="page-scroll">
+                        <a href="#contact">About Us</a>
+                    </li>
+                    <li class="page-scroll">
+                        <a href="#contact">Pricing</a>
+                    </li>
+                    <li class="page-scroll">
+                        <a href="#contact">FAQs</a>
+                    </li>-->
+          <li><a class="page-scroll cd-signin" href="#0">Sign in</a></li>
+          <li><a class="page-scroll cd-signup" href="#0">Sign up</a></li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+   
+
+    </header>
+    <div class="container portfolio"> 
+        <div class="panel panel-default">
+          <div class="panel-fake-heading flclear">
+            <div class="view_account col-sm-3">
+                <h3>View</h3>
+                <div class="dropdown">
+                <a id="dLabel" data-target="#" href="http://example.com" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                Retirement
+                <span class="caret"></span>
+              </a>
+
+              <ul class="dropdown-menu" aria-labelledby="dLabel">
+                <li><a href="#">Personal Account</a></li>
+                <li><a href="#">Retirement</a></li>
+              </ul>
+            </div>
+
+            </div>
+            <div class="account col-sm-3">
+                <h3>Account</h3>   
+                <p>Personal Account</p>             
+            </div>
+            <div class="goal col-sm-2">
+                <h3>Goal Type</h3>   
+                <p>Education</p>             
+            </div>
+            <div class="Balamce col-sm-2">
+                <h3>Balance</h3>   
+                <p>Rs 0.00 </p>             
+            </div>
+          </div>
+          <div class="panel-body">
+            <div class="col-sm-4">
+                <div class="sidebar">
+                    <p class="current-portfolio">Your Current Portfolio</p>
+                    <p> Pie Chart</p>
+
+                    <div class="portfolio_small_info">
+                        
+                        <table>
+                            <tr>
+                                <td>Risk </td> <td class="text-right">Moderate </td>
+                            </tr>
+
+                            <tr>
+                                <td>Target Allocation</td> <td class="text-right">90% Stocks </td>
+                            </tr>
+
+                        </table>
+
+                        <button type="button" class="btn btn-default">Adjust Target Allocation > </button>
+                    </div>
+
+                   
+
+                    <div class="panel panel-default rebalance">
+                      <div class="panel-body">
+                      <div class="flclear"> 
+                         <span class="pull-left"> Rebalancing</span>
+                        <span class="pull-right drift_amount" > ON</span>
+                       </div>
+                       <p>Your portfolio drifts due to normal price fluctuations.
+                            We rebalance if it reaches 3.0%.</p>
+                        <div class="flclear"> 
+                         <span class="pull-left drift_amount"> Drift </span>
+                        <span class="pull-right" > Normal</span>
+                       </div>
+
+                       <p class="drift_amount"> 0.0 %</p>
+                      </div>
+                    </div>
+                    
+
+                </div>
+
+            </div>
+
+            <div class="col-sm-8 portfolio_large_info">
+                <table>
+                    <thead>
+                        <tr>
+                            <th><div class="td_contain_one">HOLDINGs</div></th> 
+                            <th> <div class="td_contain_two">CURRENT WEIGHT</div></th> 
+                            <th> <div class="td_contain_three">CURRENT VALUE</div></th>
+                        </tr>
+                    </thead>
+                    <tfoot>
+                        <tr>
+                            <td> Total</td>
+                            <td> 100 %</td>
+                            <td> Rs 0.00</td>
+                        </tr>
+                    </tfoot>
+                    <tbody>
+                        <tr>
+                            <td>
+                           
+                               <span class="right-arrow"> > </span> <a class="asset-class" data-toggle="collapse" href="#asset-class" 
+                               aria-expanded="false" aria-controls="asset-class">US Total Stock Market:</a>                            
+
+                                <div class="asset-child-class collapse" id="asset-class"><a href="#">VTI:Vanguard Total Stock Market ETF</a> 
+
+                                <p class="asset-child-sub-class">
+                                <span class="right-arrow"> > </span>  
+                                <a data-toggle="collapse" href="#asset-child-sub" aria-expanded="false" aria-controls="asset-child-sub">why this asset class and these etfs</a> </p>
+
+                                <p class="asset-child-sub-class collapse" id="asset-child-sub"> US Total Stock Market contains broad exposure to the entire US stock market, including growth and value companies of small, mid and large capitalizations. This asset class allows participation in the historically strong long-term growth of the US economy.
+                                </p>
+                                </div> 
+                                                      
+                            </td>
+
+                            <td class="td_contain_two">
+                               
+                                <p>16.2%</p>
+                                <div class="graph"></div>
+                                   
+                                
+                            </td>
+                            <td>
+                               
+                                    <span>Rs 0.00 </span>
+                                
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                            
+                               <span class="right-arrow"> > </span> <a class="asset-class" data-toggle="collapse" href="#asset-class1" 
+                               aria-expanded="false" aria-controls="asset-class1">US Total Stock Market:</a>                            
+
+                                <div class="asset-child-class collapse" id="asset-class1"><a href="#">VTI:Vanguard Total Stock Market ETF</a> 
+
+                                <p class="asset-child-sub-class">
+                                <span class="right-arrow"> > </span>  
+                                <a data-toggle="collapse" href="#asset-child-sub1" aria-expanded="false" aria-controls="asset-child-sub1">why this asset class and these etfs</a> </p>
+
+                                <p class="asset-child-sub-class collapse" id="asset-child-sub1"> US Total Stock Market contains broad exposure to the entire US stock market, including growth and value companies of small, mid and large capitalizations. This asset class allows participation in the historically strong long-term growth of the US economy.
+                                </p>
+                                </div> 
+                                                      
+                            </td>
+
+                            <td class="td_contain_two">
+                                
+                                <p>16.2%</p>
+                                <div class="graph"></div>
+                                    
+                                
+                            </td>
+                            <td>
+                                
+                                    <span>Rs 0.00 </span>
+                                
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <!--Starting Modals  -->
+
+                <!-- Button Groups for Modals -->
+            <div class="modal_container">
+                <div class="btn-group" role="group" aria-label="...">
+              <button type="button" class="btn btn-default btn-lg" data-toggle="modal" data-target="#myModal">
+              <h5> Investing Strategy</h5>
+              <h6>Why this Portfolio?</h6>
+              </button>
+              <button type="button" class="btn btn-default btn-lg" data-toggle="modal" data-target="#myModal2">
+                <h5> Investing Strategy</h5>
+                <h6>Why these ETFs?</h6>
+              </button>
+              <button type="button" class="btn btn-default btn-lg" data-toggle="modal" data-target="#myModal3">
+                <h5> Investing Strategy</h5>
+                <h6>Tax Efficiency</h6>
+              </button>
+            </div>
+     
+           
+
+            <!-- Modal -->
+            <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h1 class="modal-title" id="myModalLabel">Why this Portfolio?</h1>
+                  </div>
+                  <div class="modal-body">
+                   Betterment constructs globally diversified strategic asset allocation portfolios appropriate for an investor's goals and time horizon. Each portfolio is selected as the result of a systematic portfolio optimization process that simultaneously balances forecasts for long-run expected returns for each asset class against both historical and forward-looking downside behavior for the portfolio as a whole.
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--  -->
+
+            <!--  -->
+          
+
+            <!-- Modal -->
+            <div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel2">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h1 class="modal-title" id="myModalLabel">Why these ETFs?</h1>
+                  </div>
+                  <div class="modal-body">
+                    <p> Betterment exclusively uses open-ended index tracking ETFs rather than mutual or closed-end funds due to their low manager risk, low embedded costs and natural tax efficiencies. These structural advantages along with the maturation and growth of the global ETF market over the last two decades has led to liquid investments covering different asset classes, markets, styles, and geographies. As a result, we can source investment vehicles from a market of portfolio components which are versatile, extremely liquid, and easily substitutable. However, not all ETFs are exactly alike and the difference between an optimal and a suboptimal selection can have non-trivial effects on long-term performance of a portfolio. </p>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+            <!-- Modal -->
+            <div class="modal fade" id="myModal3" tabindex="-1" role="dialog" aria-labelledby="myModalLabe3">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h1 class="modal-title" id="myModalLabel">Tax Efficiency</h1>
+                  </div>
+                  <div class="modal-body">
+                   Betterment portfolios and the systems that manage them are constructed from the ground up to be maximally tax efficient. This begins with security selection, where we use index tracking ETFs instead of mutual funds. Unlike actively managed funds, index tracking funds have significantly lower turnover resulting in materially lower incidences of capital gains being passed on to investors. In addition, the legal and administrative structure of most ETFs differs from mutual funds in the way that investors are insulated from each other rather than pooled together. As a result, ETF investors are only responsible for their own tax consequences rather than sharing in the collective tax burden through distributions. The end result of just holding ETFs is a portfolio with lower capital gains burden which is also entirely immune to mutual fund style administrator-driven distribution. 
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--  -->
+            </div> <!-- end of modal container -->
+            
+            </div> <!-- End of the col -->
+
+
+          </div>
+        </div>
+    </div>
+    
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>  
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha256-KXn5puMvxCw+dAYznun+drMdG1IFl3agK0p/pqT9KAo= sha512-2e8qq0ETcfWRI4HJBzQiA3UoyFk6tbNyG+qSaIBZLyW9Xf3sWZHN/lxe9fTh1U45DpPf07yj94KsUHHWe4Yk1A==" crossorigin="anonymous"></script>	 
+	<script src="../js/script.js"></script>
+    </body>
+</html>

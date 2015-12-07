@@ -1,0 +1,261 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Performance</title>
+        <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600' rel='stylesheet' type='text/css'>
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha256-7s5uDGW3AHqw6xtJmNNtr+OBRJUlgkNJEo78P4b0yRw= sha512-nNo+yCHEyn0smMxSswnf/OnX6/KwJuZTlNZBjauKhTK0c+zT+q5JOCx0UFhXQ6rJR9jg6Es8gPuD2uZcYDLqSw==" crossorigin="anonymous">
+        <link rel="stylesheet" href="../style/global.css">  
+        <link rel="stylesheet" href="../style/header.css">      
+    </head>
+    <body>
+    <header> 
+        <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-fixed-top"  >
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#page-top"><img src="../images/logo_img.jpg " ></a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="hidden">
+                        <a href="#page-top"></a>
+                    </li>
+   <!--                 <li class="page-scroll">
+                        <a href="#portfolio">Why Fino</a>
+                    </li>
+                    <li class="page-scroll">
+                        <a href="#about">What We Do</a>
+                    </li>
+                    <li class="page-scroll">
+                        <a href="#contact">About Us</a>
+                    </li>
+                    <li class="page-scroll">
+                        <a href="#contact">Pricing</a>
+                    </li>
+                    <li class="page-scroll">
+                        <a href="#contact">FAQs</a>
+                    </li>-->
+          <li><a class="page-scroll cd-signin" href="#0">Sign in</a></li>
+          <li><a class="page-scroll cd-signup" href="#0">Sign up</a></li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+   
+
+    </header>
+    <div class="container performance">
+        <div class="panel panel-default">
+          <div class="panel-body">
+          <div class="row">
+        <div class="col-sm-3 col-md-3">
+            <div class="panel-group" id="accordion">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">Balance</a>
+                        </h4>
+                    </div>
+                    <div id="collapseOne" class="panel-collapse collapse in">
+                        <div class="panel-body">
+                            <table class="">
+                                <tr>
+                                    <td>
+                                        <a href="#menu1" id="sel1">Balance Snapshot</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <a href="#menu2" id="sel2">Balance Overtime</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <a href="#menu3" id="sel3">Balance and Holding</a>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a  href="#projected" id="projected1">Projected Savings</a>
+                        </h4>
+                    </div>
+
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a  href="#Recent" id="Recent1" >Recent Transaction</a>
+                        </h4>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+        <div class="col-sm-9 col-md-9 right-side-graph">
+  <div class="row">
+
+    <div class=" box" id="Recent" > 
+
+<div>
+
+<p><b >My Orders  </b></p>
+
+<p > Our state of the art Analytics Infrastructure enables us to provide you personalized recommendation on your savings portfolio. Our state of the art Analytics Infrastructure enables us to provide you personalized recommendation on your savings portfolio.</p>
+</div>
+<table  >
+  <tr>
+      <th>Date</th><th>Transaction</th><th>Amount</th><th>Status</th>
+  </tr>
+  <tr> <td> 15/09/2015</td><td> Buy 2.8 Units ICICI Balance Fund</td><td> 3,000</td><td> --</td></tr>
+  <tr> <td> 15/09/2015</td><td> Buy 10 Units UTI Money Market Fund</td><td> 3,000</td><td> --</td></tr>
+
+</table>
+<div  class="order">
+<div ><button type="button" class="btn btn-default" >Order Status</button> <span ><a href="" >Click Here</a></span></div>
+<div ><button type="button" class="btn btn-default" >Transaction History</button><span ><a href="" >Click Here</a></span></div>
+</div>
+    </div>
+    <div class=" box" id="menu1" style="display:block"> 
+      <div id="chartdiv2" style="width: 80%; height: 400px; " ></div>
+    </div>
+    <div class="box" id="menu2" > 
+
+<div id="chartdiv1" style="width: 80%; height: 200px; align:center" ></div>
+
+<table >
+  <tr>
+      <th colspan="3">Balance Details</th>
+  </tr>
+  <tr> <td> Biginning Balance</td><td> 250,000</td><td> </td></tr>
+  <tr> <td> Purchases & Withdrawls</td><td> 55,000</td><td> </td></tr>
+  <tr> <td> Investment Returns</td><td> 45,000</td><td> </td></tr>
+  <tr> <td> Ending Balance</td><td> 350,000</td><td> </td></tr>
+  <tr> <td> Rate of Return</td><td> 10.70%</td><td> </td></tr></table>
+    </div>
+    <div class=" box" id="menu3" > 
+    
+<div>
+<h1> Balance and Holding </h1>
+<p > Our state of the art Analytics Infrastructure enables us to provide you personalized recommendation on your savings portfolio. Our state of the art Analytics Infrastructure enables us to provide you personalized recommendation on your savings portfolio.</p>
+</div>
+<table  >
+  <tr>
+      <th>Date</th><th>Transaction</th><th>Amount</th><th>Status</th>
+  </tr>
+  <tr> <td> 15/09/2015</td><td> Buy 2.8 Units ICICI Balance Fund</td><td> 3,000</td><td> --</td></tr>
+  <tr> <td> 15/09/2015</td><td> Buy 10 Units UTI Money Market Fund</td><td> 3,000</td><td> --</td></tr>
+
+</table>
+
+  </div>
+  
+
+    <div class="box" id="projected"> 
+    <div id="selector">
+    <label> <button type="button"  name="dataset" checked="checked" onclick="selectDataset(0);" class="btn btn-default" />1 Year </button> </label>
+    <label><button type="button" name="dataset" onclick="selectDataset(1);" class="btn btn-default">3 Year </button>  </label>
+    <label><button  type="button" name="dataset" onclick="selectDataset(2);" class="btn btn-default">5 Year </button> </label>
+</div>
+<div id="chartdiv" style="width: 80%; height: 200px; align:center" ></div>
+
+<table >
+  <tr>
+      <th ></th>
+      <th >Funds not Available</th>
+      <th >Funds Available</th>
+  </tr>
+  <tr> <td> 2015 Est</td><td> 40,000</td><td> -- </td></tr>
+  <tr> <td> 2016 Est</td><td> 30,000</td><td> 20,000 </td></tr>
+  <tr> <td> 2017 Est</td><td> 80,000</td><td> 30,000 </td></tr>
+    </div>
+  
+  
+        </div>
+    </div>
+</div>
+            
+          </div>
+        </div>
+    </div>
+    
+        
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>  
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha256-KXn5puMvxCw+dAYznun+drMdG1IFl3agK0p/pqT9KAo= sha512-2e8qq0ETcfWRI4HJBzQiA3UoyFk6tbNyG+qSaIBZLyW9Xf3sWZHN/lxe9fTh1U45DpPf07yj94KsUHHWe4Yk1A==" crossorigin="anonymous">  </script>	 
+	<script src="../js/script.js"></script>
+    <script type="text/javascript">
+
+    $(document).ready(function(){
+        $('#sel1').click(function(){
+                $("#menu1").show();
+                $("#menu2").hide();
+                $("#menu3").hide();
+                $("#Recent").hide();
+                $("#projected").hide();
+                $("#sel1").style.color = "red";
+        });
+         $('#sel2').click(function(){
+                $("#menu1").hide()
+;                $("#menu2").show();
+                $("#menu3").hide();
+                $("#Recent").hide();
+                $("#projected").hide();
+
+        });
+         $('#sel3').click(function(){
+         
+                $("#menu1").hide();
+                $("#menu2").hide();
+                $("#menu3").show();
+                $("#Recent").hide();
+                $("#projected").hide();
+
+        });
+             $('#Recent1').click(function(){
+         
+                $("#menu1").hide();
+                $("#menu2").hide();
+                $("#menu3").hide();
+                $("#Recent").show();
+                $("#projected").hide();
+
+        });
+             $('#projected1').click(function(){
+         
+                $("#menu1").hide();
+                $("#menu2").hide();
+                $("#menu3").hide();
+                $("#Recent").hide();
+                $("#projected").show();
+
+        });
+    });
+</script>
+    <script type="text/javascript" src="http://www.amcharts.com/lib/3/amcharts.js"></script>
+    <script type="text/javascript" src="http://www.amcharts.com/lib/3/pie.js"></script>
+    <script type="text/javascript" src="http://www.amcharts.com/lib/3/serial.js"></script>
+    <!-- The Js below contains the chart data -->
+    <script src="../js/perf_page.js"></script>
+
+        
+    </body>
+</html>

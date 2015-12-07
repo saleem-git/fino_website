@@ -1,0 +1,291 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Summary</title>
+        <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600' rel='stylesheet' type='text/css'>
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha256-7s5uDGW3AHqw6xtJmNNtr+OBRJUlgkNJEo78P4b0yRw= sha512-nNo+yCHEyn0smMxSswnf/OnX6/KwJuZTlNZBjauKhTK0c+zT+q5JOCx0UFhXQ6rJR9jg6Es8gPuD2uZcYDLqSw==" crossorigin="anonymous">
+        <link rel="stylesheet" href="../style/global.css">
+        <link rel="stylesheet" href="../style/header.css">
+        
+    </head>
+    <body>
+    <header> 
+		    <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-fixed-top"  >
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#page-top"><img src="../images/logo_img.jpg " ></a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="hidden">
+                        <a href="#page-top"></a>
+                    </li>
+   <!--                 <li class="page-scroll">
+                        <a href="#portfolio">Why Fino</a>
+                    </li>
+                    <li class="page-scroll">
+                        <a href="#about">What We Do</a>
+                    </li>
+                    <li class="page-scroll">
+                        <a href="#contact">About Us</a>
+                    </li>
+                    <li class="page-scroll">
+                        <a href="#contact">Pricing</a>
+                    </li>
+                    <li class="page-scroll">
+                        <a href="#contact">FAQs</a>
+                    </li>-->
+					<li><a class="page-scroll cd-signin" href="#0">Sign in</a></li>
+					<li><a class="page-scroll cd-signup" href="#0">Sign up</a></li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+   
+
+		</header>
+    <div class="container" >
+    	<div class="manage_account row"> 
+    	<h1 class="col-sm-6"><span>Saleem's</span>  Personal Account Overview </h1>
+    	<div class="account_controls col-sm-6">
+    	<div class="deposit_div">
+	    	<div class="deposit_box">
+	    	<button type="button" id="deposit_toggle" class="btn deposit_button">Deposit <span class="caret"></span></button>    	
+	    		<div class="deposit-form" style="display:none">
+					<form action="#" method="POST">
+						<section class="form-group">
+						<label class="section-title">Deposit</label>
+						
+						<input name="amount" value="" type="text">
+						
+						</section>
+						<section class="form-group">
+						<label class="section-title">To your goal</label>	
+						<!--  -->
+							<div class="dropdown">
+							  <button id="dLabel" type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							    Retirement
+							    <span class="caret"></span>
+							  </button>
+							  <ul class="dropdown-menu" aria-labelledby="dLabel">
+							    <li><a href="#">Retirement</a></li>
+							  </ul>
+							</div>
+						<!--  -->					
+						</section>
+
+						<button class="btn deposit_button"  type="submit" id="dep_amt">Deposit</button>
+					</form>
+				 </div>
+	    	</div>    	
+    	<button type="button" id="second" class="btn btn-info">Roll Over</button>
+    	<button type="button" id="third" class="btn btn-info">Add Goal or IRA</button>
+    	</div>
+    </div>
+    </div>
+    <!-- Starting panel -->
+    <div class="panel panel-default">
+	  <div class="panel-body overview_account">
+  	
+	    <div class="earnings col-sm-6">
+	    	<span class="glyphicon glyphicon-plus-sign" id="earning_info_span"></span>
+	    	<div>
+		    	<h3> TOTAL BALANCE FOR ALL GOALS</h3>
+		    	<h1>$0.00</h1>
+		    	<div class="summary_plan_detailed_info" id="earning_info" >
+	    	<div>
+	    	<p> PERIOD SINCE </p>
+	    	<div class="dropdown">
+	    	<a id="dLabel" data-target="#" href="http://example.com" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+		    Account Opened (August 2015)
+		    <span class="caret"></span>
+		  </a>
+
+  <ul class="dropdown-menu" aria-labelledby="dLabel">
+    <li><a href="#">Account opened  (August 2015)</a></li>
+  </ul>
+	    	</div> 
+	    	</div>	    	
+	    	<table>
+	    	 
+	    		<tr>
+	    			<th>What you have invested </th> <th>0.00 </th>
+	    		</tr>
+	    	
+	    		<tr>
+	    			<td>Deposits </td> <td>0.00 </td>
+	    		</tr>
+	    		<tr>
+	    			<td>Withdrawals </td> <td>0.00  </td>
+	    		</tr>
+	    		<tr>
+	    			<td>Other </td> <td>0.00  </td>
+	    		</tr>
+	    	</table>
+
+	    	<table>
+	    		<tr>
+	    			<th>What you've earned  </th> <th>0.00 </th>
+	    		</tr>
+	    		<tr>
+	    			<td>Market changes </td> <td>0.00 </td>
+	    		</tr>
+	    		<tr>
+	    			<td>Dividends </td> <td>0.00  </td>
+	    		</tr>
+	    		<tr>
+	    			<td>Betterment's fees </td> <td>0.00  </td>
+	    		</tr>
+	    		
+	    		
+	    	</table>
+	    	<table class="total">
+	    		<tr>
+	    			<th>Earnings  </th> <th>0.00  </th>
+	    		</tr>
+	    		<tr>
+	    			<th>Time-weighted return </th> <th>0.00  </th>
+	    		</tr>
+
+	    	</table>
+
+	    </div>
+		    	<h4>TOTAL EARNINGS <span>+$0.00 </span></h4>
+	    	</div>
+	    </div>
+	    
+	    <div class="losses col-sm-6">
+	    	<p>TAX LOSS HARVESTING+ OFF</p>
+	    	<p>Harvested losses $0.00</p>
+	    </div>
+
+	  
+	    
+	  </div>
+	</div>
+
+	<div class="panel panel-default">
+	  <div class="panel-body retirement_plan">
+	    <div class="earnings col-sm-6 retirement_plan_actions">
+	    	<div class="col-sm-6 edit_plan">
+		    	<span class="glyphicon glyphicon-plus-sign pull-left" id="retirement_info_span"></span>
+		    	<h2 class="pull-left"> Retirement </h2> <button type="button" class="btn btn-default pull-left">Edit Plan</button>
+		    </div>
+		    <div class="col-sm-6 deposit">
+		    	<p>CURRENT BALANCE</p>
+		    	<button type="button" class="btn btn-default">Deposit</button> <span>Rs 0.00 </span>
+		    </div>
+
+		    <!-- copied  -->
+		    <div class="summary_plan_detailed_info" id="retirement_info">
+	    	<div>
+	    	<p> PERIOD SINCE </p>
+	    	<div class="dropdown">
+	    	<a id="dLabel" data-target="#" href="http://example.com" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+		    Account Opened (August 2015)
+		    <span class="caret"></span>
+		  </a>
+
+  <ul class="dropdown-menu" aria-labelledby="dLabel">
+    <li><a href="#">Account opened  (August 2015)</a></li>
+  </ul>
+	    	</div> 
+	    	</div>	    	
+	    	<table>
+	    	 
+	    		<tr>
+	    			<th>What you have invested </th> <th>0.00 </th>
+	    		</tr>
+	    	
+	    		<tr>
+	    			<td>Deposits </td> <td>0.00 </td>
+	    		</tr>
+	    		<tr>
+	    			<td>Withdrawals </td> <td>0.00  </td>
+	    		</tr>
+	    		<tr>
+	    			<td>Other </td> <td>0.00  </td>
+	    		</tr>
+	    	</table>
+
+	    	<table>
+	    		<tr>
+	    			<th>What you've earned  </th> <th>0.00 </th>
+	    		</tr>
+	    		<tr>
+	    			<td>Market changes </td> <td>0.00 </td>
+	    		</tr>
+	    		<tr>
+	    			<td>Dividends </td> <td>0.00  </td>
+	    		</tr>
+	    		<tr>
+	    			<td>Betterment's fees </td> <td>0.00  </td>
+	    		</tr>
+	    		
+	    		
+	    	</table>
+	    	<table class="total">
+	    		<tr>
+	    			<th>Earnings  </th> <th>0.00  </th>
+	    		</tr>
+	    		<tr>
+	    			<th>Time-weighted return </th> <th>0.00  </th>
+	    		</tr>
+
+	    	</table>
+	    	<div class="deposit_status">
+	    		<a href="#" >AUTO-DEPOSIT OFF</a>
+	    		<a href="#" >SMARTDEPOSIT OFF</a>
+
+	    	</div>
+
+	    </div>
+	    <!-- end cop -->
+	    </div>
+	    <div class="col-sm-6">
+	    <div class="basket_balance"> 
+		    <div id="" class="summary_plan_detailed_info">
+		    	<table>
+	    		<tr>
+	    			<th>Basket  </th> <th>Balance </th>
+	    		</tr>
+	    		<tr>
+	    			<td>Bonds </td> <td>0.00 </td>
+	    		</tr>
+	    		<tr>
+	    			<td>Stocks </td> <td>0.00  </td>
+	    		</tr>    		
+	    		
+	    	</table>
+		    </div>
+	    </div>
+	    	
+
+	    </div>
+	  </div>
+	</div>
+
+    </div><!-- End of container -->
+
+
+        
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>  
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha256-KXn5puMvxCw+dAYznun+drMdG1IFl3agK0p/pqT9KAo= sha512-2e8qq0ETcfWRI4HJBzQiA3UoyFk6tbNyG+qSaIBZLyW9Xf3sWZHN/lxe9fTh1U45DpPf07yj94KsUHHWe4Yk1A==" crossorigin="anonymous"></script>	 
+	<script src="../js/script.js"></script>
+    </body>
+</html>

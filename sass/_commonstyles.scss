@@ -1,0 +1,37 @@
+/* Common Styles */
+.flclear:after{
+ 	clear: both;
+ 	display: table;
+ 	content: "";
+}
+	.summary_plan_detailed_info{
+		margin-top: 30px;
+		p{
+			@include fontl(14);
+			margin: 10px 0px;
+			display: inline-block;
+			
+			span{
+				color: #1F93EF;
+			}
+		}
+		div.dropdown{
+			display: inline-block;
+			margin-left: 5px;
+		}
+		th,td{
+			padding-bottom: 5px;
+		}
+		td {
+			@include fontl(14);			
+		}
+		th{
+				@include fontm(16);	
+				padding-right: 40px;
+				min-width: 215px;
+			}
+		table.total tr th{
+			padding:5px 0px;
+		}
+	}
+
