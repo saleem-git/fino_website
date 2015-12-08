@@ -430,15 +430,13 @@
 				padding: 5px;
 			}
 			h4{
-				width: 23.5%;
+				width: 24%;
 				display: inline-block !important;
 				margin: 15px 0px;
 				font-size: 13px;
 				@include fontl(12);
 				text-align: center;
-				&:first-child {
-					width: 27%;
-				}
+				
 			}
 
 	}
