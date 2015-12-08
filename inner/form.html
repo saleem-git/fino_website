@@ -74,16 +74,18 @@
                             <div class="col-sm-7">
                             <h3 class="text-center"> Basic information
                             </h3>
-                            <p class="text-center"> We use this information to create your account. Please enter the same name you use to file taxex.
+                            <p class="text-center"> We use this information to create your account. Please enter the same name you use to file taxes.
                             </p>
                             <label for="" class="si-menu-label">First Name</label>
                             <input type="text" placeholder="First Name" name="firstname">
-                            <label for="" class="si-menu-label">Last Name</label>
-                            <input type="text" placeholder="Last Name">
+                            <label for="" class="si-menu-label" >Last Name</label>
+                            <input type="text" placeholder="Last Name" name="lastname">
                             <label for="" class="si-menu-label">Email Address</label>
-                            <input type="email" placeholder="Email Address">
+                            <input type="email" placeholder="Email Address" name="email">
                             <label for="" class="si-menu-label">Password</label>
-                            <input type="password" placeholder="Password">
+                            <input type="password" placeholder="Password" name="password">
+                            <label for="" class="si-menu-label">Confirm Password</label>
+                            <input type="password" placeholder="Confirm Password" name="confirm_password">
                             </div >
                         
                 </div>
@@ -111,26 +113,25 @@
                             </p>
                             
                             <label for="" class="si-menu-label">Address Line 1</label>
-                            <input type="text" placeholder="Address Line 1">
+                            <input type="text" placeholder="Address Line 1" name="address_1">
                             <label for="" class="si-menu-label">Address Line 2</label>
                             <input type="text" placeholder="Address Line 1">
                             <label for="" class="si-menu-label">City</label>
-                            <input type="email" placeholder="City">
+                            <input type="text" placeholder="City" name="city">
                             <label for="" class="si-menu-label">State</label>
-                            <input type="password" placeholder="State">
+                            <input type="text" placeholder="State" name="state">
                             <label for="" class="si-menu-label">ZIP Code</label>
-                            <input type="password" placeholder="ZIP Code">
+                            <input type="text" placeholder="ZIP Code" name="zip_code">
                             <label for="" class="si-menu-label">Phone Number</label>
-                            <input type="password" placeholder="Phone Number">
+                            <input type="text" placeholder="Phone Number" name="phone_number">
 
                             <label for="our-info" class="si-menu-label">How did you hear about us? </label>
                             <select class="form-control si-menu-input" id="our-info">
-                            <option >Select</option>
-                            <option >Friends</option>
-                            <option >Facebook / Twitter / Quora</option>
-                            <option >Mobile Advertising</option>
-                            <option >Other</option>
-                            <option >Online</option>
+                            <option value="" selected>Select</option>
+                            <option value="Friends">Friends</option>
+                            <option value="Online">Online</option>
+                            <option value="Social_Network">Facebook / Twitter / Quora</option>
+                            <option value="Mobile_Advertising">Mobile Advertising</option>
 
                             </select>
                             </div >
@@ -159,12 +160,12 @@
                             FinoTrust is a financial institution just like a bank or a brokerage firm, so we must comply with the USA PATRIOT ACT. This requires us to verify your identity. We will not run a credit check.
                             </p>
                             <label for="" class="si-menu-label">PAN Number</label>
-                            <input type="text" placeholder="PAN Number">
+                            <input type="text" placeholder="PAN Number" name="pan">
                             <label for="" class="si-menu-label">Date of birth</label>
                             <input type="date" placeholder="DOB">
                             <label for="" class="si-menu-label">Gender</label>
-                            <input type="radio" name="sex" value="male" id="male">  <label for="male"> Male</label>                       
-                            <input type="radio" name="sex" value="female" id="female" > <label for="female"> Female</label> 
+                            <input type="radio" name="sex" value="male">  <label for="male"> Male</label>                       
+                            <input type="radio" name="sex" value="female"> <label for="female"> Female</label> 
 
 
                             </div >
@@ -195,12 +196,13 @@
                             </p>
                             <label class="si-menu-label">Are you a politically exposed person</label>
                             
-                            <input type="radio" value="yes" name="political" id="yes" > <label for="yes">Yes </label>                           
-                            <input type="radio" value="no" name="political" id="no">  <label for="no">No </label>                                              
+                            <input type="radio" value="yes" name="political"> <label for="yes">Yes </label>                           
+                            <input type="radio" value="no" name="political">  <label for="no">No </label>                                              
                             
 
                              <label for="residency_tax" class="si-menu-label">What is your residency for Tax Status? </label>
-                             <select class="form-control si-menu-input" id="residency_tax">
+                             <select class="form-control si-menu-input" id="residency_tax" name="residency_tax">
+                             <option value="" selected> Select </option>
                              <option value="Indian"> Indian </option>
                              <option value="NRI-Repatriation"> NRI - Repatriation </option>
                              <option value="NRI-Non-Repatriation">NRI - Non Repatriation </option>
@@ -264,21 +266,39 @@
                 username: {
                     required: true,
                     minlength: 2
-                },
+					},
                 password: {
                     required: true,
                     minlength: 5
-                },
+					},
                 confirm_password: {
                     required: true,
-                    minlength: 5,
-                    equalTo: "#password"
-                },
+                    minlength: 5
+                    //equalTo: "#password"
+					},
                 email: {
                     required: true,
                     email: true
-                },              
-                agree: "required"
+					},              
+                agree: "required",              
+                address_1: "required",
+				city: "required",              
+                state: "required",              
+                zip_code: {
+					required: true,
+					digits:true,
+					minlength: 6,
+					maxlength: 6
+					},
+                pan: "required",              
+                phone_number: {
+                    required: true,
+					digits:true,
+					minlength: 10,
+					maxlength: 10
+					}, 
+                residency_tax: "required"
+				
             },
             messages: {
                 firstname: "Please enter your firstname",
@@ -297,12 +317,26 @@
                     equalTo: "Please enter the same password as above"
                 },
                 email: "Please enter a valid email address",
-                agree: "Please accept our policy"
+                agree: "Please accept our policy",
+				address_1: "Please enter your Address",
+				city: "Please enter your City",
+				state: "Please enter your State",
+				zip_code: {
+				required:"Please enter your ZIP/Pincode",
+				length:"Enter Valid ZIP/Pincode"
+				},
+				phone_number: {
+				required: "Please enter a Phone Number",				
+				minlength: "Your username must consist of at least 10"
+                },
+				pan: "Please enter your PAN",
+				residency_tax: "Please enter Residency for Tax Status"
             }
         });
         
     });
     </script>
+	
     <script src="../js/script.js"></script>
 
     </body>
