@@ -127,9 +127,10 @@ $("#retirement_info_span").on("click",function(){
 	  $( "#retirement_info" ).slideToggle( "slow");
 	  $( ".basket_balance" ).slideToggle( "slow");
 	  $("#retirement_info_span").toggleClass("glyphicon-plus-sign, glyphicon-minus-sign ");
-
-
 });
+
+
+
 
 
 });

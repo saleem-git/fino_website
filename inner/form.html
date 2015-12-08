@@ -95,7 +95,7 @@
                             <p class="text-center"> We use this information to create your account. Please enter the same name you use to file taxex.
                             </p>
                             <label for="" class="si-menu-label">First Name</label>
-                            <input type="text" placeholder="First Name">
+                            <input type="text" placeholder="First Name" name="firstname">
                             <label for="" class="si-menu-label">Last Name</label>
                             <input type="text" placeholder="Last Name">
                             <label for="" class="si-menu-label">Email Address</label>
@@ -222,20 +222,17 @@
                              <option value="Indian"> Indian </option>
                              <option value="NRI-Repatriation"> NRI - Repatriation </option>
                              <option value="NRI-Non-Repatriation">NRI - Non Repatriation </option>
-                             </select>
-
-                        
-
-
+                             </select>                 
                         </div >
             
             </div>
             <div class="modal-footer footer-below">
-                <button type="button" class="btn btn-primary step step-1" data-step="1" onclick="sendEvent('#demo-modal-3', 2)">Next</button>
+            <input class="submit" type="submit" value="Submit">
+                <button type="button" class="btn btn-primary step step-1" data-step="1" onclick="sendEventNext('#demo-modal-3', 2) ">Next</button>
                 <button type="button" class="btn btn-primary step step-2" data-step="2" onclick="sendEvent('#demo-modal-3', 1)">Back</button>
                 <button type="button" class="btn btn-primary step step-3" data-step="3" onclick="sendEvent('#demo-modal-3', 2)">Back</button>
-                <button type="button" class="btn btn-primary step step-2" data-step="2" onclick="sendEvent('#demo-modal-3', 3)">Next</button>
-                <button type="button" class="btn btn-primary step step-3" data-step="3" onclick="sendEvent('#demo-modal-3', 4)">Next</button>
+                <button type="button" class="btn btn-primary step step-2" data-step="2" onclick="sendEventNext('#demo-modal-3', 3)">Next</button>
+                <button type="button" class="btn btn-primary step step-3" data-step="3" onclick="sendEventNext('#demo-modal-3', 4)">Next</button>
                 <button type="button" class="btn btn-primary step step-4" data-step="3" onclick="sendEvent('#demo-modal-3', 3)">Back</button>
 
             </div>
@@ -252,14 +249,79 @@
     </div>
     
     <script type="text/javascript">
+
         sendEvent = function(sel, step) {
         $(sel).trigger('next.m.' + step);
     }
+
+    sendEventNext = function(sel, step) {
+        if ($('#demo-modal-3').valid()) {
+        $(sel).trigger('next.m.' + step);
+    }
+    }
     </script> 
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>  
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+        <script src="../js/jquery.validate.js"></script>  
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha256-KXn5puMvxCw+dAYznun+drMdG1IFl3agK0p/pqT9KAo= sha512-2e8qq0ETcfWRI4HJBzQiA3UoyFk6tbNyG+qSaIBZLyW9Xf3sWZHN/lxe9fTh1U45DpPf07yj94KsUHHWe4Yk1A==" crossorigin="anonymous"></script>	 
-	<script src="../js/script.js"></script>
+	
     <script src="../js/multi-step-modal.js"></script>
+    <script>
+    $.validator.setDefaults({
+        submitHandler: function() {
+            alert("submitted!");
+        }
+    });
+
+    $().ready(function() {
+        // validate the comment form when it is submitted
+        // validate signup form on keyup and submit
+        $("#demo-modal-3").validate({
+            rules: {
+                firstname: "required",
+                lastname: "required",
+                username: {
+                    required: true,
+                    minlength: 2
+                },
+                password: {
+                    required: true,
+                    minlength: 5
+                },
+                confirm_password: {
+                    required: true,
+                    minlength: 5,
+                    equalTo: "#password"
+                },
+                email: {
+                    required: true,
+                    email: true
+                },              
+                agree: "required"
+            },
+            messages: {
+                firstname: "Please enter your firstname",
+                lastname: "Please enter your lastname",
+                username: {
+                    required: "Please enter a username",
+                    minlength: "Your username must consist of at least 2 characters"
+                },
+                password: {
+                    required: "Please provide a password",
+                    minlength: "Your password must be at least 5 characters long"
+                },
+                confirm_password: {
+                    required: "Please provide a password",
+                    minlength: "Your password must be at least 5 characters long",
+                    equalTo: "Please enter the same password as above"
+                },
+                email: "Please enter a valid email address",
+                agree: "Please accept our policy"
+            }
+        });
+        
+    });
+    </script>
+    <script src="../js/script.js"></script>
 
     </body>
 </html>
