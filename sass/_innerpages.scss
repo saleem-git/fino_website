@@ -365,9 +365,10 @@
 
 	@include fontsb (16);
 	.info_bubble {
-		.info_icon{
-			height: 100px;
-			//@include small_icons-sprite(diduknow);
+		.info_icon{			
+			height: 60px;
+			width: 40px;
+			margin: 25px auto 16px;
 		}
 		border-radius: 50%;
 		text-align: center;
@@ -443,7 +444,20 @@
 		.modal-footer{
 			border:none;
 		}
-}	
+}	.modal-body{
+	&.step-1 .info_icon{
+		@include small_icons-sprite(sign_up);			
+	}
+	&.step-2 .info_icon{
+		@include small_icons-sprite(people);			
+	}
+	&.step-3 .info_icon{
+		@include small_icons-sprite(layeredsecurity);			
+	}
+	&.step-4 .info_icon{
+		@include small_icons-sprite(diduknow);			
+	}
+} 
 .m-progress-bar {
     height: 5px;
     background: #1F93EF;

@@ -1,10 +1,10 @@
 @import "compass/reset";
 @import "compass/utilities";
 @import "compass/css3";
-
+$small_icons-spacing: 20px;
+@import "small_icons/*.png";
 @import "mixins.scss";
 @import "onboard.scss" ;
 @import "innerpages.scss";
 @import "commonstyles.scss";
-$small_icons-spacing: 10px;
-@import "small_icons/*.png";
+
