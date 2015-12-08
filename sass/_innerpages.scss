@@ -357,3 +357,96 @@
 	}
 
 }
+
+/* for sign up page */
+.sign-up {
+	.info-container{
+	}
+
+	@include fontsb (16);
+	.info_bubble {
+		.info_icon{
+			height: 100px;
+			//@include small_icons-sprite(diduknow);
+		}
+		border-radius: 50%;
+		text-align: center;
+		background-color:#17ba9b;
+		overflow: hidden;
+		width: 300px;
+		height: 300px;
+		color: #fff;
+		&>p {
+			width: 85%;
+			margin: 40px auto;
+		}
+
+		.info_questions{
+			background-color: #12756a;
+			text-align: center;
+			padding:15px 0px 25px 0px;
+			position: relative;
+
+			p{
+				padding:8px 0px;
+			}
+			h2{
+
+			}
+
+			&:hover {
+				bottom: 165px;
+			}
+		}
+	}
+	form{
+		p{
+			@include fontm(14);
+			margin:10px 0px;
+		}
+		label {
+			display: block;	
+			@include fontsb(14);		
+			margin: 10px 0px;
+		}
+		input[type="radio"]+label{
+			display: inline-block;
+			margin-bottom: 0px;
+
+		}
+		input[type="text"] {
+				display: block;				
+				margin-bottom: 10px;
+			}
+			input[type="radio"]{
+				margin-bottom: 15px;
+			}
+			input {
+				@include fontl(14);
+				padding: 5px;
+			}
+			h4{
+				width: 24%;
+				display: inline-block !important;
+				margin: 15px 0px;
+				font-size: 13px;
+				@include fontl(12);
+				text-align: center;
+			}
+
+	}
+.modal{display:block; position:relative ; overflow:visible;}
+.modal-content{
+	overflow:visible;
+	border:none;
+	box-shadow:none;
+		.modal-footer{
+			border:none;
+		}
+}	
+.m-progress-bar {
+    height: 5px;
+    background: #1F93EF;
+    width: 25%;
+}
+}

@@ -13,48 +13,39 @@
     <body>
 
     <div class="container sign-up"> 
-        <div class="row">
-            <div class="info-container col-sm-5">
-                <div class="info_bubble">
-                    <div class="info_icon"></div>
-                    <h1>SIGN UP TODAY</h1>
-                    <p> You're moments away from getting started on your safety net</p>
-
-                    <div class="info_questions">
-                    <h2>Questions </h2>
-                    <p>We're here to help Contact us: </p>
-                    <p>080 1234 - 4569 </p>
-                    <p> support@fino.com</p>
-                    <p>FAQ's</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-7">
+            <div class="">
                 <form class="modal multi-step" id="demo-modal-3">
                 <div class="modal-content">
                 <div class="modal-header">
-                    <h4 class="modal-title step-1" data-step="1">Step 1</h4>
-                    <h4 class="modal-title step-2" data-step="2">Step 2</h4>
-                    <h4 class="modal-title step-3" data-step="3`">Step 3</h4>
-                    <h4 class="modal-title step-4" data-step="4">Final Step</h4>
+                    <h4 class="modal-title step-1" data-step="1">Goal Recommendations &nbsp; &nbsp;  &nbsp; Account Details</h4>
+                    <h4 class="modal-title step-2" data-step="2">Contact Informtion</h4>
+                    <h4 class="modal-title step-3" data-step="3`">Identity Verification</h4>
+                    <h4 class="modal-title step-4" data-step="4"> Regulatory Questions </h4>
                     <div class="m-progress">
                         <div class="m-progress-bar-wrapper">
                             <div class="m-progress-bar">
                             </div>
-                        </div>
-                        <div class="m-progress-stats">
-                            <span class="m-progress-current">
-                            </span>
-                            /
-                            <span class="m-progress-total">4</span>
-                        </div>
-                        <div class="m-progress-complete">
-                            Completed
-                        </div>
+                        </div>                       
+                       
                     </div>
                 </div>
-                <div class="modal-body step-1" data-step="1">
-                            <div >
+                <div class="modal-body step-1 row" data-step="1">
+                    <div class="info-container col-sm-5">
+                        <div class="info_bubble">
+                            <div class="info_icon"></div>
+                            <h1>SIGN UP TODAY</h1>
+                            <p> You're moments away from getting started on your safety net</p>
+
+                            <div class="info_questions">
+                            <h2>Questions </h2>
+                            <p>We're here to help Contact us: </p>
+                            <p>080 1234 - 4569 </p>
+                            <p> support@fino.com</p>
+                            <p>FAQ's</p>
+                            </div>
+                        </div>
+                    </div>
+                            <div class="col-sm-7">
                             <h3 class="text-center"> Basic information
                             </h3>
                             <p class="text-center"> We use this information to create your account. Please enter the same name you use to file taxex.
@@ -70,8 +61,23 @@
                             </div >
                         
                 </div>
-                <div class="modal-body step-2" data-step="2">
-                            <div >
+                <div class="modal-body step-2 row" data-step="2">
+                <div class="info-container col-sm-5">
+                        <div class="info_bubble">
+                            <div class="info_icon"></div>
+                            <h1>SIGN UP TODAY2</h1>
+                            <p> You're moments away from getting started on your safety net</p>
+
+                            <div class="info_questions">
+                            <h2>Questions </h2>
+                            <p>We're here to help Contact us: </p>
+                            <p>080 1234 - 4569 </p>
+                            <p> support@fino.com</p>
+                            <p>FAQ's</p>
+                            </div>
+                        </div>
+                    </div>
+                            <div class="col-sm-7">
                             <h3 class="text-center"> Contact information
                             </h3>
                             <p class="text-center"> 
@@ -90,8 +96,10 @@
                             <input type="password" placeholder="ZIP Code">
                             <label for="" class="si-menu-label">Phone Number</label>
                             <input type="password" placeholder="Phone Number">
-                            <select class="form-control si-menu-input" style="margin-top:10px; margin-bottom:15px" >
-                            <option >How did you hear about us?</option>
+
+                            <label for="our-info" class="si-menu-label">How did you hear about us? </label>
+                            <select class="form-control si-menu-input" id="our-info">
+                            <option >Select</option>
                             <option >Friends</option>
                             <option >Facebook / Twitter / Quora</option>
                             <option >Mobile Advertising</option>
@@ -102,8 +110,23 @@
                             </div >
                 </div>
                 
-                <div class="modal-body step-3" data-step="3">
-                            <div >
+                <div class="modal-body step-3 row" data-step="3">
+                <div class="info-container col-sm-5">
+                        <div class="info_bubble">
+                            <div class="info_icon"></div>
+                            <h1>SIGN UP TODAY3</h1>
+                            <p> You're moments away from getting started on your safety net</p>
+
+                            <div class="info_questions">
+                            <h2>Questions </h2>
+                            <p>We're here to help Contact us: </p>
+                            <p>080 1234 - 4569 </p>
+                            <p> support@fino.com</p>
+                            <p>FAQ's</p>
+                            </div>
+                        </div>
+                    </div>
+                            <div class="col-sm-7">
                             <h3 class="text-center"> Identity information
                             </h3>
                             <p class="text-center"> 
@@ -114,38 +137,48 @@
                             <label for="" class="si-menu-label">Date of birth</label>
                             <input type="date" placeholder="DOB">
                             <label for="" class="si-menu-label">Gender</label>
-                            <form>
-                            <input type="radio" name="sex" value="male" checked> Male
-                            
-                            <input type="radio" name="sex" value="female"> Female
-                            </form> 
+                            <input type="radio" name="sex" value="male" id="male">  <label for="male"> Male</label>                       
+                            <input type="radio" name="sex" value="female" id="female" > <label for="female"> Female</label> 
 
 
                             </div >
                 
                 
                 </div>
-                <div class="modal-body step-4" data-step="4">
-                            <div >
+                <div class="modal-body step-4 row" data-step="4">
+                <div class="info-container col-sm-5">
+                        <div class="info_bubble">
+                            <div class="info_icon"></div>
+                            <h1>SIGN UP TODAY4</h1>
+                            <p> You're moments away from getting started on your safety net</p>
+
+                            <div class="info_questions">
+                            <h2>Questions </h2>
+                            <p>We're here to help Contact us: </p>
+                            <p>080 1234 - 4569 </p>
+                            <p> support@fino.com</p>
+                            <p>FAQ's</p>
+                            </div>
+                        </div>
+                    </div>
+                            <div class="col-sm-7">
                             <h3 class="text-center"> Regulatory Questions
                             </h3>
                             <p class="text-center"> 
                             We are required toask these regulatory questions. Most customers answers no.
                             </p>
-                            <label for="political" class="si-menu-label">Are you a politically exposed person</label>
-                            <form>
-                            <input type="radio" value="yes" name="political" > Yes
+                            <label class="si-menu-label">Are you a politically exposed person</label>
                             
-                            <input type="radio" value="no" name="political"> No
-                           </form>
+                            <input type="radio" value="yes" name="political" id="yes" > <label for="yes">Yes </label>                           
+                            <input type="radio" value="no" name="political" id="no">  <label for="no">No </label>                                              
+                            
 
-                                                    
-                            <label for="residency_tax" class="si-menu-label">What is your residency for Tax Status? </label>
-                            <form>
-                            <input type="radio" value="1" name="residency_tax" id="indian">  <label for="indian">Indian</label>
-                            <input type="radio" value="2" name="residency_tax"> NRI - Repatriation 
-                            <input type="radio" value="3" name="residency_tax" > NRI - Non Repatriation 
-                            </form>
+                             <label for="residency_tax" class="si-menu-label">What is your residency for Tax Status? </label>
+                             <select class="form-control si-menu-input" id="residency_tax">
+                             <option value="Indian"> Indian </option>
+                             <option value="NRI-Repatriation"> NRI - Repatriation </option>
+                             <option value="NRI-Non-Repatriation">NRI - Non Repatriation </option>
+                             </select>
 
                         
 
@@ -172,7 +205,6 @@
     </div>
 
             </div>
-        </div>
     </div>
     
     <script type="text/javascript">
