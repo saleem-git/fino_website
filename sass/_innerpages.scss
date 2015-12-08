@@ -401,6 +401,9 @@
 		}
 	}
 	form{
+		&.modal {
+			z-index: 0;
+		}
 		p{
 			@include fontm(14);
 			margin:10px 0px;
