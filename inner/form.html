@@ -157,15 +157,24 @@
                             <h3 class="text-center"> Identity information
                             </h3>
                             <p class="text-center"> 
-                            FinoTrust is a financial institution just like a bank or a brokerage firm, so we must comply with the USA PATRIOT ACT. This requires us to verify your identity. We will not run a credit check.
+                            FinoTrust is a financial institution just like a bank or a brokerage firm. This requires us to verify your identity. We will not run a credit check.
                             </p>
                             <label for="" class="si-menu-label">PAN Number</label>
                             <input type="text" placeholder="PAN Number" name="pan">
                             <label for="" class="si-menu-label">Date of birth</label>
-                            <input type="date" placeholder="DOB">
+                            
+                            <input type="text" id="datepicker" placeholder="DOB" readonly >
                             <label for="" class="si-menu-label">Gender</label>
-                            <input type="radio" name="sex" value="male">  <label for="male"> Male</label>                       
+                            <input type="radio" name="sex" value="male">  <label for="male"> Male &nbsp;</label>                       
                             <input type="radio" name="sex" value="female"> <label for="female"> Female</label> 
+
+                            <label for="residency_tax" class="si-menu-label">What is your residency for Tax Status? </label>
+                             <select class="form-control si-menu-input" id="residency_tax" name="residency_tax">
+                             <option value="" selected> Select </option>
+                             <option value="Indian"> Indian </option>
+                             <option value="NRI-Repatriation"> NRI - Repatriation </option>
+                             <option value="NRI-Non-Repatriation">NRI - Non Repatriation </option>
+                             </select> 
 
 
                             </div >
@@ -192,7 +201,7 @@
                             <h3 class="text-center"> Regulatory Questions
                             </h3>
                             <p class="text-center"> 
-                            We are required toask these regulatory questions. Most customers answers no.
+                            We are required to ask these regulatory questions. Most customers answers no.
                             </p>
                             <label class="si-menu-label">Are you a politically exposed person</label>
                             
@@ -200,18 +209,11 @@
                             <input type="radio" value="no" name="political">  <label for="no">No </label>                                              
                             
 
-                             <label for="residency_tax" class="si-menu-label">What is your residency for Tax Status? </label>
-                             <select class="form-control si-menu-input" id="residency_tax" name="residency_tax">
-                             <option value="" selected> Select </option>
-                             <option value="Indian"> Indian </option>
-                             <option value="NRI-Repatriation"> NRI - Repatriation </option>
-                             <option value="NRI-Non-Repatriation">NRI - Non Repatriation </option>
-                             </select>                 
+                                             
                         </div >
             
             </div>
             <div class="modal-footer footer-below">
-            <input class="submit" type="submit" value="Submit">
                 <button type="button" class="btn btn-primary step step-1" data-step="1" onclick="sendEventNext('#demo-modal-3', 2) ">Next</button>
                 <button type="button" class="btn btn-primary step step-2" data-step="2" onclick="sendEvent('#demo-modal-3', 1)">Back</button>
                 <button type="button" class="btn btn-primary step step-3" data-step="3" onclick="sendEvent('#demo-modal-3', 2)">Back</button>
@@ -245,11 +247,33 @@
     }
     </script> 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+        <script src="../js/jquery-ui.min.js"></script> 
         <script src="../js/jquery.validate.js"></script>  
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha256-KXn5puMvxCw+dAYznun+drMdG1IFl3agK0p/pqT9KAo= sha512-2e8qq0ETcfWRI4HJBzQiA3UoyFk6tbNyG+qSaIBZLyW9Xf3sWZHN/lxe9fTh1U45DpPf07yj94KsUHHWe4Yk1A==" crossorigin="anonymous"></script>	 
 	
     <script src="../js/multi-step-modal.js"></script>
     <script>
+
+
+         $(function() {
+    $( "#datepicker" ).datepicker({
+      changeMonth: true,
+      changeYear: true,
+      yearRange: "-80:+0",
+    });
+  });
+
+         // Hover states on the static widgets
+$( "#dialog-link, #icons li" ).hover(
+    function() {
+        $( this ).addClass( "ui-state-hover" );
+    },
+    function() {
+        $( this ).removeClass( "ui-state-hover" );
+    }
+);
+
+
     $.validator.setDefaults({
         submitHandler: function() {
             alert("submitted!");
@@ -290,7 +314,11 @@
 					minlength: 6,
 					maxlength: 6
 					},
-                pan: "required",              
+                pan: {
+                    required: true,
+                    minlength: 10,
+                    maxlength: 10
+                },             
                 phone_number: {
                     required: true,
 					digits:true,
