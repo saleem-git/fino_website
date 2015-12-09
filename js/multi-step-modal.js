@@ -22,12 +22,12 @@
         function completeSteps() {
             $progress_stats.hide();
             $progress_complete.show();
-            $modal.find('.progress-text').animate({
+           /* $modal.find('.progress-text').animate({
                 top: '-2em'
             });
             $modal.find('.complete-indicator').animate({
                 top: '-2em'
-            });
+            });*/
             $progress_bar.addClass('completed');
         }
 

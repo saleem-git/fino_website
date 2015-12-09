@@ -83,7 +83,7 @@
                             <label for="" class="si-menu-label">Email Address</label>
                             <input type="email" placeholder="Email Address" name="email">
                             <label for="" class="si-menu-label">Password</label>
-                            <input type="password" placeholder="Password" name="password">
+                            <input type="password" placeholder="Password" id="password" name="password">
                             <label for="" class="si-menu-label">Confirm Password</label>
                             <input type="password" placeholder="Confirm Password" name="confirm_password">
                             </div >
@@ -263,17 +263,6 @@
     });
   });
 
-         // Hover states on the static widgets
-$( "#dialog-link, #icons li" ).hover(
-    function() {
-        $( this ).addClass( "ui-state-hover" );
-    },
-    function() {
-        $( this ).removeClass( "ui-state-hover" );
-    }
-);
-
-
     $.validator.setDefaults({
         submitHandler: function() {
             alert("submitted!");
@@ -297,8 +286,8 @@ $( "#dialog-link, #icons li" ).hover(
 					},
                 confirm_password: {
                     required: true,
-                    minlength: 5
-                    //equalTo: "#password"
+                    minlength: 5,
+                    equalTo: "#password"
 					},
                 email: {
                     required: true,

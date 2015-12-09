@@ -52,7 +52,7 @@ section.plan_info{
 		margin: 0px;
 	}
 	.panel-heading{
-		background-color: #1F93EF;
+		background-color: #18bb9c;
 		color: #fff;
 		text-align: right;
 		padding: 10px 35px;
@@ -141,19 +141,37 @@ section.plan_info{
 		}
 
 	}
-	.glyph_fino{
+	.plan_icon{
+		width: 50px;
+		height: 50px;
+		display: inline-block;
+		margin-left: 15px;
 	}
-	.glyphicon{
-		color: #1F93EF;
-		font-size: 32px;
-		padding: 10px;
-		left: 20px;
+	.safety{
+		@include small_icons-sprite(safety);		
+	}
+	.retire{
+		@include small_icons-sprite(retirement);
+	}
+	.invest{
+		@include small_icons-sprite(investment);
+	}
+
+	.plan_icon{
+		width: 50px;
+		height: 50px;
+		display: inline-block;
+		margin-left: 15px;
 	}
 	.goal_content{
 		.panel-body{
 			border-top-color: transparent;
 			&.selected_row{
 				background-color:#f2ffe5;
+			}
+			p:first-child{
+				@include fontm(16);
+				margin-top: 25px;
 			}
 			#amchart_legend{
 				position: relative;

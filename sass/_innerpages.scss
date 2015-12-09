@@ -412,6 +412,11 @@
 			display: block;	
 			@include fontsb(14);		
 			margin: 10px 0px;
+			&.error{
+				@include fontm(12);
+				color: #ff4c4c;
+
+			}
 		}
 		input[type="radio"]+label{
 			display: inline-block;
@@ -432,6 +437,7 @@
 			h4{
 				width: 24%;
 				display: inline-block !important;
+				
 				margin: 15px 0px;
 				font-size: 13px;
 				@include fontl(12);
