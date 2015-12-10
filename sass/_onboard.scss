@@ -106,13 +106,16 @@ section.plan_info{
 				position: relative;
 				cursor: pointer;
 				display: inline-block;
+				border-bottom: 1px solid #18BB9C;
+				padding: 0px 5px;
+				color: #18BB9C
 				
 			}
 			span.edit{
 				position: absolute;
-				color: rgb(204, 204, 204);
-				font-size: 14px;
-				top: -25px;
+				color: #18BB9C;
+				font-size: 12px;
+				top: -12px;
 				left: 51px;				
 			}
 			span.edit-time{				
@@ -122,10 +125,10 @@ section.plan_info{
 		}
 		span.down_arrow{
 			position: absolute;
-			color: #000;
+			color: #18BB9C;
 			left: 88%;
 			font-size: 22px;
-			top: 10px;			
+			top: 25px;			
 		}
 	}
 	.goal_metainfo {

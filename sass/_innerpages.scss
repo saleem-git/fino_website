@@ -408,10 +408,20 @@
 			@include fontm(14);
 			margin:10px 0px;
 		}
+		div.name_field {
+			&>div{
+				padding:0px;
+				input[type="text"]{
+					width: 85%;
+					min-width: 250px;
+					max-width: 270px;
+				}
+			}
+		}
 		label {
 			display: block;	
 			@include fontsb(14);		
-			margin: 10px 0px;
+			margin:0px;
 			&.error{
 				@include fontm(12);
 				color: #ff4c4c;
@@ -423,16 +433,21 @@
 			margin-bottom: 0px;
 
 		}
-		input[type="text"] {
+		input[type="text"],input[type="password"],input[type="email"] {
 				display: block;				
-				margin-bottom: 10px;
+				margin-bottom: 25px;
+				border:none;
+				border-bottom: 1px solid #adb4bb;
+				color: #17ba9b;
+				width: 45%;
+				min-width: 250px;
 			}
 			input[type="radio"]{
 				margin-bottom: 15px;
 			}
 			input {
 				@include fontl(14);
-				padding: 5px;
+				padding-top: 2px;
 			}
 			h4{
 				width: 24%;
@@ -456,6 +471,11 @@
 	box-shadow:none;
 		.modal-footer{
 			border:none;
+			.btn-primary{
+				background-color:#17ba9b;
+				border-color:#17ba9b;
+				padding: 6px 30px;
+			}
 		}
 }	.modal-body{
 	&.step-1 .info_icon{

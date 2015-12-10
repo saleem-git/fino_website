@@ -76,8 +76,17 @@
                             </h3>
                             <p class="text-center"> We use this information to create your account. Please enter the same name you use to file taxes.
                             </p>
-                            <label for="" class="si-menu-label">First Name</label>
-                            <input type="text" placeholder="First Name" name="firstname">
+                            <div class="name_field " >
+                                <div class="col-sm-6"> 
+                                    <label for="" class="si-menu-label">First Name</label>
+                                    <input type="text" placeholder="First Name" name="firstname">
+                                </div>
+
+                                <div class="col-sm-6">
+                                    <label for="" class="si-menu-label">Middle Name</label>
+                                    <input type="text" placeholder="Middle Name" name="middlename">
+                                </div>
+                            </div>
                             <label for="" class="si-menu-label" >Last Name</label>
                             <input type="text" placeholder="Last Name" name="lastname">
                             <label for="" class="si-menu-label">Email Address</label>
@@ -214,12 +223,12 @@
             
             </div>
             <div class="modal-footer footer-below">
-                <button type="button" class="btn btn-primary step step-1" data-step="1" onclick="sendEventNext('#demo-modal-3', 2) ">Next</button>
+                <button type="button" class="btn btn-primary step step-1" data-step="1" onclick="sendEventNext('#demo-modal-3', 2) ">Continue</button>
                 <button type="button" class="btn btn-primary step step-2" data-step="2" onclick="sendEvent('#demo-modal-3', 1)">Back</button>
                 <button type="button" class="btn btn-primary step step-3" data-step="3" onclick="sendEvent('#demo-modal-3', 2)">Back</button>
-                <button type="button" class="btn btn-primary step step-2" data-step="2" onclick="sendEventNext('#demo-modal-3', 3)">Next</button>
-                <button type="button" class="btn btn-primary step step-3" data-step="3" onclick="sendEventNext('#demo-modal-3', 4)">Next</button>
-                <button type="button" class="btn btn-primary step step-4" data-step="3" onclick="sendEvent('#demo-modal-3', 3)">Back</button>
+                <button type="button" class="btn btn-primary step step-2" data-step="2" onclick="sendEventNext('#demo-modal-3', 3)">Continue</button>
+                <button type="button" class="btn btn-primary step step-3" data-step="3" onclick="sendEventNext('#demo-modal-3', 4)">Continue</button>
+                <button type="submit" class="btn btn-primary step step-4" data-step="3" onclick="">Create Account</button>
 
             </div>
         </div>
@@ -254,18 +263,16 @@
     <script src="../js/multi-step-modal.js"></script>
     <script>
 
-
-         $(function() {
-    $( "#datepicker" ).datepicker({
-      changeMonth: true,
-      changeYear: true,
-      yearRange: "-80:+0",
+    $(function() {
+        $( "#datepicker" ).datepicker({
+        changeMonth: true,
+        changeYear: true,
+        yearRange: "-80:+0",
+        });
     });
-  });
 
     $.validator.setDefaults({
         submitHandler: function() {
-            alert("submitted!");
         }
     });
 
@@ -277,7 +284,7 @@
                 firstname: "required",
                 lastname: "required",
                 username: {
-                    required: true,
+                    required: true
                     minlength: 2
 					},
                 password: {
