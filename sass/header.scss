@@ -2,13 +2,13 @@
     position: relative;
     min-height: 60px;
     margin-bottom: 21px;
-    border: 1px solid transparent;
-	
+    border: 1px solid transparent;	
 &.navbar-default{
 background-color:#2C3E50;
 text-transform: uppercase;
+padding-top:4px;
 & .navbar-nav>{
-
+	
 	li{
 		a{
 			color: white;
@@ -16,25 +16,36 @@ text-transform: uppercase;
 		}
 			a:hover{
 			color: #18bc9c;
+			background:transparent;
 		}
 		&.dropdown-menu{
 		z-index:1100;
 		}
 		ul.dropdown-menu {
 			background-color: #2C3E50;
+			margin-top:3px;
+			li{padding:1em;
+			&:hover{background-color:white;}
+			}
 		}
 		
 	}
 	
 }
 .navbar-brand{
-padding: 5px 15px; 
+padding: 3px 15px; 
 }
 }
 
 }
 
-
+.active-now{
+		background:#18bc9c;
+		border-radius:5px
+	}
+#no-hover{&:hover{ color:white;}}
+		
+		
 /* footer */ 
 footer{
 .footer-below{

@@ -19,17 +19,6 @@
             $modal.find('[data-step]').hide();
         }
 
-        function completeSteps() {
-            $progress_stats.hide();
-            $progress_complete.show();
-           /* $modal.find('.progress-text').animate({
-                top: '-2em'
-            });
-            $modal.find('.complete-indicator').animate({
-                top: '-2em'
-            });*/
-            $progress_bar.addClass('completed');
-        }
 
         function getPercentComplete(current_step, total_steps) {
             return Math.min(current_step / total_steps * 100, 100) + '%';
