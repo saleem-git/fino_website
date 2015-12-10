@@ -72,11 +72,10 @@
                         </div>
                     </div>
                             <div class="col-sm-7">
-                            <h3 class="text-center"> Basic information
-                            </h3>
+                            <h1 class="text-center"> Basic information</h1>
                             <p class="text-center"> We use this information to create your account. Please enter the same name you use to file taxes.
                             </p>
-                            <div class="name_field " >
+                            <div class="name_field row" >
                                 <div class="col-sm-6"> 
                                     <label for="" class="si-menu-label">First Name</label>
                                     <input type="text" placeholder="First Name" name="firstname">
@@ -87,6 +86,7 @@
                                     <input type="text" placeholder="Middle Name" name="middlename">
                                 </div>
                             </div>
+                             
                             <label for="" class="si-menu-label" >Last Name</label>
                             <input type="text" placeholder="Last Name" name="lastname">
                             <label for="" class="si-menu-label">Email Address</label>
@@ -132,6 +132,7 @@
                             <label for="" class="si-menu-label">ZIP Code</label>
                             <input type="text" placeholder="ZIP Code" name="zip_code">
                             <label for="" class="si-menu-label">Phone Number</label>
+                            <input type="text" placeholder="Country Code" name="country_code">
                             <input type="text" placeholder="Phone Number" name="phone_number">
 
                             <label for="our-info" class="si-menu-label">How did you hear about us? </label>
@@ -170,9 +171,8 @@
                             </p>
                             <label for="" class="si-menu-label">PAN Number</label>
                             <input type="text" placeholder="PAN Number" name="pan">
-                            <label for="" class="si-menu-label">Date of birth</label>
-                            
-                            <input type="text" id="datepicker" placeholder="DOB" readonly >
+                            <label for="" class="si-menu-label">Date of birth</label>   
+                            <input type="text" id="datepicker" name="date" placeholder="DOB" readonly >                         
                             <label for="" class="si-menu-label">Gender</label>
                             <input type="radio" name="sex" value="male">  <label for="male"> Male &nbsp;</label>                       
                             <input type="radio" name="sex" value="female"> <label for="female"> Female</label> 
@@ -233,18 +233,11 @@
             </div>
         </div>
 </form>
-    <!-- Scroll to Top Button (Only visible on small and extra-small screen sizes) -->
-    <div class="scroll-top page-scroll visible-xs visible-sm">
-        <a class="btn btn-primary" href="#page-top">
-            <i class="fa fa-chevron-up"></i>
-        </a>
-    </div>
-
+    
             </div>
     </div>
     
     <script type="text/javascript">
-
         sendEvent = function(sel, step) {
         $(sel).trigger('next.m.' + step);
     }
@@ -268,6 +261,7 @@
         changeMonth: true,
         changeYear: true,
         yearRange: "-80:+0",
+        defaultDate: "-0m -30y"
         });
     });
 
@@ -284,7 +278,7 @@
                 firstname: "required",
                 lastname: "required",
                 username: {
-                    required: true
+                    required: true,
                     minlength: 2
 					},
                 password: {
@@ -310,6 +304,7 @@
 					minlength: 6,
 					maxlength: 6
 					},
+                date:"required",
                 pan: {
                     required: true,
                     minlength: 10,
@@ -321,6 +316,7 @@
 					minlength: 10,
 					maxlength: 10
 					}, 
+                country_code:"required",
                 residency_tax: "required"
 				
             },

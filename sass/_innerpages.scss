@@ -391,10 +391,7 @@
 			p{
 				padding:8px 0px;
 			}
-			h2{
-
-			}
-
+			
 			&:hover {
 				bottom: 165px;
 			}
@@ -406,9 +403,11 @@
 		}
 		p{
 			@include fontm(14);
-			margin:10px 0px;
+			margin:10px 0px 40px;
 		}
+
 		div.name_field {
+			margin:0px;
 			&>div{
 				padding:0px;
 				input[type="text"]{
@@ -420,11 +419,12 @@
 		}
 		label {
 			display: block;	
-			@include fontsb(14);		
+			@include fontm(14);		
 			margin:0px;
 			&.error{
 				@include fontm(12);
 				color: #ff4c4c;
+				margin-bottom: 10px;
 
 			}
 		}
@@ -435,7 +435,7 @@
 		}
 		input[type="text"],input[type="password"],input[type="email"] {
 				display: block;				
-				margin-bottom: 25px;
+				margin-bottom: 20px;
 				border:none;
 				border-bottom: 1px solid #adb4bb;
 				color: #17ba9b;
@@ -449,10 +449,16 @@
 				@include fontl(14);
 				padding-top: 2px;
 			}
+			input[name="country_code"], input[name="phone_number"]{
+				display: inline-block;				
+			}
+			input[name="country_code"]{
+				width: 95px;
+				min-width: auto;
+			}
 			h4{
 				width: 24%;
-				display: inline-block !important;
-				
+				display: inline-block !important;				
 				margin: 15px 0px;
 				font-size: 13px;
 				@include fontl(12);
@@ -477,7 +483,13 @@
 				padding: 6px 30px;
 			}
 		}
-}	.modal-body{
+		
+		.modal-header{
+			border-bottom:none;
+		}
+}	
+
+.modal-body{
 	&.step-1 .info_icon{
 		@include small_icons-sprite(sign_up);			
 	}
@@ -493,7 +505,7 @@
 } 
 .m-progress-bar {
     height: 5px;
-    background: #1F93EF;
+    background-color: #17ba9b;
     width: 25%;
 }
 }
