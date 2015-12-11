@@ -225,18 +225,23 @@
 
 	<div class="panel panel-default">
 	  <div class="panel-body retirement_plan">
-	    <div class="earnings col-sm-6 retirement_plan_actions">
-	    	<div class="col-sm-6 edit_plan">
-		    	<span class="sign plus-sign" id="retirement_info_span"></span>
-		    	<h2 class="pull-left"> Retirement </h2> <button type="button" class="btn btn-default pull-left">Edit Plan</button>
-		    </div>
-		    <div class="col-sm-6 deposit">
-		    	<p>CURRENT BALANCE</p>
-		    	<button type="button" class="btn btn-default">Deposit</button> <span>Rs 0.00 </span>
-		    </div>
 
+		<div class="row earnings">
+			<div class="col-sm-6 edit_plan">
+			<span class="sign plus-sign" id="retirement_info_span"></span>
+			<h2 class="pull-left"> Retirement </h2> <button type="button" class="btn btn-default pull-left">Edit Plan</button>
+			</div>
+			<div class="col-sm-6 retirement_plan_actions">
+			<div class="deposit">
+			<p>CURRENT BALANCE</p>
+			<button type="button" class="btn btn-default">Deposit</button> <span>Rs 0.00 </span></div>
+			</div>
+		</div>
+
+		<div class="row" id="retirement_info"> 
+		<div class="earnings col-sm-6 retirement_plan_actions">		
 		    <!-- copied  -->
-		    <div class="summary_plan_detailed_info" id="retirement_info">
+		    <div class="summary_plan_detailed_info" >
 	    	<div>
 	    	<p> PERIOD SINCE </p>
 	    	<div class="dropdown">
@@ -314,11 +319,13 @@
 
 	    </div>
 	    <!-- end cop -->
-	    </div>
+	    </div><!-- end of outer col sm 6 -->
 	    <div class="col-sm-6">
+	      <div class="chartdiv" id="chartdiv11"></div>
 	    <div class="basket_balance"> 
-		    <div id="" class="summary_plan_detailed_info">
-		    	<table>
+
+		    <div id="" class="summary_plan_detailed_info" >
+		    	<table style="margin: 0px auto;">
 		    	<thead>
 		    		<tr>
 	    				<th>Basket  </th> <th>Balance </th>
@@ -340,6 +347,8 @@
 	    	
 
 	    </div>
+		</div>
+
 	  </div>
 	</div>
 

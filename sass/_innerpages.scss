@@ -100,11 +100,12 @@
 
 
 /* retirement Plan */
-.retirement_plan_actions{
-	#retirement_info{
+#retirement_info{
 		display: none;
 
 	}
+.retirement_plan_actions{
+	
 	&>div.edit_plan {
 		padding:0px;
 		span{
@@ -124,7 +125,6 @@
 		}		
 	}
 	.deposit{
-		text-align: right;
 			p{
 				@include fontl(14);
 				padding-bottom: 5px;
@@ -378,12 +378,13 @@
 		text-align: center;
 		background-color:#17ba9b;
 		overflow: hidden;
-		width: 300px;
-		height: 300px;
+		width: 265px;
+		height: 265px;
 		color: #fff;
+		margin:0 auto;
 		&>p {
 			width: 85%;
-			margin: 40px auto;
+			margin: 30px auto;
 		}
 
 		.info_questions{
@@ -405,9 +406,12 @@
 		&.modal {
 			z-index: 0;
 		}
+		h1{
+			margin:10px 0px;
+		}
 		p{
 			@include fontm(14);
-			margin:10px 0px 40px;
+			margin:5px 0px 35px;
 		}
 
 		div.name_field {

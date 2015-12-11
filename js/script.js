@@ -139,7 +139,7 @@ $("#earned_sub_info_span").on("click",function(event){
 
 $("#retirement_info_span").on("click",function(){
 	  $( "#retirement_info" ).slideToggle( "slow");
-	  $( ".basket_balance" ).slideToggle( "slow");
+	  //$( ".basket_balance" ).slideToggle( "slow");
 	  $("#retirement_info_span").toggleClass("plus-sign, minus-sign");
 });
 

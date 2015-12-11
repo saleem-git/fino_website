@@ -103,3 +103,30 @@ chartConfig1.dataProvider = [
 
 // create the chart
 AmCharts.makeChart("chartdiv10", chartConfig1);
+
+// create a copy of the universal config
+var chartConfig2 = clone(chartConfig);
+
+// modify a copy of the config
+chartConfig2.dataProvider = [
+            {
+              "country": "Czech Republic",
+              "litres": "356"
+            },
+            {
+              "country": "Ireland",
+              "litres": 131
+            },
+            {
+              "country": "Germany",
+              "litres": 115.
+            },
+            {
+              "country": "Australia",
+              "litres": 109
+            }
+
+];
+
+// create the chart
+AmCharts.makeChart("chartdiv11", chartConfig2);
