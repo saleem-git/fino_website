@@ -119,14 +119,43 @@ $("span.target-time+span input[type='text']").focusout(function(){
 /*Slide toggle for summary page*/
 $("#earning_info_span").on("click",function(event){
 	  $( "#earning_info" ).slideToggle( "slow");
-	  $("#earning_info_span").toggleClass("glyphicon-plus-sign, glyphicon-minus-sign ");
+	  $("#earning_info_span").toggleClass("plus-sign, minus-sign");
 
 });
+
+//for summary sub section
+$("#invested_info_span").on("click",function(event){
+	  $(this).parents("thead").next().slideToggle( "slow");
+	  $("#invested_info_span").toggleClass("plus-sign, minus-sign");
+
+});
+
+$("#earned_sub_info_span").on("click",function(event){
+	   $(this).parents("thead").next().slideToggle( "slow");
+	  $("#earned_sub_info_span").toggleClass("plus-sign, minus-sign");
+
+});
+
 
 $("#retirement_info_span").on("click",function(){
 	  $( "#retirement_info" ).slideToggle( "slow");
 	  $( ".basket_balance" ).slideToggle( "slow");
-	  $("#retirement_info_span").toggleClass("glyphicon-plus-sign, glyphicon-minus-sign ");
+	  $("#retirement_info_span").toggleClass("plus-sign, minus-sign");
+});
+
+//retirement sub info
+
+$("#retire-invest_info_span").on("click",function(event){
+	   $(this).parents("thead").next().slideToggle( "slow");
+	  $("#retire-invest_info_span").toggleClass("plus-sign, minus-sign");
+
+});
+
+
+$("#retire-earnedsub_info_span").on("click",function(event){
+	   $(this).parents("thead").next().slideToggle( "slow");
+	  $("#retire-earnedsub_info_span").toggleClass("plus-sign, minus-sign");
+
 });
 
 

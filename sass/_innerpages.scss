@@ -59,13 +59,17 @@
 /* Overview */
 .panel-default{
 	margin-top:30px;
+	.chartdiv{
+		min-height: 300px;
+	}
 }
 .overview_account{
 	.earnings{
-		&>div{
+		.earnings_div{
 			float: left;
 			h3{
 				@include fontl(14);
+				margin-left: 10px;
 			}		
 			h1{
 				@include fontm(32);
@@ -73,12 +77,8 @@
 			h4{
 				@include fontl(12);
 			}
-		}
-		.glyphicon{
-				float: left;
-				padding-right:10px;
-				cursor: pointer;
-			}
+			
+		}		
 	
 	}
 	.losses{
@@ -92,6 +92,9 @@
 	}
 	#earning_info{
 		display: none;
+		h4{
+			@include fontl(12);
+		}
 	}
 }
 
@@ -100,6 +103,7 @@
 .retirement_plan_actions{
 	#retirement_info{
 		display: none;
+
 	}
 	&>div.edit_plan {
 		padding:0px;

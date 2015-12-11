@@ -124,13 +124,30 @@
     <!-- Starting panel -->
     <div class="panel panel-default">
 	  <div class="panel-body overview_account">
-  	
-	    <div class="earnings col-sm-6">
-	    	<span class="glyphicon glyphicon-plus-sign" id="earning_info_span"></span>
-	    	<div>
+  		<div class="row"> 	
+	    <div class="earnings col-sm-6 flclear">
+	    	<span class="sign plus-sign" id="earning_info_span"></span>
+	    	
+
+	    	<div class="earnings_div">
 		    	<h3> TOTAL BALANCE FOR ALL GOALS</h3>
 		    	<h1>$0.00</h1>
-		    	<div class="summary_plan_detailed_info" id="earning_info" >
+		    	<h4>TOTAL EARNINGS <span>+$0.00 </span></h4>
+		    	
+	    	</div> <!-- End for classless div after span -->
+	    </div><!-- End of first col-sm -6 for overaccoint -->
+	    
+	    <div class="losses col-sm-6">
+	    	<p>TAX LOSS HARVESTING+ OFF</p>
+	    	<p>Harvested losses $0.00</p>
+
+	    	<!--  -->
+	    </div>
+	    </div>
+
+	    <div class="row earnings" id="earning_info">
+	    	<div class="col-md-6">
+	    		<div class="summary_plan_detailed_info"  >
 	    	<div>
 	    	<p> PERIOD SINCE </p>
 	    	<div class="dropdown">
@@ -145,11 +162,12 @@
 	    	</div> 
 	    	</div>	    	
 	    	<table>
-	    	 
+	    	<thead>
 	    		<tr>
-	    			<th><span class="glyphicon glyphicon-plus-sign" id="invested_info_span">What you have invested </th> <th>0.00 </th>
+	    			<th><span class="sign plus-sign" id="invested_info_span"></span> What you have invested </th> <th>0.00 </th>
 	    		</tr>
-	    	
+	    	</thead> 
+	    	<tbody style="display:none">
 	    		<tr>
 	    			<td>Deposits </td> <td>0.00 </td>
 	    		</tr>
@@ -159,12 +177,17 @@
 	    		<tr>
 	    			<td>Other </td> <td>0.00  </td>
 	    		</tr>
+	    	</tbody>	
 	    	</table>
 
 	    	<table>
+	    	<thead>
 	    		<tr>
-	    			<th>What you've earned  </th> <th>0.00 </th>
+	    			<th><span class="sign plus-sign" id="earned_sub_info_span"></span>  What you've earned  </th> <th>0.00 </th>
 	    		</tr>
+	    	</thead>
+	    	
+	    	<tbody style="display:none">
 	    		<tr>
 	    			<td>Market changes </td> <td>0.00 </td>
 	    		</tr>
@@ -174,27 +197,34 @@
 	    		<tr>
 	    			<td>Betterment's fees </td> <td>0.00  </td>
 	    		</tr>
-	    		
+	    	</tbody>	  		   		
 	    		
 	    	</table>
 	    	<table class="total">
+	    	<thead>
 	    		<tr>
 	    			<th>Earnings  </th> <th>0.00  </th>
 	    		</tr>
+	    	</thead>
+	    	<tbody>
 	    		<tr>
 	    			<th>Time-weighted return </th> <th>0.00  </th>
 	    		</tr>
+	    	</tbody>    		
+	    		
 
 	    	</table>
 
-	    </div>
+	    </div><!-- end for summary_plan_detailed_info (the hiding div)-->
 		    	<h4>TOTAL EARNINGS <span>+$0.00 </span></h4>
+
+	    	</div> <!-- End of first columns -->
+
+	    	<div class="col-md-6">
+	    		<div id="chartdiv10" class="chartdiv"></div>
+
 	    	</div>
-	    </div>
-	    
-	    <div class="losses col-sm-6">
-	    	<p>TAX LOSS HARVESTING+ OFF</p>
-	    	<p>Harvested losses $0.00</p>
+
 	    </div>
 
 	  
@@ -206,7 +236,7 @@
 	  <div class="panel-body retirement_plan">
 	    <div class="earnings col-sm-6 retirement_plan_actions">
 	    	<div class="col-sm-6 edit_plan">
-		    	<span class="glyphicon glyphicon-plus-sign pull-left" id="retirement_info_span"></span>
+		    	<span class="sign plus-sign" id="retirement_info_span"></span>
 		    	<h2 class="pull-left"> Retirement </h2> <button type="button" class="btn btn-default pull-left">Edit Plan</button>
 		    </div>
 		    <div class="col-sm-6 deposit">
@@ -230,11 +260,13 @@
 	    	</div> 
 	    	</div>	    	
 	    	<table>
-	    	 
+	    	<thead>
 	    		<tr>
-	    			<th>What you have invested </th> <th>0.00 </th>
+	    			<th> <span class="sign plus-sign" id="retire-invest_info_span"> </span> What you have invested </th> <th>0.00 </th>
 	    		</tr>
-	    	
+	    	</thead>
+	    	 
+	    	<tbody style="display:none">
 	    		<tr>
 	    			<td>Deposits </td> <td>0.00 </td>
 	    		</tr>
@@ -244,13 +276,19 @@
 	    		<tr>
 	    			<td>Other </td> <td>0.00  </td>
 	    		</tr>
+	    	</tbody> 	
+	    		
 	    	</table>
 
 	    	<table>
+	    	<thead>
 	    		<tr>
-	    			<th>What you've earned  </th> <th>0.00 </th>
+	    			<th><span class="sign plus-sign" id="retire-earnedsub_info_span"> </span> What you've earned  </th> <th>0.00 </th>
 	    		</tr>
-	    		<tr>
+	    	 </thead>
+
+	    	 <tbody style="display:none">
+	    	 	<tr>
 	    			<td>Market changes </td> <td>0.00 </td>
 	    		</tr>
 	    		<tr>
@@ -259,17 +297,23 @@
 	    		<tr>
 	    			<td>Betterment's fees </td> <td>0.00  </td>
 	    		</tr>
+	    	 </tbody>
+	    		
+	    		
 	    		
 	    		
 	    	</table>
 	    	<table class="total">
+	    	<thead>
 	    		<tr>
 	    			<th>Earnings  </th> <th>0.00  </th>
 	    		</tr>
+	    	</thead>
+	    	<tbody>
 	    		<tr>
 	    			<th>Time-weighted return </th> <th>0.00  </th>
 	    		</tr>
-
+	    	</tbody>
 	    	</table>
 	    	<div class="deposit_status">
 	    		<a href="#" >AUTO-DEPOSIT OFF</a>
@@ -284,15 +328,20 @@
 	    <div class="basket_balance"> 
 		    <div id="" class="summary_plan_detailed_info">
 		    	<table>
-	    		<tr>
-	    			<th>Basket  </th> <th>Balance </th>
-	    		</tr>
-	    		<tr>
+		    	<thead>
+		    		<tr>
+	    				<th>Basket  </th> <th>Balance </th>
+	    			</tr>
+		    	</thead>
+	    		<tbody>
+	    			<tr>
 	    			<td>Bonds </td> <td>0.00 </td>
 	    		</tr>
 	    		<tr>
 	    			<td>Stocks </td> <td>0.00  </td>
-	    		</tr>    		
+	    		</tr>   
+	    		</tbody>
+	    		 		
 	    		
 	    	</table>
 		    </div>
@@ -310,5 +359,10 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>  
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha256-KXn5puMvxCw+dAYznun+drMdG1IFl3agK0p/pqT9KAo= sha512-2e8qq0ETcfWRI4HJBzQiA3UoyFk6tbNyG+qSaIBZLyW9Xf3sWZHN/lxe9fTh1U45DpPf07yj94KsUHHWe4Yk1A==" crossorigin="anonymous"></script>	 
 	<script src="../js/script.js"></script>
+	<script type="text/javascript" src="http://www.amcharts.com/lib/3/amcharts.js"></script>
+<script type="text/javascript" src="http://cdn.amcharts.com/lib/3/pie.js"></script>
+<script type="text/javascript" src="http://www.amcharts.com/lib/3/themes/light.js"></script>
+	<script src="../js/amchartcreate.js"></script>
+
     </body>
 </html>

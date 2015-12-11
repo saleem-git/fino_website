@@ -5,6 +5,9 @@
  	content: "";
 }
 	.summary_plan_detailed_info{
+		table {
+			margin:10px 0px;
+		}
 		margin-top: 30px;
 		p{
 			@include fontl(14);
@@ -28,13 +31,33 @@
 		th{
 				@include fontm(16);	
 				padding-right: 40px;
-				min-width: 215px;
+				min-width: 245px;
+				margin-left: 5px;
 			}
 		table.total tr th{
 			padding:5px 0px;
 		}
 	}
 
+.overview_account .earnings,.retirement_plan .earnings{
+			span.sign{
+				float: left;
+				width: 20px;
+				height: 20px;
+				display: inline-block;
+				padding-right: 10px;
+				cursor: pointer;
+				margin-right: 5px;
+			}
+			span.plus-sign {
+				@include small_icons-sprite(plus);				
+			}
+			span.minus-sign {
+				@include small_icons-sprite(minus);				
+			}
+
+
+}
 	/* Jquery cal css start */
 /*! jQuery UI - v1.11.4 - 2015-12-08
 * http://jqueryui.com
