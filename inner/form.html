@@ -72,12 +72,12 @@
                         </div>
                     </div>
                             <div class="col-sm-7">
-                            <h1 class="text-center"> Basic information</h1>
-                            <p class="text-center"> We use this information to create your account. Please enter the same name you use to file taxes.
+                            <h1 > Basic information</h1>
+                            <p > We use this information to create your account. Please enter the same name you use to file taxes.
                             </p>
-                            <div class="name_field row" >
+                            <div class="name_field row " >
                                 <div class="col-sm-6"> 
-                                    <label for="" class="si-menu-label">First Name</label>
+                                    <label for="" class="si-menu-label ">First Name<span class="required"> *</span></label>
                                     <input type="text" placeholder="First Name" name="firstname">
                                 </div>
 
@@ -87,14 +87,15 @@
                                 </div>
                             </div>
                              
-                            <label for="" class="si-menu-label" >Last Name</label>
+                            <label for="" class="si-menu-label" >Last Name<span class="required"> *</span></label>
                             <input type="text" placeholder="Last Name" name="lastname">
-                            <label for="" class="si-menu-label">Email Address</label>
+                            <label for="" class="si-menu-label">Email Address<span class="required"> *</span></label>
                             <input type="email" placeholder="Email Address" name="email">
-                            <label for="" class="si-menu-label">Password</label>
+                            <label for="" class="si-menu-label">Password<span class="required"> *</span></label>
                             <input type="password" placeholder="Password" id="password" name="password">
-                            <label for="" class="si-menu-label">Confirm Password</label>
+                            <label for="" class="si-menu-label">Confirm Password<span class="required"> *</span></label>
                             <input type="password" placeholder="Confirm Password" name="confirm_password">
+							
                             </div >
                         
                 </div>
@@ -115,25 +116,25 @@
                         </div>
                     </div>
                             <div class="col-sm-7">
-                            <h3 class="text-center"> Contact information
+                            <h3 > Contact information
                             </h3>
-                            <p class="text-center"> 
+                            <p > 
                             To sign up for a FinoTrust account you must have a valid mailing address. We will never sell this information to anyone. Ever.
                             </p>
                             
-                            <label for="" class="si-menu-label">Address Line 1</label>
+                            <label for="" class="si-menu-label">Address Line 1<span class="required"> *</span></label>
                             <input type="text" placeholder="Address Line 1" name="address_1">
                             <label for="" class="si-menu-label">Address Line 2</label>
                             <input type="text" placeholder="Address Line 1">
-                            <label for="" class="si-menu-label">City</label>
+                            <label for="" class="si-menu-label">City<span class="required"> *</span></label>
                             <input type="text" placeholder="City" name="city">
-                            <label for="" class="si-menu-label">State</label>
+                            <label for="" class="si-menu-label">State<span class="required"> *</span></label>
                             <input type="text" placeholder="State" name="state">
-                            <label for="" class="si-menu-label">ZIP Code</label>
+                            <label for="" class="si-menu-label">ZIP Code<span class="required"> *</span></label>
                             <input type="text" placeholder="ZIP Code" name="zip_code">
-                            <label for="" class="si-menu-label">Phone Number</label>
+                            <label for="" class="si-menu-label">Phone Number<span class="required"> *</span></label>
                             <input type="text" placeholder="Country Code" name="country_code">
-                            <input type="text" placeholder="Phone Number" name="phone_number">
+                            <input type="text" maxlength="10" placeholder="Phone Number" name="phone_number">
 
                             <label for="our-info" class="si-menu-label">How did you hear about us? </label>
                             <select class="form-control si-menu-input" id="our-info">
@@ -164,9 +165,9 @@
                         </div>
                     </div>
                             <div class="col-sm-7">
-                            <h3 class="text-center"> Identity information
+                            <h3 > Identity information
                             </h3>
-                            <p class="text-center"> 
+                            <p > 
                             FinoTrust is a financial institution just like a bank or a brokerage firm. This requires us to verify your identity. We will not run a credit check.
                             </p>
                             <label for="" class="si-menu-label">PAN Number</label>
@@ -174,10 +175,9 @@
                             <label for="" class="si-menu-label">Date of birth</label>   
                             <input type="text" id="datepicker" name="date" placeholder="DOB" readonly >                         
                             <label for="" class="si-menu-label">Gender</label>
-                            <input type="radio" name="sex" value="male">  <label for="male"> Male &nbsp;</label>                       
+                            <input type="radio" name="sex" value="male">  <label for="male"> Male &nbsp;&nbsp;</label>                       
                             <input type="radio" name="sex" value="female"> <label for="female"> Female</label> 
-
-                            <label for="residency_tax" class="si-menu-label">What is your residency for Tax Status? </label>
+                            <label for="residency_tax" class="si-menu-label ">What is your residency for Tax Status?<span class="required"> *</span></label>
                              <select class="form-control si-menu-input" id="residency_tax" name="residency_tax">
                              <option value="" selected> Select </option>
                              <option value="Indian"> Indian </option>
@@ -207,14 +207,14 @@
                         </div>
                     </div>
                             <div class="col-sm-7">
-                            <h3 class="text-center"> Regulatory Questions
+                            <h3> Regulatory Questions
                             </h3>
-                            <p class="text-center"> 
+                            <p > 
                             We are required to ask these regulatory questions. Most customers answers no.
                             </p>
-                            <label class="si-menu-label">Are you a politically exposed person</label>
+                            <label class="si-menu-label ">Are you a politically exposed person<span class="required"> *</span></label>
                             
-                            <input type="radio" value="yes" name="political"> <label for="yes">Yes </label>                           
+                            <input type="radio" value="yes" name="political"> <label for="yes">Yes&nbsp;&nbsp; &nbsp;&nbsp; </label>                           
                             <input type="radio" value="no" name="political">  <label for="no">No </label>                                              
                             
 
@@ -306,7 +306,6 @@
 					},
                 date:"required",
                 pan: {
-                    required: true,
                     minlength: 10,
                     maxlength: 10
                 },             
