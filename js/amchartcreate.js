@@ -84,7 +84,7 @@ var chartConfig1 = clone(chartConfig);
 chartConfig1.dataProvider = [
             {
               "country": "Czech Republic",
-              "litres": "356"
+              "litres": 356
             },
             {
               "country": "Ireland",
