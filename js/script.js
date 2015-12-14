@@ -19,29 +19,48 @@ $("ul.step-labels li a").on("click",function(){
 /*To hide goal meta bg color*/
 $('#collapseOne').on('show.bs.collapse', function () {
 		$("#headingOne .goal_metainfo").css("background-color","transparent");
-		$("#arrow").removeClass("glyphicon-menu-down");
-		$("#arrow").addClass("glyphicon-menu-up");
+		$("#headingOne #arrow").removeClass("glyphicon-menu-down");
+		$("#headingOne #arrow").addClass("glyphicon-menu-up");
 
 	});
 
 $('#collapseOne').on('hide.bs.collapse', function () {
 		$("#headingOne  .goal_metainfo").css("background-color","#F9F9F9");
-		$("#arrow").removeClass("glyphicon-menu-up");
-		$("#arrow").addClass("glyphicon-menu-down");
+		$("#headingOne #arrow").removeClass("glyphicon-menu-up");
+		$("#headingOne #arrow").addClass("glyphicon-menu-down");
 
 	});
 $('#collapseTwo').on('show.bs.collapse', function () {
 		$("#headingTwo .goal_metainfo").css("background-color","transparent");
+		$("#headingTwo #arrow").removeClass("glyphicon-menu-down");
+		$("#headingTwo #arrow").addClass("glyphicon-menu-up");
 	});
 $('#collapseTwo').on('hidden.bs.collapse', function () {
 		$("#headingTwo  .goal_metainfo").css("background-color","#F9F9F9");
+		$("#headingTwo #arrow").removeClass("glyphicon-menu-up");
+		$("#headingTwo #arrow").addClass("glyphicon-menu-down");
 	});
 
 $('#collapseThree').on('show.bs.collapse', function () {
 		$("#headingThree .goal_metainfo").css("background-color","transparent");
+		$("#headingThree #arrow").removeClass("glyphicon-menu-down");
+		$("#headingThree #arrow").addClass("glyphicon-menu-up");
 	});
 $('#collapseThree').on('hidden.bs.collapse', function () {
 		$("#headingThree .goal_metainfo").css("background-color","#F9F9F9");
+		$("#headingThree #arrow").removeClass("glyphicon-menu-up");
+		$("#headingThree #arrow").addClass("glyphicon-menu-down");
+	});
+
+$('#collapseFour').on('show.bs.collapse', function () {
+		$("#headingFour .goal_metainfo").css("background-color","transparent");
+		$("#headingFour #arrow").removeClass("glyphicon-menu-down");
+		$("#headingFour #arrow").addClass("glyphicon-menu-up");
+	});
+$('#collapseFour').on('hidden.bs.collapse', function () {
+		$("#headingFour .goal_metainfo").css("background-color","#F9F9F9");
+		$("#headingFour #arrow").removeClass("glyphicon-menu-up");
+		$("#headingFour #arrow").addClass("glyphicon-menu-down");
 	});
 
 /*Deposit menu show and hide*/
