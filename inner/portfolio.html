@@ -11,34 +11,7 @@
         <link rel="stylesheet" href="../style/header.css">
     </head>
     <body>
-<!--    <header> 
-    <nav class="navbar navbar-default navbar-fixed-top"  >
-        <div class="container">
-            <div class="navbar-header page-scroll">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="#page-top"><img src="../images/logo_img.jpg " ></a>
-            </div>
-
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav navbar-right">
-                    <li class="hidden">
-                        <a href="#page-top"></a>
-                    </li>
-          <li><a class="page-scroll cd-signin" href="#0">Sign in</a></li>
-          <li><a class="page-scroll cd-signup" href="#0">Sign up</a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-    </header>
-	
-	-->
-    <header>
+<header>
     <!-- Navigation -->
 <nav class="navbar navbar-default inner-head">
   <div class="container-fluid">
@@ -91,21 +64,19 @@
             </div>
 
             </div>
-            <div class="account col-sm-3">
-                <h3>Account</h3>   
-                <p>Personal Account</p>             
+            <div class="execute col-sm-3">
+                <button type="button" class="btn btn-default">Execute Portfolio</button>             
             </div>
-            <div class="goal col-sm-2">
-                <h3>Goal Type</h3>   
-                <p>Education</p>             
+            <div class="change col-sm-2">
+                <button type="button" class="btn btn-default">Change Portfolio</button>            
             </div>
-            <div class="Balamce col-sm-2">
+            <div class="balance col-sm-2">
                 <h3>Balance</h3>   
                 <p>Rs 0.00 </p>             
             </div>
           </div>
           <div class="panel-body">
-            <div class="col-sm-4">
+            <div class="col-sm-3">
                 <div class="sidebar">
                     <p class="current-portfolio">Your Current Portfolio</p>
                     <p> Pie Chart</p>
@@ -123,7 +94,8 @@
 
                         </table>
 
-                        <button type="button" class="btn btn-default">Adjust Target Allocation > </button>
+                        <div><button type="button" class="btn btn-default">Change Portfolio </button></div>
+                        <div><button type="button" class="btn btn-default">Change Funds </button></div>
                     </div>
 
                    
@@ -150,23 +122,32 @@
 
             </div>
 
-            <div class="col-sm-8 portfolio_large_info">
+            <div class="col-sm-9 portfolio_large_info">
                 <table>
                     <thead>
                         <tr>
-                            <th><div class="td_contain_one">HOLDINGs</div></th> 
-                            <th> <div class="td_contain_two">CURRENT WEIGHT</div></th> 
-                            <th> <div class="td_contain_three">CURRENT VALUE</div></th>
+                            <th><div class="td_contain_one">MUTUAL FUND</div></th> 
+                            <th> <div class="td_contain_two">RECOMMENDED<br>WEIGHT</div></th> 
+                            <th> <div class="td_contain_three">INVESTED<br>WEIGHT</div></th> 
+                            <th> <div class="td_contain_four">CURRENT<br>VALUE</div></th>
+                            <th> <div class="td_contain_five">ACTION</div></th>
                         </tr>
                     </thead>
                     <tfoot>
                         <tr>
                             <td> Total</td>
                             <td> 100 %</td>
+                            <td> 100 %</td>
                             <td> Rs 0.00</td>
+                            <td> </td>
                         </tr>
                     </tfoot>
                     <tbody>
+                        <tr class="tr_fund">
+							<td colspan="5">
+							Mutual Fund Equity
+							</td>
+                        </tr>
                         <tr>
                             <td>
                            
@@ -192,10 +173,23 @@
                                    
                                 
                             </td>
-                            <td>
+                            <td class="td_contain_two">
                                
-                                    <span>Rs 0.00 </span>
+                                <p>16.2%</p>
+                                <div class="graph"></div>
+                                   
                                 
+                            </td>
+                            <td>
+								<span>Rs 0.00 </span>
+                            </td>
+							<td>
+								<select class="action" name="action">
+									<option value="" selected hidden> ACTION </option>
+									<option value="Purchase">Purchase<span class="caret"></span></option>
+									<option value="redeem">Redeem</option>
+									<option value="SIP-registration">SIP Registration </option>
+								</select>
                             </td>
                         </tr>
                         <tr>
@@ -223,10 +217,118 @@
                                     
                                 
                             </td>
+                            <td class="td_contain_two">  
+                                <p>16.2%</p>
+                                <div class="graph"></div>  
+                            </td>
+                            <td>
+								<span>Rs 0.00 </span>
+                            </td>
+                            <td>
+								<select class="action" name="action">
+									<option value="" selected hidden> ACTION </option>
+									<option value="Purchase">Purchase<span class="caret"></span></option>
+									<option value="redeem">Redeem</option>
+									<option value="SIP-registration">SIP Registration </option>
+								</select>
+                            </td>
+                        </tr>
+                    
+                        <tr class="tr_fund">
+							<td colspan="5">
+							MF Debt Funds
+							</td>
+                        </tr>
+                        <tr>
+                            <td>
+                           
+                               <span class="right-arrow"> > </span> <a class="asset-class" data-toggle="collapse" href="#asset-class" 
+                               aria-expanded="false" aria-controls="asset-class">US Total Stock Market:</a>                            
+
+                                <div class="asset-child-class collapse" id="asset-class"><a href="#">VTI:Vanguard Total Stock Market ETF</a> 
+
+                                <p class="asset-child-sub-class">
+                                <span class="right-arrow"> > </span>  
+                                <a data-toggle="collapse" href="#asset-child-sub" aria-expanded="false" aria-controls="asset-child-sub">why this asset class and these etfs</a> </p>
+
+                                <p class="asset-child-sub-class collapse" id="asset-child-sub"> US Total Stock Market contains broad exposure to the entire US stock market, including growth and value companies of small, mid and large capitalizations. This asset class allows participation in the historically strong long-term growth of the US economy.
+                                </p>
+                                </div> 
+                                                      
+                            </td>
+
+                            <td class="td_contain_two">
+                               
+                                <p>16.2%</p>
+                                <div class="graph"></div>
+                                   
+                                
+                            </td>
+                            <td class="td_contain_two">
+                               
+                                <p>16.2%</p>
+                                <div class="graph"></div>
+                                   
+                                
+                            </td>
+                            <td>
+                               
+                                    <span>Rs 0.00 </span>
+                                
+                            </td>
+                            <td>
+								<select class="action" name="action">
+									<option value="" selected hidden> ACTION </option>
+									<option value="Purchase">Purchase</option>
+									<option value="redeem">Redeem</option>
+									<option value="SIP-registration">SIP Registration </option>
+								</select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                            
+                               <span class="right-arrow"> > </span> <a class="asset-class" data-toggle="collapse" href="#asset-class1" 
+                               aria-expanded="false" aria-controls="asset-class1">US Total Stock Market:</a>                            
+
+                                <div class="asset-child-class collapse" id="asset-class1"><a href="#">VTI:Vanguard Total Stock Market ETF</a> 
+
+                                <p class="asset-child-sub-class">
+                                <span class="right-arrow"> > </span>  
+                                <a data-toggle="collapse" href="#asset-child-sub1" aria-expanded="false" aria-controls="asset-child-sub1">why this asset class and these etfs</a> </p>
+
+                                <p class="asset-child-sub-class collapse" id="asset-child-sub1"> US Total Stock Market contains broad exposure to the entire US stock market, including growth and value companies of small, mid and large capitalizations. This asset class allows participation in the historically strong long-term growth of the US economy.
+                                </p>
+                                </div> 
+                                                      
+                            </td>
+
+                            <td class="td_contain_two">
+                                
+                                <p>16.2%</p>
+                                <div class="graph"></div>
+                                    
+                                
+                            </td>
+                            <td class="td_contain_two">
+                                
+                                <p>16.2%</p>
+                                <div class="graph"></div>
+                                    
+                                
+                            </td>
                             <td>
                                 
                                     <span>Rs 0.00 </span>
                                 
+                            </td>
+                            <td>
+								<select class="action" name="action">
+									<option value="" selected hidden> ACTION </option>
+									<option value="Purchase">Purchase<span class="caret"></span></option>
+									<option value="redeem">Redeem</option>
+									<option value="SIP-registration">SIP Registration </option>
+								</select>
                             </td>
                         </tr>
                     </tbody>

@@ -12,7 +12,6 @@
 				width: 100px;
 				float: left;
 				position: relative;
-				
 				form{
 					padding: 15px 0px;
 					label{
@@ -223,8 +222,9 @@
 					width: 100%;
 					th {
 						@include fontl(12);
+						border-bottom: 1px solid rgb(204, 204, 204);
 						&:first-child{
-							width: 350px;
+							width: 250px;
 						}
 					}
 					td,td p, td a {
@@ -266,7 +266,16 @@
 							padding: 6px 15px 6px 4px;
 						}
 					}
-					
+					.tr_fund td{
+						font-weight:700;
+						color:#18bb9c;
+					}
+					.action{
+						width:100px;
+						background-color:#2C3E50;
+						color:white;
+					}
+
 				}/* end of table */
 				.modal_container{
 					margin-top: 30px;
@@ -279,8 +288,6 @@
 						button{
 							background-color:#1F93EF;
 							color: #fff;
-
-							
 						}
 					}
 					.btn-group {
