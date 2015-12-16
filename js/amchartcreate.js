@@ -1,7 +1,4 @@
 /*For Amcharts*/
-
-
-
 var chartConfig = {
           "type": "pie",
           "balloonText": "[[title]]<br><span style='font-size:14px'><b>[[value]]</b> ([[percents]]%)</span>",
@@ -102,7 +99,7 @@ chartConfig1.dataProvider = [
 ];
 
 // create the chart
-AmCharts.makeChart("chartdiv10", chartConfig1);
+AmCharts.makeChart("sumchartdiv1", chartConfig1);
 
 // create a copy of the universal config
 var chartConfig2 = clone(chartConfig);
@@ -129,4 +126,60 @@ chartConfig2.dataProvider = [
 ];
 
 // create the chart
-AmCharts.makeChart("chartdiv11", chartConfig2);
+AmCharts.makeChart("sumchartdiv2", chartConfig2);
+
+
+// create a copy of the universal config
+var chartConfig4 = clone(chartConfig);
+
+// modify a copy of the config
+chartConfig4.dataProvider = [
+            {
+              "country": "FD",
+              "litres": 156
+            },
+            {
+              "country": "MF Liquid",
+              "litres": 131
+            },
+            {
+              "country": "MF Debt",
+              "litres": 315.
+            },
+            {
+              "country": "MF Equity",
+              "litres": 109
+            }
+
+];
+
+// create the chart
+AmCharts.makeChart("chartdiv2", chartConfig4);
+
+
+// create a copy of the universal config
+var chartConfig5 = clone(chartConfig);
+
+// modify a copy of the config
+chartConfig5.dataProvider = [
+            {
+              "country": "Czech Republic",
+              "litres": "356"
+            },
+            {
+              "country": "Ireland",
+              "litres": 131
+            },
+            {
+              "country": "Germany",
+              "litres": 115.
+            },
+            {
+              "country": "Australia",
+              "litres": 109
+            }
+
+];
+
+// create the chart
+AmCharts.makeChart("chartdiv3", chartConfig5);

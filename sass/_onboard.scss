@@ -15,9 +15,7 @@ a,a:focus{
 			border: none;
 			color: #1F93EF;
 			font-size: 15px;			
-		}
-
-
+			}
 		}
 		a,a:hover{
 			border:none;
@@ -92,6 +90,7 @@ section.plan_info{
 		p{
 			padding:20px 10px 20px 35px;
 			@include fontl(18);
+			max-width: 600px;
 			span {
 			input[type="text"]{
 				border: none;
@@ -115,11 +114,11 @@ section.plan_info{
 				position: absolute;
 				color: #18BB9C;
 				font-size: 12px;
-				top: -12px;
+				top: -8px;
 				left: 51px;				
 			}
 			span.edit-time{				
-				left: 10px;				
+				left: 30px;				
 			}
 			
 		}
@@ -133,7 +132,7 @@ section.plan_info{
 	}
 	.goal_metainfo {
 		background-color: #F9F9F9;
-		padding: 15px 0px;
+		padding: 25px 0px;
 		label{
 			@include fontl(16);
 			margin-left: 80px;

@@ -98,6 +98,28 @@ $( "#third").on("click",function() {
   alert( "Handler for .click() called." );
 });*/
 
+/*(function() {
+
+
+   $('.target-amount').click(target);
+})();*/
+
+//calling function on page load and on event
+jQuery(function($) {
+
+	function target() {
+		$(".target-amount").on("click", function(event){
+		$(this).hide();
+		event.stopPropagation();
+		$(this).next().show();
+		$(this).next().children().focus();
+		});
+    }
+
+    $('.target-amount').click(target);
+});
+
+
 $(".target-amount").on("click", function(event){
 	$(this).hide();
 	event.stopPropagation();
@@ -177,7 +199,64 @@ $("#retire-earnedsub_info_span").on("click",function(event){
 
 });
 
+/*Script for determining the goals*/
+var jsondata,formobj;	  
+$.fn.serializeObject = function()
+       
+	{
+	    var o = {};
+	    var a = this.serializeArray();
+	    $.each(a, function() {
+	        if (o[this.name] !== undefined) {
+	            if (!o[this.name].push) {
+	                o[this.name] = [o[this.name]];
+	            }
+	            o[this.name].push(this.value || '');
+	        } else {
+	            o[this.name] = this.value || '';
+	        }
+	    });
+	    return o;
+	};
 
+$(function() {
+
+$("form[name='onboardinfo']").submit(function() {
+	formobj=JSON.stringify($("form[name='onboardinfo']").serializeObject());
+	$('#result').text(formobj+"print");
+	jsondata = JSON.parse(formobj);    
+	//alert(jsondata.retirement);
+	if(jsondata.age && jsondata.income !=""){
+		console.log("empty data");
+
+				// Check browser support
+				//var testObject = { 'one': 1, 'two': 2, 'three': 3 };
+
+			// Put the object into storage
+			
+			sessionStorage.setItem('someData',formobj);
+			nextpage();
+
+
+		
+
+	}
+	else {
+		console.log(jsondata);
+		console.log("fill the fields");
+	// retirement-info="here here";
+	return false;
+	}
+	
+	
+});
+
+});
+
+function nextpage() {
+	//alert("going in next function");
+	document.location.href("onboarding.html");	
+}
 
 
 
