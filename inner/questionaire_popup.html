@@ -1,0 +1,398 @@
+<html>
+<head>
+<style>
+/*custom font*/
+
+/*form styles*/
+#msform {
+margin: 50px auto;
+position: relative;
+}
+#msform fieldset {
+border: 0 none;
+width: 60%;
+margin: 0 20%;
+line-height:35px;
+/*stacking fieldsets above each other*/
+position: absolute;
+}
+/*Hide all except first fieldset*/
+#msform fieldset:not(:first-of-type) {
+display: none;
+}
+.radio input {
+    margin-right: 15px;
+}
+/*buttons*/
+#msform .action-button {
+width: 100px;
+background: #27AE60;
+font-weight: bold;
+color: white;
+border: 0 none;
+border-radius: 1px;
+cursor: pointer;
+padding: 10px 5px;
+margin: 10px 5px;
+float:right;
+}
+#msform .action-button:hover, #msform .action-button:focus {
+box-shadow: 0 0 0 2px white, 0 0 0 3px #27AE60;
+}
+/*headings*/
+.fs-title {
+font-size: 15px;
+text-transform: uppercase;
+color: #2C3E50;
+margin-bottom: 10px;
+}
+/*progressbar*/
+#progressbar {
+margin: 5% 10%;
+overflow: hidden;
+/*CSS counters to number the steps*/
+counter-reset: step;
+}
+#progressbar li {
+list-style-type: none;
+color: gray;
+width: 7.69%;
+float: left;
+position: relative;
+}
+#progressbar li:before {
+content: '.';
+width: 10px;
+line-height: 10px;
+display: block;
+font-size: 10px;
+color: #ddd;
+background: #ddd;
+border-radius: 50px;
+margin: 0 auto 5px auto;
+}
+/*progressbar connectors*/
+#progressbar li:after {
+content: '';
+width: 100%;
+height: 2px;
+background-color: #ddd;
+position: absolute;
+left: -50%;
+top: 4px;
+z-index: -1; /*put it behind the numbers*/
+}
+#progressbar li:first-child:after {
+/*connector not needed before the first step*/
+content: none;
+}
+/*marking active/completed steps green*/
+/*The number of the step and the connector before it = green*/
+#progressbar li.active:before, #progressbar li.active:after {
+background: #27AE60;
+color: #27AE60;
+}
+</style>
+<title>jQuery Multi-Step Form Example</title>
+</head>
+<body>
+
+<!-- multistep form -->
+<form id="msform">
+<!-- progressbar -->
+<ul id="progressbar">
+<li class="active"></li>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+</ul>
+<!-- fieldsets -->
+<fieldset>
+<h2 class="fs-title">You are financially responsible for:</h2>
+  <div class="radio">
+    <label>
+      <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" >
+      4-5 people besides yourself
+    </label>
+  </div>
+  <div class="radio">
+    <label>
+      <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+        2-3 people besides yourself
+    </label>
+  </div>
+  <div class="radio">
+    <label>
+      <input type="radio" name="optionsRadios" id="optionsRadios3" value="option3" >
+        1 person besides yourself
+    </label>
+  </div> 
+  <div class="radio">
+    <label>
+      <input type="radio" name="optionsRadios" id="optionsRadios4" value="option4" >
+        Only you
+    </label>
+  </div>
+<input type="button" name="next" class="next action-button" value="Next" />
+</fieldset>
+<fieldset>
+<h2 class="fs-title">Till what age would you like to continue working?</h2>
+<div>
+<div class="radio"><label><input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" >Up to 45 years </label></div>    
+<div class="radio"><label><input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">50 years </label></div>
+<div class="radio"><label><input type="radio" name="optionsRadios" id="optionsRadios3" value="option3" >55 years</label></div>
+<div class="radio"><label><input type="radio" name="optionsRadios" id="optionsRadios4" value="option4" >60 years</label></div>
+  </div>
+<input type="button" name="next" class="next action-button" value="Next" />
+<input type="button" name="previous" class="previous action-button" value="Previous" />
+
+</fieldset>
+<fieldset>
+<h2 class="fs-title">How much are you willing to set aside monthly towards your investment goals?</h2>
+<div>
+<div class="radio"><label><input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" > 5-10% of monthly income </label></div>    
+<div class="radio"><label><input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">10-15% of monthly income </label></div>
+<div class="radio"><label><input type="radio" name="optionsRadios" id="optionsRadios3" value="option3" >15-20% of monthly income</label></div>
+<div class="radio"><label><input type="radio" name="optionsRadios" id="optionsRadios4" value="option4" >25%+ of monthly income</label></div>
+  </div>
+<input type="button" name="next" class="next action-button" value="Next" />
+<input type="button" name="previous" class="previous action-button" value="Previous" />
+</fieldset>
+<fieldset>
+<h2 class="fs-title">How long are you willing to wait for getting the desired portfolio amount?</h2>
+<div>
+<div class="radio"><label><input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" >Less than 1 year </label></div>    
+<div class="radio"><label><input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">1-3 years </label></div>
+<div class="radio"><label><input type="radio" name="optionsRadios" id="optionsRadios3" value="option3" >3-5 years</label></div>
+<div class="radio"><label><input type="radio" name="optionsRadios" id="optionsRadios4" value="option4" >5-10 years</label></div>
+<div class="radio"><label><input type="radio" name="optionsRadios" id="optionsRadios4" value="option4" >More than 10 years</label></div>
+  </div>
+<input type="button" name="next" class="next action-button" value="Next" />
+<input type="button" name="previous" class="previous action-button" value="Previous" />
+</fieldset>
+<fieldset>
+<h2 class="fs-title">When making an investment decision, state the one most important to you?</h2>
+<div>
+<div class="radio"><label><input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" > Regular Income</label></div>    
+<div class="radio"><label><input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">Principal protection first</label></div>
+<div class="radio"><label><input type="radio" name="optionsRadios" id="optionsRadios3" value="option3" > Wealth creation in long term, ignoring fluctuations in short term</label></div>
+<div class="radio"><label><input type="radio" name="optionsRadios" id="optionsRadios4" value="option4" >Tax Efficiency</label></div>
+  </div>
+<input type="button" name="next" class="next action-button" value="Next" />
+<input type="button" name="previous" class="previous action-button" value="Previous" />
+</fieldset>
+
+<fieldset>
+<h2 class="fs-title">What would you consider as satisfactory performance of your investment portfolio?</h2>
+<div>
+<div class="radio"><label><input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" >Potential annureturn of 9-10% pre-tax with risk of 0-3% fall in portfolio value </label></div>    
+<div class="radio"><label><input type="radio" name="optionsRadios" id="optionsRadios2" value="option2"> Potential annual return of 11-12% pre-tax with risk of 4-5% fall in portfolio value </label></div>
+<div class="radio"><label><input type="radio" name="optionsRadios" id="optionsRadios3" value="option3" >Potential annual return of 13-14% pre-tax with risk of 6-8% fall in portfolio value</label></div>
+<div class="radio"><label><input type="radio" name="optionsRadios" id="optionsRadios4" value="option4" > Potential annual return of above 15% pre-tax with risk of 9-14% fall in portfolio value</label></div>
+  </div>
+<input type="button" name="next" class="next action-button" value="Next" />
+<input type="button" name="previous" class="previous action-button" value="Previous" />
+</fieldset>
+<fieldset>
+<h2 class="fs-title">What would you do in a game show like KBC, if you were winning Rs10 lakhs and had to make one of the following choices without knowing the next question:</h2>
+<div>
+<div class="radio"><label><input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" >Take Rs10 lakhs and quit the game </label></div>    
+<div class="radio"><label><input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">Play to increase prize money won by Rs5 lakhs with risk of Rs5 lakhs of amt won </label></div>
+<div class="radio"><label><input type="radio" name="optionsRadios" id="optionsRadios3" value="option3" >Play to increase prize money won by Rs10 lakhs with risk of Rs7.5 lakhs</label></div>
+<div class="radio"><label><input type="radio" name="optionsRadios" id="optionsRadios4" value="option4" >Play to increase prize money won by Rs20 lakhs with risk of Rs10 lakhs</label></div>
+  </div>
+<input type="button" name="next" class="next action-button" value="Next" />
+<input type="button" name="previous" class="previous action-button" value="Previous" />
+</fieldset>
+<fieldset>
+<h2 class="fs-title">In case of sudden windfall gain, you would do the following:</h2>
+<div>
+<div class="radio"><label><input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" >Save a large portion in bank FD or other debt instruments </label></div>    
+<div class="radio"><label><input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">Spend a large portion on lifestyle needs like buy a car or plan a vacation </label></div>
+<div class="radio"><label><input type="radio" name="optionsRadios" id="optionsRadios3" value="option3" >Invest a sizeable portion in equities</label></div>
+<div class="radio"><label><input type="radio" name="optionsRadios" id="optionsRadios4" value="option4" >Invest a sizeable portion in equities</label></div>
+  </div>
+<input type="button" name="next" class="next action-button" value="Next" />
+<input type="button" name="previous" class="previous action-button" value="Previous" />
+</fieldset>
+<fieldset>
+<h2 class="fs-title">What best describes your equity investment style?</h2>
+<div>
+<div class="radio"><label><input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" >I can tolerate small fluctuations in value of investment (say 10-15%)
+ </label></div>    
+<div class="radio"><label><input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">I can tolerate medium fluctuations (16-20%)
+ </label></div>
+<div class="radio"><label><input type="radio" name="optionsRadios" id="optionsRadios3" value="option3" >I can tolerate large fluctuations (21-30%)
+</label></div>
+  </div>
+<input type="button" name="next" class="next action-button" value="Next" />
+<input type="button" name="previous" class="previous action-button" value="Previous" />
+</fieldset>
+<fieldset>
+<h2 class="fs-title">If the equity market falls by 20-25% in the short term, what would be your response?
+</h2>
+<div>
+<div class="radio"><label><input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" >Sell existing holdings and stay in cash
+ </label></div>    
+<div class="radio"><label><input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">Sell part of your shares
+ </label></div>
+<div class="radio"><label><input type="radio" name="optionsRadios" id="optionsRadios3" value="option3" >Hold on to existing stocks but not buy more
+</label></div>
+<div class="radio"><label><input type="radio" name="optionsRadios" id="optionsRadios4" value="option4" >Buy more equity shares because price IS low
+</label></div>
+  </div>
+<input type="button" name="next" class="next action-button" value="Next" />
+<input type="button" name="previous" class="previous action-button" value="Previous" />
+</fieldset>
+<fieldset>
+<h2 class="fs-title">How long have you been investing in equities?
+</h2>
+<div>
+<div class="radio"><label><input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" >0-2 years </label></div>    
+<div class="radio"><label><input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">2-5 years </label></div>
+<div class="radio"><label><input type="radio" name="optionsRadios" id="optionsRadios3" value="option3" >5-10 years</label></div>
+<div class="radio"><label><input type="radio" name="optionsRadios" id="optionsRadios4" value="option4" >10+ years</label></div>
+  </div>
+<input type="button" name="next" class="next action-button" value="Next" />
+<input type="button" name="previous" class="previous action-button" value="Previous" />
+</fieldset>
+<fieldset>
+<h2 class="fs-title">My income-expense history in the recent past has been:
+</h2>
+<div>
+<div class="radio"><label><input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" >Expenses well within income </label></div>    
+<div class="radio"><label><input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">Expenses near equal to income </label></div>
+<div class="radio"><label><input type="radio" name="optionsRadios" id="optionsRadios3" value="option3" >Expenses exceed income</label></div>
+  </div>
+<input type="button" name="next" class="next action-button" value="Next" />
+<input type="button" name="previous" class="previous action-button" value="Previous" />
+</fieldset>
+<fieldset>
+<h2 class="fs-title">Beating inflation in the long run is more important to me than short term stable returns
+</h2>
+<div>
+<div class="radio"><label><input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" >Strongly agree </label></div>    
+<div class="radio"><label><input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">Agree </label></div>
+<div class="radio"><label><input type="radio" name="optionsRadios" id="optionsRadios3" value="option3" >Disagree</label></div>
+<div class="radio"><label><input type="radio" name="optionsRadios" id="optionsRadios4" value="option4" >Strongly disagree</label></div>
+  </div>
+<input type="submit" name="submit" class="submit action-button" value="Submit" />
+<input type="button" name="previous" class="previous action-button" value="Previous" />
+</fieldset>
+
+</form>
+
+<!-- jQuery --> 
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>  
+<!-- jQuery easing plugin --> 
+<script>
+
+/*Saleem's code*/
+$(document).ready(function(){
+ $("input[type='radio']").click(function(index){
+      $(this).closest('fieldset').find(".next").triggerHandler("click");
+  }); 
+	
+
+});
+
+
+/*Dev code*/
+$(function() {
+
+var current_fs, next_fs, previous_fs; //fieldsets
+var left, opacity, scale; //fieldset properties which we will animate
+var animating; //flag to prevent quick multi-click glitches
+
+
+
+$(".next").on("click",function(){
+	console.log("in next function");
+	if(animating) return false;
+	console.log("in next after condition");
+	animating = true;
+
+	current_fs = $(this).parent();
+	next_fs = $(this).parent().next();
+	
+	//activate next step on progressbar using the index of next_fs
+	$("#progressbar li").eq($("fieldset").index(next_fs)).addClass("active");
+	
+	//show the next fieldset
+	next_fs.show(); 
+	//hide the current fieldset with style
+	current_fs.animate({opacity: 0}, {
+		step: function(now, mx) {
+			//as the opacity of current_fs reduces to 0 - stored in "now"
+			//1. scale current_fs down to 80%
+			scale = 1 - (1 - now) * 0.2;
+			//2. bring next_fs from the right(50%)
+			left = (now * 50)+"%";
+			//3. increase opacity of next_fs to 1 as it moves in
+			opacity = 1 - now;
+			current_fs.css({'transform': 'scale('+scale+')'});
+			next_fs.css({'left': left, 'opacity': opacity});
+		}, 
+		//duration: 800, 
+		complete: function(){
+			current_fs.hide();
+			animating = false;
+			console.log("near end");
+		}, 
+		//this comes from the custom easing plugin
+	});
+	console.log("end");
+});
+
+$(".previous").on("click",function(){
+	if(animating) return false;
+	animating = true;
+	
+	current_fs = $(this).parent();
+	previous_fs = $(this).parent().prev();
+	
+	//de-activate current step on progressbar
+	$("#progressbar li").eq($("fieldset").index(current_fs)).removeClass("active");
+	
+	//show the previous fieldset
+	previous_fs.show(); 
+	//hide the current fieldset with style
+	current_fs.animate({opacity: 0}, {
+		step: function(now, mx) {
+			//as the opacity of current_fs reduces to 0 - stored in "now"
+			//1. scale previous_fs from 80% to 100%
+			scale = 0.8 + (1 - now) * 0.2;
+			//2. take current_fs to the right(50%) - from 0%
+			left = ((1-now) * 50)+"%";
+			//3. increase opacity of previous_fs to 1 as it moves in
+			opacity = 1 - now;
+			current_fs.css({'left': left});
+			previous_fs.css({'transform': 'scale('+scale+')', 'opacity': opacity});
+		}, 
+		duration: 800, 
+		complete: function(){
+			current_fs.hide();
+			animating = false;
+		}, 
+		//this comes from the custom easing plugin
+	});
+});
+
+$(".submit").click(function(){
+	return false;
+})
+
+});
+</script>
+
+</body>
+</html>
