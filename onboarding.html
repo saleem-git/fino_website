@@ -337,6 +337,85 @@
 			$("#onboarding #headingTwo p").html("Retire happily by saving Rs <span class='target-amount'>"+salaryto_save+"<span class='glyphicon glyphicon-pencil edit'></span> </span> <span style='display:none'><input type='text' name='income' maxlength='9'> </span> By <span class='target-time'>"+yearto_retire+"<span class='glyphicon glyphicon-pencil edit edit-time'></span></span>  <span style='display:none'><input type='text' name='time' maxlength='4'> </span> ");	
 				//var toprint=yearscalc(yearto_retire);
 				//yearscalc(yearto_retire);
+				
+				
+
+				function updateretirementchart (changeyears) {						
+					var p=yearscalc(changeyears);
+				if ( p==1 ){
+					low_fd=70;
+					low_debt=00;
+					low_equ=00;
+					low_liq=30;
+					divn=4;
+					drawchart(divn,low_fd,low_debt,low_equ,low_liq);
+
+
+					med_fd=40;
+					med_debt=00;
+					med_equ=00;
+					med_liq=60;
+					divn=5;
+					drawchart(divn,med_fd,med_debt,med_equ,med_liq);
+
+					high_fd=20;
+					high_deb=00;
+					high_equ=00;
+					high_liq=80;
+					divn=6;					
+					drawchart(divn,high_fd,high_deb,high_equ,high_liq)
+
+					}
+
+					else if ((p=>1) && (p<=5) ) {
+					low_fd=10;
+					low_debt=60;
+					low_equ=20;
+					low_liq=10;
+					divn=4;
+					drawchart(divn,low_fd,low_debt,low_equ,low_liq);
+
+
+					med_fd=10;
+					med_debt=40;
+					med_equ=40;
+					med_liq=10;
+					divn=5;
+					drawchart(divn,med_fd,med_debt,med_equ,med_liq);
+
+					high_fd=10;
+					high_deb=10;
+					high_equ=70;
+					high_liq=10;
+					divn=6;					
+					drawchart(divn,high_fd,high_deb,high_equ,high_liq)				
+				}
+				else if ((p>5))
+				 {
+					low_fd=10;
+					low_debt=60;
+					low_equ=30;
+					low_liq=00;
+					divn=4;
+					drawchart(divn,low_fd,low_debt,low_equ,low_liq);
+
+
+					med_fd=10;
+					med_debt=40;
+					med_equ=50;
+					med_liq=00;
+					divn=5;
+					drawchart(divn,med_fd,med_debt,med_equ,med_liq);
+
+					high_fd=10;
+					high_deb=20;
+					high_equ=70;
+					high_liq=00;
+					divn=6;					
+					drawchart(divn,high_fd,high_deb,high_equ,high_liq)
+						}					
+				}
+								
 				var p=yearscalc(yearto_retire);
 				if ( p==1 ){
 					low_fd=70;

@@ -148,7 +148,7 @@ $("span.target-time+span input[type='text']").focusout(function(){
 		var timeval=$(this).val().trim();
 	$(this).parent().prev().text(timeval);
 	yearscalc(timeval);
-	retirementcalc(timeval);
+	updateretirementchart(timeval);
 	$(this).parent().prev().append("<span class='glyphicon glyphicon-pencil edit edit-time'></span>");
 
 }
