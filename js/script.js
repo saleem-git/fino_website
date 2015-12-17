@@ -120,16 +120,12 @@ jQuery(function($) {
 });
 
 
-$(".target-amount").on("click", function(event){
-	$(this).hide();
-	event.stopPropagation();
-	$(this).next().show();
-	$(this).next().children().focus();
 
-});
 
 $("span.target-amount+span input[type='text']").focusout(function(){
-	if ($(this).val()!=""){
+	var amtvalinput=$(this).val();
+	//var amtvalinputlength=amtvalinput.trim().lenght
+	if (((amtvalinput)!="") && ($.isNumeric(amtvalinput)) && ((amtvalinput)>0) ) {
 		$(this).parent().prev().text($(this).val());
 		$(this).parent().prev().append("<span class='glyphicon glyphicon-pencil edit'></span>");
 	}
@@ -147,9 +143,14 @@ $(".target-time").on("click", function(event){
 });
 
 $("span.target-time+span input[type='text']").focusout(function(){
-	if ($(this).val()!=""){
-	$(this).parent().prev().text($(this).val());
+	var timevalinput=$(this).val();
+	if ( ((timevalinput)!="") && ($.isNumeric(timevalinput)) &&((timevalinput)>0) ) {
+		var timeval=$(this).val().trim();
+	$(this).parent().prev().text(timeval);
+	yearscalc(timeval);
+	retirementcalc(timeval);
 	$(this).parent().prev().append("<span class='glyphicon glyphicon-pencil edit edit-time'></span>");
+
 }
 	$(this).parent().hide();
 	$(".target-time").show();
@@ -257,6 +258,19 @@ function nextpage() {
 	//alert("going in next function");
 	document.location.href("onboarding.html");	
 }
+
+
+/*  for (var i = 0; i <= 4; i++) {
+        if (Number(document.getElementById('value-'+i).value)) {
+            chart.dataProvider.push({
+                
+                "chartConfig3.dataProvider[1].litres":150
+            })
+        }
+    }
+*/
+
+
 
 
 

@@ -1,8 +1,10 @@
+
 /*For Amcharts*/
 var chartConfig = {
           "type": "pie",
           "balloonText": "[[title]]<br><span style='font-size:14px'><b>[[value]]</b> ([[percents]]%)</span>",
           "labelsEnabled": true,
+          "hideLabelsPercent": 5,
           "titleField": "category",
           "valueField": "column-1",
           "labelRadius": -30,
@@ -23,8 +25,8 @@ var chartConfig = {
             ],
           "sequencedAnimation": false,
           "startEffect": "easeOutSine",
-          "titleField": "country",
-          "valueField": "litres",
+          "titleField": "product",
+          "valueField": "investment",
           "percentPrecision": 0,
           "pathToImages": "http://cdn.amcharts.com/lib/3/images/",
           "theme": "light",
@@ -70,116 +72,210 @@ function clone(obj) {
 }
 
 
+/*check for 0 values*/
+AmCharts.addInitHandler(function(chartConfig) { 
+    // add visibleInLegendField to chart config
+    chartConfig.visibleInLegendField = "visibleInLegend";
+    
+    // check each slice
+    for(var i = 0; i < chartConfig.dataProvider.length; i++) {
+      if (chartConfig.dataProvider[i][chartConfig.valueField] === 0) {
+        chartConfig.dataProvider[i].visibleInLegend = false;
+      }
+    }
+  
+
+}, ["pie"]);
+
+
+/*Charts for onboarding page start*/
+
 /**
  * Create first chart
  */
 
-// create a copy of the universal config
-var chartConfig1 = clone(chartConfig);
-
+ // create a copy of the universal config
+var chartConfig0 = clone(chartConfig);
 // modify a copy of the config
-chartConfig1.dataProvider = [
+chartConfig0.dataProvider = [
             {
-              "country": "Czech Republic",
-              "litres": 356
+              "product": "FD",
+              "investment": 70
             },
             {
-              "country": "Ireland",
-              "litres": 131
+              "product": "MF Debt",
+              "investment": 0
             },
             {
-              "country": "Germany",
-              "litres": 115.
-            },
+              "product": "MF Equity",
+              "investment": 0
+            }, 
             {
-              "country": "Australia",
-              "litres": 109
+              "product": "MF Liquid",
+              "investment": 30
             }
 
 ];
 
+function update() {        
+        AmCharts.makeChart("chartdiv", chartConfig0);
+      } 
+
 // create the chart
-AmCharts.makeChart("sumchartdiv1", chartConfig1);
+AmCharts.makeChart("chartdiv", chartConfig0);
+
 
 // create a copy of the universal config
 var chartConfig2 = clone(chartConfig);
-
 // modify a copy of the config
 chartConfig2.dataProvider = [
             {
-              "country": "Czech Republic",
-              "litres": "356"
+              "product": "FD",
+              "investment": 40
             },
             {
-              "country": "Ireland",
-              "litres": 131
+              "product": "MF Debt",
+              "investment": 0
             },
             {
-              "country": "Germany",
-              "litres": 115.
-            },
+              "product": "MF Equity",
+              "investment": 0
+            }, 
             {
-              "country": "Australia",
-              "litres": 109
+              "product": "MF Equity",
+              "investment": 60
             }
 
 ];
 
 // create the chart
-AmCharts.makeChart("sumchartdiv2", chartConfig2);
+AmCharts.makeChart("chartdiv2", chartConfig2);
 
+
+// create a copy of the universal config
+var chartConfig3 = clone(chartConfig);
+// modify a copy of the config
+chartConfig3.dataProvider = [
+            {
+              "product": "FD",
+              "investment": 20
+            },
+            {
+              "product": "MF Debt",
+              "investment": 0
+            },
+            {
+              "product": "MF Equity",
+              "investment": 0
+            },           
+            {
+              "product": "MF Liquid",
+              "investment": 80
+            }
+
+];
+// create the chart
+AmCharts.makeChart("chartdiv3", chartConfig3);
 
 // create a copy of the universal config
 var chartConfig4 = clone(chartConfig);
 
-// modify a copy of the config
-chartConfig4.dataProvider = [
-            {
-              "country": "FD",
-              "litres": 156
-            },
-            {
-              "country": "MF Liquid",
-              "litres": 131
-            },
-            {
-              "country": "MF Debt",
-              "litres": 315.
-            },
-            {
-              "country": "MF Equity",
-              "litres": 109
-            }
 
-];
 
-// create the chart
-AmCharts.makeChart("chartdiv2", chartConfig4);
 
+
+/*Charts for onboarding page end*/
+
+
+
+
+/*
+******************************************************************
+*/
+/*Charts for Summary page*/
 
 // create a copy of the universal config
-var chartConfig5 = clone(chartConfig);
+var chartConfigsum1 = clone(chartConfig);
 
 // modify a copy of the config
-chartConfig5.dataProvider = [
+chartConfigsum1.dataProvider = [
             {
-              "country": "Czech Republic",
-              "litres": "356"
+              "product": "Czech Republic",
+              "investment": 356
             },
             {
-              "country": "Ireland",
-              "litres": 131
+              "product": "Ireland",
+              "investment": 131
             },
             {
-              "country": "Germany",
-              "litres": 115.
+              "product": "Germany",
+              "investment": 115.
             },
             {
-              "country": "Australia",
-              "litres": 109
+              "product": "Australia",
+              "investment": 109
             }
 
 ];
 
 // create the chart
-AmCharts.makeChart("chartdiv3", chartConfig5);
+AmCharts.makeChart("sumchartdiv1", chartConfigsum1);
+
+// create a copy of the universal config
+var chartConfigsum2 = clone(chartConfig);
+
+// modify a copy of the config
+chartConfigsum2.dataProvider = [
+            {
+              "product": "Czech Republic",
+              "investment": "356"
+            },
+            {
+              "product": "Ireland",
+              "investment": 131
+            },
+            {
+              "product": "Germany",
+              "investment": 115.
+            },
+            {
+              "product": "Australia",
+              "investment": 109
+            }
+
+];
+
+// create the chart
+AmCharts.makeChart("sumchartdiv2", chartConfigsum2);
+
+
+/*******************************************/
+//chart Dynamic
+        function drawchart(divval,fdv,mfdebtv,mfeqv,mfliqv) {
+          console.log("In Fn");
+          var divch="chartdiv"+divval;
+          var chartconfigno="chartConfig"+divval;
+          var chartconfigno = clone(chartConfig);
+          chartconfigno.dataProvider = [
+                  {
+                    "product": "FD",
+                    "investment": fdv
+                  },
+                  {
+                    "product": "MF Debt",
+                    "investment": mfdebtv
+                  },
+                  {
+                    "product": "MF Equity",
+                    "investment": mfeqv
+                  },           
+                  {
+                    "product": "MF Liquid",
+                    "investment": mfliqv
+                  }
+
+        ];
+        AmCharts.makeChart(divch,chartconfigno);
+        }
+
+/**********************************************/

@@ -233,21 +233,21 @@
 				    <div id="collapseFour" class="panel-collapse collapse goal_content" role="tabpanel" aria-labelledby="headingFour">
 				      <div class="panel-body">
 				        <div class="col-sm-5">
-		        			<div id="chartdiv8" style="width: 80%; height: 210px;" ></div>
+		        			<div id="chartdiv10" style="width: 80%; height: 210px;" ></div>
 				         </div>
 				         <div class="col-sm-7"><p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et.</p></div>
 				      </div> 
 
 				      <div class="panel-body selected_row">
 				        <div class="col-sm-5">
-		        			<div id="chartdiv8" style="width: 80%; height: 210px;" ></div>
+		        			<div id="chartdiv11" style="width: 80%; height: 210px;" ></div>
 				         </div>
 				         <div class="col-sm-7"><p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et.</p></div>
 				      </div>
 
 				      <div class="panel-body">
 				        <div class="col-sm-5">
-		        			<div id="chartdiv9" style="width: 80%; height: 210px;" ></div>
+		        			<div id="chartdiv12" style="width: 80%; height: 210px;" ></div>
 				         </div>
 				         <div class="col-sm-7"><p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et.</p>
 				         </div>
@@ -302,20 +302,27 @@
 				var contingency_year=1+currentYear;
 				var contingency_amt=0.5*(incomeinfo);
 				var philan_year=2+currentYear;
-				var dig=109;
-				var diggi=115;
-				
+
+				var low,medium,high,low_fd,low_debt,low_equ,low_liq;
+				low=1;
+				medium=5;
+				high=6;				
+				low_fd=low_debt=low_equ=low_liq=10;
+				var divn;
+
+				var med_fd,med_debt,med_equ,med_liq;
+				var high_fd,high_debt,high_equ,high_liq;
 				
 
 
-	console.log(contingency_amt);
-	/*console.log(retirementinfo);
+	/*console.log(contingency_amt);
+	console.log(retirementinfo);
 	console.log(ageinfo);
 	console.log(yearto_retire);
-	console.log(salaryto_save);*/
-	/*console.log(martialinfo);
-	console.log(incomeinfo);*/
-		/*if(retirementinfo=="not_retired") {
+	console.log(salaryto_save);
+	console.log(martialinfo);
+	console.log(incomeinfo);
+*/		/*if(retirementinfo=="not_retired") {
 			$("#onboarding #headingOne .goal_metainfo label:nth-of-type(2)").text("Tax Saving");			
 		}*/
 
@@ -323,68 +330,112 @@
 			case "not_retired":
 			$("#onboarding #headingOne .goal_metainfo label:nth-of-type(2)").text("Tax Saving");
 			$("#onboarding #headingOne p").html("Save on Taxes by investing Rs <span class='target-amount'>150000 <span class='glyphicon glyphicon-pencil edit'></span> </span> <span style='display:none'><input type='text' name='income' maxlength='9'> </span> In best Tax Saving Mutual Funds (Under Section 80C)");
-
-			function update() {
-				alert("ok");
-				chartConfig3.dataProvider[];
-				chartConfig3.dataProvider[1].litres=300;
-				 chartConfig3.validateData();
-			}
-			//
-
-
-// create a copy of the universal config
-var chartConfig3 = clone(chartConfig);
-
-// modify a copy of the config
-chartConfig3.dataProvider = [
-            {
-              "country": "Czech Republic",
-              "litres": 156
-            },
-            {
-              "country": "Ireland",
-              "litres": 231
-            },
-            {
-              "country": "Germany",
-              "litres": 115
-            },
-            {
-              "country": "Australia",
-              "litres": dig
-            }
-
-];
-
-/*Starting the Chart for onboarding page */
-
-// create the chart
-AmCharts.makeChart("chartdiv", chartConfig3);
-
+			//chartConfig3.dataProvider[1].litres=300;
+			
 
 			$("#onboarding #headingTwo .goal_metainfo label:nth-of-type(2)").text("Retirement");
-			$("#onboarding #headingTwo p").html("Retire happily by saving Rs <span class='target-amount'>"+salaryto_save+"<span class='glyphicon glyphicon-pencil edit'></span> </span> <span style='display:none'><input type='text' name='income' maxlength='9'> </span> By <span class='target-time'>"+yearto_retire+"<span class='glyphicon glyphicon-pencil edit edit-time'></span></span>  <span style='display:none'><input type='text' name='time' maxlength='4'> </span> ");
+			$("#onboarding #headingTwo p").html("Retire happily by saving Rs <span class='target-amount'>"+salaryto_save+"<span class='glyphicon glyphicon-pencil edit'></span> </span> <span style='display:none'><input type='text' name='income' maxlength='9'> </span> By <span class='target-time'>"+yearto_retire+"<span class='glyphicon glyphicon-pencil edit edit-time'></span></span>  <span style='display:none'><input type='text' name='time' maxlength='4'> </span> ");	
+				//var toprint=yearscalc(yearto_retire);
+				//yearscalc(yearto_retire);
+				var p=yearscalc(yearto_retire);
+				if ( p==1 ){
+					low_fd=70;
+					low_debt=00;
+					low_equ=00;
+					low_liq=30;
+					divn=4;
+					drawchart(divn,low_fd,low_debt,low_equ,low_liq);
+
+
+					med_fd=40;
+					med_debt=00;
+					med_equ=00;
+					med_liq=60;
+					divn=5;
+					drawchart(divn,med_fd,med_debt,med_equ,med_liq);
+
+					high_fd=20;
+					high_deb=00;
+					high_equ=00;
+					high_liq=80;
+					divn=6;					
+					drawchart(divn,high_fd,high_deb,high_equ,high_liq)
+
+					}
+
+					else if ((p=>1) && (p<=5) ) {
+					low_fd=10;
+					low_debt=60;
+					low_equ=20;
+					low_liq=10;
+					divn=4;
+					drawchart(divn,low_fd,low_debt,low_equ,low_liq);
+
+
+					med_fd=10;
+					med_debt=40;
+					med_equ=40;
+					med_liq=10;
+					divn=5;
+					drawchart(divn,med_fd,med_debt,med_equ,med_liq);
+
+					high_fd=10;
+					high_deb=10;
+					high_equ=70;
+					high_liq=10;
+					divn=6;					
+					drawchart(divn,high_fd,high_deb,high_equ,high_liq)				
+				}
+				else if ((p>5))
+				 {
+					low_fd=10;
+					low_debt=60;
+					low_equ=30;
+					low_liq=00;
+					divn=4;
+					drawchart(divn,low_fd,low_debt,low_equ,low_liq);
+
+
+					med_fd=10;
+					med_debt=40;
+					med_equ=50;
+					med_liq=00;
+					divn=5;
+					drawchart(divn,med_fd,med_debt,med_equ,med_liq);
+
+					high_fd=10;
+					high_deb=20;
+					high_equ=70;
+					high_liq=00;
+					divn=6;					
+					drawchart(divn,high_fd,high_deb,high_equ,high_liq)
+						}	
+				
 
 			$("#onboarding #headingThree .goal_metainfo label:nth-of-type(2)").text("General Investment");
 			$("#onboarding #headingThree p").html("Invest in Direct Mutual Funds to grow your money over a period of <span class='target-time'> 5  <span class='glyphicon glyphicon-pencil edit edit-time'></span></span>  <span style='display:none'><input type='text' name='time' maxlength='4'> </span> Years");
+			//console.log(yearscalc(5));
 			
 			break;
 
 			case "retired":
 			$("#onboarding #headingOne .goal_metainfo label:nth-of-type(2)").text("General Investment");
 			$("#onboarding #headingOne p").html("Invest in Direct Mutual Funds to grow your money over a period of <span class='target-time'> 5  <span class='glyphicon glyphicon-pencil edit edit-time'></span></span>  <span style='display:none'><input type='text' name='time' maxlength='4'> </span> Years");
+			//console.log(yearscalc(5));
 
 			$("#onboarding #headingTwo .goal_metainfo label:nth-of-type(2)").text("Loan Repayment");
 			$("#onboarding #headingTwo p").html("Pay back your loan by saving Rs <span class='target-amount'> 800,000 <span class='glyphicon glyphicon-pencil edit'></span> </span> <span style='display:none'><input type='text' name='income' maxlength='9'> </span> By <span class='target-time'>"+child_edu+"  <span class='glyphicon glyphicon-pencil edit edit-time'></span></span>  <span style='display:none'><input type='text' name='time' maxlength='4'> </span> (Year)");
+			//console.log(yearscalc(child_edu));
 
 
 			$("#onboarding #headingThree .goal_metainfo label:nth-of-type(2)").text("Save for Travel");
 			$("#onboarding #headingThree p").html("Plan your next travel by saving Rs <span class='target-amount'> 200,000 <span class='glyphicon glyphicon-pencil edit'></span> </span> <span style='display:none'><input type='text' name='income' maxlength='9'> </span> By <span class='target-time'>"+contingency_year+"  <span class='glyphicon glyphicon-pencil edit edit-time'></span></span>  <span style='display:none'><input type='text' name='time' maxlength='4'> </span> (Year)");
+			//console.log(yearscalc(contingency_year));
 
 
 			$("#onboarding #headingFour .goal_metainfo label:nth-of-type(2)").text("Philanthropy");
 			$("#onboarding #headingFour p").html("Plan a philanthropic donation by saving Rs <span class='target-amount'> 200,000  <span class='glyphicon glyphicon-pencil edit'></span> </span> <span style='display:none'><input type='text' name='income' maxlength='9'> </span> By <span class='target-time'>"+philan_year+"  <span class='glyphicon glyphicon-pencil edit edit-time'></span></span>  <span style='display:none'><input type='text' name='time' maxlength='4'> </span> (Year)");
+			//console.log(yearscalc(philan_year));
 			break;
 
 		}
@@ -397,10 +448,49 @@ AmCharts.makeChart("chartdiv", chartConfig3);
 					else{
 						$("#onboarding #headingFour .goal_metainfo label:nth-of-type(2)").text("Contingency Plan");
 						$("#onboarding #headingFour p").html("Create and emergency pool of Rs <span class='target-amount'>"+contingency_amt+" <span class='glyphicon glyphicon-pencil edit'></span> </span> <span style='display:none'><input type='text' name='income' maxlength='9'> </span> Over a period of <span class='target-time'>"+contingency_year+"  <span class='glyphicon glyphicon-pencil edit edit-time'></span></span>  <span style='display:none'><input type='text' name='time' maxlength='4'> </span> Months");
+						//console.log(yearscalc(contingency_year));
 					}
 				} 
 
-			
+				
+
+//
+    function yearscalc(timeval_par) {
+    	//timeval_par=parseInt(timeval_par);
+    	var yearsfrom_now;
+    	/*console.log(timeval_par+"in time calculation"); 
+    	console.log(timeval_par.length);  */
+    	timeval_par=timeval_par.toString();
+
+    	if(((timeval_par.length)>2) && ((timeval_par)>(currentYear)) ) {
+    		timeval_par=parseInt(timeval_par);
+    		yearsfrom_now= timeval_par-currentYear;
+    		/*console.log(yearsfrom_now+"just the  length");*/
+    		//console.log(yearsfrom_now);
+    		return yearsfrom_now;
+
+    	}	
+
+    	else if ((timeval_par)>0) {
+    		yearsfrom_now=timeval_par;
+    		return yearsfrom_now;
+    	}
+    	
+
+    	//console.log(yearsfrom_now+"one length");
+		/*	var yearsfrom_retire= yearto_retire-currentYear;
+			if (((yearsfrom_retire)>(low)) && ((yearsfrom_retire)<=(medium)) ) {
+				
+				alert(yearsfrom_retire);
+			}*/
+    }
+   
+
+
+//
+
+
+			//mediumrisk(divn,low_fd,low_debt,low_equ,low_liq);
 		</script>
 	
 	</body>
