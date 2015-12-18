@@ -128,6 +128,7 @@ $("span.target-amount+span input[type='text']").focusout(function(){
 	if (((amtvalinput)!="") && ($.isNumeric(amtvalinput)) && ((amtvalinput)>0) ) {
 		$(this).parent().prev().text($(this).val());
 		$(this).parent().prev().append("<span class='glyphicon glyphicon-pencil edit'></span>");
+
 	}
 	$(this).parent().hide();
 	$(".target-amount").show();
@@ -146,11 +147,10 @@ $("span.target-time+span input[type='text']").focusout(function(){
 	var timevalinput=$(this).val();
 	if ( ((timevalinput)!="") && ($.isNumeric(timevalinput)) &&((timevalinput)>0) ) {
 		var timeval=$(this).val().trim();
-	$(this).parent().prev().text(timeval);
-	yearscalc(timeval);
-	updateretirementchart(timeval);
+	$(this).parent().prev().text(timeval);	
 	$(this).parent().prev().append("<span class='glyphicon glyphicon-pencil edit edit-time'></span>");
-
+	panel_toupdate=($(this).parents(".panel-heading").attr("id"));	
+	timechangefn(panel_toupdate,timeval);	
 }
 	$(this).parent().hide();
 	$(".target-time").show();
@@ -230,13 +230,12 @@ $("form[name='onboardinfo']").submit(function() {
 	if(jsondata.age && jsondata.income !=""){
 		console.log("empty data");
 
-				// Check browser support
-				//var testObject = { 'one': 1, 'two': 2, 'three': 3 };
-
-			// Put the object into storage
-			
-			sessionStorage.setItem('someData',formobj);
-			nextpage();
+			// Check browser support
+			//var testObject = { 'one': 1, 'two': 2, 'three': 3 };
+			// Put the object into storage			
+			sessionStorage.setItem('formdata',formobj);
+			//nextpage();
+			return true;
 
 
 		
@@ -254,10 +253,10 @@ $("form[name='onboardinfo']").submit(function() {
 
 });
 
-function nextpage() {
+/*function nextpage() {
 	//alert("going in next function");
 	document.location.href("onboarding.html");	
-}
+}*/
 
 
 /*  for (var i = 0; i <= 4; i++) {

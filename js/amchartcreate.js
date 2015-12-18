@@ -95,90 +95,6 @@ AmCharts.addInitHandler(function(chartConfig) {
  */
 
  // create a copy of the universal config
-var chartConfig0 = clone(chartConfig);
-// modify a copy of the config
-chartConfig0.dataProvider = [
-            {
-              "product": "FD",
-              "investment": 70
-            },
-            {
-              "product": "MF Debt",
-              "investment": 0
-            },
-            {
-              "product": "MF Equity",
-              "investment": 0
-            }, 
-            {
-              "product": "MF Liquid",
-              "investment": 30
-            }
-
-];
-
-function update() {        
-        AmCharts.makeChart("chartdiv", chartConfig0);
-      } 
-
-// create the chart
-AmCharts.makeChart("chartdiv", chartConfig0);
-
-
-// create a copy of the universal config
-var chartConfig2 = clone(chartConfig);
-// modify a copy of the config
-chartConfig2.dataProvider = [
-            {
-              "product": "FD",
-              "investment": 40
-            },
-            {
-              "product": "MF Debt",
-              "investment": 0
-            },
-            {
-              "product": "MF Equity",
-              "investment": 0
-            }, 
-            {
-              "product": "MF Equity",
-              "investment": 60
-            }
-
-];
-
-// create the chart
-AmCharts.makeChart("chartdiv2", chartConfig2);
-
-
-// create a copy of the universal config
-var chartConfig3 = clone(chartConfig);
-// modify a copy of the config
-chartConfig3.dataProvider = [
-            {
-              "product": "FD",
-              "investment": 20
-            },
-            {
-              "product": "MF Debt",
-              "investment": 0
-            },
-            {
-              "product": "MF Equity",
-              "investment": 0
-            },           
-            {
-              "product": "MF Liquid",
-              "investment": 80
-            }
-
-];
-// create the chart
-AmCharts.makeChart("chartdiv3", chartConfig3);
-
-// create a copy of the universal config
-var chartConfig4 = clone(chartConfig);
 
 
 
@@ -252,7 +168,7 @@ AmCharts.makeChart("sumchartdiv2", chartConfigsum2);
 /*******************************************/
 //chart Dynamic
         function drawchart(divval,fdv,mfdebtv,mfeqv,mfliqv) {
-          console.log("In Fn");
+          //console.log("In Fn");
           var divch="chartdiv"+divval;
           var chartconfigno="chartConfig"+divval;
           var chartconfigno = clone(chartConfig);
