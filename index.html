@@ -39,7 +39,7 @@
                     <li class="page-scroll"><a href="Pricing.html">Pricing</a></li>
                     <li class="page-scroll"><a href="FAQs.html">FAQs</a></li>
 					<li class="page-scroll"><a class="cd-signin" href="#">Sign in</a></li>
-					<li class="page-scroll" id="signup-expander1" onclick="location.href = 'Get-started.html'"> Sign Up </li>			
+					<li class="page-scroll" id="sign-up" ><a href="Get-started.html"> Sign Up </a></li>			
 			</ul>
             </div>
         </div>
@@ -51,34 +51,34 @@
 			<img class="img-responsive" src="images/profile.png" alt="">
 			<div class="intro-text">
 				<span class="name"><h2>Invest smartly & hassle-free!</h2></span>
-				<hr class="star-light">
-				<span class=><p style="margin-left:10%; margin-right:10%">We enable people to better manage and grow their wealth through smarter technology for a fraction of cost of traditional Financial Services</p></span>
+				<span class="icon-bar"></span><span class="glyphicon glyphicon-star edit"></span><span class="glyphicon glyphicon-minus edit"></span>
+				<span ><p >We enable people to better manage and grow their wealth through smarter technology for a fraction of cost of traditional Financial Services</p></span>
 			</div>
-			<div class="row list-inline"  >
-				<li  class="btn btn-lg btn-outline one" onclick="location.href = 'Get-started.html'"><b>Get Started</b></li>
-				<li  class="btn btn-lg btn-outline" onclick="location.href = 'What-We-Do.html'">Learn More</li>
+			<div class="row list-inline" id="btn-start"  >
+				<li  class="btn btn-lg btn-outline get-start" onclick="location.href = 'Get-started.html'"><b>Get Started</b></li>
+				<li  class="btn btn-lg btn-outline learn-more" onclick="location.href = 'What-We-Do.html'">Learn More</li>
 			</div>
 		</div>
 	</div>
 </div>
-		<div class="intro-text" style="margin-top:4%;">
+		<div class="intro-text text-center" style="margin-top:4%;">
 		<span class="name"><h5 style="color:gray; text-align:center;  margin-bottom:5%">START YOUR INVESTMENT PLAN</h5></span>
 		<form method="get" action="onboarding.html" name="onboardinfo">
 		<p class="details">
 		I am 
-		<input  style="color:#18BC9C" type="text" name="age" maxlength="2" size="3" value"4"  />
+		<input  type="text" name="age" maxlength="2" size="3" value"4"  />
 		years old and <!--  onkeyup="this.value=this.value.replace(/[^\d]/,'')" -->
-		<select class="minimal" style="overflow:hidden;" name="retirement">
+		<select class="minimal" id="retired" style="overflow:hidden;" name="retirement">
     		<option value="not_retired">Not Retired</option>
             <option value="retired">Retired</option>
         </select>
 		I am 
-		<select class="minimal" style="overflow:hidden;" name="martial_status">
+		<select class="minimal" id="married" style="overflow:hidden;" name="martial_status">
     		<option value="married"> Married </option>
             <option value="unmarried"> Un-Married</option>
         </select>
 		with 
-		<select class="minimal" style="overflow:hidden;" name="kids" >
+		<select class="minimal" id="kids" style="overflow:hidden;" name="kids" >
     		<option value="0">0 </option>
             <option value="1">1 </option>
             <option value="2">2</option>
@@ -87,7 +87,7 @@
         </select>
         kids.<br><br>
 		My annual pre tax income is ₹
-		<input style="color:#18BC9C" type="text" placeholder="" maxlength="10" name="income" value="4500" size="10" class="comma" onkeyup="this.value=this.value.replace(/[^\d]/,'')">
+		<input type="text" placeholder="" maxlength="10" name="income" value="4500" size="10" class="comma" onkeyup="this.value=this.value.replace(/[^\d]/,'')">
 
         <span class="madlib-error"></span>
 
@@ -95,22 +95,14 @@
 		</p>
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 text-center" >
-                 <input type="submit" class="btn btn-lg btn-outline " id="get_start" value="Start Investment">
+                 <button type="submit" class="btn btn-lg btn-outline " id="get_start" >Start Investment</button>
             </div>
         </div>
         </form>
-         <h2>JSON</h2>
-        <pre id="result">
+        
     </div>
         
-       
-		</div>
-
-		<div >
-
-			
-		</div>
-            <div class="row" style="padding:20%; padding-bottom:0%; padding-top:10%">
+        <div class="row how-it-works" style="padding:20%; padding-bottom:0%; padding-top:10%">
                 <div class="col-lg-12 text-center">
 					<div class="row" >
                      <h3>how it works</h3>
@@ -118,17 +110,17 @@
 					</div>
 				</div>
                <div class="col-sm-4 portfolio-item text-center">
-                <img  src="img/icons/b.png">
+                <img  src="images/icons/b.png">
                      <h4><b>1. Tell us about yourself</b></h4>
                      <p>Tell us in brief about you & your Financial Goals</p>
                 </div>
                 <div class="col-sm-4 portfolio-item text-center">
-                <img  src="img/icons/c.png">
+                <img  src="images/icons/c.png">
                     <h4><b>2. Get Advice</b></h4>
                     <p> We will understand your needs and recommend a customized savings plan to meet your Goals.</p>   
                 </div>
                 <div class="col-sm-4 portfolio-item text-center">
-                <img src="img/icons/a.png" >
+                <img src="images/icons/a.png" >
                      <h4><b>3. invest & Relax</b></h4>
                      <p> Invest through us & monitor your Portfolio closely.<br>Relax, We at Finotrust follow the strictest bank security norms.</p>  
                 </div>
@@ -155,7 +147,7 @@
                            </div>
                             </div>
                         </div>
-                        <img src="img/portfolio/search.jpg" class="img-responsive" alt="">
+                        <img src="images/portfolio/search.jpg" class="img-responsive" alt="">
                     </a>
                 </div>
                 <div class="col-sm-4 portfolio-item">
@@ -168,7 +160,7 @@
                             </div>
                             </div>
                         </div>
-                        <img src="img/portfolio/easy.jpg" class="img-responsive" alt="">
+                        <img src="images/portfolio/easy.jpg" class="img-responsive" alt="">
                     </a>
                 </div>
                 <div class="col-sm-4 portfolio-item">
@@ -183,7 +175,7 @@
                             </div>
                             </div>
                         </div>
-                        <img src="img/portfolio/secure.jpg" class="img-responsive" alt="">
+                        <img src="images/portfolio/secure.jpg" class="img-responsive" alt="">
                     </a>
                 </div>
                 
@@ -241,129 +233,12 @@
         </div>
     </footer>
 
-    <!-- Scroll to Top Button (Only visible on small and extra-small screen sizes) -->
-    <div class="scroll-top page-scroll visible-xs visible-sm">
-        <a class="btn btn-primary" href="#page-top">
-            <i class="fa fa-chevron-up"></i>
-        </a>
-    </div>
 
-    <!-- Portfolio Modals -->
-    <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-content">
-            <div class="close-modal" data-dismiss="modal">
-                <div class="lr">
-                    <div class="rl">
-                    </div>
-                </div>
-            </div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-8 col-lg-offset-2">
-                        <div class="modal-body">
-                            <h2>Project Title</h2>
-                            <hr class="star-primary">
-                            <img src="img/search.jpg" class="img-responsive img-centered small1" alt="">
-                            <p>Use this area of the page to describe your project. The icon above is part of a free icon set by <a href="https://sellfy.com/p/8Q9P/jV3VZ/">Flat Icons</a>. On their website, you can download their free set with 16 icons, or you can purchase the entire set with 146 icons for only $12!</p>
-                            <ul class="list-inline item-details">
-                                <li>Client:
-                                    <strong><a href="http://startbootstrap.com">Start Bootstrap</a>
-                                    </strong>
-                                </li>
-                                <li>Date:
-                                    <strong><a href="http://startbootstrap.com">April 2014</a>
-                                    </strong>
-                                </li>
-                                <li>Service:
-                                    <strong><a href="http://startbootstrap.com">Web Development</a>
-                                    </strong>
-                                </li>
-                            </ul>
-                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-content">
-            <div class="close-modal" data-dismiss="modal">
-                <div class="lr">
-                    <div class="rl">
-                    </div>
-                </div>
-            </div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-8 col-lg-offset-2">
-                        <div class="modal-body">
-                            <h2>Project Title</h2>
-                            <hr class="star-primary">
-                            <img src="img/easy.jpg" class="img-responsive img-centered small1" alt="">
-                            <p>Use this area of the page to describe your project. The icon above is part of a free icon set by <a href="https://sellfy.com/p/8Q9P/jV3VZ/">Flat Icons</a>. On their website, you can download their free set with 16 icons, or you can purchase the entire set with 146 icons for only $12!</p>
-                            <ul class="list-inline item-details">
-                                <li>Client:
-                                    <strong><a href="http://startbootstrap.com">Start Bootstrap</a>
-                                    </strong>
-                                </li>
-                                <li>Date:
-                                    <strong><a href="http://startbootstrap.com">April 2014</a>
-                                    </strong>
-                                </li>
-                                <li>Service:
-                                    <strong><a href="http://startbootstrap.com">Web Development</a>
-                                    </strong>
-                                </li>
-                            </ul>
-                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="portfolio-modal modal fade" id="portfolioModal3" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-content">
-            <div class="close-modal" data-dismiss="modal">
-                <div class="lr">
-                    <div class="rl">
-                    </div>
-                </div>
-            </div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-8 col-lg-offset-2">
-                        <div class="modal-body">
-                            <h2>Project Title</h2>
-                            <hr class="star-primary">
-                            <img src="img/secure.jpg" class="img-responsive img-centered small1" alt="">
-                            <p>Use this area of the page to describe your project. The icon above is part of a free icon set by <a href="https://sellfy.com/p/8Q9P/jV3VZ/">Flat Icons</a>. On their website, you can download their free set with 16 icons, or you can purchase the entire set with 146 icons for only $12!</p>
-                            <ul class="list-inline item-details">
-                                <li>Client:
-                                    <strong><a href="http://startbootstrap.com">Start Bootstrap</a>
-                                    </strong>
-                                </li>
-                                <li>Date:
-                                    <strong><a href="http://startbootstrap.com">April 2014</a>
-                                    </strong>
-                                </li>
-                                <li>Service:
-                                    <strong><a href="http://startbootstrap.com">Web Development</a>
-                                    </strong>
-                                </li>
-                            </ul>
-                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
 
      <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>  
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha256-KXn5puMvxCw+dAYznun+drMdG1IFl3agK0p/pqT9KAo= sha512-2e8qq0ETcfWRI4HJBzQiA3UoyFk6tbNyG+qSaIBZLyW9Xf3sWZHN/lxe9fTh1U45DpPf07yj94KsUHHWe4Yk1A==" crossorigin="anonymous"></script>	 
 	<script src="js/script.js"></script>
+	<script src="js/cbpAnimatedHeader.js"></script>
 
 	</body>
 </html>

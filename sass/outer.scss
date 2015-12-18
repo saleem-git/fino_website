@@ -1,27 +1,88 @@
 .home{
+font-family: Montserrat;
+	h1, h2, h3, h4, h5, h6 {font-weight:700; text-transform:uppercase}
 	@media(min-width:768px) {
     .navbar.navbar-default.navbar-fixed-top {
-        padding: 15px 0;
-        -webkit-transition: padding .3s;
-        -moz-transition: padding .3s;
-        transition: padding .3s;
+	position:fixed;
+        padding: 10px 0;
 		}
-    .navbar-fixed-top.navbar-shrink {
-        padding: 5px 0;
-		}
-    .navbar-fixed-top.navbar-shrink .navbar-brand {
-        font-size: 1.5em;
-		}
+
 	}
 	#intro{
+		h2{font-size:30px;}
 		text-align: center;
-		background: #18BC9C none repeat scroll 0% 0%;
+		background: #18bb9c none repeat scroll 0% 0%;
 		min-height: 450px;
 		color: #FFF;
 		width: 100%;
-		margin-top: -21px;
-		img{margin: 0px auto 10px;}
+		margin-top: 60px;
+		img{margin: 3% auto 2%;}
 		}
+	.intro-text{
+		& p{padding:0 20%;}
+	}
+	input{color:#18bb9c; border:none; border-bottom:1px solid gray; text-align:center; }
+	select{border:none; border-bottom:1px solid gray;}
+	.how-it-works{
+	h3{font-size:26px;}
+	h4{font-size:20px;}
+	p{font-size:18px;}
+	}
+	
+#portfolio {
+    .portfolio-item {
+        margin: 0 0 15px;
+        right: 0;
+        .portfolio-link {
+            display: block;
+            position: relative;
+            max-width: 400px;
+            margin: 0 auto;
+            .caption {
+                background: gray;
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                opacity: 0;
+                transition: all ease 0.5s;
+                -webkit-transition: all ease 0.5s;
+                -moz-transition: all ease 0.5s;
+                &:hover {
+                    opacity: 1;
+                }
+                .caption-content {
+                    position: absolute;
+                    width: 100%;
+                    height: 20px;
+                    font-size: 20px;
+                    text-align: center;
+                    top: 50%;
+                    margin-top: -12px;
+                    color: white;
+                    i {
+                        margin-top: -12px;
+                    }
+                    h3,
+                    h4 {
+                        margin: 0;
+                    }
+                }
+            }
+        }
+    }
+    * {
+        z-index: 2;
+    }
+}
+
+@media(min-width:767px) {
+    #portfolio {
+        .portfolio-item {
+            margin: 0 0 30px;
+        }
+    }
+}
+
 }
 .what-we-do{
 	font-family: Montserrat;
@@ -49,11 +110,9 @@
 	text-transform: uppercase;
 	}
 	& #get_start{
-		background:#18bc9c;
 		&:hover {
 			background:#fff; 
-			border: solid 2px #18bc9c;
-			color:#18bc9c;
+			color:#18bb9c;
 			}
 		}
 	& #beat{
@@ -82,9 +141,81 @@
 }
 .btn-outline {
 	margin: 15px;
-	border: 2px solid #000;
+	border: 2px solid #18bb9c;
 	font-size: 20px;
 	color: #000;
-	background: transparent none repeat scroll 0px 0px;
+		background:#18bb9c;
 	transition: all 0.3s ease-in-out 0s;
+	&:hover{background:#fff; color:#18bb9c;}
+	&.get-start{ border-color: #fff; padding:5px 15px; background:#fff; box-shadow: 5px 5px 2px #888; }
+	&.learn-more{ border-color: #fff; padding:5px 15px;}
+}
+
+@media (max-width: 950px) {
+    .navbar-header {
+        float: none;
+    }
+    .navbar-left,.navbar-right {
+        float: none !important;
+    }
+    .navbar-toggle {
+        display: block;
+    }
+    .navbar-collapse {
+        box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
+    }
+    .navbar-fixed-top {
+		top: 0;
+		overflow:hidden ;
+		border-width: 0 0 1px;
+	}
+    .navbar-collapse.collapse {
+        display: none!important;
+    }
+    .navbar-nav {
+        float: none!important;
+		margin-top: 7.5px;
+	}
+	.navbar-nav>li {
+        float: none;
+    }
+    .navbar-nav>li>a {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    .collapse.in{
+  		display:block !important;
+	}
+}
+.benchmark{
+h1, h2, h3, h4, h5, h6 {font-family: Montserrat; font-weight:700; text-transform:uppercase; padding:1em 0;}
+h2{font-size:30px}
+h3{font-size:26px; margin-top:-6%}
+h4{font-size:20px;}
+section{
+		background-repeat: no-repeat;
+		background-size: 100% 100%;
+		background-position: center center;
+		min-height:400px;
+		padding:10%;
+		&#logo{background-image: url("../images/benchmark-logo.jpg"); margin-top:-21px; h3{color:white;margin-top:0}}
+		&#goal-story{background:black; h3{color:white;}}
+		&#invest{background:black; h3{color:white;} #chartdiv5{width: 60%; height: 400px;margin:auto;}}
+		&#age-story{
+			background:#ebebeb;
+			.glyphicon{
+				padding:0px 5%;
+				&.glyphicon-chevron-left{margin-left:35%}
+				}
+			
+		}
+		}
+#msform {
+& fieldset {
+#chartdiv, #chartdiv2, #chartdiv3{width: 60%; height: 400px;margin:auto;}
+width: 100%;
+&:not(:first-of-type) {
+display: none;
+}
+}}
 }

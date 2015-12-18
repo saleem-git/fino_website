@@ -4,11 +4,12 @@
         <meta charset="utf-8">
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Funds</title>
+        <title>Benchmark</title>
         <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600' rel='stylesheet' type='text/css'>
         <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha256-7s5uDGW3AHqw6xtJmNNtr+OBRJUlgkNJEo78P4b0yRw= sha512-nNo+yCHEyn0smMxSswnf/OnX6/KwJuZTlNZBjauKhTK0c+zT+q5JOCx0UFhXQ6rJR9jg6Es8gPuD2uZcYDLqSw==" crossorigin="anonymous">
         <link rel="stylesheet" href="../style/global.css">
         <link rel="stylesheet" href="../style/header.css">
+        <link rel="stylesheet" href="../style/outer.css">
     </head>
 <header>
     <!-- Navigation -->
@@ -45,11 +46,448 @@
 </nav>
 </header>
 <body class="benchmark">
-   <p class="text-center" style="padding:40px; font-size:35px; font-weight:700;">
-   Under Construction
-   </p>
+
+<section id="logo">
+<div  class="text-center">
+	<h3 class="text-center">we provide you a set of priorities based on your expectations using finotrust data driven analytics</h3><br>
+	<h4 class="text-center">set your benchmark now</h4>
+</div>
+</section>
+<section id="goal-story">
+<div  class="text-center">
+	<h3 class="text-center">goal wise story</h3><br>
+</div>
+</section>
+<section id="age-story">
+<div  class="text-center">
+	<h3 class="text-center">age wise story</h3><br>
+</div>
+	<form id="msform">
+
+	<!-- fieldsets -->
+		<fieldset>
+			<span class="glyphicon glyphicon-chevron-left "></span>Retirement Plan<span class="glyphicon glyphicon-chevron-right next "></span>
+			<div id="chartdiv"  ></div>
+		</fieldset>
+		<fieldset>
+			<span class="glyphicon glyphicon-chevron-left previous"></span>Retirement  2<span class="glyphicon glyphicon-chevron-right next "></span>
+			<div id="chartdiv2"  ></div></fieldset>
+		<fieldset>
+			<span class="glyphicon glyphicon-chevron-left previous"></span> Retirement 3<span class="glyphicon glyphicon-chevron-right  "></span>
+			<div id="chartdiv3"  ></div>
+		</fieldset>
+
+	</form>
+
+</section>
+<section id="invest">
+<div  class="text-center">
+	<h3 class="text-center">investments made per month story</h3><br>
+</div>
+<div id="chartdiv5"  ></div>
+</section>
+<!-- multistep form -->
+
+<!-- jQuery --> 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>  
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha256-KXn5puMvxCw+dAYznun+drMdG1IFl3agK0p/pqT9KAo= sha512-2e8qq0ETcfWRI4HJBzQiA3UoyFk6tbNyG+qSaIBZLyW9Xf3sWZHN/lxe9fTh1U45DpPf07yj94KsUHHWe4Yk1A==" crossorigin="anonymous"></script>	 
-	<script src="../js/script.js"></script>
-    </body>
+	<script src="../js/script.js"></script><!-- jQuery easing plugin --> 
+<script>
+
+
+	/*Dev code*/
+	$(function() {
+
+var current_fs, next_fs, previous_fs; //fieldsets
+var left, opacity, scale; //fieldset properties which we will animate
+var animating; //flag to prevent quick multi-click glitches
+
+
+
+$(".next").on("click",function(){
+	console.log("in next function");
+	if(animating) return false;
+	console.log("in next after condition");
+	animating = true;
+
+	current_fs = $(this).parent();
+	next_fs = $(this).parent().next();
+	
+	//activate next step on progressbar using the index of next_fs
+	$("#progressbar li").eq($("fieldset").index(next_fs)).addClass("active");
+	
+	//show the next fieldset
+	next_fs.show(); 
+	//hide the current fieldset with style
+	current_fs.animate({opacity: 0}, {
+		step: function(now, mx) {
+			//as the opacity of current_fs reduces to 0 - stored in "now"
+			//1. scale current_fs down to 80%
+			scale = 1 - (1 - now) * 0.2;
+			//2. bring next_fs from the right(50%)
+			left = (now * 50)+"%";
+			//3. increase opacity of next_fs to 1 as it moves in
+			opacity = 1 - now;
+			current_fs.css({'transform': 'scale('+scale+')'});
+			next_fs.css({'left': left, 'opacity': opacity});
+		}, 
+		//duration: 800, 
+		complete: function(){
+			current_fs.hide();
+			animating = false;
+			console.log("near end");
+		}, 
+		//this comes from the custom easing plugin
+	});
+	console.log("end");
+});
+
+$(".previous").on("click",function(){
+	if(animating) return false;
+	animating = true;
+	
+	current_fs = $(this).parent();
+	previous_fs = $(this).parent().prev();
+	
+	//de-activate current step on progressbar
+	$("#progressbar li").eq($("fieldset").index(current_fs)).removeClass("active");
+	
+	//show the previous fieldset
+	previous_fs.show(); 
+	//hide the current fieldset with style
+	current_fs.animate({opacity: 0}, {
+		step: function(now, mx) {
+			//as the opacity of current_fs reduces to 0 - stored in "now"
+			//1. scale previous_fs from 80% to 100%
+			scale = 0.8 + (1 - now) * 0.2;
+			//2. take current_fs to the right(50%) - from 0%
+			left = ((1-now) * 50)+"%";
+			//3. increase opacity of previous_fs to 1 as it moves in
+			opacity = 1 - now;
+			current_fs.css({'left': left});
+			previous_fs.css({'transform': 'scale('+scale+')', 'opacity': opacity});
+		}, 
+		//duration: 100, 
+		complete: function(){
+			current_fs.hide();
+			animating = false;
+		}, 
+		//this comes from the custom easing plugin
+	});
+});
+
+
+});
+</script>
+
+		<!-- amCharts javascript sources -->
+		<script type="text/javascript" src="http://www.amcharts.com/lib/3/amcharts.js"></script>
+		<script type="text/javascript" src="http://www.amcharts.com/lib/3/serial.js"></script>
+
+		<!-- amCharts javascript code -->
+
+<script type="text/javascript">
+			AmCharts.makeChart("chartdiv",
+				{
+					"type": "serial",
+					"categoryField": "category",
+					"startDuration": 1,
+					"categoryAxis": {
+						"gridPosition": "start"
+					},
+					"trendLines": [],
+					"graphs": [
+						{
+							"fillAlphas": 1,
+							"id": "AmGraph-1",
+							"title": "25-32 Yrs",
+							"type": "column",
+							"valueField": "column-1"
+						}
+					],
+					"guides": [],
+					"valueAxes": [
+						{
+							"id": "ValueAxis-1",
+							"title": "Axis title"
+						}
+					],
+					"allLabels": [],
+					"balloon": {},
+					"dataProvider": [
+						{
+							"category": "category 1",
+							"column-1": 8
+						},
+						{
+							"category": "category 2",
+							"column-1": 16
+						},
+						{
+							"category": "category 3",
+							"column-1": 2
+						},
+						{
+							"category": "category 4",
+							"column-1": 7
+						}
+					]
+				}
+			);
+		</script>
+<script type="text/javascript">
+			AmCharts.makeChart("chartdiv2",
+				{
+					"type": "serial",
+					"categoryField": "category",
+					"startDuration": 1,
+					"categoryAxis": {
+						"gridPosition": "start"
+					},
+					"trendLines": [],
+					"graphs": [
+						{
+							"fillAlphas": 1,
+							"id": "AmGraph-1",
+							"title": "graph 1",
+							"type": "column",
+							"valueField": "column-1"
+						}
+					],
+					"guides": [],
+					"valueAxes": [
+						{
+							"id": "ValueAxis-1",
+							"title": "Axis title"
+						}
+					],
+					"allLabels": [],
+					"balloon": {},
+					"dataProvider": [
+						{
+							"category": "category 1",
+							"column-1": 8
+						},
+						{
+							"category": "category 2",
+							"column-1": 16
+						},
+						{
+							"category": "category 3",
+							"column-1": 2
+						},
+						{
+							"category": "category 4",
+							"column-1": 7
+						}
+					]
+				}
+			);
+		</script>
+<script type="text/javascript">
+			AmCharts.makeChart("chartdiv3",
+				{
+					"type": "serial",
+					"categoryField": "category",
+					"startDuration": 1,
+					"categoryAxis": {
+						"gridPosition": "start"
+					},
+					"trendLines": [],
+					"graphs": [
+						{
+							"fillAlphas": 1,
+							"id": "AmGraph-1",
+							"title": "graph 1",
+							"type": "column",
+							"valueField": "column-1"
+						}
+					],
+					"guides": [],
+					"valueAxes": [
+						{
+							"id": "ValueAxis-1",
+							"title": "Axis title"
+						}
+					],
+					"allLabels": [],
+					"balloon": {},
+					"dataProvider": [
+						{
+							"category": "category 1",
+							"column-1": 8
+						},
+						{
+							"category": "category 2",
+							"column-1": 16
+						},
+						{
+							"category": "category 3",
+							"column-1": 2
+						},
+						{
+							"category": "category 4",
+							"column-1": 7
+						}
+					]
+				}
+			);
+		</script>
+
+	<script type="text/javascript">
+			AmCharts.makeChart("chartdiv5",
+				{
+					"type": "serial",
+					"categoryField": "category",
+					"plotAreaBorderColor": "#FFF",
+					"plotAreaFillColors": "#000",
+					"startDuration": 1,
+					"backgroundColor": "#000",
+					"borderColor": "#FFF",
+					"fontSize": 15,
+					"categoryAxis": {
+					"gridPosition": "start",
+					"axisColor": "#FFF",
+					"color": "#FFF",
+					"fillAlpha": 0.15,
+					"fontSize": 12,
+					"gridAlpha": 0.15,
+					"gridColor": "#FFF",
+					"gridCount": 10,
+					"titleColor": "#FFFFFF"
+					},
+					"graphs": [
+						{
+							"balloonText": "[[title]] of [[category]]:[[value]]",
+							"fillAlphas": 1,
+							"id": "AmGraph-1",
+							"title": "25-32 Yrs",
+							"type": "column",
+							"valueField": "column-1"
+						},
+						{
+							"balloonText": "[[title]] of [[category]]:[[value]]",
+							"fillAlphas": 1,
+							"id": "AmGraph-2",
+							"title": "32-40 Yrs",
+							"type": "column",
+							"valueField": "column-2"
+						},
+						{
+							"balloonText": "[[title]] of [[category]]:[[value]]",
+							"fillAlphas": 1,
+							"id": "AmGraph-3",
+							"title": "40-60 Yrs",
+							"type": "column",
+							"valueField": "column-3"
+						}
+					],
+					"guides": [],
+					"valueAxes": [
+						{
+							"id": "ValueAxis-1",
+							"axisColor": "#FFF",
+							"color": "#FFFFFF",
+							"fontSize": 15,
+							"title": "Axis title",
+							"titleColor": "#FFFFFF"
+						}
+					],
+					"allLabels": [],
+					"balloon": {},
+					"colors": [
+					"#208b95",
+					"#b91a2c",
+					"#632f77",
+					"#0D8ECF",
+					"#2A0CD0",
+					"#CD0D74",
+					"#CC0000"
+					],
+					"legend": {
+						"enabled": true,
+						"backgroundColor": "#000",
+						"bottom": -2,
+						"color": "#FFF",
+						"gradientRotation": -4,
+						"maxColumns": 3,
+						"spacing": 0,
+						"useGraphSettings": true
+					},
+					"titles": [
+						{
+							"color": "#FFFFFF",
+							"id": "Title-1",
+							"size": 15,
+							"text": ""
+						}
+					],
+					"dataProvider": [
+						{
+			"category": "category 1",
+			"column-1": 8,
+			"column-2": 5,
+			"column-3": 10
+		},
+		{
+			"category": "category 2",
+			"column-1": 6,
+			"column-2": 7,
+			"column-3": 6
+		},
+		{
+			"category": "category 3",
+			"column-1": 2,
+			"column-2": 3,
+			"column-3": 3
+		},
+		{
+			"category": "category 4",
+			"column-1": "5",
+			"column-2": "7",
+			"column-3": 4
+		},
+		{
+			"category": "category 5",
+			"column-1": "2",
+			"column-2": "3",
+			"column-3": 10
+		},
+		{
+			"category": "category 6",
+			"column-1": "8",
+			"column-2": "12",
+			"column-3": 2
+		},
+		{
+			"category": "category 7",
+			"column-1": "1",
+			"column-2": "4",
+			"column-3": 4
+		}
+	]
+				}
+			);
+		</script>
+
+</body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
