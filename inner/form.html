@@ -9,7 +9,7 @@
         <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha256-7s5uDGW3AHqw6xtJmNNtr+OBRJUlgkNJEo78P4b0yRw= sha512-nNo+yCHEyn0smMxSswnf/OnX6/KwJuZTlNZBjauKhTK0c+zT+q5JOCx0UFhXQ6rJR9jg6Es8gPuD2uZcYDLqSw==" crossorigin="anonymous">
         <link rel="stylesheet" href="../style/global.css">
         <link rel="stylesheet" href="../style/header.css">
-
+       
     </head>
     <body>
    <header> 
@@ -40,7 +40,7 @@
 
     <div class="container sign-up"> 
             <div class="">
-                <form class="modal multi-step" id="demo-modal-3">
+                <form class="modal multi-step" id="demo-modal-3" action="summary.html">
                 <div class="modal-content">
                 <div class="modal-header hidden-xs ">
                     <h4 class="modal-title step-1" data-step="1">Goal Recommendations </h4>
@@ -116,6 +116,7 @@
                         </div>
                     </div>
                             <div class="col-sm-7">
+                            <button type="button" class="btn btn-primary navi-btn step step-2" data-step="2" onclick="sendEvent('#demo-modal-3', 1)">Back</button>
                             <h3 > Contact information
                             </h3>
                             <p > 
@@ -165,6 +166,7 @@
                         </div>
                     </div>
                             <div class="col-sm-7">
+                            <button type="button" class="btn btn-primary navi-btn step step-3" data-step="3" onclick="sendEvent('#demo-modal-3', 2)">Back</button>
                             <h3 > Identity information
                             </h3>
                             <p > 
@@ -207,6 +209,7 @@
                         </div>
                     </div>
                             <div class="col-sm-7">
+                            <button type="button" class="btn btn-primary navi-btn step step-4" data-step="3" onclick="sendEvent('#demo-modal-3', 3)">Back</button>
                             <h3> Regulatory Questions
                             </h3>
                             <p > 
@@ -223,13 +226,10 @@
             
             </div>
             <div class="modal-footer footer-below">
-                <button type="button" class="btn btn-primary step step-1" data-step="1" onclick="sendEventNext('#demo-modal-3', 2) ">Continue</button>
-                <button type="button" class="btn btn-primary step step-2" data-step="2" onclick="sendEvent('#demo-modal-3', 1)">Back</button>
-                <button type="button" class="btn btn-primary step step-3" data-step="3" onclick="sendEvent('#demo-modal-3', 2)">Back</button>
-                <button type="button" class="btn btn-primary step step-2" data-step="2" onclick="sendEventNext('#demo-modal-3', 3)">Continue</button>
-                <button type="button" class="btn btn-primary step step-3" data-step="3" onclick="sendEventNext('#demo-modal-3', 4)">Continue</button>
-                <button type="submit" class="btn btn-primary step step-4" data-step="3" onclick="">Create Account</button>
-
+                <button type="button" class="btn btn-primary navi-btn step step-1" data-step="1" onclick="sendEventNext('#demo-modal-3', 2) ">Continue</button>                            
+                <button type="button" class="btn btn-primary navi-btn step step-2" data-step="2" onclick="sendEventNext('#demo-modal-3', 3)">Continue</button>
+                <button type="button" class="btn btn-primary navi-btn step step-3" data-step="3" onclick="sendEventNext('#demo-modal-3', 4)">Continue</button>                
+                <input type="submit" class="btn btn-primary navi-btn step step-4" data-step="3" onclick="" value="Create Account">
             </div>
         </div>
 </form>
@@ -275,7 +275,7 @@
         // validate signup form on keyup and submit
         $("#demo-modal-3").validate({
             rules: {
-                firstname: "required",
+                firstname: "required"
                 lastname: "required",
                 username: {
                     required: true,

@@ -277,6 +277,7 @@
 					}
 
 				}/* end of table */
+
 				.modal_container{
 					margin-top: 30px;
 					.modal-header h1{
@@ -492,13 +493,16 @@
 	overflow:visible;
 	border:none;
 	box-shadow:none;
-		.modal-footer{
-			border:none;
-			.btn-primary{
+
+		.btn-primary.navi-btn{
 				background-color:#17ba9b;
 				border-color:#17ba9b;
 				padding: 6px 30px;
+				margin-bottom: 30px;
 			}
+
+		.modal-footer{
+			border:none;			
 		}
 		
 		.modal-header{
@@ -525,4 +529,38 @@
     background-color: #17ba9b;
     width: 25%;
 }
+}
+#tour_modal {
+	/* 
+	.modal {
+				  text-align: center;
+				  padding: 0!important;
+				}
+
+				.modal:before {
+				  content: '';
+				  display: inline-block;
+				  height: 100%;
+				  vertical-align: middle;
+				  margin-right: -4px;
+				}
+
+				.modal-dialog {
+				  display: inline-block;
+				  text-align: left;
+				  vertical-align: middle;
+				} */
+
+	
+	.carousel-control {
+		width: 3%;
+		background:none;
+	}
+
+	.item p{
+		width: 95%;
+		margin: 0 auto;
+		@include fontm(14);
+		
+	} 
 }
