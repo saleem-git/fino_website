@@ -158,6 +158,9 @@ section.plan_info{
 	.invest{
 		@include small_icons-sprite(investment);
 	}
+	.philan{
+		@include small_icons-sprite(contingency);
+	}
 	.plan_icon{
 		width: 50px;
 		height: 50px;
