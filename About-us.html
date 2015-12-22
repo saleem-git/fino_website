@@ -1,0 +1,151 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>About Us</title>
+        <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600' rel='stylesheet' type='text/css'>
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha256-7s5uDGW3AHqw6xtJmNNtr+OBRJUlgkNJEo78P4b0yRw= sha512-nNo+yCHEyn0smMxSswnf/OnX6/KwJuZTlNZBjauKhTK0c+zT+q5JOCx0UFhXQ6rJR9jg6Es8gPuD2uZcYDLqSw==" crossorigin="anonymous">
+        <link rel="stylesheet" href="style/global.css">
+        <link rel="stylesheet" href="style/header.css">
+        <link rel="stylesheet" href="style/outer.css">
+       
+    </head>
+    <script src="https://maps.googleapis.com/maps/api/js"></script>
+    <script>
+      function initialize() 
+	  
+	  {
+		var var_location = new google.maps.LatLng( 12.911844199999999,77.63625619999993);
+ 
+        var var_mapoptions = {
+          center: var_location,
+          zoom: 17
+        };
+ 
+		var var_marker = new google.maps.Marker({
+			position: var_location,
+			map: var_map,
+			title:"FinoTrust"});
+ 
+        var var_map = new google.maps.Map(document.getElementById("map"),
+            var_mapoptions);
+ 
+		var_marker.setMap(var_map);	
+ 
+      }
+      google.maps.event.addDomListener(window, 'load', initialize);
+    </script>
+	   	<header> 
+		    <!-- Navigation -->
+			<nav class="navbar navbar-default navbar-fixed-top"  >
+				<div class="container">
+				<!-- Brand and toggle get grouped for better mobile display -->
+					<div class="navbar-header page-scroll">
+						<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+							<span class="sr-only">Toggle navigation</span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</button>
+						<a class="navbar-brand" href="#page-top"><img src="./images/logo_img.jpg " ></a>
+					</div>
+
+				<!-- Collect the nav links, forms, and other content for toggling -->
+					<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+						<ul class="nav navbar-nav navbar-right">
+							<li class="hidden"><a href="#page-top"></a></li>
+							<li class="page-scroll"><a href="Why-Fino.html">Why Fino</a></li>
+							<li class="page-scroll"><a href="What-We-Do.html">What We Do</a></li>
+							<li class="page-scroll"><a href="About-Us.html" class="active-now">About Us</a></li>
+							<li class="page-scroll"><a href="Pricing.html">Pricing</a></li>
+							<li class="page-scroll"><a href="FAQs.html">FAQs</a></li>
+							<li class="page-scroll"><a class="cd-signin" href="#">Sign in</a></li>
+							<li class="page-scroll"><a href="Get-started.html"> Sign Up </a></li>
+						</ul>
+					</div>
+				<!-- /.navbar-collapse -->
+				</div>
+				<!-- /.container-fluid -->
+			</nav>
+		</header>
+<body class="about-us">
+<div id="mission">
+	<div class="text-center">
+		<h3><b  >"Save efficiently through FinoTrust!"</b></h3>
+		<p >FinoTrust simplifies implementing a savings and investment plan in today's world of too many choices and complex products. We at FinoTrust, strive to understand your needs and goals and will recommend a customized plan.</p>
+		<p >Sign up now to start your long term (or even a short term) savings and investment plan.</p>
+	</div>
+</div>
+<div id="contact-us">
+	<h3 class="text-center">Contact Us</h3>
+<!-------------------- Contact us  ----------------------->
+<div class="container">
+	<div class="row">
+		<div class="col-md-6 " >
+			<p ><h4>FinoTrust<br>
+			#25, 9th Main, 18th Cross,<br>
+			7th Sector, HSR Layout<br>
+			Bangalore, Karnataka – 560102</p><br></h4>
+			<h4><p >080-41245883<br></p>
+			<p >help@finotrust.com</p></h4>
+		 </div>
+		<div class="col-md-6" >
+			<div id="map"></div>   
+		</div>
+
+  </div>
+</div>
+ </div>
+ <section id="team" >
+
+<div class="container" >
+<h3 class="text-center">Meet Our Team</h3>
+
+<div class="row" >
+<div class="col-sm-6 text-center member" >
+<div >
+<img class="img-circle" src="images/2.jpg" >
+<h3 ><b>Shailesh Mehta</b></h3>
+<h4 style="color:black">CHAIRMAN</h4>
+<p class="description">As Chairman, Shailesh developed the entire technology platform of FinoTrust which is a benchmark of Security and Robustness in Indian Financial Industry.</p>
+<div id="collapseThree" class="accordion-body collapse">
+<div class="accordion-inner"> 
+<p class="description">He is an avid techie and has built India's foremost wealth management platform which received the EuroMoney award for the best technology initiative in the Asia-Pacific region. He can either be found immersed deeply in either developing the next tech product we should launch or trying the solve the mysteries of our universe through Gita!</p>
+<h5>Education:</h5><p>Bachelors in Engineering Physics from IIT Bombay (1992).<br>
+MBA in Entrepreneurship from IIM Ahmedabad (1994)</p>
+</div>
+</div>
+<button class="SeeMore2" data-toggle="collapse" href="#collapseThree">Read More</button><br>
+<a href="https://www.linkedin.com/in/shaileshmehta"><img src="images/linkedin_icon.png"/></a>
+</div>      
+</div>
+<div class="col-sm-6 text-center member" >
+<div >
+<img class="img-circle"  src="images/varun.jpg" >
+<h3 ><b>Varun Gupta</b></h3>
+<h4 style="color:black">CEO</h4>
+
+<p class="description" >As CEO, Varun is responsible for the entire consumer facing side of FinoTrust be it design of the product or customer service communication.</p>
+<div id="collapsefour" class="accordion-body collapse">
+<div class="accordion-inner"> <p class="description">He is an analyst at heart and is extremely data driven in all his thinking and execution. When he is not shouting “Show me the data!” to his team, he is either visualizing how to change the world or taking a trip on his enfield to the nearby mountains..<br></p>
+<h5>Education:</h5><p>Bachelors in Biotechnology Engineering, IIT Madras (2009)<br>
+Masters in Biotechnology Engineering, IIT Madras (2010)</p>
+</div>
+</div>
+<button class="SeeMore2" data-toggle="collapse" href="#collapsefour">Read More</button><br>
+<a href="https://www.linkedin.com/in/varunsunnygupta" ><img src="images/linkedin_icon.png"/></a>
+</div>
+</div>
+</div>
+</div>         
+</section>
+
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>  
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha256-KXn5puMvxCw+dAYznun+drMdG1IFl3agK0p/pqT9KAo= sha512-2e8qq0ETcfWRI4HJBzQiA3UoyFk6tbNyG+qSaIBZLyW9Xf3sWZHN/lxe9fTh1U45DpPf07yj94KsUHHWe4Yk1A==" crossorigin="anonymous"></script>	 
+	<script src="js/script.js"></script>
+	<script src="js/readmore.js"></script>
+
+</body>
+</html>

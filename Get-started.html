@@ -13,7 +13,6 @@
         <link rel="stylesheet" href="style/outer.css">
        
     </head>
-    <body class="what-we-do">
 	   	<header> 
 		    <!-- Navigation -->
     <nav class="navbar navbar-default navbar-fixed-top"  >
@@ -34,8 +33,8 @@
 			<ul class="nav navbar-nav navbar-right">
                     <li class="hidden"><a href="#page-top"></a></li>
                     <li class="page-scroll"><a href="Why-Fino.html">Why Fino</a></li>
-                    <li class="page-scroll"><a href="What-We-Do.html" class="active-now">What We Do</a></li>
-                    <li class="page-scroll"><a href="About-Us.html">About Us</a></li>
+                    <li class="page-scroll"><a href="What-We-Do.html">What We Do</a></li>
+                    <li class="page-scroll"><a href="About-Us.html" >About Us</a></li>
                     <li class="page-scroll"><a href="Pricing.html">Pricing</a></li>
                     <li class="page-scroll"><a href="FAQs.html">FAQs</a></li>
 					<li class="page-scroll"><a class="cd-signin" href="#">Sign in</a></li>
@@ -45,54 +44,57 @@
         </div>
     </nav>
 </header>
-    <div id="we_do">
-		<div  class="text-center" style="width:50%; margin:auto ">
-		<p class="text-center">manage all your financial goals and investments at one place
-		</p>
+    <body class="home">
 
-		</div>
+		<div class="intro-text text-center" style="margin-top:14%;">
+		<span class="name"><h5 style="color:gray; text-align:center;  margin-bottom:5%">START YOUR INVESTMENT PLAN</h5></span>
+		<form method="get" action="onboarding.html" name="onboardinfo">
+		<p class="details" style="padding:0 15%;">
+		I am 
+		<input  type="text" name="age" maxlength="2" size="3" value"4"  />
+		years old and <!--  onkeyup="this.value=this.value.replace(/[^\d]/,'')" -->
+		<select class="minimal" id="retired" style="overflow:hidden;" name="retirement">
+    		<option value="not_retired">Not Retired</option>
+            <option value="retired">Retired</option>
+        </select>
+		I am 
+		<select class="minimal" id="married" style="overflow:hidden;" name="martial_status">
+    		<option value="married"> Married </option>
+            <option value="unmarried"> Un-Married</option>
+        </select>
+		with 
+		<select class="minimal" id="kids" style="overflow:hidden;" name="kids" >
+    		<option value="0">0 </option>
+            <option value="1">1 </option>
+            <option value="2">2</option>
+            <option value="3">3 </option>
+            <option value="4">4</option>
+        </select>
+        kids.<br><br>
+		My annual pre tax income is ₹
+		<input type="text" placeholder="" maxlength="10" name="income" value="4500" size="10" class="comma" onkeyup="this.value=this.value.replace(/[^\d]/,'')">
+
+        <span class="madlib-error"></span>
+
+		
+		</p>
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 text-center" >
+                 <button type="submit" class="btn btn-lg btn-outline " id="get_start" >Start Investment</button>
+            </div>
+        </div>
+        </form>
+        
     </div>
-	<div id="beat" >
-		<h3><b  >"beat the inflation"</b></h3>
-		<p >
-		Usually investing in FD's will let you lose money as post tax returns are lower than inflation. However, with our suggested portfolio you will be able to beat the inflation and grow your money either conservatively or aggressively
-		</p>
-		<div >
+        
 
-		<div class="row">
-		<div class="col-lg-8 col-lg-offset-2 text-center" >
-		<a href="#" class="btn btn-lg btn-outline " id="get_start" >INVEST NOW</a></div>
-		</div>
-		</div>
- </div>
- <div class="container"  id="we_do1">
-	<div class="row" >
-		<div class="col-md-8 " >
-		<h3><b  >"robust technology"</b></h3>
-		<p >We simplify the complicated financial service for you using combination of financial knowledge and analytics.</p>
-		</div>
-		<div class="col-md-4" >
-		<img src="images/icons/robust.png"> </img>
-		</div>
-	</div>
- </div>
- <div class="container" id="we_do2">
- <div class="row" >
-	<div class="col-md-4" >
-		<img src="images/icons/strategy.png"> </img>
-	</div>
-	<div class="col-md-8 ">
-		<h3><b  >"strategic investment"</b></h3>
-		<p >Don't just tactically invest money to save on taxes, spend 5 mins. with us and become strategic about it.</p>
-	</div>
-
- </div>
- </div>
-
-
+    <!--HOME SECTION END  -->
+  
+   <!-- jQuery -->
      <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>  
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha256-KXn5puMvxCw+dAYznun+drMdG1IFl3agK0p/pqT9KAo= sha512-2e8qq0ETcfWRI4HJBzQiA3UoyFk6tbNyG+qSaIBZLyW9Xf3sWZHN/lxe9fTh1U45DpPf07yj94KsUHHWe4Yk1A==" crossorigin="anonymous"></script>	 
 	<script src="js/script.js"></script>
 
-	</body>
+</body>
+
 </html>
