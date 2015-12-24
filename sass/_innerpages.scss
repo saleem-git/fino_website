@@ -221,10 +221,11 @@
 				table {
 					width: 100%;
 					th {
-						@include fontl(12);
+						@include fontsb(14);
 						border-bottom: 1px solid rgb(204, 204, 204);
+						padding-bottom: 15px;
 						&:first-child{
-							width: 250px;
+							width:350px;
 						}
 					}
 					td,td p, td a {
@@ -234,9 +235,30 @@
 						padding-bottom:5px;
 						line-height: auto;											
 					}
+					th,td{
+						&:nth-child(3){
+							display: none;
+						}
+					}
 					td{
 						padding: 4px 0px;
 						vertical-align: middle;
+
+						.btn{
+							padding:5px 20px;
+							margin-right: 5px;
+						}
+						.btn-primary{
+							background-color:#2C3E51;
+							border-color:#2C3E51;
+							&:hover{
+								background-color:#233140;
+							}
+						}
+						.btn-default{
+							border-color:#2C3E51;
+							color: #2C3E51;
+						}
 					}
 					tfoot {
 						border-top: 1px solid rgb(204, 204, 204);
@@ -494,15 +516,17 @@
 	border:none;
 	box-shadow:none;
 
-		.btn-primary.navi-btn{
+		
+
+		.modal-footer{
+			border:none;	
+
+			.btn-primary{
 				background-color:#17ba9b;
 				border-color:#17ba9b;
 				padding: 6px 30px;
 				margin-bottom: 30px;
-			}
-
-		.modal-footer{
-			border:none;			
+			}		
 		}
 		
 		.modal-header{
@@ -531,8 +555,8 @@
 }
 }
 #tour_modal {
-	/* 
-	.modal {
+	 
+	/* .modal {
 				  text-align: center;
 				  padding: 0!important;
 				}
@@ -560,7 +584,17 @@
 	.item p{
 		width: 95%;
 		margin: 0 auto;
-		@include fontm(14);
-		
+		@include fontm(14);		
 	} 
+	img {
+    max-width: 400px;
+    max-height: 300px;
+    margin:60px 0px 80px 0px;
+  }
+  .carousel-indicators li {
+  	border: 1px solid #999;
+  }
+  .carousel-indicators li.active{
+  	background-color: #999;
+  }
 }

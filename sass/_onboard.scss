@@ -156,7 +156,7 @@ section.plan_info{
 		@include small_icons-sprite(retirement);
 	}
 	.invest{
-		@include small_icons-sprite(investment);
+		@include small_icons-sprite(child_philanthropy);
 	}
 	.philan{
 		@include small_icons-sprite(contingency);
@@ -173,9 +173,17 @@ section.plan_info{
 			&.selected_row{
 				background-color:#f2ffe5;
 			}
-			p:first-child{
-				@include fontm(16);
-				margin-top: 25px;
+			h3{
+				@include fontsb(16);
+
+			}
+			ul {
+				li{
+					@include fontsb(14);
+					padding-bottom: 12px;
+					@include small_icons-sprite(tick);
+					padding-left: 25px;
+				}
 			}
 			a.btn{
 					margin-top: 15px;
