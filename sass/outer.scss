@@ -1,7 +1,12 @@
+.home, .what-we-do, .about-us, .benchmark, .safe, .transparent, .funds, .policy, .tlh{
+	h1, h2, h3, h4, h5, h6 {font-family: Montserrat; font-weight:700; text-transform:uppercase; padding:1em 0;}
+	h2{font-size:30px}
+	h3{font-size:26px;}
+	h4{font-size:20px;}
+}
 .home{
 overflow-x:hidden;
 font-family: Montserrat;
-	h1, h2, h3, h4, h5, h6 {font-weight:700; text-transform:uppercase}
 	@media(min-width:768px) {
     .navbar.navbar-default.navbar-fixed-top {
 	position:fixed;
@@ -19,17 +24,17 @@ font-family: Montserrat;
 		img{margin: 3% auto 2%;}
 		}
 	.intro-text{
+		h2{padding:0.5em 0;}
 		& p{padding:0 20%;}
 	}
 	input{color:#18bb9c; border:none; border-bottom:1px solid gray; text-align:center; }
 	select{border:none; border-bottom:1px solid gray;}
 	.how-it-works{
-	h3{font-size:26px;}
-	h4{font-size:20px;}
+	padding:2% 10%;
 	p{font-size:18px;}
 	}
-	
 #portfolio {
+	&.container{padding:10% 20% 0; h3{color:#18bb9c;}}
     .portfolio-item {
         margin: 0 0 15px;
         right: 0;
@@ -39,7 +44,7 @@ font-family: Montserrat;
             max-width: 400px;
             margin: 0 auto;
             .caption {
-                background: gray;
+                background: #18bb9c;
                 position: absolute;
                 width: 100%;
                 height: 100%;
@@ -56,7 +61,8 @@ font-family: Montserrat;
                     height: 20px;
                     font-size: 20px;
                     text-align: center;
-                    top: 50%;
+                    top: 10%;
+					padding:10% 2%;
                     margin-top: -12px;
                     color: white;
                     i {
@@ -105,10 +111,6 @@ font-family: Montserrat;
 			padding-top:5em;
 		}
 	}
-	& h3{
-	font-size: 26px;
-	text-transform: uppercase;
-	}
 	& #get_start{
 		&:hover {
 			background:#fff; 
@@ -125,6 +127,7 @@ font-family: Montserrat;
 	& #we_do1{
 		width:100%;
 		padding:0 15%;
+		h3{color:#2C3E50;}
 		}
 	& #we_do2{
 		background:#2C3E50;
@@ -144,7 +147,7 @@ font-family: Montserrat;
 	border: 2px solid #18bb9c;
 	font-size: 20px;
 	color: #000;
-		background:#18bb9c;
+	background:#18bb9c;
 	transition: all 0.3s ease-in-out 0s;
 	&:hover{background:#fff; color:#18bb9c;}
 	&.get-start{ border-color: #fff; padding:5px 15px; background:#fff; box-shadow: 5px 5px 2px #888; }
@@ -188,9 +191,8 @@ font-family: Montserrat;
 	}
 }
 .benchmark{
-h1, h2, h3, h4, h5, h6 {font-family: Montserrat; font-weight:700; text-transform:uppercase; padding:1em 0;}
 h2{font-size:30px}
-h3{font-size:26px; margin-top:-6%}
+h3{ margin-top:-6%}
 h4{font-size:20px;}
 section{
 		background-repeat: no-repeat;
@@ -220,17 +222,19 @@ display: none;
 }}
 }
 .about-us{
-h1, h2, h3, h4, h5, h6 {font-family: Montserrat; font-weight:700; text-transform:uppercase; padding:1em 0; color:white;}
 h2{font-size:30px}
 h3{font-size:26px;}
 h4{font-size:20px;}
-background: rgba(24,187,156,0.7);
-	#mission{background:rgba(24,187,156,0.3); margin-top:-2%; padding:3em 0;p{padding: 0 12%; color:white}}
-	#contact-us{background:rgba(24,187,156,0.9); padding:2em 0; .container{padding:2em 0;}}
+	#mission{
+		background-image: url("../images/about-us-logo.jpg");
+		h3{padding-top:9%;}
+		p{padding: 0 12%; color:white}}
+	#contact-us{padding:2em 0; .container{padding:2em 0;}; background:#2e2e2e; color:white; .colour{color:#18bb9c;} h3,h4{padding:0.5em 0;} }
 	#team{
-		background:rgba(24,187,15,0.3);
+		h3,h4{padding:0.5em 0;}
+		.colour{color:#18bb9c;}
 		padding:2em 0;
-		.SeeMore2{margin:15px 0;}
+		.btn{background:#ebebeb;}
 		h5{padding:0;
 		color:#2C3E51;
 		text-align:left;}
@@ -258,8 +262,236 @@ background: rgba(24,187,156,0.7);
 	.panel-body {padding:15px 25px; p{font-size:15px}}
 
 	}
+}
+									/* Easy and Transparent*/
 
+.logo{
+		background-repeat: no-repeat;
+		background-size: 100% 100%;
+		background-position: center center;
+		height:380px;
+		margin-top:-21px;
+		h3{font-family: Montserrat;font-size:30px; text-transform:uppercase; font-weight:700; padding: 14% 1px 10px; color:#fff; margin-left:10%;}
+}
+.easy{
+	.seven-col{padding:5% 0; width:90%;}
+	#easy{
+		background-image: url("../images/easy-logo.jpg");
+	}
+	@media (min-width: 768px){
+	  .seven-cols .col-md-1,
+	  .seven-cols .col-sm-1,
+	  .seven-cols .col-lg-1  {
+		width: 100%;
+		*width: 100%;
+		padding:15px;
+		h3{font-size:20px; padding:10px 1px; color:#18bb9c;}
+		p{font-size:20px; padding:2px 5px;}
+	  }
+	}
 
+	@media (min-width: 1000px) {
+	  .seven-cols .col-md-1,
+	  .seven-cols .col-sm-1,
+	  .seven-cols .col-lg-1 {
+		width: 14.285714285714285714285714285714%;
+		*width: 14.285714285714285714285714285714%;
+		padding:1px;
+		h3{border-top:2px dotted gray; font-size:13px;  padding:10px 1px; color:#18bb9c;}
+		p{font-size:13px; padding:2px 5px;}
+	  }
+	}	 
+	@media (min-width: 1300px) {
+	  .seven-cols .col-md-1,
+	  .seven-cols .col-sm-1,
+	  .seven-cols .col-lg-1 {
+		width: 14.285714285714285714285714285714%;
+		*width: 14.285714285714285714285714285714%;
+		padding:0.5px;
+		h3{border-top:2px dotted gray; font-size:14px; padding:10px 1px; color:#18bb9c;}
+		p{font-size:15px; padding:2px 8%;}
+	  }
+	}
+}
+
+.safe{
+		#safe{
+		background-image: url("../images/safe-logo.jpg");
+	}
+	.row{
+		padding:5% 17%;
+		h3{font-size:15px;  padding:10px 1px; color:#18bb9c;}
+		p{font-size:15px; padding:2px 8%;}
+	}
+
+}
+.transparency{
+		#transparency{
+		background-image: url("../images/transparncy-logo.jpg");
+		}
+		.row-head{
+			padding:5% 0;
+			#left{font-size:18px; text-transform:uppercase; font-weight:900; color:#f86637;}
+			#right{font-size:18px; text-transform:uppercase; font-weight:900; color:#18bb9c;}
+		}
+		.row{
+		h3{font-size:15px; padding:10px 1px; color:#18bb9c;}
+		p{font-size:15px; padding:2px 0;}
+		.right{text-align:right; padding-right:0;h3{color:#f86637}}
+		.left{text-align:left; padding-left:0; border-left:2px dotted gray;}
+	}}
+
+.funds{
+	.tab-content{margin-top:0.5em; h3{font-size:15px; font-weight:600; padding:2em 0 0;} }
+	.nav-tabs li{width:25%; border:none; color:white; & a{color:#000; font-weight:600;}  &.active a, &.active a:focus, &.active a:hover{color:white;background-color:#18bb9c;}}
+	.bottom-table{
+		padding:20px;
+		margin:5em auto; border:2px solid rgb(204, 204, 204);
+		th {
+			&:first-child{
+				width: auto;
+			}
+		}
+		}
+	table{
+		border: 2px solid rgb(204, 204, 204);
+		width: 100%;
+		font-size:12px;
+		th {
+			font-size:15px;
+			text-align:center;
+			background:#18bb9c; color:white;
+			border: 2px solid rgb(204, 204, 204);
+			padding:3px;
+			&:first-child{
+				width: 250px;
+			}
+		}
+		margin-top: 20px;
+		}
+		td{
+		padding:5px;
+		border: 1px solid rgb(204, 204, 204);
+		}
+		button {
+		color: #fff;
+		border-color: #1F93EF;
+		width: 90%;
+		margin:5%;
+		&.buy{background-color:green;}
+		&.sip{background-color:#b38015;}
+		&:hover{
+		background-color:#18bb9c;
+		color: #fff;
+		}
+		}
+.search-invest-select{padding:20px;border: 1px solid rgb(204, 204, 204);label{padding:0.5em 0; font-weight:500;}}
+.search-invest-tab{
+	margin-top:1em;
+	border:1px solid #18bb9c;
+	border-radius:5px;
+	p{font-size:12px;}
+	.nav-tabs li{width:50%; border:none; color:white; & a{color:#000; font-weight:600;}  &.active a, &.active a:focus, &.active a:hover{color:white;background-color:#18bb9c;}}
+	.tab-content{padding:1em;}
+	.row div{padding:5px}
+	label{font-size:12px; padding:0.5em 0; font-weight:500;}
+	input{width:100%;}
+	}
+}
+.policy{
+.nav {
+	li{a{color: #23527C;}}
+	.active{
+	h5{color:#18bb9c;
+    &:focus, :active, :hover{ 
+	 color: #23527C;
+	 }}}
+	
+	
+}
+.nav > li >  {
+    text-decoration: none;
+    
+}
+
+&.callout.row{padding:1em 0;}
+h5 {
+    font-size: 15px;
+    padding: 0.5em 0px;
+}
+#panel2-1{h5{margin-top:1.5em;}}
+.tabs-content{padding:1em 3em;}
+p{font-size:15px;}
+}
+.tlh{
+	overflow-x:hidden;
+#tlh{
+	background-image: url("../images/tlh-logo.jpg");
+	h3{padding-top:4em;margin-left:0;}
+	color:white;
+	}
+	#how-it-works{
+	.row{
+		padding:5% 8%;
+		h2{padding:1em; }
+		h3{font-size:15px;  padding:10px 1px; color:#18bb9c;}
+		p{font-size:15px; padding:2px 8%;}
+	}
+	width:100%; background:white; }
+	#supercharge{
+		padding:3em 0;
+		width:100%; background:white;
+		h2{padding-top:2em;}
+		.try-it{padding:0; h4{padding:10px;}}
+		}
+	#understand{width:100%; background:#1d2027;
+	.row{
+		color:white;
+		padding:5% 2%;
+		h2{padding:1em 0; font-size:26px; }
+	}
+		}
+	
+}
+.pricing{
+	#pricing{
+	background-image: url("../images/pricing-logo.jpg");
+	h3{padding-top:4em;margin-left:0;}
+	p{font-weight:700;}
+	color:white;
+	}
+	table{ 
+		margin-top:3em;
+		thead{
+			background:#363636;
+			color:white;
+			th{padding:10px;}
+		}
+		border-top:1px solid gray;
+		border-right:1px solid gray;
+		tr, td, th {
+		border-collapse: collapse;
+		text-align: center;
+		border-left:1px solid gray;
+		border-bottom:1px solid gray;
+		}
+		tr td{padding:10px; text-align:center}
+		td{width:300px}
+		.key_column {
+			background: #e5f9e5;
+			
+		}
+		.fino_column {
+			background: #18BC9C;
+			color:white;
+		}
+		.option_column {
+			background: #ebebeb;
+			color:#333;
+			
+		}
+		}
+		
 
 
 }
