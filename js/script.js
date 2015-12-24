@@ -236,10 +236,6 @@ $("form[name='onboardinfo']").submit(function() {
 			sessionStorage.setItem('formdata',formobj);
 			//nextpage();
 			return true;
-
-
-		
-
 	}
 	else {
 		console.log(jsondata);

@@ -363,6 +363,7 @@
 
      <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>  
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha256-KXn5puMvxCw+dAYznun+drMdG1IFl3agK0p/pqT9KAo= sha512-2e8qq0ETcfWRI4HJBzQiA3UoyFk6tbNyG+qSaIBZLyW9Xf3sWZHN/lxe9fTh1U45DpPf07yj94KsUHHWe4Yk1A==" crossorigin="anonymous"></script>	 
+	<script src="js/readmore.js"></script>
 	
 	 <!-- For Am chart -->
 		<script type="text/javascript" src="http://www.amcharts.com/lib/3/amcharts.js"></script>
@@ -381,9 +382,10 @@
 				var ageinfo=localData.age;
 				parseInt(ageinfo);
 				var martialinfo=localData.martial_status;
-				var kidsinfo=localData.kids
+				var kidsinfo=localData.kids;
 				parseInt(kidsinfo);
-				var incomeinfo=localData.income
+				var incomeinfo=localData.income;
+				incomeinfo=incomeinfo.replace(/,/g,"");
 				parseInt(incomeinfo);
 
 				/*Computed Variables*/		
@@ -632,6 +634,8 @@
 					drawchart(divn,high_fd,high_deb,high_equ,high_liq)
 						}					
 				}
+
+				
 		</script>
 	
 	</body>
