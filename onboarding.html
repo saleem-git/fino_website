@@ -384,6 +384,7 @@
 				var kidsinfo=localData.kids
 				parseInt(kidsinfo);
 				var incomeinfo=localData.income
+				incomeinfo=incomeinfo.replace(/,/g,"");
 				parseInt(incomeinfo);
 
 				/*Computed Variables*/		
@@ -428,7 +429,7 @@
 		switch (retirementinfo) {
 			case "not_retired":
 			$("#headingOne .goal_metainfo label:nth-of-type(2)").text("Tax Saving");
-			$("#onboarding #headingOne p").html("Save on Taxes by investing Rs <span class='target-amount'>150000 <span class='glyphicon glyphicon-pencil edit'></span> </span> <span style='display:none'><input type='text' name='income' maxlength='9'> </span> In best Tax Saving Mutual Funds (Under Section 80C)");
+			$("#onboarding #headingOne p").html("Save on Taxes by investing Rs <span class='target-amount'>150000 <span class='glyphicon glyphicon-pencil edit'></span> </span> <span style='display:none'><input type='text' name='income' maxlength='9' > </span> In best Tax Saving Mutual Funds (Under Section 80C)");
 
 			$("#collapseOne .panel-body:first-child ul").html("<li>Diverse Portfolio of Mutual Funds</li>    <li>Zero Fees</li>   <li>Entire amount withdrawable after 3 years with zero taxes</li> <li>Expected amount after 3 years between 9% to 18% of current Invested amount</li>");
 			$("#collapseOne .panel-body:nth-child(2) ul").html("<li>Diverse Portfolio of Mutual Funds</li>    <li>Zero Fees</li>   <li>Entire amount withdrawable after 3 years with zero taxes</li> <li>Expected amount after 3 years between 6% to 24% of current Invested amount</li>");
@@ -633,6 +634,6 @@
 						}					
 				}
 		</script>
-	
+	<script src="js/readmore.js"></script>
 	</body>
 </html>

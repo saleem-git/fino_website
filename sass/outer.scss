@@ -7,6 +7,7 @@
 .home{
 overflow-x:hidden;
 font-family: Montserrat;
+h3{padding-bottom:3px;}
 	@media(min-width:768px) {
     .navbar.navbar-default.navbar-fixed-top {
 	position:fixed;
@@ -14,6 +15,7 @@ font-family: Montserrat;
 		}
 	}
 	#intro{
+		padding:4em 0;
 		h2{font-size:30px;}
 		text-align: center;
 		background: #18bb9c none repeat scroll 0% 0%;
@@ -24,16 +26,17 @@ font-family: Montserrat;
 		img{margin: 3% auto 2%;}
 		}
 	.intro-text{
-		h2{padding:0.5em 0;}
+		h2{padding:0.15em 0;}
 		& p{padding:0 20%;}
 	}
 	input{color:#18bb9c; border:none; border-bottom:1px solid gray; text-align:center; }
 	select{border:none; border-bottom:1px solid gray;}
 	.how-it-works{
-	padding:2% 10%;
+	padding:4em 10%;
 	p{font-size:18px;}
 	}
 #portfolio {
+	padding:4em 0;
 	&.container{padding:10% 20% 0; h3{color:#18bb9c;}}
     .portfolio-item {
         margin: 0 0 15px;
@@ -61,7 +64,7 @@ font-family: Montserrat;
                     height: 20px;
                     font-size: 20px;
                     text-align: center;
-                    top: 10%;
+                    top: 1.4em;
 					padding:10% 2%;
                     margin-top: -12px;
                     color: white;
@@ -87,6 +90,47 @@ font-family: Montserrat;
             margin: 0 0 30px;
         }
     }
+}
+
+hr.star-light,
+hr.star-primary {
+    padding: 0;
+    border: none;
+    border-top: solid 5px;
+    text-align: center;
+    max-width: 250px;
+    margin: 25px auto 30px;
+}
+
+hr.star-light:after,
+hr.star-primary:after {
+    content: "\f005";
+    font-family: FontAwesome;
+    display: inline-block;
+    position: relative;
+    top: -0.8em;
+    font-size: 2em;
+    padding: 0 0.25em;
+}
+
+hr.star-light {
+    border-color: white;
+	line-height: 1.42857;
+}
+
+hr.star-light:after {
+    background-color: #18BC9C;
+    color: white;
+}
+
+hr.star-primary {
+    border-color: #2C3E50;
+	line-height: 1.42857;
+}
+
+hr.star-primary:after {
+    background-color: white;
+    color: #2C3E50;
 }
 
 }
@@ -201,7 +245,30 @@ section{
 		min-height:400px;
 		padding:10%;
 		&#logo{background-image: url("../images/benchmark-logo.jpg"); margin-top:-21px; h3{color:white;margin-top:0}}
-		&#goal-story{background:black; h3{color:white;}}
+		&#goal-story{
+		.row{width: 70%;margin: auto;}
+			padding:4em;
+			background:black; h3{color:white; margin-top:0;}
+			.chart {
+				position:relative;
+			}
+
+			canvas {
+				display: block;
+				position:absolute;
+				top:1.6em;
+				left:1.6em;
+			}
+			span {
+				color:#fff;
+				display:block;
+				line-height:205px;
+				text-align:center;
+				width:220px;
+				font-size:30px;
+				font-weight:600;
+			}
+			}
 		&#invest{background:black; h3{color:white;} #chartdiv5{width: 60%; height: 400px;margin:auto;}}
 		&#age-story{
 			background:#ebebeb;
@@ -235,9 +302,7 @@ h4{font-size:20px;}
 		.colour{color:#18bb9c;}
 		padding:2em 0;
 		.btn{background:#ebebeb;}
-		h5{padding:0;
-		color:#2C3E51;
-		text-align:left;}
+		h5{color:#2C3E51;}
 		.row{padding:0 10%;
 			p{padding:5px 1.5em;}
 			}
@@ -269,7 +334,7 @@ h4{font-size:20px;}
 		background-repeat: no-repeat;
 		background-size: 100% 100%;
 		background-position: center center;
-		height:380px;
+		height:400px;
 		margin-top:-21px;
 		h3{font-family: Montserrat;font-size:30px; text-transform:uppercase; font-weight:700; padding: 14% 1px 10px; color:#fff; margin-left:10%;}
 }
@@ -456,8 +521,8 @@ p{font-size:15px;}
 .pricing{
 	#pricing{
 	background-image: url("../images/pricing-logo.jpg");
-	h3{padding-top:4em;margin-left:0;}
-	p{font-weight:700;}
+	h3{padding-top:3em;margin-left:0;}
+	p{font-weight:700; margin-left:-2em;}
 	color:white;
 	}
 	table{ 
