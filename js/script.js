@@ -227,8 +227,8 @@ $("form[name='onboardinfo']").submit(function() {
 	$('#result').text(formobj+"print");
 	jsondata = JSON.parse(formobj);    
 	//alert(jsondata.retirement);
-	if(jsondata.age && jsondata.income !=""){
-		console.log("empty data");
+	if((jsondata.age!="") && (jsondata.income !="")) {
+		console.log("data filled");
 
 			// Check browser support
 			//var testObject = { 'one': 1, 'two': 2, 'three': 3 };

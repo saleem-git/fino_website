@@ -373,7 +373,7 @@
         <script src="js/amchartcreate.js"></script>
 		<script src="js/script.js"></script>
 		<script type="text/javascript">
-				//console.log("going in onboarding");
+				console.log("going in onboarding");
 				var localData = JSON.parse(sessionStorage.getItem('formdata'));
 				/*console.log(localData.kids);
 				console.log(localData.income);*/
@@ -384,13 +384,12 @@
 				var martialinfo=localData.martial_status;
 				var kidsinfo=localData.kids;
 				parseInt(kidsinfo);
-<<<<<<< HEAD
+
 				var incomeinfo=localData.income
-=======
 				var incomeinfo=localData.income;
->>>>>>> origin/master
-				incomeinfo=incomeinfo.replace(/,/g,"");
-				parseInt(incomeinfo);
+
+				/*incomeinfo=incomeinfo.replace(/,/g,"");
+				parseInt(incomeinfo);*/
 
 				/*Computed Variables*/		
 				var currentYear =(new Date).getFullYear();
@@ -420,7 +419,7 @@
 				
 
 
-/*	console.log(contingency_amt);
+	/*console.log(contingency_amt);
 	console.log(retirementinfo);
 	console.log(ageinfo);
 	console.log(yearto_retire);
