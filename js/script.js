@@ -121,12 +121,21 @@ jQuery(function($) {
 
 
 
-
+ 
 $("span.target-amount+span input[type='text']").focusout(function(){
-	var amtvalinput=$(this).val();
+
+	 var amtvalinput=$(this).val();	
+	 amtvalinput=amtvalinput.replace(/,/g,"");
+	//parseInt(amtvalinput);
 	//var amtvalinputlength=amtvalinput.trim().lenght
 	if (((amtvalinput)!="") && ($.isNumeric(amtvalinput)) && ((amtvalinput)>0) ) {
-		$(this).parent().prev().text($(this).val());
+		/*var tempval=(($(this).val()).toLocaleString());
+		console.log(tempval+ " temp value");*/
+		//amtvalinput=parseInt(amtvalinput);
+		amtvalinput=((parseInt(amtvalinput)).toLocaleString());
+		//console.log(amtvalinput+ "val");
+
+		$(this).parent().prev().text(amtvalinput);
 		$(this).parent().prev().append("<span class='glyphicon glyphicon-pencil edit'></span>");
 
 	}
@@ -134,6 +143,21 @@ $("span.target-amount+span input[type='text']").focusout(function(){
 	$(".target-amount").show();
 
 });
+
+// to input commas while inputting value
+  $(".target-amount+span input").keyup(function(event){
+      // skip for arrow keys
+      if(event.which >= 37 && event.which <= 40){
+          event.preventDefault();
+      }
+      var $this = $(this);
+      var num = $this.val().replace(/,/gi, "");
+      var num2 = num.replace(/\d(?=(?:\d{3})+$)/g, '$&,');
+      //console.log(num2);
+      // the following line has been simplified. Revision history contains original.
+      $this.val(num2);
+  });
+
 
 $(".target-time").on("click", function(event){
 	$(this).hide();

@@ -177,7 +177,15 @@ section.plan_info{
 				@include fontsb(16);
 
 			}
+			button[type="button"] {
+				background-color: rgb(242, 255, 229);
+				float: right;
+				color: rgb(0, 0, 0);
+				cursor: default;
+			}
+
 			ul {
+				clear: both;
 				li{
 					@include fontsb(14);
 					padding-bottom: 12px;
