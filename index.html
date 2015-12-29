@@ -88,7 +88,7 @@
         </select>
         kids.<br><br>
 		My annual pre tax income is ₹
-		<input type="text" placeholder="" maxlength="10" name="income" value="4500" size="10" class="comma">
+		<input type="text" placeholder="" maxlength="10" name="income" value="4500" size="10" class="comma" onkeyup="this.value=this.value.replace(/[^\d]/,'')">
 
         <span class="madlib-error"></span>
 

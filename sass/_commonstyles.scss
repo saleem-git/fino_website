@@ -505,9 +505,89 @@
 	filter: Alpha(Opacity=30); /* support: IE8 */
 	border-radius: 8px;
 }
-
-
-
-
 			/* Jquery cal css end */
 
+/* For Tour pop up */ 
+#tour_modal {	 
+	/* .modal {
+				  text-align: center;
+				  padding: 0!important;
+				}
+
+				.modal:before {
+				  content: '';
+				  display: inline-block;
+				  height: 100%;
+				  vertical-align: middle;
+				  margin-right: -4px;
+				}
+
+				.modal-dialog {
+				  display: inline-block;
+				  text-align: left;
+				  vertical-align: middle;
+				} */
+
+	
+	.carousel-control {
+		width: 3%;
+		background:none;
+	}
+
+	.item p{
+		width: 95%;
+		margin: 5px auto;
+		@include fontm(14);		
+	} 
+	img {
+    max-width: 400px;
+    max-height: 300px;
+    margin:60px 0px 80px 0px;
+  }
+  .carousel-indicators li {
+  	border: 1px solid #999;
+  }
+  .carousel-indicators li.active{
+  	background-color: #999;
+  }
+}
+
+.tour_popup {
+	.modal-header{ 
+		border-bottom:none;
+		h1{
+				@include fontsb(16);
+			}
+			.close{
+				font-size: 35px;
+			}
+		}
+	.modal-body{
+		padding:0px;
+
+		h5 {
+			@include fontsb(14);
+		}
+	}
+	
+	.tab-content{
+		background-color:#F1F1F1;
+		padding: 15px;
+	}	
+		.nav-tabs > li {
+		a {
+			background-color: #F8F8F8;
+			border-color: #ddd;
+			border-radius:0px;
+			color: #000;
+			padding: 10px 25px;
+			@include fontsb(12);
+		}
+		&.active a{
+			background-color:#F1F1F1;
+		}
+	}
+	.modal-footer{
+		background-color:#F1F1F1;
+	}
+}
