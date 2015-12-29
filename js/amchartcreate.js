@@ -7,7 +7,7 @@ var chartConfig = {
           "hideLabelsPercent": 5,
           "titleField": "category",
           "valueField": "column-1",
-          "labelRadius": -30,
+          "labelRadius": -20,
           "labelText": " [[percents]]%",
           "fontSize": 10,
           "legend": {

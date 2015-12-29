@@ -117,7 +117,7 @@
 				         <ul>
 				            
 				         </ul>
-				         <button class="btn btn-success">Select This Goal and Continue </button>
+				         <button class="btn btn-success">Select this Plan and Continue </button>
 				         </div>
 				      	</div> 
 
@@ -127,8 +127,9 @@
 		        			<div id="chartdiv2" style="width: 80%; height: 210px;" ></div>
 				         </div>
 				         <div class="col-sm-7">
+				         <button type="button" class="btn btn-default"> RECOMMENDED</button>
 				         <ul></ul>
-				         	 <a href="inner/form.html" class="btn btn-success">Select This Goal and Continue</a>
+				         	 <a href="inner/form.html" class="btn btn-success">Select this Plan and Continue</a>
 				         </div>
 				      </div>
 
@@ -139,7 +140,7 @@
 				         </div>
 				         <div class="col-sm-7"> 
 				         <ul></ul>
-				         <a href="inner/form.html" class="btn btn-success">Select This Goal and Continue</a>
+				         <a href="inner/form.html" class="btn btn-success">Select this Plan and Continue</a>
 				         </div>
 				      </div>
 				    </div>
@@ -171,7 +172,7 @@
 				             <li>Tax Loss Harvesting</li>
 				             <li>Goal Amount Variance between -5% to +10%</li>
 				         </ul>
-				         	<a href="inner/form.html" class="btn btn-success">Select This Goal and Continue</a>
+				         	<a href="inner/form.html" class="btn btn-success">Select this Plan and Continue</a>
 				         </div>
 				      </div> 
 
@@ -188,7 +189,7 @@
 				             <li>Tax Loss Harvesting</li>
 				             <li>Goal Amount Variance between -10% to +20%</li>
 				         </ul>
-				         	<a href="inner/form.html" class="btn btn-success">Select This Goal and Continue</a>
+				         	<a href="inner/form.html" class="btn btn-success">Select this Plan and Continue</a>
 				         </div>
 				      </div>
 
@@ -205,7 +206,7 @@
 				             <li>Tax Loss Harvesting</li>
 				             <li>Goal Amount Variance between -15% to +30%</li>
 				         </ul>
-				         <a href="inner/form.html" class="btn btn-success">Select This Goal and Continue</a>
+				         <a href="inner/form.html" class="btn btn-success">Select this Plan and Continue</a>
 				         </div>
 				      </div>
 				    </div>
@@ -238,7 +239,7 @@
 				             <li>Tax Loss Harvesting</li>
 				             <li>Goal Amount Variance between -5% to +10%</li>
 				         </ul>
-				         	<a href="inner/form.html" class="btn btn-success">Select This Goal and Continue</a>
+				         	<a href="inner/form.html" class="btn btn-success">Select this Plan and Continue</a>
 				         </div>
 				      	
 				      </div> 
@@ -256,7 +257,7 @@
 				             <li>Tax Loss Harvesting</li>
 				             <li>Goal Amount Variance between -10% to +20%</li>
 				         </ul>
-				         	<a href="inner/form.html" class="btn btn-success">Select This Goal and Continue</a>
+				         	<a href="inner/form.html" class="btn btn-success">Select this Plan and Continue</a>
 				         </div>
 				      
 				      </div>
@@ -274,7 +275,7 @@
 				             <li>Tax Loss Harvesting</li>
 				             <li>Goal Amount Variance between -15% to +30%</li>
 				         </ul>
-				         <a href="inner/form.html" class="btn btn-success">Select This Goal and Continue</a>
+				         <a href="inner/form.html" class="btn btn-success">Select this Plan and Continue</a>
 				         </div>
 				      </div>
 				    </div>
@@ -308,7 +309,7 @@
 				             <li>Tax Loss Harvesting</li>
 				             <li>Goal Amount Variance between -5% to +10%</li>
 				         </ul>
-				         <a href="inner/form.html" class="btn btn-success">Select This Goal and Continue</a>
+				         <a href="inner/form.html" class="btn btn-success">Select this Plan and Continue</a>
 				         </div>
 				      </div> 
 
@@ -325,7 +326,7 @@
 				             <li>Tax Loss Harvesting</li>
 				             <li>Goal Amount Variance between -10% to +20%</li>
 				         </ul>
-				         <a href="inner/form.html" class="btn btn-success">Select This Goal and Continue</a>
+				         <a href="inner/form.html" class="btn btn-success">Select this Plan and Continue</a>
 				         </div>
 				      </div>
 
@@ -342,7 +343,7 @@
 				             <li>Tax Loss Harvesting</li>
 				             <li>Goal Amount Variance between -15% to +30%</li>
 				         </ul>
-				         <a href="inner/form.html" class="btn btn-success">Select This Goal and Continue</a>
+				         <a href="inner/form.html" class="btn btn-success">Select this Plan and Continue</a>
 				         </div>
 				      </div>
 				    </div>
@@ -387,7 +388,7 @@
 
 				var incomeinfo=localData.income
 				var incomeinfo=localData.income;
-
+				$("section.plan_info p.income span").text(incomeinfo);
 				incomeinfo=incomeinfo.replace(/,/g,"");
 				parseInt(incomeinfo);
 
@@ -395,7 +396,10 @@
 				var currentYear =(new Date).getFullYear();
 				var ageto_retire=60-ageinfo;
 				var yearto_retire=currentYear+ageto_retire;
+
 				var salaryto_save=30*incomeinfo;
+				salaryto_save=(salaryto_save).toLocaleString();
+				//console.log(salaryto_save+"comma");
 				var child_edu=5+currentYear;
 				var contingency_year=1+currentYear;
 				var contingency_amt=0.5*(incomeinfo);
@@ -412,7 +416,7 @@
 				var high_fd,high_debt,high_equ,high_liq;
 				
 				$("section.plan_info p.age span").text(ageinfo);
-				$("section.plan_info p.income span").text(incomeinfo);
+				
 
 				
 				
@@ -433,7 +437,7 @@
 		switch (retirementinfo) {
 			case "not_retired":
 			$("#headingOne .goal_metainfo label:nth-of-type(2)").text("Tax Saving");
-			$("#onboarding #headingOne p").html("Save on Taxes by investing Rs <span class='target-amount'>150000 <span class='glyphicon glyphicon-pencil edit'></span> </span> <span style='display:none'><input type='text' name='income' maxlength='9' > </span> In best Tax Saving Mutual Funds (Under Section 80C)");
+			$("#onboarding #headingOne p").html("Save on Taxes by investing Rs <span class='target-amount'>150,000 <span class='glyphicon glyphicon-pencil edit'></span> </span> <span style='display:none'><input type='text' name='income' maxlength='9' > </span> In best Tax Saving Mutual Funds (Under Section 80C)");
 
 			$("#collapseOne .panel-body:first-child ul").html("<li>Diverse Portfolio of Mutual Funds</li>    <li>Zero Fees</li>   <li>Entire amount withdrawable after 3 years with zero taxes</li> <li>Expected amount after 3 years between 9% to 18% of current Invested amount</li>");
 			$("#collapseOne .panel-body:nth-child(2) ul").html("<li>Diverse Portfolio of Mutual Funds</li>    <li>Zero Fees</li>   <li>Entire amount withdrawable after 3 years with zero taxes</li> <li>Expected amount after 3 years between 6% to 24% of current Invested amount</li>");
@@ -471,8 +475,8 @@
 			$("#onboarding #headingOne p").html("Invest in Direct Mutual Funds to grow your money over a period of <span class='target-time'> 5  <span class='glyphicon glyphicon-pencil edit edit-time'></span></span>  <span style='display:none'><input type='text' name='time' maxlength='4'> </span> Years");
 
 			$("#collapseOne .panel-body:first-child ul").html("<li>Diverse Portfolio of Mutual Funds</li>    <li>Zero Fees</li>   <li> Personalized Advice</li> <li>Optimized for Taxes</li> <li>Tax Loss Harvesting</li> <li>Better option than Fixed Deposits</li>");
-			$("#collapsecollapseOne .panel-body:nth-child(2) ul").html("<li>Diverse Portfolio of Mutual Funds</li>    <li>Zero Fees</li>   <li> Personalized Advice</li> <li>Optimized for Taxes</li> <li>Tax Loss Harvesting</li> <li>Portfolio for beating inflation</li>");
-			$("#collapsecollapseOne .panel-body:nth-child(3) ul").html("<li>Diverse Portfolio of Mutual Funds</li>    <li>Zero Fees</li>   <li> Personalized Advice</li> <li>Optimized for Taxes</li> <li>Tax Loss Harvesting</li> <li>Portfolio for long term wealth creation</li>");
+			$("#collapseOne .panel-body:nth-child(2) ul").html("<li>Diverse Portfolio of Mutual Funds</li>    <li>Zero Fees</li>   <li> Personalized Advice</li> <li>Optimized for Taxes</li> <li>Tax Loss Harvesting</li> <li>Portfolio for beating inflation</li>");
+			$("#collapseOne .panel-body:nth-child(3) ul").html("<li>Diverse Portfolio of Mutual Funds</li>    <li>Zero Fees</li>   <li> Personalized Advice</li> <li>Optimized for Taxes</li> <li>Tax Loss Harvesting</li> <li>Portfolio for long term wealth creation</li>");
 
 			//updateretirementchart(5);
 			updateretirementchart(5,1);
@@ -640,6 +644,5 @@
 
 				
 		</script>
-	<script src="js/readmore.js"></script>
 	</body>
 </html>
