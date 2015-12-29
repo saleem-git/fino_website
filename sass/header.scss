@@ -116,7 +116,7 @@ footer {
 	}
 	.footer-col {
 		text-align:left;
-		&.big{padding:0 8em;}
+		&.big{padding:0 6em;}
 		margin-bottom: 50px;
 		ul{list-style-type:none; line-height:40px; padding-left:0;
 			& a{text-decoration:none; }
@@ -126,7 +126,7 @@ footer {
 	.footer-below {
 		padding: 25px 0;
 		background-color: #2C3E50;
-		.copyright{h4{text-transform:none;}}
+		.copyright{h4{text-transform:none;} p{font-size:14px;}}
 	}
 	.btn-social {
     display: inline-block;
