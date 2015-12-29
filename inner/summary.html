@@ -228,7 +228,9 @@
 		<div class="row earnings">
 			<div class="col-sm-6 edit_plan">
 			<span class="sign plus-sign" id="retirement_info_span"></span>
-			<h2 class="pull-left"> Retirement </h2> <button type="button" class="btn btn-default pull-left">Edit Plan</button>
+			<h2> Retirement </h2> 
+			<a href="#">Personal Account</a>
+			<button type="button" class="btn btn-default ">Edit Plan</button>
 			</div>
 			<div class="col-sm-6 retirement_plan_actions">
 			<div class="deposit">
@@ -354,26 +356,26 @@
             <h5> Pop up</h5>                
         </button>
 	<!-- Modal -->
-    <div class="modal fade" id="tour_modal" tabindex="-1" role="dialog" aria-labelledby="tour_modal">
+    <div class="modal fade tour_popup" id="tour_modal" tabindex="-1" role="dialog" aria-labelledby="tour_modal">
               <div class="modal-dialog  modal-lg" role="document">
                 <div class="modal-content">
                   <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                    <h1 class="modal-title" id="myModalLabel">Slider</h1>
+                    <h1 class="modal-title" id="myModalLabel">Brief tour of the website</h1>
                   </div>                
 
                   <div class="modal-body">
                   <!-- starting tabs -->
                    <!-- Nav tabs -->
 					  <ul class="nav nav-tabs" role="tablist">
-					    <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">Home</a></li>
-					    <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">Profile</a></li>
-					    <li role="presentation"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">Messages</a></li>
-					    <li role="presentation"><a href="#settings" aria-controls="settings" role="tab" data-toggle="tab">Settings</a></li>
+					    <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">SUMMARY</a></li>
+					    <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">INVEST</a></li>
+					    <li role="presentation"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">BENCHMARK</a></li>
+					    <li role="presentation"><a href="#settings" aria-controls="settings" role="tab" data-toggle="tab">FUNDS</a></li>
 					  </ul>
 
 					  <div class="tab-content">
-					    <div role="tabpanel" class="tab-pane fade in active" id="home">One
+					    <div role="tabpanel" class="tab-pane fade in active" id="home">
 					    <!-- starting first tab -->
 					    	<!-- Pasting the slider -->
 				        <div id="carousel-tour" class="carousel slide" data-ride="carousel" data-interval="false">
@@ -389,10 +391,13 @@
 				    <div class="item active">
 				    <div class="row">
 				    	<div class="col-md-6">
-				    		<img src="../images/tour/we_do.png" alt="tour_summary">
+				    		<img src="../images/tour/summary/one.png" alt="tour_summary">
 				    	</div>
 				    	<div class="col-md-6">
-				    		<p>11111 Betterment portfolios and the systems that manage them are constructed from the ground up to be maximally tax efficient. This begins with security selection, where we use index tracking ETFs instead of mutual funds. Unlike actively managed funds, index tracking funds have significantly lower turnover resulting in materially lower incidences of capital gains being passed on to investors. In addition, the legal and administrative structure of most ETFs differs from mutual funds in the way that investors are insulated from each other rather than pooled together. As a result, ETF investors are only responsible for their own tax consequences rather than sharing in the collective tax burden through distributions. </p>
+				    		<h5>Invest </h5>
+				    		<p> Enter the desired amount to invest.</p>
+				    		<h5>Add Goal </h5>
+				    		<p>Goal setting is pretty simple. A goal is something that you are willing to work for.</p>
 				    	</div> 			    		
 
 				    </div>
@@ -401,10 +406,11 @@
 				    <div class="item">
 				       <div class="row">
 				    	<div class="col-md-6">
-				    		<img src="../images/tour/comp2.png" alt="tour_summary">
+				    		<img src="../images/tour/summary/two.png" alt="tour_summary">
 				    	</div>
 				    	<div class="col-md-6">
-				    		<p>11111 Betterment portfolios and the systems that manage them are constructed from the ground up to be maximally tax efficient. This begins with security selection, where we use index tracking ETFs instead of mutual funds. Unlike actively managed funds, index tracking funds have significantly lower turnover resulting in materially lower incidences of capital gains being passed on to investors. In addition, the legal and administrative structure of most ETFs differs from mutual funds in the way that investors are insulated from each other rather than pooled together. As a result, ETF investors are only responsible for their own tax consequences rather than sharing in the collective tax burden through distributions. </p>
+				    	<h5>Total Balance for all goals</h5>
+				    		<p>A consolidated view of your overall investments and earnings. </p>
 				    	</div>  	
 
 				    </div>
@@ -413,10 +419,11 @@
 				    <div class="item">
 				      <div class="row">
 				    	<div class="col-md-6">
-				    		<img src="../images/tour/zoomed.jpg" alt="tour_summary">
+				    		<img src="../images/tour/summary/three.png" alt="tour_summary">
 				    	</div>
 				    	<div class="col-md-6">
-				    		<p>11111 Betterment portfolios and the systems that manage them are constructed from the ground up to be maximally tax efficient. This begins with security selection, where we use index tracking ETFs instead of mutual funds. Unlike actively managed funds, index tracking funds have significantly lower turnover resulting in materially lower incidences of capital gains being passed on to investors. In addition, the legal and administrative structure of most ETFs differs from mutual funds in the way that investors are insulated from each other rather than pooled together. As a result, ETF investors are only responsible for their own tax consequences rather than sharing in the collective tax burden through distributions. </p>
+				    	<h5>Goal</h5>
+				    		<p>Your goal account summary. </p>
 				    	</div>  	
 
 				    </div>
@@ -437,7 +444,7 @@
 				        <!-- End of slider -->
 					    <!-- end first tab -->
 					    </div>
-					    <div role="tabpanel" class="tab-pane" id="profile">Two
+					    <div role="tabpanel" class="tab-pane" id="profile">
 					    <!-- start -->
 					    	<!-- Pasting the slider -->
 				        <div id="carousel-tour2" class="carousel slide" data-ride="carousel" data-interval="false">
@@ -446,6 +453,7 @@
 						    <li data-target="#carousel-tour2" data-slide-to="0" class="active"></li>
 						    <li data-target="#carousel-tour2" data-slide-to="1"></li>
 						    <li data-target="#carousel-tour2" data-slide-to="2"></li>
+						    <li data-target="#carousel-tour2" data-slide-to="3"></li>
 						  </ol>
 
 				  <!-- Wrapper for slides -->
@@ -453,10 +461,11 @@
 				    <div class="item active">
 				    <div class="row">
 				    	<div class="col-md-6">
-				    		<img src="../images/tour/we_do.png" alt="tour_summary">
+				    		<img src="../images/tour/invest/one.png" alt="tour_summary">
 				    	</div>
 				    	<div class="col-md-6">
-				    		<p>2221 Betterment portfolios and the systems that manage them are constructed from the ground up to be maximally tax efficient. This begins with security selection, where we use index tracking ETFs instead of mutual funds. Unlike actively managed funds, index tracking funds have significantly lower turnover resulting in materially lower incidences of capital gains being passed on to investors. In addition, the legal and administrative structure of most ETFs differs from mutual funds in the way that investors are insulated from each other rather than pooled together. As a result, ETF investors are only responsible for their own tax consequences rather than sharing in the collective tax burden through distributions. </p>
+				    	<h5>Execute Portfolio</h5>
+				    		<p>Execute the recommended plan that best meets your needs and tolerance for risk. </p>
 				    	</div> 			    		
 
 				    </div>
@@ -465,10 +474,11 @@
 				    <div class="item">
 				       <div class="row">
 				    	<div class="col-md-6">
-				    		<img src="../images/tour/comp2.png" alt="tour_summary">
+				    		<img src="../images/tour/invest/two.png" alt="tour_summary">
 				    	</div>
 				    	<div class="col-md-6">
-				    		<p>222 Betterment portfolios and the systems that manage them are constructed from the ground up to be maximally tax efficient. This begins with security selection, where we use index tracking ETFs instead of mutual funds. Unlike actively managed funds, index tracking funds have significantly lower turnover resulting in materially lower incidences of capital gains being passed on to investors. In addition, the legal and administrative structure of most ETFs differs from mutual funds in the way that investors are insulated from each other rather than pooled together. As a result, ETF investors are only responsible for their own tax consequences rather than sharing in the collective tax burden through distributions. </p>
+				    	<h5>Change Portfolio</h5>
+				    		<p>If you wish to modify the recommended portfolio you can use this option. Our advisors are available to help you choose wisely.</p>
 				    	</div>  	
 
 				    </div>
@@ -477,10 +487,24 @@
 				    <div class="item">
 				      <div class="row">
 				    	<div class="col-md-6">
-				    		<img src="../images/tour/zoomed.jpg" alt="tour_summary">
+				    		<img src="../images/tour/invest/three.png" alt="tour_summary">
 				    	</div>
 				    	<div class="col-md-6">
-				    		<p>22223 Betterment portfolios and the systems that manage them are constructed from the ground up to be maximally tax efficient. This begins with security selection, where we use index tracking ETFs instead of mutual funds. Unlike actively managed funds, index tracking funds have significantly lower turnover resulting in materially lower incidences of capital gains being passed on to investors. In addition, the legal and administrative structure of most ETFs differs from mutual funds in the way that investors are insulated from each other rather than pooled together. As a result, ETF investors are only responsible for their own tax consequences rather than sharing in the collective tax burden through distributions. </p>
+				    	<h5>Buy/Sell</h5>
+				    		<p>You can transact and manage individual funds/assets from here. </p>
+				    	</div>  	
+
+				    </div>
+				    </div>
+
+				    <div class="item">
+				      <div class="row">
+				    	<div class="col-md-6">
+				    		<img src="../images/tour/invest/four.png" alt="tour_summary">
+				    	</div>
+				    	<div class="col-md-6">
+				    	<h5>Mutual Funds Listing</h5>
+				    		<p>List of Mutual funds under your portfolio. You can click on each of the them to view a brief description.</p>
 				    	</div>  	
 
 				    </div>
@@ -502,7 +526,7 @@
 					    <!-- end -->
 
 					    </div>
-					    <div role="tabpanel" class="tab-pane" id="messages">Three
+					    <div role="tabpanel" class="tab-pane" id="messages">
 
 					    	<!-- start -->
 					    	<!-- Pasting the slider -->
@@ -510,8 +534,7 @@
 				  <!-- Indicators --> 
 						  <ol class="carousel-indicators">
 						    <li data-target="#carousel-tour3" data-slide-to="0" class="active"></li>
-						    <li data-target="#carousel-tour3" data-slide-to="1"></li>
-						    <li data-target="#carousel-tour3" data-slide-to="2"></li>
+						   
 						  </ol>
 
 				  <!-- Wrapper for slides -->
@@ -519,39 +542,15 @@
 				    <div class="item active">
 				    <div class="row">
 				    	<div class="col-md-6">
-				    		<img src="../images/tour/we_do.png" alt="tour_summary">
+				    		<img src="../images/tour/benchmark/one.png" alt="tour_summary">
 				    	</div>
 				    	<div class="col-md-6">
-				    		<p>1133 Betterment portfolios and the systems that manage them are constructed from the ground up to be maximally tax efficient. This begins with security selection, where we use index tracking ETFs instead of mutual funds. Unlike actively managed funds, index tracking funds have significantly lower turnover resulting in materially lower incidences of capital gains being passed on to investors. In addition, the legal and administrative structure of most ETFs differs from mutual funds in the way that investors are insulated from each other rather than pooled together. As a result, ETF investors are only responsible for their own tax consequences rather than sharing in the collective tax burden through distributions. </p>
+				    	<h5>Benchmark</h5>
+				    		<p>we provide you a set of priorities based on your expectations using finotrust data driven analytics. </p>
 				    	</div> 			    		
 
-				    </div>
-				      
-				    </div>
-				    <div class="item">
-				       <div class="row">
-				    	<div class="col-md-6">
-				    		<img src="../images/tour/comp2.png" alt="tour_summary">
-				    	</div>
-				    	<div class="col-md-6">
-				    		<p>2233 Betterment portfolios and the systems that manage them are constructed from the ground up to be maximally tax efficient. This begins with security selection, where we use index tracking ETFs instead of mutual funds. Unlike actively managed funds, index tracking funds have significantly lower turnover resulting in materially lower incidences of capital gains being passed on to investors. In addition, the legal and administrative structure of most ETFs differs from mutual funds in the way that investors are insulated from each other rather than pooled together. As a result, ETF investors are only responsible for their own tax consequences rather than sharing in the collective tax burden through distributions. </p>
-				    	</div>  	
-
-				    </div>
-				    </div>
-
-				    <div class="item">
-				      <div class="row">
-				    	<div class="col-md-6">
-				    		<img src="../images/tour/zoomed.jpg" alt="tour_summary">
-				    	</div>
-				    	<div class="col-md-6">
-				    		<p>3333 Betterment portfolios and the systems that manage them are constructed from the ground up to be maximally tax efficient. This begins with security selection, where we use index tracking ETFs instead of mutual funds. Unlike actively managed funds, index tracking funds have significantly lower turnover resulting in materially lower incidences of capital gains being passed on to investors. In addition, the legal and administrative structure of most ETFs differs from mutual funds in the way that investors are insulated from each other rather than pooled together. As a result, ETF investors are only responsible for their own tax consequences rather than sharing in the collective tax burden through distributions. </p>
-				    	</div>  	
-
-				    </div>
-				    </div>
-				    
+				    </div>				      
+				    </div> 			    
 				  </div>
 
 				  <!-- Controls -->
@@ -567,7 +566,7 @@
 				        <!-- End of slider -->
 					    <!-- end -->
 					    </div>
-					    <div role="tabpanel" class="tab-pane" id="settings">Four
+					    <div role="tabpanel" class="tab-pane" id="settings">
 
 					    <!-- start -->
 					    	<!-- Pasting the slider -->
@@ -577,6 +576,7 @@
 						    <li data-target="#carousel-tour4" data-slide-to="0" class="active"></li>
 						    <li data-target="#carousel-tour4" data-slide-to="1"></li>
 						    <li data-target="#carousel-tour4" data-slide-to="2"></li>
+						    <li data-target="#carousel-tour4" data-slide-to="3"></li>
 						  </ol>
 
 				  <!-- Wrapper for slides -->
@@ -584,10 +584,11 @@
 				    <div class="item active">
 				    <div class="row">
 				    	<div class="col-md-6">
-				    		<img src="../images/tour/we_do.png" alt="tour_summary">
+				    		<img src="../images/tour/funds/one.png" alt="tour_summary">
 				    	</div>
 				    	<div class="col-md-6">
-				    		<p>4411 Betterment portfolios and the systems that manage them are constructed from the ground up to be maximally tax efficient. This begins with security selection, where we use index tracking ETFs instead of mutual funds. Unlike actively managed funds, index tracking funds have significantly lower turnover resulting in materially lower incidences of capital gains being passed on to investors. In addition, the legal and administrative structure of most ETFs differs from mutual funds in the way that investors are insulated from each other rather than pooled together. As a result, ETF investors are only responsible for their own tax consequences rather than sharing in the collective tax burden through distributions. </p>
+				    	<h5>Mutual Fund Types</h5>
+				    		<p>You can glide through the tabs for different mutual funds each having their own level of risks and returns.</p>
 				    	</div> 			    		
 
 				    </div>
@@ -596,10 +597,11 @@
 				    <div class="item">
 				       <div class="row">
 				    	<div class="col-md-6">
-				    		<img src="../images/tour/comp2.png" alt="tour_summary">
+				    		<img src="../images/tour/funds/two.png" alt="tour_summary">
 				    	</div>
 				    	<div class="col-md-6">
-				    		<p>4422 Betterment portfolios and the systems that manage them are constructed from the ground up to be maximally tax efficient. This begins with security selection, where we use index tracking ETFs instead of mutual funds. Unlike actively managed funds, index tracking funds have significantly lower turnover resulting in materially lower incidences of capital gains being passed on to investors. In addition, the legal and administrative structure of most ETFs differs from mutual funds in the way that investors are insulated from each other rather than pooled together. As a result, ETF investors are only responsible for their own tax consequences rather than sharing in the collective tax burden through distributions. </p>
+				    	<h5>Search funds to invest</h5>
+				    		<p>This sections helps you to search different scheme types to invest in.</p>
 				    	</div>  	
 
 				    </div>
@@ -608,11 +610,26 @@
 				    <div class="item">
 				      <div class="row">
 				    	<div class="col-md-6">
-				    		<img src="../images/tour/zoomed.jpg" alt="tour_summary">
+				    		<img src="../images/tour/funds/three.png" alt="tour_summary">
 				    	</div>
 				    	<div class="col-md-6">
-				    		<p>4433 Betterment portfolios and the systems that manage them are constructed from the ground up to be maximally tax efficient. This begins with security selection, where we use index tracking ETFs instead of mutual funds. Unlike actively managed funds, index tracking funds have significantly lower turnover resulting in materially lower incidences of capital gains being passed on to investors. In addition, the legal and administrative structure of most ETFs differs from mutual funds in the way that investors are insulated from each other rather than pooled together. As a result, ETF investors are only responsible for their own tax consequences rather than sharing in the collective tax burden through distributions. </p>
-				    	</div>  	
+				    	<h5>Recent transactions</h5>
+				    		<p>A brief summary of your recent transactions is shown here. </p>
+				    	</div> 	
+
+				    </div>
+				    </div>
+
+				    <div class="item">
+				      <div class="row">
+				    	<div class="col-md-6">
+				    		<img src="../images/tour/funds/three.png" alt="tour_summary">
+				    	</div>
+				    	<div class="col-md-6">
+				    	<h5>SIP & One Time</h5>
+				    		<p>Systematic Investment Planning - SIP is a method of investing a fixed sum, regularly, in a mutual fund scheme allowing you to buy units on a given date each month.</p>
+							<p> One Time - You can invest lump sum into the mutual fund. </p>
+				    	</div> 	
 
 				    </div>
 				    </div>
@@ -671,6 +688,11 @@
         
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>  
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha256-KXn5puMvxCw+dAYznun+drMdG1IFl3agK0p/pqT9KAo= sha512-2e8qq0ETcfWRI4HJBzQiA3UoyFk6tbNyG+qSaIBZLyW9Xf3sWZHN/lxe9fTh1U45DpPf07yj94KsUHHWe4Yk1A==" crossorigin="anonymous"></script>	 
+	<script type="text/javascript">
+		$(function () {
+  $('[data-toggle="tooltip"]').tooltip();
+})
+	</script>
 	<script src="../js/script.js"></script>
 	<script type="text/javascript" src="http://www.amcharts.com/lib/3/amcharts.js"></script>
 <script type="text/javascript" src="http://cdn.amcharts.com/lib/3/pie.js"></script>
