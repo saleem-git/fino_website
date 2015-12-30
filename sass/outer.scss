@@ -1,8 +1,9 @@
-.home, .what-we-do, .about-us, .benchmark, .safe, .transparent, .funds, .policy, .tlh{
+.home, .what-we-do, .about-us, .benchmark, .safe, .transparent, .funds, .policy, .tlh, .why-fino, .career{
 	h1, h2, h3, h4, h5, h6 {font-family: Montserrat; font-weight:700; text-transform:uppercase; padding:1em 0;}
 	h2{font-size:30px}
 	h3{font-size:26px;}
 	h4{font-size:20px;}
+	overflow-x:hidden;
 }
 .home{
 overflow-x:hidden;
@@ -518,6 +519,45 @@ p{font-size:15px;}
 		}
 	
 }
+.why-fino{
+	#why-fino{
+	background-image: url("../images/why-fino-logo.jpg");
+	h3{padding-top:4.5em;margin-left:0;}
+	p{font-weight:700; margin-left:-2em;}
+	color:white;
+	}
+	.section{
+		#one{
+		padding:5em 25%;
+		h2{padding:0;}
+		p{padding:2em ;}
+		img{padding:2em ;}
+		h4{padding-top:0em ;}
+		}
+		#three{
+		background:#ebebeb;
+		.row{
+			padding:5em 10%;
+			
+			div{background:white;
+				margin:3%;
+				img{padding-top:1em;}
+				p{padding:0em 1em 1em;
+					font-size:18px;
+					}
+				}
+			}
+		h2{padding:0;}
+		}
+		#two{
+		height:400px;
+		.carousel-inner > .item > img, .carousel-inner > .item > a > img {
+				width: 100%;
+				margin: auto;
+			  }
+			}
+		}
+	}
 .pricing{
 	#pricing{
 	background-image: url("../images/pricing-logo.jpg");
@@ -555,8 +595,29 @@ p{font-size:15px;}
 			color:#333;
 			
 		}
+	}
+}
+.career{
+	#career{
+	background-image: url("../images/career-logo.jpg");
+	h3{padding-top:6.5em;margin-left:0;}
+	p{font-weight:700; margin-left:-2em;}
+	color:white;
+	}
+	.openings{
+	padding:5em;
+	.member{
+		margin:1em 0;
+		padding:2em;
+		padding-bottom:1em;
+		border: 2px solid #18bb9c;
+		.SeeMore2{background:transparent; border:none;color:#18BC9C; cursor:pointer;}
+		.apply-button{
+			text-align:right;
+			.btn{
+			background:#fff;border:1px solid #18BC9C;
+			&:hover{background:#18BC9C;}
+			}}
 		}
-		
-
-
+		}
 }
