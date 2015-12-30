@@ -53,18 +53,18 @@ section.plan_info{
 		background-color: #18bb9c;
 		color: #fff;
 		text-align: right;
-		padding: 10px 35px;
+		padding: 25px 35px;
 		h2{
 		display: inline-block;
 		float: left;
-		@include fontl(36);
+		@include fontm(22);
 	}
-	span,label{
+	span{
 		@include fontl(22);
-
 	}
 	label{
 		display: block;
+		@include fontl(12);
 	}
 	}
 
@@ -89,8 +89,9 @@ section.plan_info{
 		position: relative;
 		p{
 			padding:20px 10px 20px 35px;
-			@include fontl(18);
+			@include fontl(15);
 			max-width: 600px;
+			line-height: 30px;
 			span {
 			input[type="text"]{
 				border: none;
@@ -110,16 +111,15 @@ section.plan_info{
 				color: #18BB9C
 				
 			}
-			span.edit{
+			
+			span.edittext:after{
+				content: "Edit";
 				position: absolute;
-				color: #18BB9C;
+				top: -17px;
 				font-size: 12px;
-				top: -8px;
-				left: 51px;				
+				right: -2px;
 			}
-			span.edit-time{				
-				left: 30px;				
-			}
+			
 			
 		}
 		span.down_arrow{

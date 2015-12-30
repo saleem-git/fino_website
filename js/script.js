@@ -136,7 +136,7 @@ $("span.target-amount+span input[type='text']").focusout(function(){
 		//console.log(amtvalinput+ "val");
 
 		$(this).parent().prev().text(amtvalinput);
-		$(this).parent().prev().append("<span class='glyphicon glyphicon-pencil edit'></span>");
+		$(this).parent().prev().append("<span class='edittext'></span>");
 
 	}
 	$(this).parent().hide();
