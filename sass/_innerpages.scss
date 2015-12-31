@@ -263,6 +263,9 @@
 							color: #2C3E51;
 						}
 					}
+					tbody tr:not(.tr_fund) td {
+						padding-left:15px;
+					}
 					tfoot {
 						border-top: 1px solid rgb(204, 204, 204);
 						td {
