@@ -20,9 +20,9 @@
 		
 	}
 	.dropdown-toggle {width: 248px;}
+	.username{border-left: 2px solid #808080;}
 	.navbar-right {
-				border-left: 2px solid #808080;
-				&:hover,active{background:#263646;}}
+	&:hover,active{background:#263646;}}
 	&.navbar.navbar-default .navbar-nav > li a{
 										color: gray;
 										&:hover{color:white;}
@@ -79,7 +79,7 @@ padding: 10px 15px;
 img{max-height:35px;}
 }
 }
-
+&.navbar-fixed-top{position:fixed;}
 }
 .required {
     color: #e32;
@@ -107,6 +107,9 @@ img{max-height:35px;}
 	}
 /* footer */ 
 footer {
+	font-family: 'Montserrat';
+	h1, h2, h3, h4, h5, h6 {font-family: Montserrat; font-weight:700; text-transform:uppercase; padding-top:1em;}
+	h3{font-size:26px;color:white;}
 	color: white;
 	.footer-above {
 		background-color: #233140;
@@ -126,7 +129,7 @@ footer {
 	.footer-below {
 		padding: 25px 0;
 		background-color: #2C3E50;
-		.copyright{h4{text-transform:none;} p{font-size:14px;}}
+		.copyright{h4{text-transform:none;padding-bottom: 0;} p{font-size:14px;}}
 	}
 	.btn-social {
     display: inline-block;
@@ -214,8 +217,8 @@ background-image:
 	calc(100% - 20px) calc(0.8em + 2px),
 	calc(100% - 15px) calc(0.8em + 2px),
 	calc(100% - 2.5em) 0.5em;
-	&#retired{width:8em;}
-	&#married{width:6em;}
+	&#retired, {width:7.6em;}
+	&#married{width:7.6em;}
 	&#kids{width:3em;}
 	}
 }
