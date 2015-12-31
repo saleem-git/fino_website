@@ -408,7 +408,6 @@
 			width: 85%;
 			margin: 28px auto;
 		}
-		#bubble4{margin: 16px auto;}
 
 		.info_questions{
 			background-color: #12756a;
@@ -427,7 +426,7 @@
 		}
 	}
 	form{
-		&.modal {
+		&.one-step {
 			z-index: 0;
 		}
 		h1{
@@ -474,22 +473,15 @@
 				width: 45%;
 				min-width: 250px;
 			}
-			input[type="radio"]{
-				margin-bottom: 15px;
-			}
 			input {
 				@include fontl(14);
 				padding-top: 2px;
 			}
-			input[name="country_code"], input[name="phone_number"]{
+			input[name="phone_number"]{
 				display: inline-block;				
 			}
-			input[name="country_code"]{
-				width: 95px;
-				min-width: auto;
-			}
 			h4{
-				width: 24%;
+				width: 49%;
 				display: inline-block !important;				
 				margin: 15px 0px;
 				font-size: 13px;
@@ -497,20 +489,16 @@
 				text-align: center;
 				
 			}
-			
-			
-			
-
 	}
 .modal{display:block; position:relative ; overflow:visible;}
-.modal-content{
+.one-step{
 	overflow:visible;
 	border:none;
 	box-shadow:none;
-
-		
-
-		.modal-footer{
+		.form-footer{
+			padding: 15px;
+			padding-right:0;
+			text-align: right;
 			border:none;	
 			.btn-primary{
 				background-color:#17ba9b;
@@ -519,29 +507,12 @@
 				margin-bottom: 30px;
 			}		
 		}
-		
-		.modal-header{
-			border-bottom:none;
-		}
 }	
 
 .modal-body{
 	&.step-1 .info_icon{
 		@include small_icons-sprite(sign_up);			
 	}
-	&.step-2 .info_icon{
-		@include small_icons-sprite(people);			
-	}
-	&.step-3 .info_icon{
-		@include small_icons-sprite(layeredsecurity);			
-	}
-	&.step-4 .info_icon{
-		@include small_icons-sprite(diduknow);			
-	}
 } 
-.m-progress-bar {
-    height: 5px;
-    background-color: #17ba9b;
-    width: 25%;
-}
+
 }
