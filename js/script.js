@@ -290,7 +290,27 @@ $("form[name='onboardinfo']").submit(function() {
 */
 
 
+/*Toggle icons for portfolio page + and - */
+var eventID;
+$(".panel.panel-default .panel.panel-default").on("shown.bs.collapse",function(event){
+	//$(this).parent().prev().children().find("h4").css( "background-color", "red" );
 
+	
+	eventID="#"+(event.target.id);
+/*	console.log(eventID);
+	console.log($(eventID).siblings().find("span"));*/
+	$(eventID).siblings().find("span").toggleClass("plus-sign, minus-sign");
+
+});
+
+$(".panel.panel-default .panel.panel-default").on("hidden.bs.collapse",function(event){
+	//$(this).parent().prev().children().find("h4").css( "background-color", "red" );
+	eventID="#"+(event.target.id);
+	/*console.log(eventID);
+	console.log($(eventID).siblings().find("span"));*/
+	$(eventID).siblings().find("span").toggleClass("plus-sign, minus-sign");
+
+});
 
 
 });

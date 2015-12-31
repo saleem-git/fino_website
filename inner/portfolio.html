@@ -50,8 +50,8 @@
 	<div class="container portfolio"> 
         <div class="panel panel-default">
           <div class="panel-fake-heading clearfix">
-            <div class="view_account col-sm-3">
-                <h3>View</h3>
+            <div class="view_account col-sm-6">
+                <h2>View</h2>
                 <div class="dropdown">
                 <a id="dLabel" data-target="#" href="http://example.com" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
                 Retirement
@@ -65,89 +65,56 @@
             </div>
 
             </div>
-            <div class="execute col-sm-3">
-                <button type="button" class="btn btn-default  btn-lg">Execute Portfolio</button>             
+            <div class="year col-sm-2">                  
+                <p>2024 </p>           
+                <h3>Target Year</h3>  
             </div>
-            <div class="change col-sm-2">
-                <button type="button" class="btn btn-default">Change Portfolio</button>            
+            <div class="amount col-sm-2">  
+                <p>Rs 0.00 </p>          
+                <h3>Target Amount</h3>   
             </div>
-            <div class="balance col-sm-2">
-                <h3>Balance</h3>   
-                <p>Rs 0.00 </p>             
+            <div class="col-sm-2">
+                <p>Rs 0.00 </p>   
+                <h3>Cureent Balance</h3>             
             </div>
           </div>
           <div class="panel-body">
-            <!-- <div class="col-sm-3">
-                <div class="sidebar">
-                    <p class="current-portfolio">Your Current Portfolio</p>
-                    <p> Pie Chart</p>
+            <div class="col-sm-12 portfolio_large_info">              
 
-                    <div class="portfolio_small_info">
-                        
-                        <table>
-                            <tr>
-                                <td>Risk </td> <td class="text-right">Moderate </td>
-                            </tr>
-
-                            <tr>
-                                <td>Target Allocation</td> <td class="text-right">90% Stocks </td>
-                            </tr>
-
-                        </table>
-
-                        <div><button type="button" class="btn btn-default">Change Portfolio </button></div>
-                        <div><button type="button" class="btn btn-default">Change Funds </button></div>
-                    </div>
-
-                   
-
-                    <div class="panel panel-default rebalance">
-                      <div class="panel-body">
-                      <div class="flclear"> 
-                         <span class="pull-left"> Rebalancing</span>
-                        <span class="pull-right drift_amount" > ON</span>
-                       </div>
-                       <p>Your portfolio drifts due to normal price fluctuations.
-                            We rebalance if it reaches 3.0%.</p>
-                        <div class="flclear"> 
-                         <span class="pull-left drift_amount"> Drift </span>
-                        <span class="pull-right" > Normal</span>
-                       </div>
-
-                       <p class="drift_amount"> 0.0 %</p>
-                      </div>
-                    </div>
-                    
-
-                </div>
-
-            </div> -->
-
-            <div class="col-sm-12 portfolio_large_info">
-                <table>
+                <!-- Starting accordion -->
+                    <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+  <div class="panel panel-default">
+    <div class="heading" role="tab" id="headingOne">
+      <h4 class="panel-title ad">      
+        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#curr_investment" aria-expanded="true" aria-controls="curr_investment">
+          <span class="sign plus-sign" id="earning_info_span"></span> Current Investment
+        </a>
+      </h4>
+    </div>
+    <div id="curr_investment" class="panel-collapse collapse " role="tabpanel" aria-labelledby="headingOne">
+      <div class="panel-body">
+       <table>
                     <thead>
                         <tr>
-                            <th><div class="td_contain_one">MUTUAL FUND</div></th> 
-                            <th> <div class="td_contain_two">RECOMMENDED WEIGHT</div></th> 
-                            <th> <div class="td_contain_three">INVESTED WEIGHT</div></th> 
-                            <th> <div class="td_contain_four">CURRENT VALUE</div></th>
-                            <th> <div class="td_contain_five">ACTION</div></th>
+                            <th><div class="td_contain_one">Scheme</div></th>                                                         
+                            <th> <div class="td_contain_two">Current Value</div></th>
+                            <th> <div class="td_contain_three">Projected Value</div></th>
+                            <th> <div class="td_contain_four">Action</div></th>
                         </tr>
                     </thead>
                     <tfoot>
                         <tr>
                             <td> Total</td>
-                            <td> 100 %</td>
-                            <td> 100 %</td>
+                            <td> Rs 0.00</td>                          
                             <td> Rs 0.00</td>
                             <td> </td>
                         </tr>
                     </tfoot>
                     <tbody>
                         <tr class="tr_fund">
-							<td colspan="5">
-							Mutual Fund Equity
-							</td>
+                            <td colspan="5">
+                            Mutual Fund Equity
+                            </td>
                         </tr>
                         <tr>
                             <td>
@@ -167,33 +134,15 @@
                                                       
                             </td>
 
-                            <td class="td_contain_two">
-                               
-                                <p>16.2%</p>
-                                <div class="graph"></div>
-                                   
-                                
-                            </td>
-                            <td class="td_contain_two">
-                               
-                                <p>16.2%</p>
-                                <div class="graph"></div>
-                                   
-                                
+                            <td>
+                                <span>Rs 0.00 </span>
+                            </td>                          
+                            <td>
+                                <span>Rs 0.00 </span>
                             </td>
                             <td>
-								<span>Rs 0.00 </span>
-                            </td>
-							<td>
-                            <button type="button" class="btn btn-primary">Buy</button>
-                            <button type="button" class="btn btn-default">Sell</button>
-
-								<!-- <select class="action" name="action">
-									<option value="" selected hidden> ACTION </option>
-									<option value="Purchase">Purchase<span class="caret"></span></option>
-									<option value="redeem">Redeem</option>
-									<option value="SIP-registration">SIP Registration </option>
-								</select> -->
+                            <button type="button" class="btn btn-primary">Sell</button>
+                            <button type="button" class="btn btn-default">Switch</button>                               
                             </td>
                         </tr>
                         <tr>
@@ -214,36 +163,22 @@
                                                       
                             </td>
 
-                            <td class="td_contain_two">
-                                
-                                <p>16.2%</p>
-                                <div class="graph"></div>
-                                    
-                                
-                            </td>
-                            <td class="td_contain_two">  
-                                <p>16.2%</p>
-                                <div class="graph"></div>  
+                            <td>
+                                <span>Rs 0.00 </span>
+                            </td>                          
+                            <td>
+                                <span>Rs 0.00 </span>
                             </td>
                             <td>
-								<span>Rs 0.00 </span>
-                            </td>
-                            <td>
-                            <button type="button" class="btn btn-primary">Buy</button>
-                            <button type="button" class="btn btn-default">Sell</button>
-								<!-- <select class="action" name="action">
-									<option value="" selected hidden> ACTION </option>
-									<option value="Purchase">Purchase<span class="caret"></span></option>
-									<option value="redeem">Redeem</option>
-									<option value="SIP-registration">SIP Registration </option>
-								</select> -->
+                            <button type="button" class="btn btn-primary">Sell</button>
+                            <button type="button" class="btn btn-default">Switch</button>                               
                             </td>
                         </tr>
                     
                         <tr class="tr_fund">
-							<td colspan="5">
-							MF Debt Funds
-							</td>
+                            <td colspan="5">
+                            MF Debt Funds
+                            </td>
                         </tr>
                         <tr>
                             <td>
@@ -262,31 +197,15 @@
                                                       
                             </td>
 
-                            <td class="td_contain_two">
-                               
-                                <p>16.2%</p>
-                                <div class="graph"></div>                                                              
-                            </td>
-
-                            <td class="td_contain_two">
-                               
-                                <p>16.2%</p>
-                                <div class="graph"></div>
-                                   
-                                
-                            </td>
-                            <td>                               
-                                <span>Rs 0.00 </span>                                
+                            <td>
+                                <span>Rs 0.00 </span>
+                            </td>                          
+                            <td>
+                                <span>Rs 0.00 </span>
                             </td>
                             <td>
-                            <button type="button" class="btn btn-primary">Buy</button>
-                            <button type="button" class="btn btn-default">Sell</button>
-								<!-- <select class="action" name="action">
-									<option value="" selected hidden> ACTION </option>
-									<option value="Purchase">Purchase</option>
-									<option value="redeem">Redeem</option>
-									<option value="SIP-registration">SIP Registration </option>
-								</select> -->
+                            <button type="button" class="btn btn-primary">Sell</button>
+                            <button type="button" class="btn btn-default">Switch</button>                               
                             </td>
                         </tr>
                         <tr>
@@ -307,38 +226,342 @@
                                                       
                             </td>
 
-                            <td class="td_contain_two">
-                                
-                                <p>16.2%</p>
-                                <div class="graph"></div>
-                                    
-                                
-                            </td>
-                            <td class="td_contain_two">
-                                
-                                <p>16.2%</p>
-                                <div class="graph"></div>
-                                    
-                                
+                            <td>
+                                <span>Rs 0.00 </span>
+                            </td>                          
+                            <td>
+                                <span>Rs 0.00 </span>
                             </td>
                             <td>
-                                
-                                    <span>Rs 0.00 </span>
-                                
-                            </td>
-                            <td>
-                            <button type="button" class="btn btn-primary">Buy</button>
-                            <button type="button" class="btn btn-default">Sell</button>
-								<!-- <select class="action" name="action">
-									<option value="" selected hidden> ACTION </option>
-									<option value="Purchase">Purchase<span class="caret"></span></option>
-									<option value="redeem">Redeem</option>
-									<option value="SIP-registration">SIP Registration </option>
-								</select> -->
+                            <button type="button" class="btn btn-primary">Sell</button>
+                            <button type="button" class="btn btn-default">Switch</button>                               
                             </td>
                         </tr>
                     </tbody>
                 </table>
+      </div>
+    </div>
+  </div>
+  <div class="panel panel-default">
+    <div class="heading" role="tab" id="headingTwo">
+      <h4 class="panel-title">
+        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#comm_investment" aria-expanded="false" aria-controls="comm_investment">
+          <span class="sign plus-sign" id="earning_info_span"></span> Committed Investment
+        </a>
+      </h4>
+    </div>
+    <div id="comm_investment" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+      <div class="panel-body">
+         <table>
+                    <thead>
+                        <tr>
+                            <th><div class="td_contain_one">Scheme</div></th>                                                         
+                            <th> <div class="td_contain_two">Current Value</div></th>
+                            <th> <div class="td_contain_three">Projected Value</div></th>
+                            <th> <div class="td_contain_four">Action</div></th>
+                        </tr>
+                    </thead>
+                    <tfoot>
+                        <tr>
+                            <td> Total</td>
+                            <td> Rs 0.00</td>                          
+                            <td> Rs 0.00</td>
+                            <td> </td>
+                        </tr>
+                    </tfoot>
+                    <tbody>
+                        <tr class="tr_fund">
+                            <td colspan="5">
+                            Mutual Fund Equity
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                           
+                               <span class="right-arrow"> > </span> <a class="asset-class" data-toggle="collapse" href="#asset-class" 
+                               aria-expanded="false" aria-controls="asset-class">US Total Stock Market:</a>                            
+
+                                <div class="asset-child-class collapse" id="asset-class"><a href="#">VTI:Vanguard Total Stock Market ETF</a> 
+
+                                <p class="asset-child-sub-class">
+                                <span class="right-arrow"> > </span>  
+                                <a data-toggle="collapse" href="#asset-child-sub" aria-expanded="false" aria-controls="asset-child-sub">why this asset class and these etfs</a> </p>
+
+                                <p class="asset-child-sub-class collapse" id="asset-child-sub"> US Total Stock Market contains broad exposure to the entire US stock market, including growth and value companies of small, mid and large capitalizations. This asset class allows participation in the historically strong long-term growth of the US economy.
+                                </p>
+                                </div> 
+                                                      
+                            </td>
+
+                            <td>
+                                <span>Rs 0.00 </span>
+                            </td>                          
+                            <td>
+                                <span>Rs 0.00 </span>
+                            </td>
+                            <td>
+                            <button type="button" class="btn btn-primary">Sell</button>
+                            <button type="button" class="btn btn-default">Switch</button>                               
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                            
+                               <span class="right-arrow"> > </span> <a class="asset-class" data-toggle="collapse" href="#asset-class1" 
+                               aria-expanded="false" aria-controls="asset-class1">US Total Stock Market:</a>                            
+
+                                <div class="asset-child-class collapse" id="asset-class1"><a href="#">VTI:Vanguard Total Stock Market ETF</a> 
+
+                                <p class="asset-child-sub-class">
+                                <span class="right-arrow"> > </span>  
+                                <a data-toggle="collapse" href="#asset-child-sub1" aria-expanded="false" aria-controls="asset-child-sub1">why this asset class and these etfs</a> </p>
+
+                                <p class="asset-child-sub-class collapse" id="asset-child-sub1"> US Total Stock Market contains broad exposure to the entire US stock market, including growth and value companies of small, mid and large capitalizations. This asset class allows participation in the historically strong long-term growth of the US economy.
+                                </p>
+                                </div> 
+                                                      
+                            </td>
+
+                            <td>
+                                <span>Rs 0.00 </span>
+                            </td>                          
+                            <td>
+                                <span>Rs 0.00 </span>
+                            </td>
+                            <td>
+                            <button type="button" class="btn btn-primary">Sell</button>
+                            <button type="button" class="btn btn-default">Switch</button>                               
+                            </td>
+                        </tr>
+                    
+                        <tr class="tr_fund">
+                            <td colspan="5">
+                            MF Debt Funds
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                           
+                               <span class="right-arrow"> > </span> <a class="asset-class" data-toggle="collapse" href="#asset-class" 
+                               aria-expanded="false" aria-controls="asset-class">US Total Stock Market:</a>                            
+
+                                <div class="asset-child-class collapse" id="asset-class"><a href="#">VTI:Vanguard Total Stock Market ETF</a> 
+
+                                <p class="asset-child-sub-class">
+                                <span class="right-arrow"> > </span>  
+                                <a data-toggle="collapse" href="#asset-child-sub" aria-expanded="false" aria-controls="asset-child-sub">why this asset class and these etfs</a> </p>
+                                <p class="asset-child-sub-class collapse" id="asset-child-sub"> US Total Stock Market contains broad exposure to the entire US stock market, including growth and value companies of small, mid and large capitalizations. This asset class allows participation in the historically strong long-term growth of the US economy.
+                                </p>
+                                </div> 
+                                                      
+                            </td>
+
+                            <td>
+                                <span>Rs 0.00 </span>
+                            </td>                          
+                            <td>
+                                <span>Rs 0.00 </span>
+                            </td>
+                            <td>
+                            <button type="button" class="btn btn-primary">Sell</button>
+                            <button type="button" class="btn btn-default">Switch</button>                               
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                            
+                               <span class="right-arrow"> > </span> <a class="asset-class" data-toggle="collapse" href="#asset-class1" 
+                               aria-expanded="false" aria-controls="asset-class1">US Total Stock Market:</a>                            
+
+                                <div class="asset-child-class collapse" id="asset-class1"><a href="#">VTI:Vanguard Total Stock Market ETF</a> 
+
+                                <p class="asset-child-sub-class">
+                                <span class="right-arrow"> > </span>  
+                                <a data-toggle="collapse" href="#asset-child-sub1" aria-expanded="false" aria-controls="asset-child-sub1">why this asset class and these etfs</a> </p>
+
+                                <p class="asset-child-sub-class collapse" id="asset-child-sub1"> US Total Stock Market contains broad exposure to the entire US stock market, including growth and value companies of small, mid and large capitalizations. This asset class allows participation in the historically strong long-term growth of the US economy.
+                                </p>
+                                </div> 
+                                                      
+                            </td>
+
+                            <td>
+                                <span>Rs 0.00 </span>
+                            </td>                          
+                            <td>
+                                <span>Rs 0.00 </span>
+                            </td>
+                            <td>
+                            <button type="button" class="btn btn-primary">Sell</button>
+                            <button type="button" class="btn btn-default">Switch</button>                               
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+      </div>
+    </div>
+  </div>
+  <div class="panel panel-default">
+    <div class="heading" role="tab" id="headingThree">
+      <h4 class="panel-title">
+        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#new_investment" aria-expanded="false" aria-controls="new_investment">
+          <span class="sign plus-sign" id="earning_info_span"></span> New Investment
+        </a>
+      </h4>
+    </div>
+    <div id="new_investment" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+      <div class="panel-body">
+        <table>
+                    <thead>
+                        <tr>
+                            <th><div class="td_contain_one">Scheme</div></th>                                                         
+                            <th> <div class="td_contain_two">Current Value</div></th>
+                            <th> <div class="td_contain_three">Projected Value</div></th>
+                            <th> <div class="td_contain_four">Action</div></th>
+                        </tr>
+                    </thead>
+                    <tfoot>
+                        <tr>
+                            <td> Total</td>
+                            <td> Rs 0.00</td>                          
+                            <td> Rs 0.00</td>
+                            <td> </td>
+                        </tr>
+                    </tfoot>
+                    <tbody>
+                        <tr class="tr_fund">
+                            <td colspan="5">
+                            Mutual Fund Equity
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                           
+                               <span class="right-arrow"> > </span> <a class="asset-class" data-toggle="collapse" href="#asset-class" 
+                               aria-expanded="false" aria-controls="asset-class">US Total Stock Market:</a>                            
+
+                                <div class="asset-child-class collapse" id="asset-class"><a href="#">VTI:Vanguard Total Stock Market ETF</a> 
+
+                                <p class="asset-child-sub-class">
+                                <span class="right-arrow"> > </span>  
+                                <a data-toggle="collapse" href="#asset-child-sub" aria-expanded="false" aria-controls="asset-child-sub">why this asset class and these etfs</a> </p>
+
+                                <p class="asset-child-sub-class collapse" id="asset-child-sub"> US Total Stock Market contains broad exposure to the entire US stock market, including growth and value companies of small, mid and large capitalizations. This asset class allows participation in the historically strong long-term growth of the US economy.
+                                </p>
+                                </div> 
+                                                      
+                            </td>
+
+                            <td>
+                                <span>Rs 0.00 </span>
+                            </td>                          
+                            <td>
+                                <span>Rs 0.00 </span>
+                            </td>
+                            <td>
+                            <button type="button" class="btn btn-primary">Sell</button>
+                            <button type="button" class="btn btn-default">Switch</button>                               
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                            
+                               <span class="right-arrow"> > </span> <a class="asset-class" data-toggle="collapse" href="#asset-class1" 
+                               aria-expanded="false" aria-controls="asset-class1">US Total Stock Market:</a>                            
+
+                                <div class="asset-child-class collapse" id="asset-class1"><a href="#">VTI:Vanguard Total Stock Market ETF</a> 
+
+                                <p class="asset-child-sub-class">
+                                <span class="right-arrow"> > </span>  
+                                <a data-toggle="collapse" href="#asset-child-sub1" aria-expanded="false" aria-controls="asset-child-sub1">why this asset class and these etfs</a> </p>
+
+                                <p class="asset-child-sub-class collapse" id="asset-child-sub1"> US Total Stock Market contains broad exposure to the entire US stock market, including growth and value companies of small, mid and large capitalizations. This asset class allows participation in the historically strong long-term growth of the US economy.
+                                </p>
+                                </div> 
+                                                      
+                            </td>
+
+                            <td>
+                                <span>Rs 0.00 </span>
+                            </td>                          
+                            <td>
+                                <span>Rs 0.00 </span>
+                            </td>
+                            <td>
+                            <button type="button" class="btn btn-primary">Sell</button>
+                            <button type="button" class="btn btn-default">Switch</button>                               
+                            </td>
+                        </tr>
+                    
+                        <tr class="tr_fund">
+                            <td colspan="5">
+                            MF Debt Funds
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                           
+                               <span class="right-arrow"> > </span> <a class="asset-class" data-toggle="collapse" href="#asset-class" 
+                               aria-expanded="false" aria-controls="asset-class">US Total Stock Market:</a>                            
+
+                                <div class="asset-child-class collapse" id="asset-class"><a href="#">VTI:Vanguard Total Stock Market ETF</a> 
+
+                                <p class="asset-child-sub-class">
+                                <span class="right-arrow"> > </span>  
+                                <a data-toggle="collapse" href="#asset-child-sub" aria-expanded="false" aria-controls="asset-child-sub">why this asset class and these etfs</a> </p>
+                                <p class="asset-child-sub-class collapse" id="asset-child-sub"> US Total Stock Market contains broad exposure to the entire US stock market, including growth and value companies of small, mid and large capitalizations. This asset class allows participation in the historically strong long-term growth of the US economy.
+                                </p>
+                                </div> 
+                                                      
+                            </td>
+
+                            <td>
+                                <span>Rs 0.00 </span>
+                            </td>                          
+                            <td>
+                                <span>Rs 0.00 </span>
+                            </td>
+                            <td>
+                            <button type="button" class="btn btn-primary">Sell</button>
+                            <button type="button" class="btn btn-default">Switch</button>                               
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                            
+                               <span class="right-arrow"> > </span> <a class="asset-class" data-toggle="collapse" href="#asset-class1" 
+                               aria-expanded="false" aria-controls="asset-class1">US Total Stock Market:</a>                            
+
+                                <div class="asset-child-class collapse" id="asset-class1"><a href="#">VTI:Vanguard Total Stock Market ETF</a> 
+
+                                <p class="asset-child-sub-class">
+                                <span class="right-arrow"> > </span>  
+                                <a data-toggle="collapse" href="#asset-child-sub1" aria-expanded="false" aria-controls="asset-child-sub1">why this asset class and these etfs</a> </p>
+
+                                <p class="asset-child-sub-class collapse" id="asset-child-sub1"> US Total Stock Market contains broad exposure to the entire US stock market, including growth and value companies of small, mid and large capitalizations. This asset class allows participation in the historically strong long-term growth of the US economy.
+                                </p>
+                                </div> 
+                                                      
+                            </td>
+
+                            <td>
+                                <span>Rs 0.00 </span>
+                            </td>                          
+                            <td>
+                                <span>Rs 0.00 </span>
+                            </td>
+                            <td>
+                            <button type="button" class="btn btn-primary">Sell</button>
+                            <button type="button" class="btn btn-default">Switch</button>                               
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+      </div>
+    </div>
+  </div>
+</div>
+                <!-- Ending Accordion -->
 
                 <!--Starting Modals  -->
 
@@ -425,315 +648,7 @@
           
         </div>
 
-        <!-- Starting intro pop up -->
-            <button type="button" class="btn btn-default btn-lg" data-toggle="modal" data-target="#tour_modal">
-            <h5> Pop up</h5>                
-        </button>
-    <!-- Modal -->
-    <div class="modal fade tour_popup" id="tour_modal" tabindex="-1" role="dialog" aria-labelledby="tour_modal">
-              <div class="modal-dialog  modal-lg" role="document">
-                <div class="modal-content">
-                  <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                    <h1 class="modal-title" id="myModalLabel">Brief tour of the website</h1>
-                  </div>                
-
-                  <div class="modal-body">
-                  <!-- starting tabs -->
-                   <!-- Nav tabs -->
-                      <ul class="nav nav-tabs" role="tablist" id="tour_tabs">
-                        <li role="presentation" class="active"><a href="#summary" aria-controls="summary" role="tab" data-toggle="tab">SUMMARY</a></li>
-                        <li role="presentation"><a href="#Invest" aria-controls="Invest" role="tab" data-toggle="tab">INVEST</a></li>
-                        <li role="presentation"><a href="#benchmark" aria-controls="benchmark" role="tab" data-toggle="tab">BENCHMARK</a></li>
-                        <li role="presentation"><a href="#funds" aria-controls="funds" role="tab" data-toggle="tab">FUNDS</a></li>
-                      </ul>
-
-                      <div class="tab-content">
-                        <div role="tabpanel" class="tab-pane fade in active" id="summary">
-                        <!-- starting first tab -->
-                            <!-- Pasting the slider -->
-                        <div id="carousel-tour" class="carousel slide" data-ride="carousel" data-interval="false">
-                  <!-- Indicators --> 
-                          <ol class="carousel-indicators">
-                            <li data-target="#carousel-tour" data-slide-to="0" class="active"></li>
-                            <li data-target="#carousel-tour" data-slide-to="1"></li>
-                            <li data-target="#carousel-tour" data-slide-to="2"></li>
-                          </ol>
-
-                  <!-- Wrapper for slides -->
-                  <div class="carousel-inner" role="listbox">
-                    <div class="item active">
-                    <div class="row">
-                        <div class="col-md-6">
-                            <img src="../images/tour/summary/one.png" alt="tour_summary">
-                        </div>
-                        <div class="col-md-6">
-                            <h5>Invest </h5>
-                            <p> Enter the desired amount to invest.</p>
-                            <h5>Add Goal </h5>
-                            <p>Goal setting is pretty simple. A goal is something that you are willing to work for.</p>
-                        </div>                      
-
-                    </div>
-                      
-                    </div>
-                    <div class="item">
-                       <div class="row">
-                        <div class="col-md-6">
-                            <img src="../images/tour/summary/two.png" alt="tour_summary">
-                        </div>
-                        <div class="col-md-6">
-                        <h5>Total Balance for all goals</h5>
-                            <p>A consolidated view of your overall investments and earnings. </p>
-                        </div>      
-
-                    </div>
-                    </div>
-
-                    <div class="item">
-                      <div class="row">
-                        <div class="col-md-6">
-                            <img src="../images/tour/summary/three.png" alt="tour_summary">
-                        </div>
-                        <div class="col-md-6">
-                        <h5>Goal</h5>
-                            <p>Your goal account summary. </p>
-                        </div>      
-
-                    </div>
-                    </div>
-                    
-                  </div>
-
-                  <!-- Controls -->
-                  <a class="left carousel-control" href="#carousel-tour" role="button" data-slide="prev">
-                    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-                    <span class="sr-only">Previous</span>
-                  </a>
-                  <a class="right carousel-control" href="#carousel-tour" role="button" data-slide="next">
-                    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-                    <span class="sr-only">Next</span>
-                  </a>
-                </div>
-                        <!-- End of slider -->
-                        <!-- end first tab -->
-                        </div>
-                        <div role="tabpanel" class="tab-pane" id="Invest">
-                        <!-- start -->
-                            <!-- Pasting the slider -->
-                        <div id="carousel-tour2" class="carousel slide" data-ride="carousel" data-interval="false">
-                  <!-- Indicators --> 
-                          <ol class="carousel-indicators">
-                            <li data-target="#carousel-tour2" data-slide-to="0" class="active"></li>
-                            <li data-target="#carousel-tour2" data-slide-to="1"></li>
-                            <li data-target="#carousel-tour2" data-slide-to="2"></li>
-                            <li data-target="#carousel-tour2" data-slide-to="3"></li>
-                          </ol>
-
-                  <!-- Wrapper for slides -->
-                  <div class="carousel-inner" role="listbox">
-                    <div class="item active">
-                    <div class="row">
-                        <div class="col-md-6">
-                            <img src="../images/tour/invest/one.png" alt="tour_summary">
-                        </div>
-                        <div class="col-md-6">
-                        <h5>Execute Portfolio</h5>
-                            <p>Execute the recommended plan that best meets your needs and tolerance for risk. </p>
-                        </div>                      
-
-                    </div>
-                      
-                    </div>
-                    <div class="item">
-                       <div class="row">
-                        <div class="col-md-6">
-                            <img src="../images/tour/invest/two.png" alt="tour_summary">
-                        </div>
-                        <div class="col-md-6">
-                        <h5>Change Portfolio</h5>
-                            <p>If you wish to modify the recommended portfolio you can use this option. Our advisors are available to help you choose wisely.</p>
-                        </div>      
-
-                    </div>
-                    </div>
-
-                    <div class="item">
-                      <div class="row">
-                        <div class="col-md-6">
-                            <img src="../images/tour/invest/three.png" alt="tour_summary">
-                        </div>
-                        <div class="col-md-6">
-                        <h5>Buy/Sell</h5>
-                            <p>You can transact and manage individual funds/assets from here. </p>
-                        </div>      
-
-                    </div>
-                    </div>
-
-                    <div class="item">
-                      <div class="row">
-                        <div class="col-md-6">
-                            <img src="../images/tour/invest/four.png" alt="tour_summary">
-                        </div>
-                        <div class="col-md-6">
-                        <h5>Mutual Funds Listing</h5>
-                            <p>List of Mutual funds under your portfolio. You can click on each of the them to view a brief description.</p>
-                        </div>      
-
-                    </div>
-                    </div>
-                    
-                  </div>
-
-                  <!-- Controls -->
-                  <a class="left carousel-control" href="#carousel-tour2" role="button" data-slide="prev">
-                    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-                    <span class="sr-only">Previous</span>
-                  </a>
-                  <a class="right carousel-control" href="#carousel-tour2" role="button" data-slide="next">
-                    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-                    <span class="sr-only">Next</span>
-                  </a>
-                </div>
-                        <!-- End of slider -->
-                        <!-- end -->
-
-                        </div>
-                        <div role="tabpanel" class="tab-pane" id="benchmark">
-
-                            <!-- start -->
-                            <!-- Pasting the slider -->
-                        <div id="carousel-tour3" class="carousel slide" data-ride="carousel" data-interval="false">
-                  <!-- Indicators --> 
-                          <ol class="carousel-indicators">
-                            <li data-target="#carousel-tour3" data-slide-to="0" class="active"></li>
-                           
-                          </ol>
-
-                  <!-- Wrapper for slides -->
-                  <div class="carousel-inner" role="listbox">
-                    <div class="item active">
-                    <div class="row">
-                        <div class="col-md-6">
-                            <img src="../images/tour/benchmark/one.png" alt="tour_summary">
-                        </div>
-                        <div class="col-md-6">
-                        <h5>Benchmark</h5>
-                            <p>we provide you a set of priorities based on your expectations using finotrust data driven analytics. </p>
-                        </div>                      
-
-                    </div>                    
-                    </div>              
-                  </div>
-
-                  <!-- Controls -->
-                  <a class="left carousel-control" href="#carousel-tour3" role="button" data-slide="prev">
-                    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-                    <span class="sr-only">Previous</span>
-                  </a>
-                  <a class="right carousel-control" href="#carousel-tour3" role="button" data-slide="next">
-                    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-                    <span class="sr-only">Next</span>
-                  </a>
-                </div>
-                        <!-- End of slider -->
-                        <!-- end -->
-                        </div>
-                        <div role="tabpanel" class="tab-pane" id="funds">
-
-                        <!-- start -->
-                            <!-- Pasting the slider -->
-                        <div id="carousel-tour4" class="carousel slide" data-ride="carousel" data-interval="false">
-                  <!-- Indicators --> 
-                          <ol class="carousel-indicators">
-                            <li data-target="#carousel-tour4" data-slide-to="0" class="active"></li>
-                            <li data-target="#carousel-tour4" data-slide-to="1"></li>
-                            <li data-target="#carousel-tour4" data-slide-to="2"></li>
-                            <li data-target="#carousel-tour4" data-slide-to="3"></li>
-                          </ol>
-
-                  <!-- Wrapper for slides -->
-                  <div class="carousel-inner" role="listbox">
-                    <div class="item active">
-                    <div class="row">
-                        <div class="col-md-6">
-                            <img src="../images/tour/funds/one.png" alt="tour_summary">
-                        </div>
-                        <div class="col-md-6">
-                        <h5>Mutual Fund Types</h5>
-                            <p>You can glide through the tabs for different mutual funds each having their own level of risks and returns.</p>
-                        </div>                      
-
-                    </div>
-                      
-                    </div>
-                    <div class="item">
-                       <div class="row">
-                        <div class="col-md-6">
-                            <img src="../images/tour/funds/two.png" alt="tour_summary">
-                        </div>
-                        <div class="col-md-6">
-                        <h5>Search funds to invest</h5>
-                            <p>This sections helps you to search different scheme types to invest in.</p>
-                        </div>      
-
-                    </div>
-                    </div>
-
-                    <div class="item">
-                      <div class="row">
-                        <div class="col-md-6">
-                            <img src="../images/tour/funds/three.png" alt="tour_summary">
-                        </div>
-                        <div class="col-md-6">
-                        <h5>Recent transactions</h5>
-                            <p>A brief summary of your recent transactions is shown here. </p>
-                        </div>  
-
-                    </div>
-                    </div>
-
-                    <div class="item">
-                      <div class="row">
-                        <div class="col-md-6">
-                            <img src="../images/tour/funds/three.png" alt="tour_summary">
-                        </div>
-                        <div class="col-md-6">
-                        <h5>SIP & One Time</h5>
-                            <p>Systematic Investment Planning - SIP is a method of investing a fixed sum, regularly, in a mutual fund scheme allowing you to buy units on a given date each month.</p>
-                            <p> One Time - You can invest lump sum into the mutual fund. </p>
-                        </div>  
-
-                    </div>
-                    </div>
-                    
-                  </div>
-
-                  <!-- Controls -->
-                  <a class="left carousel-control" href="#carousel-tour4" role="button" data-slide="prev">
-                    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-                    <span class="sr-only">Previous</span>
-                  </a>
-                  <a class="right carousel-control" href="#carousel-tour4" role="button" data-slide="next">
-                    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-                    <span class="sr-only">Next</span>
-                  </a>
-                </div>
-                        <!-- End of slider -->
-                        <!-- end -->
-                        </div>
-                      </div>
-
-                  
-                  </div>
-                  <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                  </div>
-                </div>
-              </div>
-    </div>
-        <!-- Ending intro pop up -->
+        
 
     </div>
     

@@ -86,19 +86,6 @@ img{max-height:35px;}
     content: ' *';
     display:inline;
 	}		
-.execute button{
-	background:#18bb9c;
-	color:white;
-	margin:5px;
-	border:2px solid #18bb9c;
-	&:hover{background:white; color:#18bb9c; border:2px solid #18bb9c; }
-	}
-.change button{
-	color:#18bb9c;
-	border:2px solid #18bb9c;
-	margin:5px;
-	&:hover{background:#18bb9c; color:white; border:2px solid #18bb9c; }
-}
 .balance{float:right;}
 .portfolio_small_info{
 	& button{

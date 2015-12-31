@@ -164,16 +164,19 @@
 /* POrtfolio Page */
 .portfolio{
 	.panel {
-		.panel-fake-heading{
-			background-color:transparent;
+		.panel-fake-heading{			
 			padding: 10px 15px;
 			border-bottom: 1px solid #DDD;
 			border-top-left-radius: 3px;
-			border-top-right-radius: 3px;
+			border-top-right-radius: 3px;		
 
-			p{
-				@include fontl(14);
+			p,h2{
+				@include fontsb(16);
 			}
+			h3{
+				@include fontm(14);
+			}
+			
 		}
 		.panel-body{
 			p {
@@ -217,7 +220,12 @@
 				}
 			}
 			.portfolio_large_info{
-				
+				.heading {
+					padding: 10px 15px;
+					a:focus, a:hover {
+						text-decoration: none;
+					}
+				}
 				table {
 					width: 100%;
 					th {
@@ -234,11 +242,6 @@
 						text-decoration: none;
 						padding-bottom:5px;
 						line-height: auto;											
-					}
-					th,td{
-						&:nth-child(3){
-							display: none;
-						}
 					}
 					td{
 						padding: 4px 0px;
@@ -275,19 +278,7 @@
 							text-decoration: none;
 						}
 					}
-					.td_contain_two{
-						p,div{
-							float: left;							
-						}
-						div{
-							padding:10px 0px;
-							width: 40px;
-							background-color:green;
-						}
-						p{
-							padding: 6px 15px 6px 4px;
-						}
-					}
+					
 					.tr_fund td{
 						font-weight:700;
 						color:#18bb9c;
