@@ -51,16 +51,16 @@
 	    <div class="collapse navbar-collapse" id="dropdown-thumbnail-preview">
       <ul class="nav navbar-nav">
         <li ><a href="#" class="active-now">Summary</a></li>
-        <li><a href="Portfolio.html">Portfolio</a></li>
+        <li><a href="invest.html">invest</a></li>
         <li><a href="Performance.html">Performance</a></li>
         <li><a href="Benchmark.html">Benchmark</a></li>
         <li><a href="Funds.html">Funds</a></li>
 
       </ul>
-
       <ul class="nav navbar-nav navbar-right">
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Username <span class="caret"></span></a>
+        <li class="dropdown" data-toggle="modal" data-target="#tour_modal"><a>take a Tour</a></li>
+        <li class="dropdown username" >
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" >Username <span class="caret"></span></a>
           <ul class="dropdown-menu" role="menu">
             <li><a href="#">Total Balance</a></li>
             <li><a href="#">Add a Family Member</a></li>
@@ -79,33 +79,7 @@
     	<div class="account_controls col-sm-6">
     	<div class="deposit_div">
 	    	<div class="deposit_box">
-	    	<button type="button" id="deposit_toggle" class="btn deposit_button">Invest <span class="caret"> </span></button>    	
-	    		<div class="deposit-form" style="display:none">
-					<form action="#" method="POST">
-						<section class="form-group">
-						<label class="section-title">Deposit</label>
-						
-						<input name="amount" value="" type="text">
-						
-						</section>
-						<section class="form-group">
-						<label class="section-title">To your goal</label>	
-						<!--  -->
-							<div class="dropdown">
-							  <button id="dLabel" type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-							    Retirement
-							    <span class="caret"></span>
-							  </button>
-							  <ul class="dropdown-menu" aria-labelledby="dLabel">
-							    <li><a href="#">Retirement</a></li>
-							  </ul>
-							</div>
-						<!--  -->					
-						</section>
-
-						<button class="btn deposit_button"  type="submit" id="dep_amt">Deposit</button>
-					</form>
-				 </div>
+	    	<a href="invest.html"><button type="button" class="btn deposit_button" >Invest </button></a>	
 	    	</div>    	
     	<button type="button" id="third" class="btn btn-info">Add Goal</button>
     	</div>
@@ -121,15 +95,15 @@
 
 	    	<div class="earnings_div">
 		    	<h3> TOTAL BALANCE FOR ALL GOALS</h3>
-		    	<h1>$0.00</h1>
-		    	<h4>TOTAL EARNINGS <span>+$0.00 </span></h4>
+		    	<h1>₹0.00</h1>
+		    	<h4>TOTAL EARNINGS <span>+₹0.00 </span></h4>
 		    	
 	    	</div> <!-- End for classless div after span -->
 	    </div><!-- End of first col-sm -6 for overaccoint -->
 	    
 	    <div class="losses col-sm-6">
 	    	<p>TAX LOSS HARVESTING+ OFF</p>
-	    	<p>Harvested losses $0.00</p>
+	    	<p>Harvested losses ₹0.00</p>
 
 	    	<!--  -->
 	    </div>
@@ -228,7 +202,7 @@
 		<div class="row earnings">
 			<div class="col-sm-6 edit_plan">
 			<span class="sign plus-sign" id="retirement_info_span"></span>
-			<h2> Retirement </h2> 
+			<h2> RETIREMENT </h2> 
 			<a href="#">Personal Account</a>
 			<button type="button" class="btn btn-default ">Edit Plan</button>
 			</div>
@@ -352,9 +326,6 @@
 
 	  </div>
 	</div>
-		<button type="button" class="btn btn-default btn-lg" data-toggle="modal" data-target="#tour_modal">
-            <h5> Pop up</h5>                
-        </button>
 	<!-- Modal -->
     <div class="modal fade tour_popup" id="tour_modal" tabindex="-1" role="dialog" aria-labelledby="tour_modal">
               <div class="modal-dialog  modal-lg" role="document">
@@ -370,6 +341,7 @@
 					  <ul class="nav nav-tabs" role="tablist" id="tour_tabs">
 					    <li role="presentation" class="active"><a href="#summary" aria-controls="summary" role="tab" data-toggle="tab">SUMMARY</a></li>
 					    <li role="presentation"><a href="#Invest" aria-controls="Invest" role="tab" data-toggle="tab">INVEST</a></li>
+						<li role="presentation"><a href="#Performance" aria-controls="Performance" role="tab" data-toggle="tab">PERFORMANCE</a></li>
 					    <li role="presentation"><a href="#benchmark" aria-controls="benchmark" role="tab" data-toggle="tab">BENCHMARK</a></li>
 					    <li role="presentation"><a href="#funds" aria-controls="funds" role="tab" data-toggle="tab">FUNDS</a></li>
 					  </ul>
@@ -526,7 +498,64 @@
 					    <!-- end -->
 
 					    </div>
-					    <div role="tabpanel" class="tab-pane" id="benchmark">
+					    
+						<div role="tabpanel" class="tab-pane" id="Performance">
+
+					    <!-- start -->
+					    	<!-- Pasting the slider -->
+				         <div id="carousel-tour5" class="carousel slide" data-ride="carousel" data-interval="false">
+				  <!-- Indicators --> 
+						  <ol class="carousel-indicators">
+						    <li data-target="#carousel-tour5" data-slide-to="0" class="active"></li>
+						    <li data-target="#carousel-tour5" data-slide-to="1"></li>
+						  </ol>
+
+				  <!-- Wrapper for slides -->
+				  <div class="carousel-inner" role="listbox">
+				    <div class="item active">
+				    <div class="row">
+				    	<div class="col-md-6">
+				    		<img src="../images/tour/performance/tour1.png" alt="tour_summary">
+				    	</div>
+				    	<div class="col-md-6">
+				    	<h5>Performance Statistics</h5>
+				    		<p>Check your performance over Balance snapshot,Balance Overtime,Balance and Holding.</p>
+				    	</div> 			    		
+
+				    </div>
+				      
+				    </div>
+				    <div class="item">
+				       <div class="row">
+				    	<div class="col-md-6">
+				    		<img src="../images/tour/performance/tour2.png" alt="tour_summary">
+				    	</div>
+				    	<div class="col-md-6">
+				    	<h5>Performance Statistics</h5>
+				    		<p>Compare your performance with our suggested projected savings.</p>
+				    		<p>Also, check your recent transactions to track yourself. </p>
+				    	</div>  	
+
+				    </div>
+				    </div>
+
+				  </div>
+
+				  <!-- Controls -->
+				  <a class="left carousel-control" href="#carousel-tour5" role="button" data-slide="prev">
+				    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+				    <span class="sr-only">Previous</span>
+				  </a>
+				  <a class="right carousel-control" href="#carousel-tour5" role="button" data-slide="next">
+				    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+				    <span class="sr-only">Next</span>
+				  </a>
+				</div>
+				        <!-- End of slider -->
+					    <!-- end -->
+					    </div>
+					 
+						<div role="tabpanel" class="tab-pane" id="benchmark">
 
 					    	<!-- start -->
 					    	<!-- Pasting the slider -->
@@ -658,7 +687,8 @@
                   </div>
                 </div>
               </div>
-    </div>
+    
+	</div>
             <!--  -->
 
 

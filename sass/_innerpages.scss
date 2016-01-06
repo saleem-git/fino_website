@@ -277,7 +277,10 @@
 						background-color:#2C3E50;
 						color:white;
 					}
-
+					
+				#new_investment{
+					.add_scheme{ &a{ color:red !important;}}
+					}
 				}/* end of table */
 
 				.modal_container{
@@ -310,6 +313,7 @@
 
 							}
 					}
+					
 					}
 
 					

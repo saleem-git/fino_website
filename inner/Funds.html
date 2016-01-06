@@ -24,16 +24,17 @@
 	    <div class="collapse navbar-collapse" id="dropdown-thumbnail-preview">
       <ul class="nav navbar-nav">
         <li ><a href="summary.html" >Summary</a></li>
-        <li><a href="portfolio.html" >Portfolio</a></li>
+        <li><a href="invest.html" >invest</a></li>
         <li><a href="Performance.html">Performance</a></li>
         <li><a href="Benchmark.html">Benchmark</a></li>
         <li><a href="#" class="active-now">Funds</a></li>
 
       </ul>
 
-      <ul class="nav navbar-nav navbar-right">
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Username <span class="caret"></span></a>
+       <ul class="nav navbar-nav navbar-right">
+        <li class="dropdown" data-toggle="modal" data-target="#tour_modal"><a>take a Tour</a></li>
+        <li class="dropdown username" >
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" >Username <span class="caret"></span></a>
           <ul class="dropdown-menu" role="menu">
             <li><a href="#">Total Balance</a></li>
             <li><a href="#">Add a Family Member</a></li>
@@ -50,7 +51,7 @@
 
 <div class="container funds">
 	
-<div class="col-md-8 " >
+<div class="col-md-8 top-table" >
   <ul class="nav nav-tabs">
 		<li class="active"><a data-toggle="tab" href="#Equity">Equity Funds</a></li>
 		<li><a data-toggle="tab" href="#Hybrid">Hybrid Funds</a></li>
@@ -261,7 +262,7 @@
 		</div>
 
 <div class="col-md-12 bottom-table">
-  <ul class="nav nav-tabs">
+  <ul class="nav nav-tabs ">
 		<li class="active"><a data-toggle="tab" href="#Recent">Recent Transactions</a></li>
 		<li><a data-toggle="tab" href="#Systematic">My Systematic Plans</a></li>
   </ul>
@@ -358,10 +359,7 @@
   </div>
 </div>
 
-<!-- Starting intro pop up -->
-            <button type="button" class="btn btn-default btn-lg" data-toggle="modal" data-target="#tour_modal">
-            <h5> Pop up</h5>                
-        </button>
+
     <!-- Modal -->
     <div class="modal fade tour_popup" id="tour_modal" tabindex="-1" role="dialog" aria-labelledby="tour_modal">
               <div class="modal-dialog  modal-lg" role="document">
@@ -375,14 +373,15 @@
                   <!-- starting tabs -->
                    <!-- Nav tabs -->
                       <ul class="nav nav-tabs" role="tablist" id="tour_tabs">
-                        <li role="presentation" class="active"><a href="#summary" aria-controls="summary" role="tab" data-toggle="tab">SUMMARY</a></li>
+                        <li role="presentation"><a href="#summary" aria-controls="summary" role="tab" data-toggle="tab">SUMMARY</a></li>
                         <li role="presentation"><a href="#Invest" aria-controls="Invest" role="tab" data-toggle="tab">INVEST</a></li>
+                        <li role="presentation"><a href="#Performance" aria-controls="Performance" role="tab" data-toggle="tab">PERFORMANCE</a></li>
                         <li role="presentation"><a href="#benchmark" aria-controls="benchmark" role="tab" data-toggle="tab">BENCHMARK</a></li>
-                        <li role="presentation"><a href="#funds" aria-controls="funds" role="tab" data-toggle="tab">FUNDS</a></li>
+                        <li role="presentation" class="active"><a href="#funds" aria-controls="funds" role="tab" data-toggle="tab">FUNDS</a></li>
                       </ul>
 
                       <div class="tab-content">
-                        <div role="tabpanel" class="tab-pane fade in active" id="summary">
+                        <div role="tabpanel" class="tab-pane" id="summary">
                         <!-- starting first tab -->
                             <!-- Pasting the slider -->
                         <div id="carousel-tour" class="carousel slide" data-ride="carousel" data-interval="false">
@@ -533,7 +532,64 @@
                         <!-- end -->
 
                         </div>
-                        <div role="tabpanel" class="tab-pane" id="benchmark">
+                        
+						<div role="tabpanel" class="tab-pane" id="Performance">
+
+					    <!-- start -->
+					    	<!-- Pasting the slider -->
+				        <div id="carousel-tour5" class="carousel slide" data-ride="carousel" data-interval="false">
+				  <!-- Indicators --> 
+						  <ol class="carousel-indicators">
+						    <li data-target="#carousel-tour5" data-slide-to="0" class="active"></li>
+						    <li data-target="#carousel-tour5" data-slide-to="1"></li>
+						  </ol>
+
+				  <!-- Wrapper for slides -->
+				  <div class="carousel-inner" role="listbox">
+				    <div class="item active">
+				    <div class="row">
+				    	<div class="col-md-6">
+				    		<img src="../images/tour/performance/tour1.png" alt="tour_summary">
+				    	</div>
+				    	<div class="col-md-6">
+				    	<h5>Performance Statistics</h5>
+				    		<p>Check your performance over Balance snapshot,Balance Overtime,Balance and Holding.</p>
+				    	</div> 			    		
+
+				    </div>
+				      
+				    </div>
+				    <div class="item">
+				       <div class="row">
+				    	<div class="col-md-6">
+				    		<img src="../images/tour/performance/tour2.png" alt="tour_summary">
+				    	</div>
+				    	<div class="col-md-6">
+				    	<h5>Performance Statistics</h5>
+				    		<p>Compare your performance with our suggested projected savings.</p>
+				    		<p>Also, check your recent transactions to track yourself. </p>
+				    	</div>  	
+
+				    </div>
+				    </div>
+
+				  </div>
+
+				  <!-- Controls -->
+				  <a class="left carousel-control" href="#carousel-tour5" role="button" data-slide="prev">
+				    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+				    <span class="sr-only">Previous</span>
+				  </a>
+				  <a class="right carousel-control" href="#carousel-tour5" role="button" data-slide="next">
+				    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+				    <span class="sr-only">Next</span>
+				  </a>
+				</div>
+				        <!-- End of slider -->
+					    <!-- end -->
+					    </div>
+							
+						<div role="tabpanel" class="tab-pane" id="benchmark">
 
                             <!-- start -->
                             <!-- Pasting the slider -->
@@ -573,7 +629,7 @@
                         <!-- End of slider -->
                         <!-- end -->
                         </div>
-                        <div role="tabpanel" class="tab-pane" id="funds">
+                        <div role="tabpanel" class="tab-pane fade in active" id="funds">
 
                         <!-- start -->
                             <!-- Pasting the slider -->
@@ -675,10 +731,6 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>  
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha256-KXn5puMvxCw+dAYznun+drMdG1IFl3agK0p/pqT9KAo= sha512-2e8qq0ETcfWRI4HJBzQiA3UoyFk6tbNyG+qSaIBZLyW9Xf3sWZHN/lxe9fTh1U45DpPf07yj94KsUHHWe4Yk1A==" crossorigin="anonymous"></script>	 
 	<script src="../js/script.js"></script>
-	<script type="text/javascript">
-	 $(document).ready(function(){
-        $('#tour_tabs li:eq(3) a').tab('show');
-     });
-	</script>
+
     </body>
 </html>

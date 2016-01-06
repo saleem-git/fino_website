@@ -138,23 +138,10 @@ hr.star-primary:after {
 .what-we-do{
 	font-family: Montserrat;
 	& p{
-		padding: 1em 0;
+		padding: 1em 0.6em;
 		}
 	#we_do {
 		background-image: url("../images/we_do.png");
-		background-repeat: no-repeat;
-		background-size: 100% 100%;
-		background-position: center center;
-		height:400px;
-		margin-top:-21px;
-		p{
-			font-family: Montserrat;
-			font-weight:700;
-			font-size: 32px;
-			text-transform: uppercase;
-			color: white;
-			padding-top:5em;
-		}
 	}
 	& #get_start{
 		&:hover {
@@ -167,7 +154,7 @@ hr.star-primary:after {
 		padding:3% 10%;
 		color:white;
 		text-align:center;
-		padding-bottom:20px;
+		h3{padding-bottom: 0;}
 		}
 	& #we_do1{
 		width:100%;
@@ -180,10 +167,10 @@ hr.star-primary:after {
 		width:100%;
 		padding:0 15%;
 		}
-	& .col-md-8{padding:7% 3%;}
+	& .col-md-8{padding:6% 3%;}
 	& .col-md-4{
 		& img{
-			padding:8% 30%;
+			padding:4em 30%;
 			}
 			}
 }
@@ -236,6 +223,7 @@ hr.star-primary:after {
 	}
 }
 .benchmark{
+margin-top:-25px;
 h2{font-size:30px}
 h3{ margin-top:-6%}
 h4{font-size:20px;}
@@ -297,9 +285,10 @@ h4{font-size:20px;}
 		background-image: url("../images/about-us-logo.jpg");
 		h3{padding-top:9%;}
 		p{padding: 0 12%; color:white}}
-	#contact-us{padding:2em 0; .container{padding:2em 0;}; background:#2e2e2e; color:white; .colour{color:#18bb9c;} h3,h4{padding:0.5em 0;} }
+	#contact-us{padding:2em 0; .container{padding:2em 0;}; background:#2e2e2e; color:white; .colour{color:#18bb9c;} h3,h4{padding:0.5em 0;} h4{font-weight:500; font-size:20px;} }
 	#team{
-		h3,h4{padding:0.5em 0;}
+		h3,h4{padding:0.2em 0;}
+		h4, .description{color:#818181;}
 		.colour{color:#18bb9c;}
 		padding:2em 0;
 		.btn{background:#ebebeb;}
@@ -316,7 +305,9 @@ h4{font-size:20px;}
 	}
 	}
 .faq{
+margin-top:5.5em;
 #faq{
+	padding-bottom:15em;
 	#accordion{padding:0 15%;}
 	.panel{margin-bottom:10px}
 	.panel-default{margin-top:5px}
@@ -335,12 +326,13 @@ h4{font-size:20px;}
 		background-repeat: no-repeat;
 		background-size: 100% 100%;
 		background-position: center center;
-		height:400px;
-		margin-top:-21px;
-		h3{font-family: Montserrat;font-size:30px; text-transform:uppercase; font-weight:700; padding: 14% 1px 10px; color:#fff; margin-left:10%;}
+		height:450px;
+		margin-top:3.5em;
+		h3{font-family: Montserrat;font-size:30px; text-transform:uppercase; font-weight:700; padding: 14% 0px 10px; color:#fff; }
+		p{opacity:0.7;}
 }
 .easy{
-	.seven-col{padding:5% 0; width:90%;}
+	.seven-col{padding:5% 0; width:90%;  }
 	#easy{
 		background-image: url("../images/easy-logo.jpg");
 	}
@@ -384,7 +376,7 @@ h4{font-size:20px;}
 		#safe{
 		background-image: url("../images/safe-logo.jpg");
 	}
-	.row{
+	.safe-items{
 		padding:5% 17%;
 		h3{font-size:15px;  padding:10px 1px; color:#18bb9c;}
 		p{font-size:15px; padding:2px 8%;}
@@ -395,6 +387,7 @@ h4{font-size:20px;}
 		#transparency{
 		background-image: url("../images/transparncy-logo.jpg");
 		}
+		.comparision{padding-bottom:4em;}
 		.row-head{
 			padding:5% 0;
 			#left{font-size:18px; text-transform:uppercase; font-weight:900; color:#f86637;}
@@ -405,11 +398,13 @@ h4{font-size:20px;}
 		p{font-size:15px; padding:2px 0;}
 		.right{text-align:right; padding-right:0;h3{color:#f86637}}
 		.left{text-align:left; padding-left:0; border-left:2px dotted gray;}
+		
 	}}
 
 .funds{
+	.bottom-table, .top-table{
 	.tab-content{margin-top:0.5em; h3{font-size:15px; font-weight:600; padding:2em 0 0;} }
-	.nav-tabs li{width:25%; border:none; color:white; & a{color:#000; font-weight:600;}  &.active a, &.active a:focus, &.active a:hover{color:white;background-color:#18bb9c;}}
+	.nav-tabs li{width:25%; border:none; color:white; & a{color:#000; font-weight:600;}  &.active a, &.active a:focus, &.active a:hover{color:white;background-color:#18bb9c;}}}
 	.bottom-table{
 		padding:20px;
 		margin:5em auto; border:2px solid rgb(204, 204, 204);
@@ -439,13 +434,14 @@ h4{font-size:20px;}
 		padding:5px;
 		border: 1px solid rgb(204, 204, 204);
 		}
-		button {
+		
+		.buy{background-color:green;}
+		.sip{background-color:#b38015;}
+		.buy, .sip {
 		color: #fff;
 		border-color: #1F93EF;
 		width: 90%;
 		margin:5%;
-		&.buy{background-color:green;}
-		&.sip{background-color:#b38015;}
 		&:hover{
 		background-color:#18bb9c;
 		color: #fff;
@@ -522,8 +518,6 @@ p{font-size:15px;}
 .why-fino{
 	#why-fino{
 	background-image: url("../images/why-fino-logo.jpg");
-	h3{padding-top:4.5em;margin-left:0;}
-	p{font-weight:700; margin-left:-2em;}
 	color:white;
 	}
 	.section{
@@ -550,7 +544,6 @@ p{font-size:15px;}
 		h2{padding:0;}
 		}
 		#two{
-		height:400px;
 		.carousel-inner > .item > img, .carousel-inner > .item > a > img {
 				width: 100%;
 				margin: auto;
@@ -561,7 +554,7 @@ p{font-size:15px;}
 .pricing{
 	#pricing{
 	background-image: url("../images/pricing-logo.jpg");
-	h3{padding-top:3em;margin-left:0;}
+	h3{padding-top:5em;margin-left:0;}
 	p{font-weight:700; margin-left:-2em;}
 	color:white;
 	}

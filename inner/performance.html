@@ -11,33 +11,6 @@
         <link rel="stylesheet" href="../style/header.css">      
     </head>
     <body>
-<!--    <header> 
-    <nav class="navbar navbar-default navbar-fixed-top"  >
-        <div class="container">
-            <div class="navbar-header page-scroll">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="#page-top"><img src="../images/logo_img.jpg " ></a>
-            </div>
-
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav navbar-right">
-                    <li class="hidden">
-                        <a href="#page-top"></a>
-                    </li>
-          <li><a class="page-scroll cd-signin" href="#0">Sign in</a></li>
-          <li><a class="page-scroll cd-signup" href="#0">Sign up</a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-    </header>
-	
-	-->
     <header>
     <!-- Navigation -->
 <nav class="navbar navbar-default inner-head">
@@ -50,16 +23,17 @@
 	    <div class="collapse navbar-collapse" id="dropdown-thumbnail-preview">
       <ul class="nav navbar-nav">
         <li ><a href="Summary.html" >Summary</a></li>
-        <li><a href="Portfolio.html">Portfolio</a></li>
+        <li><a href="invest.html">invest</a></li>
         <li ><a href="#" class="active-now">Performance</a></li>
         <li><a href="Benchmark.html">Benchmark</a></li>
         <li><a href="Funds.html">Funds</a></li>
 
       </ul>
 
-      <ul class="nav navbar-nav navbar-right">
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Username <span class="caret"></span></a>
+       <ul class="nav navbar-nav navbar-right">
+        <li class="dropdown" data-toggle="modal" data-target="#tour_modal"><a>take a Tour</a></li>
+        <li class="dropdown username" >
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" >Username <span class="caret"></span></a>
           <ul class="dropdown-menu" role="menu">
             <li><a href="#">Total Balance</a></li>
             <li><a href="#">Add a Family Member</a></li>
@@ -75,8 +49,8 @@
 	<div class="container performance">
         <div class="panel panel-default">
           <div class="panel-body">
-          <div class="row">
-        <div class="col-sm-3 col-md-3">
+        <div class="row">
+			<div class="col-sm-3 col-md-3">
             <div class="panel-group" id="accordion">
                 <div class="panel panel-default">
                     <div class="panel-heading">
@@ -125,94 +99,461 @@
 
             </div>
         </div>
-        <div class="col-sm-9 col-md-9 right-side-graph">
-  <div class="row">
+			<div class="col-sm-9 col-md-9 right-side-graph">
+				<div class="row">
 
-    <div class=" box" id="Recent" > 
+			<div class=" box" id="Recent" > 
 
-<div>
+				<div>
 
-<p><b >My Orders  </b></p>
+				<p><b >My Orders  </b></p>
 
-<p > Our state of the art Analytics Infrastructure enables us to provide you personalized recommendation on your savings portfolio. Our state of the art Analytics Infrastructure enables us to provide you personalized recommendation on your savings portfolio.</p>
-</div>
-<table  >
-  <tr>
-      <th>Date</th><th>Transaction</th><th>Amount</th><th>Status</th>
-  </tr>
-  <tr> <td> 15/09/2015</td><td> Buy 2.8 Units ICICI Balance Fund</td><td> 3,000</td><td> --</td></tr>
-  <tr> <td> 15/09/2015</td><td> Buy 10 Units UTI Money Market Fund</td><td> 3,000</td><td> --</td></tr>
+				<p > Our state of the art Analytics Infrastructure enables us to provide you personalized recommendation on your savings portfolio. Our state of the art Analytics Infrastructure enables us to provide you personalized recommendation on your savings portfolio.</p>
+				</div>
+				<table  >
+				  <tr>
+					  <th>Date</th><th>Transaction</th><th>Amount</th><th>Status</th>
+				  </tr>
+				  <tr> <td> 15/09/2015</td><td> Buy 2.8 Units ICICI Balance Fund</td><td> 3,000</td><td> --</td></tr>
+				  <tr> <td> 15/09/2015</td><td> Buy 10 Units UTI Money Market Fund</td><td> 3,000</td><td> --</td></tr>
 
-</table>
-<div  class="order">
-<div ><button type="button" class="btn btn-default" >Order Status</button> <span ><a href="" >Click Here</a></span></div>
-<div ><button type="button" class="btn btn-default" >Transaction History</button><span ><a href="" >Click Here</a></span></div>
-</div>
-    </div>
-    <div class=" box" id="menu1" style="display:block"> 
-      <div id="chartdiv2" style="width: 80%; height: 400px; " ></div>
-    </div>
-    <div class="box" id="menu2" > 
+				</table>
+				<div  class="order">
+				<div ><button type="button" class="btn btn-default" >Order Status</button> <span ><a href="" >Click Here</a></span></div>
+				<div ><button type="button" class="btn btn-default" >Transaction History</button><span ><a href="" >Click Here</a></span></div>
+				</div>
+			</div>
+			<div class=" box" id="menu1" style="display:block"> 
+			  <div id="chartdiv2" style="width: 80%; height: 400px; " ></div>
+			</div>
+			<div class="box" id="menu2" > 
 
-<div id="chartdiv1" style="width: 80%; height: 200px; align:center" ></div>
+				<div id="chartdiv1" style="width: 80%; height: 200px; align:center" ></div>
 
-<table >
-  <tr>
-      <th colspan="3">Balance Details</th>
-  </tr>
-  <tr> <td> Biginning Balance</td><td> 250,000</td><td> </td></tr>
-  <tr> <td> Purchases & Withdrawls</td><td> 55,000</td><td> </td></tr>
-  <tr> <td> Investment Returns</td><td> 45,000</td><td> </td></tr>
-  <tr> <td> Ending Balance</td><td> 350,000</td><td> </td></tr>
-  <tr> <td> Rate of Return</td><td> 10.70%</td><td> </td></tr></table>
-    </div>
-    <div class=" box" id="menu3" > 
-    
-<div>
-<h1> Balance and Holding </h1>
-<p > Our state of the art Analytics Infrastructure enables us to provide you personalized recommendation on your savings portfolio. Our state of the art Analytics Infrastructure enables us to provide you personalized recommendation on your savings portfolio.</p>
-</div>
-<table  >
-  <tr>
-      <th>Date</th><th>Transaction</th><th>Amount</th><th>Status</th>
-  </tr>
-  <tr> <td> 15/09/2015</td><td> Buy 2.8 Units ICICI Balance Fund</td><td> 3,000</td><td> --</td></tr>
-  <tr> <td> 15/09/2015</td><td> Buy 10 Units UTI Money Market Fund</td><td> 3,000</td><td> --</td></tr>
+				<table >
+				  <tr>
+					  <th colspan="3">Balance Details</th>
+				  </tr>
+				  <tr> <td> Biginning Balance</td><td> 250,000</td><td> </td></tr>
+				  <tr> <td> Purchases & Withdrawls</td><td> 55,000</td><td> </td></tr>
+				  <tr> <td> Investment Returns</td><td> 45,000</td><td> </td></tr>
+				  <tr> <td> Ending Balance</td><td> 350,000</td><td> </td></tr>
+				  <tr> <td> Rate of Return</td><td> 10.70%</td><td> </td></tr>
+				</table>
+			</div>
+			<div class=" box" id="menu3" > 
+			
+				<div>
+				<h1> Balance and Holding </h1>
+				<p > Our state of the art Analytics Infrastructure enables us to provide you personalized recommendation on your savings portfolio. Our state of the art Analytics Infrastructure enables us to provide you personalized recommendation on your savings portfolio.</p>
+				</div>
+					<table  >
+					  <tr>
+						  <th>Date</th><th>Transaction</th><th>Amount</th><th>Status</th>
+					  </tr>
+					  <tr> <td> 15/09/2015</td><td> Buy 2.8 Units ICICI Balance Fund</td><td> 3,000</td><td> --</td></tr>
+					  <tr> <td> 15/09/2015</td><td> Buy 10 Units UTI Money Market Fund</td><td> 3,000</td><td> --</td></tr>
 
-</table>
+					</table>
 
-  </div>
-  
+			</div>
+		  
 
-    <div class="box" id="projected"> 
-    <div id="selector">
-    <label> <button type="button"  name="dataset" checked="checked" onclick="selectDataset(0);" class="btn btn-default" />1 Year </button> </label>
-    <label><button type="button" name="dataset" onclick="selectDataset(1);" class="btn btn-default">3 Year </button>  </label>
-    <label><button  type="button" name="dataset" onclick="selectDataset(2);" class="btn btn-default">5 Year </button> </label>
-</div>
-<div id="chartdiv" style="width: 80%; height: 200px; align:center" ></div>
+			<div class="box" id="projected"> 
+			<div id="selector">
+				<label><button type="button"  name="dataset" checked="checked" onclick="selectDataset(0);" class="btn btn-default" >1 Year </button> </label>
+				<label><button type="button" name="dataset" onclick="selectDataset(1);" class="btn btn-default">3 Year </button>  </label>
+				<label><button  type="button" name="dataset" onclick="selectDataset(2);" class="btn btn-default">5 Year </button> </label>
+			</div>
+			<div id="chartdiv" style="width: 80%; height: 200px; align:center" ></div>
 
-<table >
-  <tr>
-      <th ></th>
-      <th >Funds not Available</th>
-      <th >Funds Available</th>
-  </tr>
-  <tr> <td> 2015 Est</td><td> 40,000</td><td> -- </td></tr>
-  <tr> <td> 2016 Est</td><td> 30,000</td><td> 20,000 </td></tr>
-  <tr> <td> 2017 Est</td><td> 80,000</td><td> 30,000 </td></tr>
-    </div>
-  
-  
-        </div>
-    </div>
-</div>
+			<table>
+				  <tr>
+					  <th ></th>
+					  <th >Funds not Available</th>
+					  <th >Funds Available</th>
+				  </tr>
+				  <tr> <td> 2015 Est</td><td> 40,000</td><td> -- </td></tr>
+				  <tr> <td> 2016 Est</td><td> 30,000</td><td> 20,000 </td></tr>
+				  <tr> <td> 2017 Est</td><td> 80,000</td><td> 30,000 </td></tr>
+			</table >
+			</div>
+		  
+		  
+			</div>
+			</div>
+		</div>
             
           </div>
         </div>
+	
     </div>
     
-        
+	<!-- Modal -->
+    <div class="modal fade tour_popup" id="tour_modal" tabindex="-1" role="dialog" aria-labelledby="tour_modal">
+              <div class="modal-dialog  modal-lg" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h1 class="modal-title" id="myModalLabel">Brief tour of the website</h1>
+                  </div>                
+
+                  <div class="modal-body">
+                  <!-- starting tabs -->
+                   <!-- Nav tabs -->
+					  <ul class="nav nav-tabs" role="tablist" id="tour_tabs">
+					    <li role="presentation"><a href="#summary" aria-controls="summary" role="tab" data-toggle="tab">SUMMARY</a></li>
+					    <li role="presentation"><a href="#Invest" aria-controls="Invest" role="tab" data-toggle="tab">INVEST</a></li>
+						<li role="presentation" class="active"><a href="#Performance" aria-controls="Performance" role="tab" data-toggle="tab">PERFORMANCE</a></li>
+					    <li role="presentation"><a href="#benchmark" aria-controls="benchmark" role="tab" data-toggle="tab">BENCHMARK</a></li>
+					    <li role="presentation"><a href="#funds" aria-controls="funds" role="tab" data-toggle="tab">FUNDS</a></li>
+					  </ul>
+
+					  <div class="tab-content">
+					    <div role="tabpanel" class="tab-pane" id="summary">
+					    <!-- starting first tab -->
+					    	<!-- Pasting the slider -->
+				        <div id="carousel-tour" class="carousel slide" data-ride="carousel" data-interval="false">
+				  <!-- Indicators --> 
+						  <ol class="carousel-indicators">
+						    <li data-target="#carousel-tour" data-slide-to="0" class="active"></li>
+						    <li data-target="#carousel-tour" data-slide-to="1"></li>
+						    <li data-target="#carousel-tour" data-slide-to="2"></li>
+						  </ol>
+
+				  <!-- Wrapper for slides -->
+				  <div class="carousel-inner" role="listbox">
+				    <div class="item active">
+				    <div class="row">
+				    	<div class="col-md-6">
+				    		<img src="../images/tour/summary/one.png" alt="tour_summary">
+				    	</div>
+				    	<div class="col-md-6">
+				    		<h5>Invest </h5>
+				    		<p> Enter the desired amount to invest.</p>
+				    		<h5>Add Goal </h5>
+				    		<p>Goal setting is pretty simple. A goal is something that you are willing to work for.</p>
+				    	</div> 			    		
+
+				    </div>
+				      
+				    </div>
+				    <div class="item">
+				       <div class="row">
+				    	<div class="col-md-6">
+				    		<img src="../images/tour/summary/two.png" alt="tour_summary">
+				    	</div>
+				    	<div class="col-md-6">
+				    	<h5>Total Balance for all goals</h5>
+				    		<p>A consolidated view of your overall investments and earnings. </p>
+				    	</div>  	
+
+				    </div>
+				    </div>
+
+				    <div class="item">
+				      <div class="row">
+				    	<div class="col-md-6">
+				    		<img src="../images/tour/summary/three.png" alt="tour_summary">
+				    	</div>
+				    	<div class="col-md-6">
+				    	<h5>Goal</h5>
+				    		<p>Your goal account summary. </p>
+				    	</div>  	
+
+				    </div>
+				    </div>
+				    
+				  </div>
+
+				  <!-- Controls -->
+				  <a class="left carousel-control" href="#carousel-tour" role="button" data-slide="prev">
+				    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+				    <span class="sr-only">Previous</span>
+				  </a>
+				  <a class="right carousel-control" href="#carousel-tour" role="button" data-slide="next">
+				    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+				    <span class="sr-only">Next</span>
+				  </a>
+				</div>
+				        <!-- End of slider -->
+					    <!-- end first tab -->
+					    </div>
+					    <div role="tabpanel" class="tab-pane" id="Invest">
+					    <!-- start -->
+					    	<!-- Pasting the slider -->
+				        <div id="carousel-tour2" class="carousel slide" data-ride="carousel" data-interval="false">
+				  <!-- Indicators --> 
+						  <ol class="carousel-indicators">
+						    <li data-target="#carousel-tour2" data-slide-to="0" class="active"></li>
+						    <li data-target="#carousel-tour2" data-slide-to="1"></li>
+						    <li data-target="#carousel-tour2" data-slide-to="2"></li>
+						    <li data-target="#carousel-tour2" data-slide-to="3"></li>
+						  </ol>
+
+				  <!-- Wrapper for slides -->
+				  <div class="carousel-inner" role="listbox">
+				    <div class="item active">
+				    <div class="row">
+				    	<div class="col-md-6">
+				    		<img src="../images/tour/invest/one.png" alt="tour_summary">
+				    	</div>
+				    	<div class="col-md-6">
+				    	<h5>Execute Portfolio</h5>
+				    		<p>Execute the recommended plan that best meets your needs and tolerance for risk. </p>
+				    	</div> 			    		
+
+				    </div>
+				      
+				    </div>
+				    <div class="item">
+				       <div class="row">
+				    	<div class="col-md-6">
+				    		<img src="../images/tour/invest/two.png" alt="tour_summary">
+				    	</div>
+				    	<div class="col-md-6">
+				    	<h5>Change Portfolio</h5>
+				    		<p>If you wish to modify the recommended portfolio you can use this option. Our advisors are available to help you choose wisely.</p>
+				    	</div>  	
+
+				    </div>
+				    </div>
+
+				    <div class="item">
+				      <div class="row">
+				    	<div class="col-md-6">
+				    		<img src="../images/tour/invest/three.png" alt="tour_summary">
+				    	</div>
+				    	<div class="col-md-6">
+				    	<h5>Buy/Sell</h5>
+				    		<p>You can transact and manage individual funds/assets from here. </p>
+				    	</div>  	
+
+				    </div>
+				    </div>
+
+				    <div class="item">
+				      <div class="row">
+				    	<div class="col-md-6">
+				    		<img src="../images/tour/invest/four.png" alt="tour_summary">
+				    	</div>
+				    	<div class="col-md-6">
+				    	<h5>Mutual Funds Listing</h5>
+				    		<p>List of Mutual funds under your portfolio. You can click on each of the them to view a brief description.</p>
+				    	</div>  	
+
+				    </div>
+				    </div>
+				    
+				  </div>
+
+				  <!-- Controls -->
+				  <a class="left carousel-control" href="#carousel-tour2" role="button" data-slide="prev">
+				    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+				    <span class="sr-only">Previous</span>
+				  </a>
+				  <a class="right carousel-control" href="#carousel-tour2" role="button" data-slide="next">
+				    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+				    <span class="sr-only">Next</span>
+				  </a>
+				</div>
+				        <!-- End of slider -->
+					    <!-- end -->
+
+					    </div>
+					    
+						<div role="tabpanel" class="tab-pane fade in active" id="Performance">
+
+					    <!-- start -->
+					    	<!-- Pasting the slider -->
+				         <div id="carousel-tour5" class="carousel slide" data-ride="carousel" data-interval="false">
+				  <!-- Indicators --> 
+						  <ol class="carousel-indicators">
+						    <li data-target="#carousel-tour5" data-slide-to="0" class="active"></li>
+						    <li data-target="#carousel-tour5" data-slide-to="1"></li>
+						  </ol>
+
+				  <!-- Wrapper for slides -->
+				  <div class="carousel-inner" role="listbox">
+				    <div class="item active">
+				    <div class="row">
+				    	<div class="col-md-6">
+				    		<img src="../images/tour/performance/tour1.png" alt="tour_summary">
+				    	</div>
+				    	<div class="col-md-6">
+				    	<h5>Performance Statistics</h5>
+				    		<p>Check your performance over Balance snapshot,Balance Overtime,Balance and Holding.</p>
+				    	</div> 			    		
+
+				    </div>
+				      
+				    </div>
+				    <div class="item">
+				       <div class="row">
+				    	<div class="col-md-6">
+				    		<img src="../images/tour/performance/tour2.png" alt="tour_summary">
+				    	</div>
+				    	<div class="col-md-6">
+				    	<h5>Performance Statistics</h5>
+				    		<p>Compare your performance with our suggested projected savings.</p>
+				    		<p>Also, check your recent transactions to track yourself. </p>
+				    	</div>  	
+
+				    </div>
+				    </div>
+
+				  </div>
+
+				  <!-- Controls -->
+				  <a class="left carousel-control" href="#carousel-tour5" role="button" data-slide="prev">
+				    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+				    <span class="sr-only">Previous</span>
+				  </a>
+				  <a class="right carousel-control" href="#carousel-tour5" role="button" data-slide="next">
+				    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+				    <span class="sr-only">Next</span>
+				  </a>
+				</div>
+				        <!-- End of slider -->
+					    <!-- end -->
+					    </div>
+					 
+						<div role="tabpanel" class="tab-pane" id="benchmark">
+
+					    	<!-- start -->
+					    	<!-- Pasting the slider -->
+				        <div id="carousel-tour3" class="carousel slide" data-ride="carousel" data-interval="false">
+				  <!-- Indicators --> 
+						  <ol class="carousel-indicators">
+						    <li data-target="#carousel-tour3" data-slide-to="0" class="active"></li>
+						   
+						  </ol>
+
+				  <!-- Wrapper for slides -->
+				  <div class="carousel-inner" role="listbox">
+				    <div class="item active">
+				    <div class="row">
+				    	<div class="col-md-6">
+				    		<img src="../images/tour/benchmark/one.png" alt="tour_summary">
+				    	</div>
+				    	<div class="col-md-6">
+				    	<h5>Benchmark</h5>
+				    		<p>we provide you a set of priorities based on your expectations using finotrust data driven analytics. </p>
+				    	</div> 			    		
+
+				    </div>				      
+				    </div> 			    
+				  </div>
+
+				  <!-- Controls -->
+				  <a class="left carousel-control" href="#carousel-tour3" role="button" data-slide="prev">
+				    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+				    <span class="sr-only">Previous</span>
+				  </a>
+				  <a class="right carousel-control" href="#carousel-tour3" role="button" data-slide="next">
+				    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+				    <span class="sr-only">Next</span>
+				  </a>
+				</div>
+				        <!-- End of slider -->
+					    <!-- end -->
+					    </div>
+					    <div role="tabpanel" class="tab-pane" id="funds">
+
+					    <!-- start -->
+					    	<!-- Pasting the slider -->
+				        <div id="carousel-tour4" class="carousel slide" data-ride="carousel" data-interval="false">
+				  <!-- Indicators --> 
+						  <ol class="carousel-indicators">
+						    <li data-target="#carousel-tour4" data-slide-to="0" class="active"></li>
+						    <li data-target="#carousel-tour4" data-slide-to="1"></li>
+						    <li data-target="#carousel-tour4" data-slide-to="2"></li>
+						    <li data-target="#carousel-tour4" data-slide-to="3"></li>
+						  </ol>
+
+				  <!-- Wrapper for slides -->
+				  <div class="carousel-inner" role="listbox">
+				    <div class="item active">
+				    <div class="row">
+				    	<div class="col-md-6">
+				    		<img src="../images/tour/funds/one.png" alt="tour_summary">
+				    	</div>
+				    	<div class="col-md-6">
+				    	<h5>Mutual Fund Types</h5>
+				    		<p>You can glide through the tabs for different mutual funds each having their own level of risks and returns.</p>
+				    	</div> 			    		
+
+				    </div>
+				      
+				    </div>
+				    <div class="item">
+				       <div class="row">
+				    	<div class="col-md-6">
+				    		<img src="../images/tour/funds/two.png" alt="tour_summary">
+				    	</div>
+				    	<div class="col-md-6">
+				    	<h5>Search funds to invest</h5>
+				    		<p>This sections helps you to search different scheme types to invest in.</p>
+				    	</div>  	
+
+				    </div>
+				    </div>
+
+				    <div class="item">
+				      <div class="row">
+				    	<div class="col-md-6">
+				    		<img src="../images/tour/funds/three.png" alt="tour_summary">
+				    	</div>
+				    	<div class="col-md-6">
+				    	<h5>Recent transactions</h5>
+				    		<p>A brief summary of your recent transactions is shown here. </p>
+				    	</div> 	
+
+				    </div>
+				    </div>
+
+				    <div class="item">
+				      <div class="row">
+				    	<div class="col-md-6">
+				    		<img src="../images/tour/funds/three.png" alt="tour_summary">
+				    	</div>
+				    	<div class="col-md-6">
+				    	<h5>SIP & One Time</h5>
+				    		<p>Systematic Investment Planning - SIP is a method of investing a fixed sum, regularly, in a mutual fund scheme allowing you to buy units on a given date each month.</p>
+							<p> One Time - You can invest lump sum into the mutual fund. </p>
+				    	</div> 	
+
+				    </div>
+				    </div>
+				    
+				  </div>
+
+				  <!-- Controls -->
+				  <a class="left carousel-control" href="#carousel-tour4" role="button" data-slide="prev">
+				    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+				    <span class="sr-only">Previous</span>
+				  </a>
+				  <a class="right carousel-control" href="#carousel-tour4" role="button" data-slide="next">
+				    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+				    <span class="sr-only">Next</span>
+				  </a>
+				</div>
+				        <!-- End of slider -->
+					    <!-- end -->
+					    </div>
+					  </div>
+
+                  
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                  </div>
+                </div>
+              </div>
+    
+	</div>
+            <!--  -->
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>  
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha256-KXn5puMvxCw+dAYznun+drMdG1IFl3agK0p/pqT9KAo= sha512-2e8qq0ETcfWRI4HJBzQiA3UoyFk6tbNyG+qSaIBZLyW9Xf3sWZHN/lxe9fTh1U45DpPf07yj94KsUHHWe4Yk1A==" crossorigin="anonymous">  </script>	 
 	<script src="../js/script.js"></script>
