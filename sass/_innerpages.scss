@@ -1,63 +1,60 @@
-.manage_account{
-	h1{
-			line-height: 35px;
-			padding: 0px;
-			color: #17406B;
-			@include fontsb(21);
-		}
-	.account_controls{
-		.deposit_div{
-			@include fontm(14);
-			.deposit_box{
-				width: 100px;
-				float: left;
-				position: relative;
-				form{
-					padding: 15px 0px;
-					label{
-						padding-bottom: 10px;
+.summary{
+	.manage_account{
+		h1{
+				line-height: 35px;
+				padding: 0px;
+				color: #17406B;
+				@include fontsb(21);
+			}
+		.account_controls{
+			.deposit_div{
+				@include fontm(14);
+				.deposit_box{
+					width: 100px;
+					float: left;
+					position: relative;
+					form{
+						padding: 15px 0px;
+						label{
+							padding-bottom: 10px;
+						}
+					}	
+						
+					.show_form{
+						display: block;
+					}	
+					.dropdown span.caret{
+						margin-left: 75px;
 					}
-				}	
-					
-				.show_form{
-					display: block;
-				}	
-				.dropdown span.caret{
-					margin-left: 75px;
+				}
+				.btn-info{
+					margin-right: 5px;
+				}
+				button[type="submit"]{
+					width: 100%;
+				}
+				.deposit_button{
+					background-color: #7FB800;
+					color: #fff;
 				}
 			}
-			.deposit-form{
-				position: absolute;
-				box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.5);
-				z-index: 10;
-				border-radius: 5px;
-				padding: 10px;
-				top: 40px;		
-				display: none;	
-				background-color:#fff;
-				ul{
-					width: 100%;
-				}	
-			}
-			
-			.btn-info{
-				margin-right: 5px;
-			}
-			button[type="submit"]{
-				width: 100%;
-			}
-			.deposit_button{
-				background-color: #7FB800;
-				color: #fff;
-			}
+
 		}
-
 	}
+	.modal-dialog{
+	&.add-goal{
+		width:70%;
+		top:5em;
+		.btn-default{box-shadow:none; &.select-goal{width:14em; &.active, &:active,&:focus,&:hover{background-color:#18bb9c;color:white; font-weight:700;} }}
+		.goals{width:145%; padding:10px 0;}
+		input{position: absolute;
+		clip: rect(0px, 0px, 0px, 0px);
+		pointer-events: none;}
+		}}
 }
-
 /* Overview */
 .panel-default{
-	
+	margin-top: 30px;
 	.chartdiv{
 		min-height: 300px;
 	}
@@ -163,13 +160,29 @@
 
 /* POrtfolio Page */
 .portfolio{
+	.projected-gap{
+		text-align:right;
+		input{
+		width:10em; 
+		border:2px solid gray;
+		margin:10px 0 10px 10px; 
+		border-color:#ddd; 
+		border-radius:4px; 
+		padding:5px 0;
+		}}
+	.panel-default{
+	margin-top: 0px;
+	}
 	.panel {
+		.Current-Value{padding-left:14em;}
+		.Current-Value.\32 {padding-left:12.5em;}
+		.Current-Value span{padding-left:1em;font-weight:700;}
 		.panel-fake-heading{			
 			padding: 10px 15px;
 			border-bottom: 1px solid #DDD;
 			border-top-left-radius: 3px;
 			border-top-right-radius: 3px;		
-
+			.year, .amount{text-align:center;}
 			p,h2{
 				@include fontsb(16);
 			}
@@ -221,7 +234,7 @@
 			}
 			.portfolio_large_info{
 				.heading {
-					padding: 10px 15px;
+					padding: 20px 15px;
 					a:focus, a:hover {
 						text-decoration: none;
 					}
@@ -237,7 +250,7 @@
 						}
 					}
 					td,td p, td a {
-						@include fontm(12);
+						@include fontm(15);
 						color: #696969;
 						text-decoration: none;
 						padding-bottom:5px;
@@ -263,9 +276,6 @@
 							color: #2C3E51;
 						}
 					}
-					tbody tr:not(.tr_fund) td {
-						padding-left:15px;
-					}
 					tfoot {
 						border-top: 1px solid rgb(204, 204, 204);
 						td {
@@ -283,15 +293,20 @@
 					}
 					
 					.tr_fund td{
-						font-weight:700;
-						color:#18bb9c;
+						font-size: 13px;
+						text-transform: uppercase;
+						color:#000;
 					}
 					.action{
 						width:100px;
 						background-color:#2C3E50;
 						color:white;
 					}
-
+					
+				#new_investment{
+					.add_scheme{ &a{ color:red !important;}}
+					}
+					tr{th{padding-top:1em;}}
 				}/* end of table */
 
 				.modal_container{
@@ -324,6 +339,7 @@
 
 							}
 					}
+					
 					}
 
 					
@@ -348,7 +364,7 @@
 		}
 		table {
 			min-width: 70%;
-			margin-top: 25px;
+			margin-top: 0px;
 			td{
 				border-bottom:1px solid #DDD;
 				padding: 10px 0px;

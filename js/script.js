@@ -300,7 +300,10 @@ $(".panel.panel-default .panel.panel-default").on("show.bs.collapse",function(ev
 /*	console.log(eventID);
 	console.log($(eventID).siblings().find("span"));*/
 	$(eventID).siblings().find("span.sign").toggleClass("plus-sign, minus-sign");
+<<<<<<< HEAD
 
+=======
+>>>>>>> finogit/master
 });
 
 $(".panel.panel-default .panel.panel-default").on("hide.bs.collapse",function(event){
@@ -309,10 +312,19 @@ $(".panel.panel-default .panel.panel-default").on("hide.bs.collapse",function(ev
 	/*console.log(eventID);
 	console.log($(eventID).siblings().find("span"));*/
 	$(eventID).siblings().find("span.sign").toggleClass("plus-sign, minus-sign");
+<<<<<<< HEAD
 
+=======
+>>>>>>> finogit/master
+});
+$(".panel.panel-default .panel.panel-default").on("show.bs.collapse",function(event){
+	eventID="#"+(event.target.id);
+	$(eventID).siblings().find("span.Current-Value").fadeOut();
+});
+$(".panel.panel-default .panel.panel-default").on("hide.bs.collapse",function(event){
+	eventID="#"+(event.target.id);
+	$(eventID).siblings().find("span.Current-Value").fadeIn();
 });
 
 
 });
-
-

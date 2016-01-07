@@ -1,0 +1,365 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>forms</title>
+        <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600' rel='stylesheet' type='text/css'>
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha256-7s5uDGW3AHqw6xtJmNNtr+OBRJUlgkNJEo78P4b0yRw= sha512-nNo+yCHEyn0smMxSswnf/OnX6/KwJuZTlNZBjauKhTK0c+zT+q5JOCx0UFhXQ6rJR9jg6Es8gPuD2uZcYDLqSw==" crossorigin="anonymous">
+        <link rel="stylesheet" href="../style/global.css">
+        <link rel="stylesheet" href="../style/header.css">
+       
+    </head>
+    <body>
+   <header> 
+    <nav class="navbar navbar-default navbar-fixed-top"  >
+        <div class="container">
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#page-top"><img src="../images/logo_img.jpg " ></a>
+            </div>
+
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="hidden">
+                        <a href="#page-top"></a>
+                    </li>
+          <li><a class="page-scroll cd-signin" href="#0">Sign in</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    </header>
+	
+
+    <div class="container sign-up"> 
+            <div class="">
+                <form class="modal multi-step" id="demo-modal-3" action="summary.html">
+                <div class="modal-content">
+                <div class="modal-header hidden-xs ">
+                    <h4 class="modal-title step-1" data-step="1">Goal Recommendations </h4>
+                    <h4 class="modal-title step-2" data-step="2"> Account Details</h4>
+                    <h4 class="modal-title step-3" data-step="3`">Contact Informtion</h4>
+                    <h4 class="modal-title step-4" data-step="4"> Identity Verification </h4>
+                    <div class="m-progress">
+                        <div class="m-progress-bar-wrapper">
+                            <div class="m-progress-bar">
+                            </div>
+                        </div>                       
+                       
+                    </div>
+                </div>
+                <div class="modal-body step-1 row" data-step="1">
+                    <div class="info-container col-sm-5">
+                        <div class="info_bubble">
+                            <div class="info_icon"></div>
+                            <h1>SIGN UP TODAY</h1>
+                            <p> You are moments away from getting started on your goal</p>
+
+                            <div class="info_questions">
+                            <h2>Questions </h2>
+                            <p>We're here to help Contact us: </p>
+                            <p>080 4124 - 5883 </p>
+                            <p> support@finotrust.com</p>
+                            <p>FAQ's</p>
+                            </div>
+                        </div>
+                    </div>
+                            <div class="col-sm-7">
+                            <h1 > Basic information</h1>
+                            <p > We use this information to create your account. Please enter the same name you use to file taxes.
+                            </p>
+                            <div class="name_field row " >
+                                <div class="col-sm-6"> 
+                                    <label for="" class="si-menu-label ">First Name<span class="required"> *</span></label>
+                                    <input type="text" placeholder="First Name" name="firstname">
+                                </div>
+
+                                <div class="col-sm-6">
+                                    <label for="" class="si-menu-label">Middle Name</label>
+                                    <input type="text" placeholder="Middle Name" name="middlename">
+                                </div>
+                            </div>
+                             
+                            <label for="" class="si-menu-label" >Last Name<span class="required"> *</span></label>
+                            <input type="text" placeholder="Last Name" name="lastname">
+                            <label for="" class="si-menu-label">Email Address<span class="required"> *</span></label>
+                            <input type="email" placeholder="Email Address" name="email">
+                            <label for="" class="si-menu-label">Password<span class="required"> *</span></label>
+                            <input type="password" placeholder="Password" id="password" name="password">
+                            <label for="" class="si-menu-label">Confirm Password<span class="required"> *</span></label>
+                            <input type="password" placeholder="Confirm Password" name="confirm_password">
+							
+                            </div >
+                        
+                </div>
+                <div class="modal-body step-2 row" data-step="2">
+                <div class="info-container col-sm-5">
+                        <div class="info_bubble">
+                            <div class="info_icon"></div>
+                            <h1>Did you know?</h1>
+                            <p> You are one of the elite 3% of Indians who invest efficiently</p>
+
+                            <div class="info_questions">
+                            <h2>Questions </h2>
+                            <p>We're here to help Contact us: </p>
+                            <p>080 4124 - 5883 </p>
+                            <p> support@finotrust.com</p>
+                            <p>FAQ's</p>
+                            </div>
+                        </div>
+                    </div>
+                            <div class="col-sm-7">
+                            
+                            <h3 > Contact information
+                            </h3>
+                            <p > 
+                            To sign up for a FinoTrust account you must have a valid mailing address. We will never sell this information to anyone. Ever.
+                            </p>
+                            
+                            <label for="" class="si-menu-label">Address Line 1<span class="required"> *</span></label>
+                            <input type="text" placeholder="Address Line 1" name="address_1">
+                            <label for="" class="si-menu-label">Address Line 2</label>
+                            <input type="text" placeholder="Address Line 1">
+                            <label for="" class="si-menu-label">City<span class="required"> *</span></label>
+                            <input type="text" placeholder="City" name="city">
+                            <label for="" class="si-menu-label">State<span class="required"> *</span></label>
+                            <input type="text" placeholder="State" name="state">
+                            <label for="" class="si-menu-label">ZIP Code<span class="required"> *</span></label>
+                            <input type="text" placeholder="ZIP Code" name="zip_code">
+                            <label for="" class="si-menu-label">Mobile Number<span class="required"> *</span></label>
+                            <input type="text" placeholder="Country Code" name="country_code">
+                            <input type="text" maxlength="10" placeholder="Mobile Number" name="phone_number">
+
+                            <label for="our-info" class="si-menu-label">How did you hear about us? </label>
+                            <select class="form-control si-menu-input" id="our-info">
+                            <option value="" selected hidden>Select</option>
+                            <option value="Friends">Friends</option>
+                            <option value="Online">Online</option>
+                            <option value="Social_Network">Facebook / Twitter / Quora</option>
+                            <option value="Mobile_Advertising">Mobile Advertising</option>
+
+                            </select>
+                            </div >
+                </div>
+                
+                <div class="modal-body step-3 row" data-step="3">
+                <div class="info-container col-sm-5">
+                        <div class="info_bubble">
+                            <div class="info_icon"></div>
+                            <h1>Bank</h1>
+                            <p> Level Security: Enterprise level security for all your financial data</p>
+
+                            <div class="info_questions">
+                            <h2>Questions </h2>
+                            <p>We're here to help Contact us: </p>
+                            <p>080 4124 - 5883 </p>
+                            <p> support@finotrust.com</p>
+                            <p>FAQ's</p>
+                            </div>
+                        </div>
+                    </div>
+                            <div class="col-sm-7">
+                           
+                            <h3 > Identity information
+                            </h3>
+                            <p > 
+                            FinoTrust is a financial institution just like a bank or a brokerage firm. This requires us to verify your identity. We will not run a credit check.
+                            </p>
+                            <label for="" class="si-menu-label">PAN Number</label>
+                            <input type="text" placeholder="PAN Number" name="pan">
+                            <label for="" class="si-menu-label">Date of Birth<span class="required"> *</span></label>   
+                            <input type="text" id="datepicker" name="date" placeholder="DOB" readonly >                         
+                            <label for="" class="si-menu-label">Gender</label>
+                            <input type="radio" name="sex" value="male">  <label for="male"> Male &nbsp;&nbsp;</label>                       
+                            <input type="radio" name="sex" value="female"> <label for="female"> Female</label> 
+                            <label for="residency_tax" class="si-menu-label ">What is your residency for Tax Status?<span class="required"> *</span></label>
+                             <select class="form-control si-menu-input" id="residency_tax" name="residency_tax">
+                             <option value="" selected hidden> Select </option>
+                             <option value="Indian"> Indian </option>
+                             <option value="NRI-Repatriation"> NRI - Repatriation </option>
+                             <option value="NRI-Non-Repatriation">NRI - Non Repatriation </option>
+                             </select> 
+
+
+                            </div >
+                
+                
+                </div>
+                <div class="modal-body step-4 row" data-step="4">
+                <div class="info-container col-sm-5">
+                        <div class="info_bubble">
+                            <div class="info_icon"></div>
+                            <h1>Did you know?</h1>
+                            <p id="bubble4"> All our portfolios are designed by SEBI Registered Investment Advisor</p>
+
+                            <div class="info_questions">
+                            <h2>Questions </h2>
+                            <p>We're here to help Contact us: </p>
+                            <p>080 4124 - 5883 </p>
+                            <p> support@finotrust.com</p>
+                            <p>FAQ's</p>
+                            </div>
+                        </div>
+                    </div>
+                            <div class="col-sm-7">
+                            
+                            <h3> Regulatory Questions
+                            </h3>
+                            <p > 
+                            We are required to ask these regulatory questions. Most customers answers no.
+                            </p>
+                            <label class="si-menu-label ">Are you a politically exposed person<span class="required"> *</span></label>
+                            
+                            <input type="radio" value="yes" name="political"> <label for="yes">Yes&nbsp;&nbsp; &nbsp;&nbsp; </label>                           
+                            <input type="radio" value="no" name="political">  <label for="no">No </label>                                              
+                            
+
+                                             
+                        </div >
+            
+            </div>
+            <div class="modal-footer footer-below">
+                <button type="button" class="btn btn-primary  step step-2" data-step="2" onclick="sendEvent('#demo-modal-3', 1)">Back</button>
+                 <button type="button" class="btn btn-primary  step step-3" data-step="3" onclick="sendEvent('#demo-modal-3', 2)">Back</button>
+                 <button type="button" class="btn btn-primary  step step-4" data-step="3" onclick="sendEvent('#demo-modal-3', 3)">Back</button>
+                <button type="button" class="btn btn-primary  step step-1" data-step="1" onclick="sendEventNext('#demo-modal-3', 2) ">Continue</button>                            
+                <button type="button" class="btn btn-primary  step step-2" data-step="2" onclick="sendEventNext('#demo-modal-3', 3)">Continue</button>
+                <button type="button" class="btn btn-primary  step step-3" data-step="3" onclick="sendEventNext('#demo-modal-3', 4)">Continue</button>                
+                <input type="submit" class="btn btn-primary  step step-4" data-step="3" onclick="" value="Create Account">
+            </div>
+        </div>
+</form>
+    
+            </div>
+    </div>
+    
+    <script type="text/javascript">
+        sendEvent = function(sel, step) {
+        $(sel).trigger('next.m.' + step);
+    }
+
+    sendEventNext = function(sel, step) {
+        if ($('#demo-modal-3').valid()) {
+        $(sel).trigger('next.m.' + step);
+    }
+    }
+    </script> 
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+        <script src="../js/jquery-ui.min.js"></script> 
+        <script src="../js/jquery.validate.js"></script>  
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha256-KXn5puMvxCw+dAYznun+drMdG1IFl3agK0p/pqT9KAo= sha512-2e8qq0ETcfWRI4HJBzQiA3UoyFk6tbNyG+qSaIBZLyW9Xf3sWZHN/lxe9fTh1U45DpPf07yj94KsUHHWe4Yk1A==" crossorigin="anonymous"></script>	 
+	
+    <script src="../js/multi-step-modal.js"></script>
+    <script>
+
+    $(function() {
+        $( "#datepicker" ).datepicker({
+        changeMonth: true,
+        changeYear: true,
+        yearRange: "-80:+0",
+        defaultDate: "-0m -30y"
+        });
+    });
+
+    $.validator.setDefaults({
+        submitHandler: function() {
+        }
+    });
+
+    $().ready(function() {
+        // validate the comment form when it is submitted
+        // validate signup form on keyup and submit
+        $("#demo-modal-3").validate({
+            rules: {
+                firstname: "required"
+                lastname: "required",
+                username: {
+                    required: true,
+                    minlength: 2
+					},
+                password: {
+                    required: true,
+                    minlength: 5
+					},
+                confirm_password: {
+                    required: true,
+                    minlength: 5,
+                    equalTo: "#password"
+					},
+                email: {
+                    required: true,
+                    email: true
+					},              
+                agree: "required",              
+                address_1: "required",
+				city: "required",              
+                state: "required",              
+                zip_code: {
+					required: true,
+					digits:true,
+					minlength: 6,
+					maxlength: 6
+					},
+                date:"required",
+                pan: {
+                    minlength: 10,
+                    maxlength: 10
+                },             
+                phone_number: {
+                    required: true,
+					digits:true,
+					minlength: 10,
+					maxlength: 10
+					}, 
+                country_code:"required",
+                residency_tax: "required"
+				
+            },
+            messages: {
+                firstname: "Please enter your firstname",
+                lastname: "Please enter your lastname",
+                username: {
+                    required: "Please enter a username",
+                    minlength: "Your username must consist of at least 2 characters"
+                },
+                password: {
+                    required: "Please provide a password",
+                    minlength: "Your password must be at least 5 characters long"
+                },
+                confirm_password: {
+                    required: "Please provide a password",
+                    minlength: "Your password must be at least 5 characters long",
+                    equalTo: "Please enter the same password as above"
+                },
+                email: "Please enter a valid email address",
+                agree: "Please accept our policy",
+				address_1: "Please enter your Address",
+				city: "Please enter your City",
+				state: "Please enter your State",
+				zip_code: {
+				required:"Please enter your ZIP/Pincode",
+				length:"Enter Valid ZIP/Pincode"
+				},
+				phone_number: {
+				required: "Please enter a Phone Number",				
+				minlength: "Your username must consist of at least 10"
+                },
+				pan: "Please enter your PAN",
+				residency_tax: "Please enter Residency for Tax Status"
+            }
+        });
+        
+    });
+    </script>
+	
+    <script src="../js/script.js"></script>
+
+    </body>
+</html>
