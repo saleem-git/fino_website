@@ -73,7 +73,7 @@
   </div>
 </nav>
 </header>
-	<div class="container" >
+	<div class="container summary" >
     	<div class="manage_account row"> 
     	<h1 class="col-sm-6"><span>Saleem's</span>  Personal Account Overview </h1>
     	<div class="account_controls col-sm-6">
@@ -81,7 +81,7 @@
 	    	<div class="deposit_box">
 	    	<a href="invest.html"><button type="button" class="btn deposit_button" >Invest </button></a>	
 	    	</div>    	
-    	<button type="button" id="third" class="btn btn-info">Add Goal</button>
+    	<button type="button" id="third" class="btn btn-info" data-toggle="modal" data-target="#myModal">Add Goal</button>
     	</div>
     </div>
     </div>
@@ -689,8 +689,104 @@
               </div>
     
 	</div>
-            <!--  -->
+            <!-- end tour -->
 
+			<!--Add goal Modal content-->
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog add-goal">
+		<div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Modal Header</h4>
+        </div>
+        <div class="modal-body">
+			<div class="btn-group" data-toggle="buttons">
+				<div class="row goals" >
+					<div class="col-md-2" >Basic</div>
+					<div class="col-md-9" >
+					  <label class="btn btn-default select-goal">
+						<input type="radio" name="add-goal" id="option1" autocomplete="off"> Contingency Plan
+					  </label>
+					  <label class="btn btn-default select-goal">
+						<input type="radio" name="add-goal" id="option2" autocomplete="off"> Retirement
+					  </label>
+					  <label class="btn btn-default select-goal">
+						<input type="radio" name="add-goal" id="option3" autocomplete="off"> General Investment
+					  </label>
+					  <label class="btn btn-default select-goal">
+						<input type="radio" name="add-goal" id="option4" autocomplete="off"> Save on Taxes
+					  </label>
+					</div>
+				</div>
+				<div class="row goals" >
+					<div class="col-md-2" >Planned Spends</div>
+					<div class="col-md-9" >
+					  <label class="btn btn-default select-goal ">
+						<input type="radio" name="add-goal" id="option1" autocomplete="off"> Plan a Purchase
+					  </label>
+					  <label class="btn btn-default select-goal">
+						<input type="radio" name="add-goal" id="option2" autocomplete="off"> Plan a Large Investment 
+					  </label>
+					  <label class="btn btn-default select-goal">
+						<input type="radio" name="add-goal" id="option3" autocomplete="off"> Buying a Vehicle
+					  </label>
+					</div>
+				</div>
+				<div class="row goals" >
+					<div class="col-md-2" >Major Life Goals</div>
+					<div class="col-md-9" >
+					  <label class="btn btn-default select-goal ">
+						<input type="radio" name="add-goal" id="option1" autocomplete="off"> Mariage (Self)
+					  </label>
+					  <label class="btn btn-default select-goal">
+						<input type="radio" name="add-goal" id="option2" autocomplete="off"> Marriage (Kids)
+					  </label>
+					  <label class="btn btn-default select-goal">
+						<input type="radio" name="add-goal" id="option3" autocomplete="off"> Education (Self)
+					  </label>
+					  <label class="btn btn-default select-goal">
+						<input type="radio" name="add-goal" id="option4" autocomplete="off"> Medical
+					  </label>
+					</div>
+				</div>
+				<div class="row goals" >
+					<div class="col-md-2" >Luxury</div>
+					<div class="col-md-9" >
+					  <label class="btn btn-default select-goal ">
+						<input type="radio" name="add-goal" id="option1" autocomplete="off"> Save for Travel
+					  </label>
+					  <label class="btn btn-default select-goal">
+						<input type="radio" name="add-goal" id="option2" autocomplete="off"> Philanthropy
+					  </label>
+					</div>
+				</div>
+				<div class="row goals" >
+					<div class="col-md-2" >Loan Repayment</div>
+					<div class="col-md-9" >
+					  <label class="btn btn-default select-goal ">
+						<input type="radio" name="add-goal" id="option1" autocomplete="off"> House Loan Repay
+					  </label>
+					  <label class="btn btn-default select-goal">
+						<input type="radio" name="add-goal" id="option2" autocomplete="off"> Vehicle Loan Repay
+					  </label>
+					  <label class="btn btn-default select-goal">
+						<input type="radio" name="add-goal" id="option3" autocomplete="off"> Education Loan Repay
+					  </label>
+					  <label class="btn btn-default select-goal">
+						<input type="radio" name="add-goal" id="option4" autocomplete="off"> Personal Loan Repay
+					  </label>
+					</div>
+				</div>
+			</div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Add Goal</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  
 
 <!--             <div>
 
