@@ -273,58 +273,7 @@ $("form[name='onboardinfo']").submit(function() {
 
 });
 
-/*function nextpage() {
-	//alert("going in next function");
-	document.location.href("onboarding.html");	
-}*/
 
-
-/*  for (var i = 0; i <= 4; i++) {
-        if (Number(document.getElementById('value-'+i).value)) {
-            chart.dataProvider.push({
-                
-                "chartConfig3.dataProvider[1].litres":150
-            })
-        }
-    }
-*/
-
-
-/*Toggle icons for portfolio page + and - */
-var eventID;
-$(".panel.panel-default .panel.panel-default").on("show.bs.collapse",function(event){
-	//$(this).parent().prev().children().find("h4").css( "background-color", "red" );
-
-	
-	eventID="#"+(event.target.id);
-/*	console.log(eventID);
-	console.log($(eventID).siblings().find("span"));*/
-	$(eventID).siblings().find("span.sign").toggleClass("plus-sign, minus-sign");
-<<<<<<< HEAD
-
-=======
->>>>>>> finogit/master
-});
-
-$(".panel.panel-default .panel.panel-default").on("hide.bs.collapse",function(event){
-	//$(this).parent().prev().children().find("h4").css( "background-color", "red" );
-	eventID="#"+(event.target.id);
-	/*console.log(eventID);
-	console.log($(eventID).siblings().find("span"));*/
-	$(eventID).siblings().find("span.sign").toggleClass("plus-sign, minus-sign");
-<<<<<<< HEAD
-
-=======
->>>>>>> finogit/master
-});
-$(".panel.panel-default .panel.panel-default").on("show.bs.collapse",function(event){
-	eventID="#"+(event.target.id);
-	$(eventID).siblings().find("span.Current-Value").fadeOut();
-});
-$(".panel.panel-default .panel.panel-default").on("hide.bs.collapse",function(event){
-	eventID="#"+(event.target.id);
-	$(eventID).siblings().find("span.Current-Value").fadeIn();
-});
 
 
 });

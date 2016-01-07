@@ -407,17 +407,12 @@
     <div class="heading" role="tab" id="headingThree">
       <h4 class="panel-title">
         <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#new_investment" aria-expanded="false" aria-controls="new_investment">
-<<<<<<< HEAD:inner/portfolio.html
-          <span class="sign plus-sign" id="earning_info_span"></span> New Investment 
-          <span class="text">Text</span>
-=======
           <span class="sign plus-sign" id="earning_info_span"></span> New Investment
 		  
->>>>>>> finogit/master:inner/invest.html
         </a>
       </h4>
     </div>
-    <div id="new_investment" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+    <div id="new_investment" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingThree">
       <div class="panel-body">    
         <table>
                     <thead>
@@ -1039,14 +1034,33 @@
         
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>  
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha256-KXn5puMvxCw+dAYznun+drMdG1IFl3agK0p/pqT9KAo= sha512-2e8qq0ETcfWRI4HJBzQiA3UoyFk6tbNyG+qSaIBZLyW9Xf3sWZHN/lxe9fTh1U45DpPf07yj94KsUHHWe4Yk1A==" crossorigin="anonymous"></script>	 
-    <script type="text/javascript">
-     $(document).ready(function(){
-        $('#tour_tabs li:eq(1) a').tab('show');
-		$("#new_investment").collapse('show');
-     });
-    
+
+	<script type="text/javascript">
+    /*Toggle icons for portfolio page + and - */
+        var eventID;
+        $("#headingThree span.sign").toggleClass("plus-sign, minus-sign");
+        $(".panel.panel-default .panel.panel-default").on("show.bs.collapse",function(event){
+            eventID="#"+(event.target.id);
+            $(eventID).siblings().find("span.sign").toggleClass("plus-sign, minus-sign");
+        });
+
+        $(".panel.panel-default .panel.panel-default").on("hide.bs.collapse",function(event){
+            eventID="#"+(event.target.id);
+            $(eventID).siblings().find("span.sign").toggleClass("plus-sign, minus-sign");
+
+        });
+        /*To hide texxt*/
+        $(".panel.panel-default .panel.panel-default").on("show.bs.collapse",function(event){
+            eventID="#"+(event.target.id);
+            $(eventID).siblings().find("span.Current-Value").fadeOut();
+        });
+        $(".panel.panel-default .panel.panel-default").on("hide.bs.collapse",function(event){
+            eventID="#"+(event.target.id);
+            $(eventID).siblings().find("span.Current-Value").fadeIn();
+        });
+
+
     </script>
-	<script src="../js/script.js"></script>
 	<script src="../js/readmore.js"></script>
     </body>
 </html>
