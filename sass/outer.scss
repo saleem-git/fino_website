@@ -614,3 +614,27 @@ p{font-size:15px;}
 		}
 		}
 }
+.add-scheme{
+	.search-results{
+		 table{
+		border: 2px solid rgb(204, 204, 204);
+		width: 100%;
+		font-size:12px;
+		th {
+			font-size:15px;
+			text-align:center;
+			background:#18bb9c; color:white;
+			border: 2px solid rgb(204, 204, 204);
+			padding:3px;
+			&:first-child{
+				width: 250px;
+			}
+		}
+		margin-top: 20px;
+		
+		td{
+		padding:5px;
+		border: 1px solid rgb(204, 204, 204);
+	}}
+}
+}
