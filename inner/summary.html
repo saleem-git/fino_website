@@ -12,34 +12,7 @@
         
     </head>
     <body>
-<!--    <header> 
-    <nav class="navbar navbar-default navbar-fixed-top"  >
-        <div class="container">
-            <div class="navbar-header page-scroll">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="#page-top"><img src="../images/logo_img.jpg " ></a>
-            </div>
-
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav navbar-right">
-                    <li class="hidden">
-                        <a href="#page-top"></a>
-                    </li>
-          <li><a class="page-scroll cd-signin" href="#0">Sign in</a></li>
-          <li><a class="page-scroll cd-signup" href="#0">Sign up</a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-    </header>
-	
-	-->
-    <header>
+	<header>
     <!-- Navigation -->
 <nav class="navbar navbar-default inner-head">
   <div class="container-fluid">
@@ -89,42 +62,25 @@
     <div class="panel panel-default">
 	  <div class="panel-body overview_account">
   		<div class="row"> 	
-	    <div class="earnings col-sm-6 flclear">
+	    <div class="earnings col-sm-4 flclear">
 	    	<span class="sign plus-sign" id="earning_info_span"></span>
-	    	
-
 	    	<div class="earnings_div">
-		    	<h3> TOTAL BALANCE FOR ALL GOALS</h3>
+		    	<h3> CURRENT BALANCE FOR ALL GOALS</h3>
 		    	<h1>₹0.00</h1>
-		    	<h4>TOTAL EARNINGS <span>+₹0.00 </span></h4>
 		    	
 	    	</div> <!-- End for classless div after span -->
 	    </div><!-- End of first col-sm -6 for overaccoint -->
 	    
-	    <div class="losses col-sm-6">
-	    	<p>TAX LOSS HARVESTING+ OFF</p>
-	    	<p>Harvested losses ₹0.00</p>
-
-	    	<!--  -->
-	    </div>
+		<div class="col-sm-4 retirement_plan_actions"><div class="deposit above"><p>INFLOW MINUS OUTFLOW(NET FLOW)</p><h1>₹0.00</h1></div></div>
+		<div class="col-sm-4 retirement_plan_actions"><div class="deposit above"><p>PORTFOLIO RETURNS</p><h1>0.00%</h1></div></div>
 	    </div>
 
 	    <div class="row earnings" id="earning_info">
 	    	<div class="col-md-6">
 	    		<div class="summary_plan_detailed_info"  >
 	    	<div>
-	    	<p> PERIOD SINCE </p>
-	    	<div class="dropdown">
-	    	<a id="dLabel" data-target="#" href="http://example.com" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-		    Account Opened (August 2015)
-		    <span class="caret"></span>
-		  </a>
-
-  <ul class="dropdown-menu" aria-labelledby="dLabel">
-    <li><a href="#">Account opened  (August 2015)</a></li>
-  </ul>
-	    	</div> 
-	    	</div>	    	
+	    	<p> PERIOD SINCE ACCOUNT OPENED (AUGUST 2015)</p>
+	    	</div>
 	    	<table>
 	    	<thead>
 	    		<tr>
@@ -180,7 +136,6 @@
 	    	</table>
 
 	    </div><!-- end for summary_plan_detailed_info (the hiding div)-->
-		    	<h4>TOTAL EARNINGS <span>+$0.00 </span></h4>
 
 	    	</div> <!-- End of first columns -->
 
@@ -200,17 +155,14 @@
 	  <div class="panel-body retirement_plan">
 
 		<div class="row earnings">
-			<div class="col-sm-6 edit_plan">
+			<div class="col-sm-4 edit_plan">
 			<span class="sign plus-sign" id="retirement_info_span"></span>
 			<h2> RETIREMENT </h2> 
-			<a href="#">Personal Account</a>
-			<button type="button" class="btn btn-default ">Edit Plan</button>
 			</div>
-			<div class="col-sm-6 retirement_plan_actions">
-			<div class="deposit">
-			<p>CURRENT BALANCE</p>
-			<button type="button" class="btn btn-default">Deposit</button> <span>Rs 0.00 </span></div>
-			</div>
+			<div class="col-sm-2 retirement_plan_actions"><div class="deposit"><p>TARGET YEAR</p><span>2024</span></div></div>
+			<div class="col-sm-2 retirement_plan_actions"><div class="deposit"><p>TARGET AMOUNT</p><span>Rs 0.00 </span></div></div>
+			<div class="col-sm-2 retirement_plan_actions"><div class="deposit"><p>CURRENT BALANCE</p><span>Rs 0.00 </span></div></div>
+			<div class="col-sm-2 retirement_plan_actions"><div class="deposit"><p>PROJECTED GAP</p><span>Rs 0.00 </span></div></div>
 		</div>
 
 		<div class="row" id="retirement_info"> 
@@ -218,17 +170,7 @@
 		    <!-- copied  -->
 		    <div class="summary_plan_detailed_info" >
 	    	<div>
-	    	<p> PERIOD SINCE </p>
-	    	<div class="dropdown">
-	    	<a id="dLabel" data-target="#" href="http://example.com" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-		    Account Opened (August 2015)
-		    <span class="caret"></span>
-		  </a>
-
-  <ul class="dropdown-menu" aria-labelledby="dLabel">
-    <li><a href="#">Account opened  (August 2015)</a></li>
-  </ul>
-	    	</div> 
+	    	<p> PERIOD SINCE ACCOUNT OPENED (AUGUST 2015)</p>
 	    	</div>	    	
 	    	<table>
 	    	<thead>
@@ -327,6 +269,106 @@
 	  </div>
 	</div>
 	<!-- Modal -->
+	
+<div class="col-md-12 bottom-table">
+  <ul class="nav nav-tabs ">
+		<li class="active"><a data-toggle="tab" href="#Recent">Recent Transactions</a></li>
+		<li><a data-toggle="tab" href="#Systematic">My Systematic Plans</a></li>
+  </ul>
+
+  <div class="tab-content">
+    <div id="Recent" class="tab-pane fade in active">
+	<table>
+		<thead>
+			<tr>
+				<th><div class="">Folio</div></th> 
+				<th><div class="">Date & Time</div></th> 
+				<th><div class="">Ref.No.</div></th> 
+				<th><div class="">Payment Id</div></th> 
+				<th><div class="">Scheme name </div></th> 
+				<th><div class="">Transaction Type </div></th> 
+				<th><div class="">Units</div></th> 
+				<th><div class="">Amount(Rs.)</div></th> 
+				<th><div class="">Status</div></th> 
+			</tr>
+		</thead>
+
+		<tbody>
+			<tr>
+				<td >195858</td>
+				<td >02/12/2015 16:42:12</td>
+				<td >52154</td>
+				<td >55454545</td>
+				<td >BNP Paribas LT Equity Fund(G)</td>
+				<td >New Investment</td>
+				<td >506.25</td>
+				<td >50,000</td>
+				<td >Transaction<br>completed</td>
+			</tr>
+			<tr>
+				<td >195858</td>
+				<td >02/12/2015 16:42:12</td>
+				<td >52154</td>
+				<td >55454545</td>
+				<td >BNP Paribas LT Equity Fund(G)</td>
+				<td >New Investment</td>
+				<td >506.25</td>
+				<td >50,000</td>
+				<td >Transaction<br>completed</td>
+			</tr>
+
+		</tbody>
+	</table>
+	
+    </div>
+    <div id="Systematic" class="tab-pane fade">
+	  <table>
+		<thead>
+			<tr>
+				<th><div class="">Folio</div></th> 
+				<th><div class="">Date & Time</div></th> 
+				<th><div class="">Ref.No.</div></th> 
+				<th><div class="">Payment Id</div></th> 
+				<th><div class="">Scheme name </div></th> 
+				<th><div class="">Transaction Type </div></th> 
+				<th><div class="">Units</div></th> 
+				<th><div class="">Amount(Rs.)</div></th> 
+				<th><div class="">Status</div></th> 
+			</tr>
+		</thead>
+
+		<tbody>
+			<tr>
+				<td >195858</td>
+				<td >02/12/2015 16:42:12</td>
+				<td >52154</td>
+				<td >55454545</td>
+				<td >BNP Paribas LT Equity Fund(G)</td>
+				<td >New Investment</td>
+				<td >506.25</td>
+				<td >50,000</td>
+				<td >Transaction<br>completed</td>
+			</tr>
+			<tr>
+				<td >195858</td>
+				<td >02/12/2015 16:42:12</td>
+				<td >52154</td>
+				<td >55454545</td>
+				<td >BNP Paribas LT Equity Fund(G)</td>
+				<td >New Investment</td>
+				<td >506.25</td>
+				<td >50,000</td>
+				<td >Transaction<br>completed</td>
+			</tr>
+
+		</tbody>
+	</table>
+    </div>
+
+  </div>
+</div>
+
+
     <div class="modal fade tour_popup" id="tour_modal" tabindex="-1" role="dialog" aria-labelledby="tour_modal">
               <div class="modal-dialog  modal-lg" role="document">
                 <div class="modal-content">
@@ -381,7 +423,7 @@
 				    		<img src="../images/tour/summary/two.png" alt="tour_summary">
 				    	</div>
 				    	<div class="col-md-6">
-				    	<h5>Total Balance for all goals</h5>
+				    	<h5>Current Balance for all goals</h5>
 				    		<p>A consolidated view of your overall investments and earnings. </p>
 				    	</div>  	
 
@@ -692,138 +734,135 @@
             <!-- end tour -->
 
 			<!--Add goal Modal content-->
-  <div class="modal fade" id="myModal" role="dialog">
+  <div class="modal fade multi-step" id="myModal" role="dialog">
     <div class="modal-dialog add-goal">
 		<div class="modal-content">
         <div class="modal-header">
           <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <h4 class="modal-title">Modal Header</h4>
+          <h4 class="modal-title text-center">Add your goal</h4>
         </div>
-        <div class="modal-body">
-			<div class="btn-group" data-toggle="buttons">
-				<div class="row goals" >
-					<div class="col-md-2" >Basic</div>
+        <div class="modal-body step-1" data-step="1">
+			<div class="btn-group goals" data-toggle="buttons">
+				<div class="row " >
+					<div class="col-md-2 goal-header" >Basic</div>
 					<div class="col-md-9" >
 					  <label class="btn btn-default select-goal">
-						<input type="radio" name="add-goal" id="option1" autocomplete="off"> Contingency Plan
+						<input type="radio" name="add-goal" id="option1" autocomplete="off"> <p>Contingency Plan</p>
 					  </label>
 					  <label class="btn btn-default select-goal">
-						<input type="radio" name="add-goal" id="option2" autocomplete="off"> Retirement
+						<input type="radio" name="add-goal" id="option2" autocomplete="off"> <p>Retirement</p>
 					  </label>
 					  <label class="btn btn-default select-goal">
-						<input type="radio" name="add-goal" id="option3" autocomplete="off"> General Investment
+						<input type="radio" name="add-goal" id="option3" autocomplete="off"> <p>General Investment</p>
 					  </label>
 					  <label class="btn btn-default select-goal">
-						<input type="radio" name="add-goal" id="option4" autocomplete="off"> Save on Taxes
+						<input type="radio" name="add-goal" id="option4" autocomplete="off"> <p>Save on Taxes</p>
 					  </label>
 					</div>
 				</div>
-				<div class="row goals" >
-					<div class="col-md-2" >Planned Spends</div>
-					<div class="col-md-9" >
-					  <label class="btn btn-default select-goal ">
-						<input type="radio" name="add-goal" id="option1" autocomplete="off"> Plan a Purchase
-					  </label>
-					  <label class="btn btn-default select-goal">
-						<input type="radio" name="add-goal" id="option2" autocomplete="off"> Plan a Large Investment 
-					  </label>
-					  <label class="btn btn-default select-goal">
-						<input type="radio" name="add-goal" id="option3" autocomplete="off"> Buying a Vehicle
-					  </label>
-					</div>
-				</div>
-				<div class="row goals" >
-					<div class="col-md-2" >Major Life Goals</div>
+				<div class="row " >
+					<div class="col-md-2 goal-header" >Planned Spends</div>
 					<div class="col-md-9" >
 					  <label class="btn btn-default select-goal ">
-						<input type="radio" name="add-goal" id="option1" autocomplete="off"> Mariage (Self)
+						<input type="radio" name="add-goal" id="option1" autocomplete="off"> <p>Plan a Purchase</p>
 					  </label>
 					  <label class="btn btn-default select-goal">
-						<input type="radio" name="add-goal" id="option2" autocomplete="off"> Marriage (Kids)
+						<input type="radio" name="add-goal" id="option2" autocomplete="off"> <p>Plan a Investment</p>
 					  </label>
 					  <label class="btn btn-default select-goal">
-						<input type="radio" name="add-goal" id="option3" autocomplete="off"> Education (Self)
-					  </label>
-					  <label class="btn btn-default select-goal">
-						<input type="radio" name="add-goal" id="option4" autocomplete="off"> Medical
+						<input type="radio" name="add-goal" id="option3" autocomplete="off"> <p>Buying a Vehicle</p>
 					  </label>
 					</div>
 				</div>
-				<div class="row goals" >
-					<div class="col-md-2" >Luxury</div>
+				<div class="row " >
+					<div class="col-md-2 goal-header" >Major Life Goals</div>
 					<div class="col-md-9" >
 					  <label class="btn btn-default select-goal ">
-						<input type="radio" name="add-goal" id="option1" autocomplete="off"> Save for Travel
+						<input type="radio" name="add-goal" id="option1" autocomplete="off"> <p>Mariage (Self)</p>
 					  </label>
 					  <label class="btn btn-default select-goal">
-						<input type="radio" name="add-goal" id="option2" autocomplete="off"> Philanthropy
+						<input type="radio" name="add-goal" id="option2" autocomplete="off"> <p>Marriage (Kids)</p>
+					  </label>
+					  <label class="btn btn-default select-goal">
+						<input type="radio" name="add-goal" id="option3" autocomplete="off"> <p>Education (Self)</p>
+					  </label>
+					  <label class="btn btn-default select-goal">
+						<input type="radio" name="add-goal" id="option4" autocomplete="off"> <p>Medical</p>
 					  </label>
 					</div>
 				</div>
-				<div class="row goals" >
-					<div class="col-md-2" >Loan Repayment</div>
+				<div class="row " >
+					<div class="col-md-2 goal-header" >Luxury</div>
 					<div class="col-md-9" >
 					  <label class="btn btn-default select-goal ">
-						<input type="radio" name="add-goal" id="option1" autocomplete="off"> House Loan Repay
+						<input type="radio" name="add-goal" id="option1" autocomplete="off"> <p>Save for Travel</p>
 					  </label>
 					  <label class="btn btn-default select-goal">
-						<input type="radio" name="add-goal" id="option2" autocomplete="off"> Vehicle Loan Repay
-					  </label>
-					  <label class="btn btn-default select-goal">
-						<input type="radio" name="add-goal" id="option3" autocomplete="off"> Education Loan Repay
-					  </label>
-					  <label class="btn btn-default select-goal">
-						<input type="radio" name="add-goal" id="option4" autocomplete="off"> Personal Loan Repay
+						<input type="radio" name="add-goal" id="option2" autocomplete="off"> <p>Philanthropy</p>
 					  </label>
 					</div>
 				</div>
+				<div class="row " >
+					<div class="col-md-2 goal-header" >Loan Repayment</div>
+					<div class="col-md-9" >
+					  <label class="btn btn-default select-goal ">
+						<input type="radio" name="add-goal" id="option1" autocomplete="off"> <p>House Loan</p>
+					  </label>
+					  <label class="btn btn-default select-goal">
+						<input type="radio" name="add-goal" id="option2" autocomplete="off"> <p>Vehicle Loan</p>
+					  </label>
+					  <label class="btn btn-default select-goal">
+						<input type="radio" name="add-goal" id="option3" autocomplete="off"> <p>Education Loan</p>
+					  </label>
+					  <label class="btn btn-default select-goal">
+						<input type="radio" name="add-goal" id="option4" autocomplete="off"> <p>Personal Loan</p>
+					  </label>
+					</div>
+				</div>
+				<div class="row " >
+					<div class="col-md-2 goal-header" >Add other Goal</div>
+					<div class="col-md-9" >
+						<input type="text">
+					</div>
+				</div>
+				
 			</div>
         </div>
+		
+		<div class="modal-body step-2" data-step="2">
+			<div class="row target year"><div class="col-md-6"><h3>By when you want to achieve this goal</h3></div><div class="col-md-6"><input type="text" placeholder="Target Year"></div></div>
+			<div class="row target amount"><div class="col-md-6"><h3>How much money wouldyou want to have for this goal</h3></div><div class="col-md-6"><input type="text" placeholder="Target Amount"></div></div>
+		</div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-default" data-dismiss="modal">Add Goal</button>
-        </div>
+			<button type="button" class="btn btn-primary step step-1" data-step="1" onclick="sendEvent('#myModal', 2)">Continue</button>
+			<button type="button" class="btn btn-primary step step-2" data-step="2" onclick="sendEvent('#myModal', 1)">Back</button>
+			<button type="button" class="btn btn-primary step step-2 submit-goal" data-step="2" data-dismiss="modal">Add Goal</button>
+		</div>
       </div>
       
     </div>
   </div>
-  
-
-<!--             <div>
-
-  //Nav tabs 
-  <ul class="nav nav-tabs" role="tablist">
-    <li role="presentation" class="active"><a href="#summary" aria-controls="summary" role="tab" data-toggle="tab">summary</a></li>
-    <li role="presentation"><a href="#Invest" aria-controls="Invest" role="tab" data-toggle="tab">Invest</a></li>
-    <li role="presentation"><a href="#benchmark" aria-controls="benchmark" role="tab" data-toggle="tab">benchmark</a></li>
-    <li role="presentation"><a href="#funds" aria-controls="funds" role="tab" data-toggle="tab">funds</a></li>
-  </ul>
-
- // Tab panes 
-  <div class="tab-content">
-    <div role="tabpanel" class="tab-pane fade in active" id="summary">One</div>
-    <div role="tabpanel" class="tab-pane" id="Invest">Two</div>
-    <div role="tabpanel" class="tab-pane" id="benchmark">Three</div>
-    <div role="tabpanel" class="tab-pane" id="funds">Four</div>
-  </div>
-
-</div> -->
-
+<script type="text/javascript">
+        sendEvent = function(sel, step) {
+        $(sel).trigger('next.m.' + step);
+    }
+    </script> 
     </div><!-- End of container -->
 
 
-        
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>  
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha256-KXn5puMvxCw+dAYznun+drMdG1IFl3agK0p/pqT9KAo= sha512-2e8qq0ETcfWRI4HJBzQiA3UoyFk6tbNyG+qSaIBZLyW9Xf3sWZHN/lxe9fTh1U45DpPf07yj94KsUHHWe4Yk1A==" crossorigin="anonymous"></script>	 
 	<script type="text/javascript">
 		$(function () {
+		$('.step-1').tab('show');
   $('[data-toggle="tooltip"]').tooltip();
 })
 	</script>
 	<script src="../js/script.js"></script>
 	<script type="text/javascript" src="http://www.amcharts.com/lib/3/amcharts.js"></script>
-<script type="text/javascript" src="http://cdn.amcharts.com/lib/3/pie.js"></script>
-<script type="text/javascript" src="http://www.amcharts.com/lib/3/themes/light.js"></script>
+	<script type="text/javascript" src="http://cdn.amcharts.com/lib/3/pie.js"></script>
+	<script type="text/javascript" src="http://www.amcharts.com/lib/3/themes/light.js"></script>
 	<script src="../js/amchartcreate.js"></script>
-
+	<script src="../js/multi-step-modal.js"></script>
     </body>
 </html>

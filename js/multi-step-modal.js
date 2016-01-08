@@ -54,7 +54,6 @@
             to_show.show();
             var current = parseInt(step, 10);
             updateProgress(current, total_num_steps);
-            findFirstFocusableInput(to_show).focus();
         }
 
         function findFirstFocusableInput(parent) {

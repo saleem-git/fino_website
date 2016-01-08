@@ -51,18 +51,17 @@
         <div class="panel panel-default">
           <div class="panel-fake-heading clearfix">
             <div class="view_account col-sm-6">
-                <h2>View</h2>
-                <div class="dropdown">
-                <a id="dLabel" data-target="#" href="http://example.com" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-                Retirement
-                <span class="caret"></span>
-              </a>
+                <div class="dropdown selected-goal">
+					<a id="dLabel" data-target="#" href="http://example.com" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+					Retirement
+					<span class="caret"></span>
+					</a>
 
-              <ul class="dropdown-menu" aria-labelledby="dLabel">
-                <li><a href="#">Personal Account</a></li>
-                <li><a href="#">Retirement</a></li>
-              </ul>
-            </div>
+				  <ul class="dropdown-menu" aria-labelledby="dLabel">
+					<li><a href="#">Personal Account</a></li>
+					<li><a href="#">Retirement</a></li>
+				  </ul>
+				</div>
 
             </div>
             <div class="year col-sm-2">                  
@@ -78,505 +77,346 @@
                 <h3>Current Balance</h3>             
             </div>
           </div>
-          <div class="panel-body">
+          <div class="panel-body main-panel">
             <div class="col-sm-12 portfolio_large_info">              
 
                 <!-- Starting accordion -->
-                    <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
-  <div class="panel panel-default">
-    <div class="heading" role="tab" id="headingOne">
-      <h4 class="panel-title">      
-        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#curr_investment" aria-expanded="false" aria-controls="curr_investment">
-          <span class="sign plus-sign" id="earning_info_span"></span> Current Investment
-		  <span class="Current-Value">Current Value <span>Rs 0.00</span></span>
-		  <span class="Current-Value">Projected at 2024<span>Rs 0.00</span></span>
-        </a>
-      </h4>
-    </div>
+				<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+					<div class="projected-gap">
+						<span>Projected Gap </span><input ></input>
+					</div>
+					<div class="panel panel-default">
+					<div class="heading" role="tab" id="headingOne">
+					  <h4 class="panel-title">      
+						<a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#curr_investment" aria-expanded="false" aria-controls="curr_investment">
+						  <span class="sign plus-sign" id="earning_info_span"></span> Current Investment
+						  <span class="Current-Value">Current Value <span>Rs 0.00</span></span>
+						  <span class="Current-Value">Projected at 2024<span>Rs 0.00</span></span>
+						</a>
+					  </h4>
+					</div>
 
-    <div id="curr_investment" class="panel-collapse collapse " role="tabpanel" aria-labelledby="headingOne">
-      <div class="panel-body">
-       <table>
-                    <thead>
-                        <tr>
-                            <th><div class="td_contain_one">Scheme</div></th>                                                         
-                            <th> <div class="td_contain_two">Current Value</div></th>
-                            <th> <div class="td_contain_three">Projected at 2024</div></th>
-                            <th> <div class="td_contain_four">Action</div></th>
-                        </tr>
-                    </thead>
-                    <tfoot>
-                        <tr>
-                            <td> TOTAL</td>
-                            <td> Rs 0.00</td>                          
-                            <td> Rs 0.00</td>
-                            <td> </td>
-                        </tr>
-                    </tfoot>
-                    <tbody>
-                        <tr class="tr_fund">
-                            <td colspan="5">
-                            One Time
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                           
-                               <span class="right-arrow"> > </span> <a class="asset-class" data-toggle="collapse" href="#asset-class" 
-                               aria-expanded="false" aria-controls="asset-class">HDFC Top 200</a>                            
+					<div id="curr_investment" class="panel-collapse collapse " role="tabpanel" aria-labelledby="headingOne">
+					  <div class="panel-body">
+					   <table>
+									<thead>
+										<tr>
+											<th><div class="td_contain_one">Scheme</div></th>                                                         
+											<th> <div class="td_contain_two">Current Value</div></th>
+											<th> <div class="td_contain_three">Projected at 2024</div></th>
+											<th> <div class="td_contain_four">Action</div></th>
+										</tr>
+									</thead>
+									<tfoot>
+										<tr>
+											<td> TOTAL</td>
+											<td> Rs 0.00</td>                          
+											<td> Rs 0.00</td>
+											<td> </td>
+										</tr>
+									</tfoot>
+									<tbody>
+										<tr class="tr_fund">
+											<td colspan="5">
+											One Time
+											</td>
+										</tr>
+										<tr>
+											<td>
+										   
+											   <span class="right-arrow"> > </span> <a class="asset-class" data-toggle="collapse" href="#asset-class" 
+											   aria-expanded="false" aria-controls="asset-class">HDFC Top 200</a>                            
 
-                                <div class="asset-child-class collapse" id="asset-class"><a href="#">VTI:Vanguard TOTAL Stock Market ETF</a> 
+												<div class="asset-child-class collapse" id="asset-class"><a href="#">VTI:Vanguard TOTAL Stock Market ETF</a> 
 
-                                <p class="asset-child-sub-class">
-                                <span class="right-arrow"> > </span>  
-                                <a data-toggle="collapse" href="#asset-child-sub" aria-expanded="false" aria-controls="asset-child-sub">why this asset class and these etfs</a> </p>
+												<p class="asset-child-sub-class">
+												<span class="right-arrow"> > </span>  
+												<a data-toggle="collapse" href="#asset-child-sub" aria-expanded="false" aria-controls="asset-child-sub">why this asset class and these etfs</a> </p>
 
-                                <p class="asset-child-sub-class collapse" id="asset-child-sub"> HDFC Top 200 contains broad exposure to the entire US stock market, including growth and value companies of small, mid and large capitalizations. This asset class allows participation in the historically strong long-term growth of the US economy.
-                                </p>
-                                </div> 
-                                                      
-                            </td>
+												<p class="asset-child-sub-class collapse" id="asset-child-sub"> HDFC Top 200 contains broad exposure to the entire US stock market, including growth and value companies of small, mid and large capitalizations. This asset class allows participation in the historically strong long-term growth of the US economy.
+												</p>
+												</div> 
+																	  
+											</td>
 
-                            <td>
-                                <span>Rs 0.00 </span>
-                            </td>                          
-                            <td>
-                                <span>Rs 0.00 </span>
-                            </td>
-                            <td>
-                            <button type="button" class="btn btn-primary">Sell</button>
-                            <button type="button" class="btn btn-default">Switch</button>                               
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                            
-                               <span class="right-arrow"> > </span> <a class="asset-class" data-toggle="collapse" href="#asset-class1" 
-                               aria-expanded="false" aria-controls="asset-class1">HDFC Top 200</a>                            
+											<td>
+												<span>Rs 0.00 </span>
+											</td>                          
+											<td>
+												<span>Rs 0.00 </span>
+											</td>
+											<td>
+											<button type="button" class="btn btn-primary">Sell</button>
+											<button type="button" class="btn btn-default">Switch</button>                               
+											</td>
+										</tr>
+										<tr>
+											<td>
+											
+											   <span class="right-arrow"> > </span> <a class="asset-class" data-toggle="collapse" href="#asset-class1" 
+											   aria-expanded="false" aria-controls="asset-class1">HDFC Top 200</a>                            
 
-                                <div class="asset-child-class collapse" id="asset-class1"><a href="#">VTI:Vanguard TOTAL Stock Market ETF</a> 
+												<div class="asset-child-class collapse" id="asset-class1"><a href="#">VTI:Vanguard TOTAL Stock Market ETF</a> 
 
-                                <p class="asset-child-sub-class">
-                                <span class="right-arrow"> > </span>  
-                                <a data-toggle="collapse" href="#asset-child-sub1" aria-expanded="false" aria-controls="asset-child-sub1">why this asset class and these etfs</a> </p>
+												<p class="asset-child-sub-class">
+												<span class="right-arrow"> > </span>  
+												<a data-toggle="collapse" href="#asset-child-sub1" aria-expanded="false" aria-controls="asset-child-sub1">why this asset class and these etfs</a> </p>
 
-                                <p class="asset-child-sub-class collapse" id="asset-child-sub1"> HDFC Top 200 contains broad exposure to the entire US stock market, including growth and value companies of small, mid and large capitalizations. This asset class allows participation in the historically strong long-term growth of the US economy.
-                                </p>
-                                </div> 
-                                                      
-                            </td>
+												<p class="asset-child-sub-class collapse" id="asset-child-sub1"> HDFC Top 200 contains broad exposure to the entire US stock market, including growth and value companies of small, mid and large capitalizations. This asset class allows participation in the historically strong long-term growth of the US economy.
+												</p>
+												</div> 
+																	  
+											</td>
 
-                            <td>
-                                <span>Rs 0.00 </span>
-                            </td>                          
-                            <td>
-                                <span>Rs 0.00 </span>
-                            </td>
-                            <td>
-                            <button type="button" class="btn btn-primary">Sell</button>
-                            <button type="button" class="btn btn-default">Switch</button>                               
-                            </td>
-                        </tr>
-                    
-                        <tr class="tr_fund">
-                            <td colspan="5">
-                            SIP
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                           
-                               <span class="right-arrow"> > </span> <a class="asset-class" data-toggle="collapse" href="#asset-class" 
-                               aria-expanded="false" aria-controls="asset-class">HDFC Top 200</a>                            
+											<td>
+												<span>Rs 0.00 </span>
+											</td>                          
+											<td>
+												<span>Rs 0.00 </span>
+											</td>
+											<td>
+											<button type="button" class="btn btn-primary">Sell</button>
+											<button type="button" class="btn btn-default">Switch</button>                               
+											</td>
+										</tr>
+									
+										<tr class="tr_fund">
+											<td colspan="5">
+											SIP
+											</td>
+										</tr>
+										<tr>
+											<td>
+										   
+											   <span class="right-arrow"> > </span> <a class="asset-class" data-toggle="collapse" href="#asset-class" 
+											   aria-expanded="false" aria-controls="asset-class">HDFC Top 200</a>                            
 
-                                <div class="asset-child-class collapse" id="asset-class"><a href="#">VTI:Vanguard TOTAL Stock Market ETF</a> 
+												<div class="asset-child-class collapse" id="asset-class"><a href="#">VTI:Vanguard TOTAL Stock Market ETF</a> 
 
-                                <p class="asset-child-sub-class">
-                                <span class="right-arrow"> > </span>  
-                                <a data-toggle="collapse" href="#asset-child-sub" aria-expanded="false" aria-controls="asset-child-sub">why this asset class and these etfs</a> </p>
-                                <p class="asset-child-sub-class collapse" id="asset-child-sub"> HDFC Top 200 contains broad exposure to the entire US stock market, including growth and value companies of small, mid and large capitalizations. This asset class allows participation in the historically strong long-term growth of the US economy.
-                                </p>
-                                </div> 
-                                                      
-                            </td>
+												<p class="asset-child-sub-class">
+												<span class="right-arrow"> > </span>  
+												<a data-toggle="collapse" href="#asset-child-sub" aria-expanded="false" aria-controls="asset-child-sub">why this asset class and these etfs</a> </p>
+												<p class="asset-child-sub-class collapse" id="asset-child-sub"> HDFC Top 200 contains broad exposure to the entire US stock market, including growth and value companies of small, mid and large capitalizations. This asset class allows participation in the historically strong long-term growth of the US economy.
+												</p>
+												</div> 
+																	  
+											</td>
 
-                            <td>
-                                <span>Rs 0.00 </span>
-                            </td>                          
-                            <td>
-                                <span>Rs 0.00 </span>
-                            </td>
-                            <td>
-                            <button type="button" class="btn btn-primary">Sell</button>
-                            <button type="button" class="btn btn-default">Switch</button>                               
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                            
-                               <span class="right-arrow"> > </span> <a class="asset-class" data-toggle="collapse" href="#asset-class1" 
-                               aria-expanded="false" aria-controls="asset-class1">HDFC Top 200</a>                            
+											<td>
+												<span>Rs 0.00 </span>
+											</td>                          
+											<td>
+												<span>Rs 0.00 </span>
+											</td>
+											<td>
+											<button type="button" class="btn btn-primary">Stop</button>                               
+											</td>
+										</tr>
+										<tr>
+											<td>
+											
+											   <span class="right-arrow"> > </span> <a class="asset-class" data-toggle="collapse" href="#asset-class1" 
+											   aria-expanded="false" aria-controls="asset-class1">HDFC Top 200</a>                            
 
-                                <div class="asset-child-class collapse" id="asset-class1"><a href="#">VTI:Vanguard TOTAL Stock Market ETF</a> 
+												<div class="asset-child-class collapse" id="asset-class1"><a href="#">VTI:Vanguard TOTAL Stock Market ETF</a> 
 
-                                <p class="asset-child-sub-class">
-                                <span class="right-arrow"> > </span>  
-                                <a data-toggle="collapse" href="#asset-child-sub1" aria-expanded="false" aria-controls="asset-child-sub1">why this asset class and these etfs</a> </p>
+												<p class="asset-child-sub-class">
+												<span class="right-arrow"> > </span>  
+												<a data-toggle="collapse" href="#asset-child-sub1" aria-expanded="false" aria-controls="asset-child-sub1">why this asset class and these etfs</a> </p>
 
-                                <p class="asset-child-sub-class collapse" id="asset-child-sub1"> HDFC Top 200 contains broad exposure to the entire US stock market, including growth and value companies of small, mid and large capitalizations. This asset class allows participation in the historically strong long-term growth of the US economy.
-                                </p>
-                                </div> 
-                                                      
-                            </td>
+												<p class="asset-child-sub-class collapse" id="asset-child-sub1"> HDFC Top 200 contains broad exposure to the entire US stock market, including growth and value companies of small, mid and large capitalizations. This asset class allows participation in the historically strong long-term growth of the US economy.
+												</p>
+												</div> 
+																	  
+											</td>
 
-                            <td>
-                                <span>Rs 0.00 </span>
-                            </td>                          
-                            <td>
-                                <span>Rs 0.00 </span>
-                            </td>
-                            <td>
-                            <button type="button" class="btn btn-primary">Sell</button>
-                            <button type="button" class="btn btn-default">Switch</button>                               
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-      </div>
-    </div>
-  </div>
-  <div class="panel panel-default">
-    <div class="heading" role="tab" id="headingTwo">
-      <h4 class="panel-title">
-        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#comm_investment" aria-expanded="false" aria-controls="comm_investment">
-          <span class="sign plus-sign" id="earning_info_span"></span> Committed Investment
-		  
-		  <span class="Current-Value 2">Current Value <span>Rs 0.00</span></span>
-		  <span class="Current-Value">Projected at 2024<span>Rs 0.00</span></span>
-        </a>
-      </h4>
-    </div>
-    <div id="comm_investment" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
-      <div class="panel-body">
-         <table>
-                    <thead>
-                        <tr>
-                            <th><div class="td_contain_one">Scheme</div></th>                                                         
-                            <th> <div class="td_contain_two">Current Value</div></th>
-                            <th> <div class="td_contain_three">Projected at 2024</div></th>
-                            <th> <div class="td_contain_four" style="padding-left:15px">Action</div></th>
-                        </tr>
-                    </thead>
-                    <tfoot>
-                        <tr>
-                            <td> TOTAL</td>
-                            <td> Rs 0.00</td>                          
-                            <td> Rs 0.00</td>
-                            <td> </td>
-                        </tr>
-                    </tfoot>
-                    <tbody>
-                        <tr class="tr_fund">
-                            <td colspan="5">
-                            One Time
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                           
-                               <span class="right-arrow"> > </span> <a class="asset-class" data-toggle="collapse" href="#asset-class" 
-                               aria-expanded="false" aria-controls="asset-class">HDFC Top 200</a>                            
+											<td>
+												<span>Rs 0.00 </span>
+											</td>                          
+											<td>
+												<span>Rs 0.00 </span>
+											</td>
+											<td>
+											<button type="button" class="btn btn-primary">Stop</button>                               
+											</td>
+										</tr>
+									</tbody>
+								</table>
+					  </div>
+					</div>
+					</div>
+					<div class="panel panel-default">
+					<div class="heading" role="tab" id="headingThree">
+					  <h4 class="panel-title">
+						<a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#new_investment" aria-expanded="false" aria-controls="new_investment">
+						  <span class="sign plus-sign" id="earning_info_span"></span> New Investment
+						  
+						</a>
+					  </h4>
+					</div>
+					<div id="new_investment" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingThree">
+					  <div class="panel-body">    
+						<table>
+									<thead>
+										<tr>
+											<th><div class="td_contain_one">One Time Scheme</div></th>                                                         
+											<th> <div class="td_contain_two">Invested Amount<span style="color:transparent">monthly</span></div></th>
+											<th> <div class="td_contain_three">Projected at 2024</div></th>
+											<th> <div class="td_contain_four">Scheme Rating</div></th>
+										</tr>
+									</thead>
+									<tfoot>
+										<tr>
+											<td> TOTAL</td>
+											<td> Rs 0.00</td>                          
+											<td> Rs 0.00</td>
+											<td> </td>
+										</tr>
+									</tfoot>
+									<tbody>
+										<tr class="tr_fund">
+											<td colspan="5">
+											
+											</td>
+										</tr>
 
-                                <div class="asset-child-class collapse" id="asset-class"><a href="#">VTI:Vanguard TOTAL Stock Market ETF</a> 
+										<tr>
+											<td>
+										   
+											   <span class="right-arrow"> > </span> <a class="asset-class" data-toggle="collapse" href="#asset-class" 
+											   aria-expanded="false" aria-controls="asset-class">HDFC Top 200</a>                            
 
-                                <p class="asset-child-sub-class">
-                                <span class="right-arrow"> > </span>  
-                                <a data-toggle="collapse" href="#asset-child-sub" aria-expanded="false" aria-controls="asset-child-sub">why this asset class and these etfs</a> </p>
+												<div class="asset-child-class collapse" id="asset-class"><a href="#">VTI:Vanguard TOTAL Stock Market ETF</a> 
 
-                                <p class="asset-child-sub-class collapse" id="asset-child-sub"> HDFC Top 200 contains broad exposure to the entire US stock market, including growth and value companies of small, mid and large capitalizations. This asset class allows participation in the historically strong long-term growth of the US economy.
-                                </p>
-                                </div> 
-                                                  
-                            </td>
+												<p class="asset-child-sub-class">
+												<span class="right-arrow"> > </span>  
+												<a data-toggle="collapse" href="#asset-child-sub" aria-expanded="false" aria-controls="asset-child-sub">why this asset class and these etfs</a> </p>
 
-                            <td>
-                                <span>Rs 0.00 </span>
-                            </td>                          
-                            <td>
-                                <span>Rs 0.00 </span>
-                            </td>
-                            <td>
-                            <button type="button" class="btn btn-primary">Stop</button>                               
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                            
-                               <span class="right-arrow"> > </span> <a class="asset-class" data-toggle="collapse" href="#asset-class1" 
-                               aria-expanded="false" aria-controls="asset-class1">HDFC Top 200</a>                            
+												<p class="asset-child-sub-class collapse" id="asset-child-sub"> HDFC Top 200 contains broad exposure to the entire US stock market, including growth and value companies of small, mid and large capitalizations. This asset class allows participation in the historically strong long-term growth of the US economy.
+												</p>
+												</div> 
+																  
+											</td>
 
-                                <div class="asset-child-class collapse" id="asset-class1"><a href="#">VTI:Vanguard TOTAL Stock Market ETF</a> 
+											<td >
+											<div class="col-md-8" style="border:1px solid #ddd; border-radius:4px; ">
+											   <span >Rs.<input style="border:none; padding:5px;" maxlength="12" size="12" type="text" data-type="comma"></span>
+											</div></td>                          
+											<td>
+												<span>Rs 0.00 </span>
+											</td>
+											<td> 
+												<img src="../images/icons/fivestar.png"></img>                            
+											</td>
+										</tr>
+										<tr>
+											<td>
+										   
+											   <span class="right-arrow"> > </span> <a class="asset-class" data-toggle="collapse" href="#asset-class" 
+											   aria-expanded="false" aria-controls="asset-class">HDFC Top 200</a>                            
 
-                                <p class="asset-child-sub-class">
-                                <span class="right-arrow"> > </span>  
-                                <a data-toggle="collapse" href="#asset-child-sub1" aria-expanded="false" aria-controls="asset-child-sub1">why this asset class and these etfs</a> </p>
+												<div class="asset-child-class collapse" id="asset-class"><a href="#">VTI:Vanguard TOTAL Stock Market ETF</a> 
 
-                                <p class="asset-child-sub-class collapse" id="asset-child-sub1"> HDFC Top 200 contains broad exposure to the entire US stock market, including growth and value companies of small, mid and large capitalizations. This asset class allows participation in the historically strong long-term growth of the US economy.
-                                </p>
-                                </div> 
-                                                      
-                            </td>
+												<p class="asset-child-sub-class">
+												<span class="right-arrow"> > </span>  
+												<a data-toggle="collapse" href="#asset-child-sub" aria-expanded="false" aria-controls="asset-child-sub">why this asset class and these etfs</a> </p>
 
-                            <td>
-                                <span>Rs 0.00 </span>
-                            </td>                          
-                            <td>
-                                <span>Rs 0.00 </span>
-                            </td>
-                            <td>
-                            <button type="button" class="btn btn-primary">Stop</button>                               
-                            </td>
-                        </tr>
-                    
-                        <tr class="tr_fund">
-                            <td colspan="5">
-                            SIP
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                           
-                               <span class="right-arrow"> > </span> <a class="asset-class" data-toggle="collapse" href="#asset-class" 
-                               aria-expanded="false" aria-controls="asset-class">HDFC Top 200</a>                            
+												<p class="asset-child-sub-class collapse" id="asset-child-sub"> HDFC Top 200 contains broad exposure to the entire US stock market, including growth and value companies of small, mid and large capitalizations. This asset class allows participation in the historically strong long-term growth of the US economy.
+												</p>
+												</div> 
+																  
+											</td>
 
-                                <div class="asset-child-class collapse" id="asset-class"><a href="#">VTI:Vanguard TOTAL Stock Market ETF</a> 
+											<td >
+											<div class="col-md-8" style="border:1px solid #ddd; border-radius:4px; ">
+											   <span >Rs.<input style="border:none; padding:5px;" maxlength="12" size="12" type="text" data-type="comma"></span>
+											</div></td>                          
+											<td>
+												<span>Rs 0.00 </span>
+											</td>
+											<td> 
+												<img src="../images/icons/fivestar.png"></img>                            
+											</td>
+										</tr>
+										<tr>
+											<td class="add_scheme"> <a href="#" style="color:#18bb9c"> + Add Scheme</a> </td> <td></td> <td></td> <td></td>
+										</tr>
+												 
+									</tbody>
+								</table>
+						<table>
+									<thead>
+										<tr>
+											<th><div class="td_contain_one">SIP Scheme</div></th>                                                         
+											<th> <div class="td_contain_two">Monthly Invested Amount</div></th>
+											<th> <div class="td_contain_three">Projected at 2024</div></th>
+											<th> <div class="td_contain_four">Scheme Rating</div></th>
+										</tr>
+									</thead>
+									<tfoot>
+										<tr>
+											<td> TOTAL</td>
+											<td> Rs 0.00</td>                          
+											<td > Rs 0.00</td>
+											<td> </td>
+										</tr>
+									</tfoot>
+									<tbody>
+									<tr class="tr_fund">
+											<td colspan="5">
+											
+											</td>
+										</tr>
+										<tr>
+											<td>
+										   
+											   <span class="right-arrow"> > </span> <a class="asset-class" data-toggle="collapse" href="#asset-class" 
+											   aria-expanded="false" aria-controls="asset-class">HDFC Top 200</a>                            
 
-                                <p class="asset-child-sub-class">
-                                <span class="right-arrow"> > </span>  
-                                <a data-toggle="collapse" href="#asset-child-sub" aria-expanded="false" aria-controls="asset-child-sub">why this asset class and these etfs</a> </p>
-                                <p class="asset-child-sub-class collapse" id="asset-child-sub"> HDFC Top 200 contains broad exposure to the entire US stock market, including growth and value companies of small, mid and large capitalizations. This asset class allows participation in the historically strong long-term growth of the US economy.
-                                </p>
-                                </div> 
-                                                      
-                            </td>
+												<div class="asset-child-class collapse" id="asset-class"><a href="#">VTI:Vanguard TOTAL Stock Market ETF</a> 
 
-                            <td>
-                                <span>Rs 0.00 </span>
-                            </td>                          
-                            <td>
-                                <span>Rs 0.00 </span>
-                            </td>
-                            <td>
-                            <button type="button" class="btn btn-primary">Stop</button>                               
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                            
-                               <span class="right-arrow"> > </span> <a class="asset-class" data-toggle="collapse" href="#asset-class1" 
-                               aria-expanded="false" aria-controls="asset-class1">HDFC Top 200</a>                            
+												<p class="asset-child-sub-class">
+												<span class="right-arrow"> > </span>  
+												<a data-toggle="collapse" href="#asset-child-sub" aria-expanded="false" aria-controls="asset-child-sub">why this asset class and these etfs</a> </p>
+												<p class="asset-child-sub-class collapse" id="asset-child-sub"> HDFC Top 200 contains broad exposure to the entire US stock market, including growth and value companies of small, mid and large capitalizations. This asset class allows participation in the historically strong long-term growth of the US economy.
+												</p>
+												</div> 
+																	  
+											</td>
 
-                                <div class="asset-child-class collapse" id="asset-class1"><a href="#">VTI:Vanguard TOTAL Stock Market ETF</a> 
+											<td >
+											<div class="col-md-8" style="border:1px solid #ddd; border-radius:4px; ">
+											   <span >Rs.<input style="border:none; padding:5px;" maxlength="12" size="12" type="text" data-type="comma"></span>
+											</div></td>                           
+											<td>
+												<span>Rs 0.00 </span>
+											</td>
+											<td> 
+												<img src="../images/icons/fivestar.png"></img>
+											</td>
+										</tr>
 
-                                <p class="asset-child-sub-class">
-                                <span class="right-arrow"> > </span>  
-                                <a data-toggle="collapse" href="#asset-child-sub1" aria-expanded="false" aria-controls="asset-child-sub1">why this asset class and these etfs</a> </p>
+										 <tr>
+											<td class="add_scheme"> <a href="#" style="color:#18bb9c"> + Add SIP Scheme</a> </td> <td></td> <td></td> <td></td>
+										</tr>
+										
+									</tbody>
+								</table>
+					  <div style="padding:20px 0;">
+					<div class="col-md-6" style="text-align:left;">
+					</div>
+					<div class="col-md-6" style="text-align:right;">
+					<button type="button" class="btn btn-primary">CONFIRM</button>
+					</div>
+					</div>
+					  </div>
+					</div>
+					</div>
 
-                                <p class="asset-child-sub-class collapse" id="asset-child-sub1"> HDFC Top 200 contains broad exposure to the entire US stock market, including growth and value companies of small, mid and large capitalizations. This asset class allows participation in the historically strong long-term growth of the US economy.
-                                </p>
-                                </div> 
-                                                      
-                            </td>
 
-                            <td>
-                                <span>Rs 0.00 </span>
-                            </td>                          
-                            <td>
-                                <span>Rs 0.00 </span>
-                            </td>
-                            <td>
-                            <button type="button" class="btn btn-primary">Stop</button>                               
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-      </div>
-    </div>
-  </div>
-  <div class="panel panel-default">
-    <div class="heading" role="tab" id="headingThree">
-      <h4 class="panel-title">
-        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#new_investment" aria-expanded="false" aria-controls="new_investment">
-          <span class="sign plus-sign" id="earning_info_span"></span> New Investment
-		  
-        </a>
-      </h4>
-    </div>
-    <div id="new_investment" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingThree">
-      <div class="panel-body">    
-        <table>
-                    <thead>
-                        <tr>
-                            <th><div class="td_contain_one">One Time Scheme</div></th>                                                         
-                            <th> <div class="td_contain_two">Invested Amount<span style="color:transparent">monthly</span></div></th>
-                            <th> <div class="td_contain_three">Projected at 2024</div></th>
-                            <th> <div class="td_contain_four">Scheme Rating</div></th>
-                        </tr>
-                    </thead>
-                    <tfoot>
-                        <tr>
-                            <td> TOTAL</td>
-                            <td> Rs 0.00</td>                          
-                            <td> Rs 0.00</td>
-                            <td> </td>
-                        </tr>
-                    </tfoot>
-                    <tbody>
-                        <tr class="tr_fund">
-                            <td colspan="5">
-                            
-                            </td>
-                        </tr>
-
-                        <tr>
-                            <td>
-                           
-                               <span class="right-arrow"> > </span> <a class="asset-class" data-toggle="collapse" href="#asset-class" 
-                               aria-expanded="false" aria-controls="asset-class">HDFC Top 200</a>                            
-
-                                <div class="asset-child-class collapse" id="asset-class"><a href="#">VTI:Vanguard TOTAL Stock Market ETF</a> 
-
-                                <p class="asset-child-sub-class">
-                                <span class="right-arrow"> > </span>  
-                                <a data-toggle="collapse" href="#asset-child-sub" aria-expanded="false" aria-controls="asset-child-sub">why this asset class and these etfs</a> </p>
-
-                                <p class="asset-child-sub-class collapse" id="asset-child-sub"> HDFC Top 200 contains broad exposure to the entire US stock market, including growth and value companies of small, mid and large capitalizations. This asset class allows participation in the historically strong long-term growth of the US economy.
-                                </p>
-                                </div> 
-                                                  
-                            </td>
-
-                            <td >
-							<div class="col-md-8" style="border:1px solid #ddd; border-radius:4px; ">
-                               <span >Rs.<input style="border:none; padding:5px;" maxlength="12" size="12" type="text" data-type="comma"></span>
-                            </div></td>                          
-                            <td>
-                                <span>Rs 0.00 </span>
-                            </td>
-                            <td> 
-								<img src="../images/icons/fivestar.png"></img>                            
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                           
-                               <span class="right-arrow"> > </span> <a class="asset-class" data-toggle="collapse" href="#asset-class" 
-                               aria-expanded="false" aria-controls="asset-class">HDFC Top 200</a>                            
-
-                                <div class="asset-child-class collapse" id="asset-class"><a href="#">VTI:Vanguard TOTAL Stock Market ETF</a> 
-
-                                <p class="asset-child-sub-class">
-                                <span class="right-arrow"> > </span>  
-                                <a data-toggle="collapse" href="#asset-child-sub" aria-expanded="false" aria-controls="asset-child-sub">why this asset class and these etfs</a> </p>
-
-                                <p class="asset-child-sub-class collapse" id="asset-child-sub"> HDFC Top 200 contains broad exposure to the entire US stock market, including growth and value companies of small, mid and large capitalizations. This asset class allows participation in the historically strong long-term growth of the US economy.
-                                </p>
-                                </div> 
-                                                  
-                            </td>
-
-                            <td >
-							<div class="col-md-8" style="border:1px solid #ddd; border-radius:4px; ">
-                               <span >Rs.<input style="border:none; padding:5px;" maxlength="12" size="12" type="text" data-type="comma"></span>
-                            </div></td>                          
-                            <td>
-                                <span>Rs 0.00 </span>
-                            </td>
-                            <td> 
-								<img src="../images/icons/fivestar.png"></img>                            
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="add_scheme"> <a href="#" style="color:#18bb9c"> + Add Scheme</a> </td> <td></td> <td></td> <td></td>
-                        </tr>
-                                 
-                    </tbody>
-                </table>
-        <table>
-                    <thead>
-                        <tr>
-                            <th><div class="td_contain_one">SIP Scheme</div></th>                                                         
-                            <th> <div class="td_contain_two">Monthly Invested Amount</div></th>
-                            <th> <div class="td_contain_three">Projected at 2024</div></th>
-                            <th> <div class="td_contain_four">Scheme Rating</div></th>
-                        </tr>
-                    </thead>
-                    <tfoot>
-                        <tr>
-                            <td> TOTAL</td>
-                            <td> Rs 0.00</td>                          
-                            <td > Rs 0.00</td>
-                            <td> </td>
-                        </tr>
-                    </tfoot>
-                    <tbody>
-					<tr class="tr_fund">
-                            <td colspan="5">
-                            
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                           
-                               <span class="right-arrow"> > </span> <a class="asset-class" data-toggle="collapse" href="#asset-class" 
-                               aria-expanded="false" aria-controls="asset-class">HDFC Top 200</a>                            
-
-                                <div class="asset-child-class collapse" id="asset-class"><a href="#">VTI:Vanguard TOTAL Stock Market ETF</a> 
-
-                                <p class="asset-child-sub-class">
-                                <span class="right-arrow"> > </span>  
-                                <a data-toggle="collapse" href="#asset-child-sub" aria-expanded="false" aria-controls="asset-child-sub">why this asset class and these etfs</a> </p>
-                                <p class="asset-child-sub-class collapse" id="asset-child-sub"> HDFC Top 200 contains broad exposure to the entire US stock market, including growth and value companies of small, mid and large capitalizations. This asset class allows participation in the historically strong long-term growth of the US economy.
-                                </p>
-                                </div> 
-                                                      
-                            </td>
-
-                            <td >
-							<div class="col-md-8" style="border:1px solid #ddd; border-radius:4px; ">
-                               <span >Rs.<input style="border:none; padding:5px;" maxlength="12" size="12" type="text" data-type="comma"></span>
-                            </div></td>                           
-                            <td>
-                                <span>Rs 0.00 </span>
-                            </td>
-                            <td> 
-								<img src="../images/icons/fivestar.png"></img>
-                            </td>
-                        </tr>
-
-                         <tr>
-                            <td class="add_scheme"> <a href="#" style="color:#18bb9c"> + Add SIP Scheme</a> </td> <td></td> <td></td> <td></td>
-                        </tr>
-                        
-                    </tbody>
-                </table>
-      <div style="padding:20px 0;">
-	<div class="col-md-6" style="text-align:left;">
-	</div>
-	<div class="col-md-6" style="text-align:right;">
-	<button type="button" class="btn btn-primary">CONFIRM</button>
-	</div>
-	</div>
-	  </div>
-    </div>
-  </div>
-	<div class="projected-gap">
-	<span>Projected Gap [?]</span><input ></input>
-	</div>
 	
 	
-	
-  </div>
+				</div>
                 <!-- Ending Accordion -->
 
                 <!--Starting Modals  -->

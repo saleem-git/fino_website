@@ -1,4 +1,5 @@
 .summary{
+	
 	.manage_account{
 		h1{
 				line-height: 35px;
@@ -22,9 +23,6 @@
 						
 					.show_form{
 						display: block;
-					}	
-					.dropdown span.caret{
-						margin-left: 75px;
 					}
 				}
 				.btn-info{
@@ -43,14 +41,67 @@
 	}
 	.modal-dialog{
 	&.add-goal{
+		.modal-header{background-color:#2C3E51; color:white; font-weight:600; text-transform:uppercase;}
+		.modal-body{background-color:#ebebeb; height:23em;&.step-2{.target{padding:15px}}}
+		.modal-footer{background-color:#ebebeb;}
 		width:70%;
 		top:5em;
-		.btn-default{box-shadow:none; &.select-goal{width:14em; &.active, &:active,&:focus,&:hover{background-color:#18bb9c;color:white; font-weight:700;} }}
-		.goals{width:145%; padding:10px 0;}
-		input{position: absolute;
+		.btn-default{&.submit-goal{background-color:#2C3E51;color:white;} box-shadow:none; &.select-goal{p{@include fontl(14);} width:11.5em; &.active, &:active,&:focus,&:hover{background-color:#2C3E51;color:white; font-weight:700;} }}
+		.goals{width:100%; 
+			.row{
+			padding:10px 0; 
+			.goal-header{@include fontl(16);font-weight:500;}
+			} 
+			}
+		input[type="radio"]{position: absolute;
 		clip: rect(0px, 0px, 0px, 0px);
-		pointer-events: none;}
-		}}
+		pointer-events: none;
+		}
+		&.focus{outline:none;}
+		input[type="text"]{
+			font-size:14px;
+			border:1px solid #18bb9c;
+			border-radius:4px;
+			padding:5px;
+			}
+		
+		}
+		}
+		
+	.bottom-table{
+	.tab-content{margin-top:0.5em; h3{font-size:15px; font-weight:600; padding:2em 0 0;} }}
+	.nav-tabs li{width:25%; border:none; color:white; & a{color:#000; font-weight:600;}  &.active a, &.active a:focus, &.active a:hover{color:white;background-color:#18bb9c;}}
+			.bottom-table{
+		padding:20px;
+		margin:1em auto; border:2px solid #DDD; border-radius:4px;
+		th {
+			&:first-child{
+				width: auto;
+			}
+		}
+		}
+		
+	table{
+		border: 1px solid rgb(204, 204, 204);
+		width: 100%;
+		font-size:12px;
+		th {
+			font-size:15px;
+			text-align:center;
+			background:#18bb9c; color:white;
+			border: 2px solid rgb(204, 204, 204);
+			padding:3px;
+			&:first-child{
+				width: 250px;
+			}
+		}
+		margin-top: 20px;
+		}
+		
+		td{
+		padding:5px;
+		border: 1px solid rgb(204, 204, 204);
+		}
 }
 /* Overview */
 .panel-default{
@@ -69,10 +120,8 @@
 			}		
 			h1{
 				@include fontm(32);
-			}	
-			h4{
-				@include fontl(12);
 			}
+			text-align:center;
 			
 		}		
 	
@@ -121,17 +170,14 @@
 		}		
 	}
 	.deposit{
+			text-align:center;
 			p{
 				@include fontl(14);
-				padding-bottom: 5px;
-			}
-			button{
-				border-color:#7FB800;
-				color: #7FB800;
-				&:hover {
-					background-color: #7FB800;
-					color: #fff;
-				}
+				
+				&.above{font-weight:300;}
+			}		
+			h1{
+				@include fontm(32);
 			}
 			
 		}
@@ -161,7 +207,8 @@
 /* POrtfolio Page */
 .portfolio{
 	.projected-gap{
-		text-align:right;
+		text-align:left;
+		text-transform:uppercase;
 		input{
 		width:10em; 
 		border:2px solid gray;
@@ -181,17 +228,20 @@
 			padding: 10px 15px;
 			border-bottom: 1px solid #DDD;
 			border-top-left-radius: 3px;
-			border-top-right-radius: 3px;		
-			.year, .amount{text-align:center;}
+			border-top-right-radius: 3px;
+			background:#2C3E51;
+			.year, .amount{text-align:center; color:white;h3{color:#aaa;} }
 			p,h2{
 				@include fontsb(16);
 			}
 			h3{
 				@include fontm(14);
 			}
+			.selected-goal{padding:10px 0; a{color:#18bb9c;text-decoration:none; text-transform:uppercase; font-weight:600;}}
 			
 		}
 		.panel-body{
+			&.main-panel{background:#ebebeb;}
 			p {
 				@include fontl(14);
 			}
