@@ -83,13 +83,13 @@
                 <!-- Starting accordion -->
 				<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
 					<div class="projected-gap">
-						<span>Projected Gap </span><input ></input>
+						<span>Projected Gap </span><input ></input> <span data-toggle="popover" data-placement="right" data-trigger="hover" data-content=" Expected value of your investment by your target year minus amount you require for your goal by your target year"><img src="../images/i.png"></span>
 					</div>
 					<div class="panel panel-default">
 					<div class="heading" role="tab" id="headingOne">
 					  <h4 class="panel-title">      
 						<a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#curr_investment" aria-expanded="false" aria-controls="curr_investment">
-						  <span class="sign plus-sign" id="earning_info_span"></span> Current Investment
+						  <span class="sign plus-sign" id="earning_info_span"></span> Current Investment <span data-toggle="popover" data-trigger="hover" data-content=" List of your investments which you have already made"><img src="../images/i.png"></span>
 						  <span class="Current-Value">Current Value <span>Rs 0.00</span></span>
 						  <span class="Current-Value">Projected at 2024<span>Rs 0.00</span></span>
 						</a>
@@ -118,7 +118,7 @@
 									<tbody>
 										<tr class="tr_fund">
 											<td colspan="5">
-											One Time
+											One Time <span data-toggle="popover" data-placement="right" data-trigger="hover" data-content=" Start an investment in a new scheme of your own choice"><img src="../images/i.png"></span>
 											</td>
 										</tr>
 										<tr>
@@ -182,7 +182,7 @@
 									
 										<tr class="tr_fund">
 											<td colspan="5">
-											SIP
+											SIP <span data-toggle="popover" data-placement="right" data-trigger="hover" data-content=" Start an investment in a new scheme of your own choice"><img src="../images/i.png"></span>
 											</td>
 										</tr>
 										<tr>
@@ -249,7 +249,7 @@
 					<div class="heading" role="tab" id="headingThree">
 					  <h4 class="panel-title">
 						<a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#new_investment" aria-expanded="false" aria-controls="new_investment">
-						  <span class="sign plus-sign" id="earning_info_span"></span> New Investment
+						  <span class="sign plus-sign" id="earning_info_span"></span> New Investment <span data-toggle="popover" data-placement="right" data-trigger="hover" data-content=" Start an investment in a new scheme of your own choice"><img src="../images/i.png"></span>
 						  
 						</a>
 					  </h4>
@@ -259,7 +259,7 @@
 						<table>
 									<thead>
 										<tr>
-											<th><div class="td_contain_one">One Time Scheme</div></th>                                                         
+											<th><div class="td_contain_one">One Time Scheme <span data-toggle="popover" data-placement="right" data-trigger="hover" data-content=" Start an investment in a new scheme of your own choice"><img src="../images/i.png"></span></div></th>                                                         
 											<th> <div class="td_contain_two">Invested Amount<span style="color:transparent">monthly</span></div></th>
 											<th> <div class="td_contain_three">Projected at 2024</div></th>
 											<th> <div class="td_contain_four">Scheme Rating</div></th>
@@ -347,7 +347,7 @@
 						<table>
 									<thead>
 										<tr>
-											<th><div class="td_contain_one">SIP Scheme</div></th>                                                         
+											<th><div class="td_contain_one">SIP Scheme <span data-toggle="popover" data-placement="right" data-trigger="hover" data-content=" Start an investment in a new scheme of your own choice"><img src="../images/i.png"></span></div></th>                                                         
 											<th> <div class="td_contain_two">Monthly Invested Amount</div></th>
 											<th> <div class="td_contain_three">Projected at 2024</div></th>
 											<th> <div class="td_contain_four">Scheme Rating</div></th>
@@ -899,7 +899,7 @@
             $(eventID).siblings().find("span.Current-Value").fadeIn();
         });
 
-
+$('[data-toggle="popover"]').popover(); 
     </script>
 	<script src="../js/readmore.js"></script>
     </body>

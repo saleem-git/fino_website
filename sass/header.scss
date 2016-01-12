@@ -21,7 +21,7 @@
 	}
 	.dropdown-toggle {width: 248px;}
 	.username{border-left: 2px solid #808080;}
-	.navbar-right {
+	.navbar-right li{cursor:pointer;
 	&:hover,active{background:#263646;}}
 	&.navbar.navbar-default .navbar-nav > li a{
 										color: gray;
@@ -106,7 +106,7 @@ footer {
 	}
 	.footer-col {
 		text-align:left;
-		&.big{padding:0 6em;}
+		&.big{padding:0 6em;h3{padding:1em 0;font-size: 26px; color: white;} }
 		margin-bottom: 50px;
 		ul{list-style-type:none; line-height:40px; padding-left:0;
 			& a{text-decoration:none; }
@@ -116,7 +116,7 @@ footer {
 	.footer-below {
 		padding: 25px 0;
 		background-color: #2C3E50;
-		.copyright{h4{text-transform:none;padding-bottom: 0;} p{font-size:14px;}}
+		.copyright{p{padding:0;} h4{text-transform:none;padding-bottom: 0; font-size: 16px;} p{font-size:14px;}}
 	}
 	.btn-social {
     display: inline-block;
@@ -129,6 +129,7 @@ footer {
     line-height: 45px;
 	margin:10px 0 0 0;
 	color:white;
+	padding:0;
 	background:transparent;
 }
 }
@@ -192,7 +193,7 @@ background-image:
 	border:1px solid gray;
 	box-shadow:none;
 	border-radius:5px;
-	width:15em;
+	width:24em;
 	font-size:13px;
 	padding:5px 0;
 	}

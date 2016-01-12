@@ -87,15 +87,15 @@
             <option value="4">4</option>
         </select>
         kids.<br><br>
-		My annual pre tax income is ₹
+		My annual pre tax income is  ₹
 		<input type="text" placeholder="" maxlength="10" name="income" value="" size="10" data-type="comma">
-
+		<span data-toggle="popover" data-trigger="hover" data-content="Total yearly income before deduction of taxes"><img src="images/i.png"></span>
         <span class="madlib-error"></span>
 
 		
 		</p>
         <div class="row">
-            <div class="col-lg-8 col-lg-offset-2 text-center" >
+            <div class="text-center" >
                  <button type="submit" class="btn btn-lg btn-outline " id="get_start" >Start Investment</button>
             </div>
         </div>
@@ -190,7 +190,7 @@
 			<div class="container" >
 			<div class="row" >
 				<div class="col-md-6 " >
-					<button class="btn btn-lg btn-outline footer-button" >INVEST NOW</button>
+					<a href="get-started.html"><button class="btn btn-lg btn-outline footer-button" >INVEST NOW</button></a>
 				</div>
 				<div class="col-md-6 " >
 					<div class="row" >
@@ -220,9 +220,9 @@
                     </div>
                     <div class="footer-col col-md-3">
 						<ul>
-						<a href="http://www.finotrust.com"><li>Tax Loss Harvesting</li></a>
-						<a href="Why-Fino.html"><li>Careers</li></a>
-						<a href="What-We-Do.html"><li>Blog</li></a>
+						<a href="tlh.html"><li>Tax Loss Harvesting</li></a>
+						<a href="career.html"><li>Careers</li></a>
+						<a href="#"><li>Blog</li></a>
 						<a href="About-Us.html"><li>Our Mission</li></a>
 						<a href="Policy.html"><li>Privacy Policy</li></a>
 						<a href="Policy.html"><li>Terms & Conditions</li></a>
@@ -255,6 +255,8 @@
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha256-KXn5puMvxCw+dAYznun+drMdG1IFl3agK0p/pqT9KAo= sha512-2e8qq0ETcfWRI4HJBzQiA3UoyFk6tbNyG+qSaIBZLyW9Xf3sWZHN/lxe9fTh1U45DpPf07yj94KsUHHWe4Yk1A==" crossorigin="anonymous"></script>	 
 	<script src="js/script.js"></script>
 	<script src="js/readmore.js"></script>
-
+<script>
+    $('[data-toggle="popover"]').popover();   
+</script>
 	</body>
 </html>

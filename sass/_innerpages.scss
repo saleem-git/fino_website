@@ -1,3 +1,6 @@
+.popover-content {
+    width: 20em;
+}
 .summary{
 	
 	.manage_account{
@@ -70,17 +73,15 @@
 		
 	.bottom-table{
 	.tab-content{margin-top:0.5em; h3{font-size:15px; font-weight:600; padding:2em 0 0;} }
-	.bottom-nav-tabs li{width:25%; border:none; color:white; & a{color:#000; font-weight:600;}  &.active a, &.active a:focus, &.active a:hover{color:white;background-color:#18bb9c;}}
-			.bottom-table{
-		padding:20px;
+	.bottom-nav-tabs li{width:25%; border:none; color:white;  background: gainsboro; & a{color:#000; font-weight:600;} 
+	&.active a, &.active a:focus, &.active a:hover{color:white;background-color:#18bb9c;}}
+		padding:0px !important;
 		margin:1em auto; border:2px solid #DDD; border-radius:4px;
 		th {
 			&:first-child{
 				width: auto;
 			}
 		}
-		}
-		
 	table{
 		border: 1px solid rgb(204, 204, 204);
 		width: 100%;
@@ -147,7 +148,7 @@
 /* retirement Plan */
 #retirement_info{
 		display: none;
-
+		padding-top:2em;
 	}
 .retirement_plan_actions{
 	
@@ -584,4 +585,53 @@
 	}
 } 
 
+}
+.add-scheme{
+	.add-scheme-tab{
+		margin-top:2em;
+		border:1px solid #ddd;
+		.nav-tabs li{
+		width:50%; border:none; color:white; 
+		& a{color:#000; font-weight:600;}  &.active a, &.active a:focus, &.active a:hover{color:white;background-color:#18bb9c;}}
+		p{@include fontl(14);} 
+		#all-funds{
+			label, p, span{@include fontl(14);}
+			p{padding:10px;}
+			select{width:13em; border:1px solid #ddd;padding:5px;}
+			.select-amc{padding: 2em 0em 1em;}
+			.show-schemes{padding: 2em 1em 1em; border-top:1px solid #ddd; margin:0;}
+			}
+		}
+	.search-results{
+		 table{
+		border: 2px solid rgb(204, 204, 204);
+		width: 100%;
+		font-size:12px;
+		th {
+			font-size:15px;
+			text-align:center;
+			background:#18bb9c; color:white;
+			border: 2px solid rgb(204, 204, 204);
+			padding:3px;
+			&:first-child{
+				width: 250px;
+			}
+		}
+		margin-top: 20px;
+		
+		td{
+		padding:5px;
+		text-align:center;
+		border: 1px solid rgb(204, 204, 204);
+	}}
+}
+}
+.payment{
+margin-top:6em;
+.secure-pay-head{
+	h3{@include fontl(16);padding:10px;span{color:#18bb9c;} font-weight:600;}
+	h4{@include fontl(32);}
+	h5{@include fontl(14);color:gray;}
+	img{padding:0 15px;}}
+	.secure-pay-body{img{padding:12px 12px 3px;} }
 }
