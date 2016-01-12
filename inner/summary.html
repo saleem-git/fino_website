@@ -71,8 +71,8 @@
 	    	</div> <!-- End for classless div after span -->
 	    </div><!-- End of first col-sm -6 for overaccoint -->
 	    
-		<div class="col-sm-4 retirement_plan_actions"><div class="deposit above"><p>INFLOW MINUS OUTFLOW(NET FLOW)</p><h1>₹0.00</h1></div></div>
-		<div class="col-sm-4 retirement_plan_actions"><div class="deposit above"><p>PORTFOLIO RETURNS</p><h1>0.00%</h1></div></div>
+		<div class="col-sm-4 retirement_plan_actions"><div class="deposit above"><p>INFLOW MINUS OUTFLOW(NET FLOW) <span data-toggle="popover" data-placement="top"  data-trigger="hover" data-content="Amount of Money Invested minus Amount of Money taken out"><img src="../images/i.png"></span></p><h1>₹0.00</h1></div></div>
+		<div class="col-sm-4 retirement_plan_actions"><div class="deposit above"><p>ANNUALIZED PORTFOLIO RETURNS <span data-toggle="popover" data-placement="top"  data-trigger="hover" data-content="Returns generated in percentage since you started investing on all your investments"><img src="../images/i.png"></span></p><h1>0.00%</h1></div></div>
 	    </div>
 
 	    <div class="row earnings" id="earning_info">
@@ -162,7 +162,7 @@
 			<div class="col-sm-2 retirement_plan_actions"><div class="deposit"><p>TARGET YEAR</p><span>2024</span></div></div>
 			<div class="col-sm-2 retirement_plan_actions"><div class="deposit"><p>TARGET AMOUNT</p><span>Rs 0.00 </span></div></div>
 			<div class="col-sm-2 retirement_plan_actions"><div class="deposit"><p>CURRENT BALANCE</p><span>Rs 0.00 </span></div></div>
-			<div class="col-sm-2 retirement_plan_actions"><div class="deposit"><p>PROJECTED GAP</p><span>Rs 0.00 </span></div></div>
+			<div class="col-sm-2 retirement_plan_actions"><div class="deposit"><p>PROJECTED GAP <span data-toggle="popover" data-placement="top" data-trigger="hover" data-content="Expected value of your investment by your target year minus amount you require for your goal by your target year"><img src="../images/i.png"></span></p><span>Rs 0.00 </span></div></div>
 		</div>
 
 		<div class="row" id="retirement_info"> 
@@ -854,8 +854,7 @@
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha256-KXn5puMvxCw+dAYznun+drMdG1IFl3agK0p/pqT9KAo= sha512-2e8qq0ETcfWRI4HJBzQiA3UoyFk6tbNyG+qSaIBZLyW9Xf3sWZHN/lxe9fTh1U45DpPf07yj94KsUHHWe4Yk1A==" crossorigin="anonymous"></script>	 
 	<script type="text/javascript">
 		$(function () {
-		$('.step-1').tab('show');
-  $('[data-toggle="tooltip"]').tooltip();
+  $('[data-toggle="popover"]').popover(); 
 })
 	</script>
 	<script src="../js/script.js"></script>

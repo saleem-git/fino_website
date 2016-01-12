@@ -73,7 +73,7 @@
         kids.<br><br>
 		My annual pre tax income is ₹
 		<input type="text" placeholder="" maxlength="10" name="income" value="" size="10" data-type="comma">
-
+		<span data-toggle="popover" data-trigger="hover" data-content="Total yearly income before deduction of taxes"><img src="images/i.png"></span>
         <span class="madlib-error"></span>
 
 		
@@ -92,7 +92,9 @@
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha256-KXn5puMvxCw+dAYznun+drMdG1IFl3agK0p/pqT9KAo= sha512-2e8qq0ETcfWRI4HJBzQiA3UoyFk6tbNyG+qSaIBZLyW9Xf3sWZHN/lxe9fTh1U45DpPf07yj94KsUHHWe4Yk1A==" crossorigin="anonymous"></script>	 
 	<script src="js/script.js"></script>
 	<script src="js/readmore.js"></script>
-
+	<script>
+		$('[data-toggle="popover"]').popover();   
+	</script>
 </body>
 
 </html>

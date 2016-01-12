@@ -59,7 +59,7 @@
 		<li><a data-toggle="tab" href="#Tax-Saving">Tax-Saving Funds</a></li>
   </ul>
 
-  <div class="tab-content">
+  <div class="tab-content top-table-content">
     <div id="Equity" class="tab-pane fade in active">
     <h3>Equity Funds- Moderate Risk</h3>
 	<table>
@@ -70,8 +70,8 @@
 				<th><div class="">1 Year<br>Returns </div></th> 
 				<th><div class="">3 Year<br>Returns </div></th> 
 				<th><div class="">5 Year<br>Returns </div></th> 
-				<th><div class=""> 5 Year</div></th> 
-				<th><div class=""> 5 Year</div></th> 
+				<th><div class=""></div></th> 
+				<th><div class=""></div></th> 
 			</tr>
 		</thead>
 
@@ -118,8 +118,8 @@
 				<th><div class="">1 Year<br>Returns </div></th> 
 				<th><div class="">3 Year<br>Returns </div></th> 
 				<th><div class="">5 Year<br>Returns </div></th> 
-				<th><div class=""> 5 Year</div></th> 
-				<th><div class=""> 5 Year</div></th> 
+				<th><div class=""></div></th> 
+				<th><div class=""></div></th> 
 			</tr>
 		</thead>
 
@@ -158,7 +158,7 @@
 	</table>
 
     </div>
-    <div id="Hybrid" class="tab-pane fade">
+    <div id="Hybrid" class="tab-pane">
       <h3>Hybrid Funds</h3>
 	  	<table>
 		<thead>
@@ -168,8 +168,8 @@
 				<th><div class="">1 Year<br>Returns </div></th> 
 				<th><div class="">3 Year<br>Returns </div></th> 
 				<th><div class="">5 Year<br>Returns </div></th> 
-				<th><div class=""> 5 Year</div></th> 
-				<th><div class=""> 5 Year</div></th> 
+				<th><div class=""></div></th> 
+				<th><div class=""></div></th> 
 			</tr>
 		</thead>
 
@@ -216,48 +216,23 @@
     </div>
   </div>
 </div>
+		<div class="col-md-4 search-invest-head"><h6>Search Funds to Invest</h6></div>
 		<div class="col-md-4 search-invest-select">
-			<label>AMC Name</label><br>
+		<input class="panel" type="text" placeholder="Search Funds to Invest"><br>
+			<label>Select AMC</label><br>
 			<select class="search-invest" name="action">
 				<option value="" selected hidden> AMC Name </option>
 				<option value="Purchase">Purchase<span class="caret"></span></option>
 				<option value="redeem">Redeem</option>
 				<option value="SIP-registration">SIP Registration </option>
 			</select>
-			<br><label>Scheme Type</label><br>
+			<br><label>Select Category</label><br>
 			<select class="search-invest" name="action">
 				<option value="" selected hidden> Scheme Type </option>
 				<option value="Purchase">Purchase<span class="caret"></span></option>
 				<option value="redeem">Redeem</option>
 				<option value="SIP-registration">SIP Registration </option>
 			</select>
-			<br><label>Scheme Name</label><br>
-			<select class="search-invest" name="action">
-				<option value="" selected hidden> Scheme Name </option>
-				<option value="Purchase">Purchase<span class="caret"></span></option>
-				<option value="redeem">Redeem</option>
-				<option value="SIP-registration">SIP Registration </option>
-			</select>
-<div class="search-invest-tab">
-	<ul class="nav nav-tabs">
-		<li class="active"><a data-toggle="tab" href="#sip-tab">SIP</a></li>
-		<li><a data-toggle="tab" href="#one-time">One Time</a></li>
-	</ul>
-  
-  <div class="tab-content">
-    <div id="sip-tab" class="tab-pane fade in active">
-		<div class="row"><div class="col-sm-5"><label>Frequency</label></div><div class="col-md-6"><input type="text"></input></div></div>
-		<div class="row"><div class="col-sm-5"><label>No. of Installments</label></div><div class="col-md-6"><input type="text"></input></div></div>
-		<div class="row"><div class="col-sm-5"><label>Installments Date</label></div><div class="col-md-6"><input type="text"></input></div></div>
-    </div>
-    <div id="one-time" class="tab-pane fade">
-		<div class="row"><div class="col-sm-5"><label>Frequency</label></div><div class="col-md-6"><input type="text"></input></div></div>
-		<div class="row"><div class="col-sm-5"><label>No. of Installments</label></div><div class="col-md-6"><input type="text"></input></div></div>
-		<div class="row"><div class="col-sm-5"><label>Installments Date</label></div><div class="col-md-6"><input type="text"></input></div></div>
-   </div>
-
-  </div>
-  </div>
 
 		</div>
 
@@ -632,6 +607,10 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>  
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha256-KXn5puMvxCw+dAYznun+drMdG1IFl3agK0p/pqT9KAo= sha512-2e8qq0ETcfWRI4HJBzQiA3UoyFk6tbNyG+qSaIBZLyW9Xf3sWZHN/lxe9fTh1U45DpPf07yj94KsUHHWe4Yk1A==" crossorigin="anonymous"></script>	 
 	<script src="../js/script.js"></script>
-
+	<script>
+$(document).ready(function(){
+    $('[data-toggle="popover"]').popover();   
+});
+</script>
     </body>
 </html>
