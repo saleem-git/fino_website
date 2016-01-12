@@ -385,12 +385,12 @@
 				var ageto_retire=60-ageinfo;
 				var yearto_retire=currentYear+ageto_retire;
 
-				var salaryto_save=30*incomeinfo;
+				var salaryto_save=(ageto_retire*incomeinfo);
 				salaryto_save=(salaryto_save).toLocaleString();
 				//console.log(salaryto_save+"comma");
 				var child_edu=5+currentYear;
 				var contingency_year=1+currentYear;
-				var contingency_amt=0.5*(incomeinfo);
+				var contingency_amt=(0.5*(incomeinfo)).toLocaleString();
 				var philan_year=2+currentYear;
 
 				var low,medium,high,low_fd,low_debt,low_equ,low_liq;
