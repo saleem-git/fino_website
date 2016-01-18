@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>What We Do</title>
+        <title>Get Started</title>
         <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600' rel='stylesheet' type='text/css'>
         <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha256-7s5uDGW3AHqw6xtJmNNtr+OBRJUlgkNJEo78P4b0yRw= sha512-nNo+yCHEyn0smMxSswnf/OnX6/KwJuZTlNZBjauKhTK0c+zT+q5JOCx0UFhXQ6rJR9jg6Es8gPuD2uZcYDLqSw==" crossorigin="anonymous">
 		<link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
@@ -50,7 +50,7 @@
 		<span class="name"><h5 style="color:gray; text-align:center;  margin-bottom:4%">START YOUR INVESTMENT PLAN</h5></span>
 		<form method="get" action="onboarding.html" name="onboardinfo">
 		<div class="details">
-			<section class="row onboarding-desktop-form">
+			<section class="row onboarding-desktop-form hidden-xs">
 			<p><span class="edit-age"> I am 
 				<input  type="text" name="age" maxlength="2" size="3" value"4" />
 				years old and <!--  onkeyup="this.value=this.value.replace(/[^\d]/,'')" -->
@@ -80,34 +80,33 @@
 					<span data-toggle="popover" data-trigger="hover" data-content="Total yearly income before deduction of taxes"><img src="images/i.png"></span>
 				</span></p>	
 			</section>
-			<section class="row onboarding-mobile-form">
+			<section class="row onboarding-mobile-form visible-xs">
 				<fieldset>
-					<input name="age" type="tel" placeholder="Enter Age" maxlength="3" data-suffix=" years old">
-					<span class="age-error error-message"></span>
-
-					<input name="retirementStatus" type="hidden">
-					<div class="retirement-status">
-						<a href="#" data-retirement-status="notRetired">Not retired</a>
-						<a href="#" data-retirement-status="retired">Retired</a>
+					<div class="income panel"><input name="age" type="tel" placeholder="Enter Age" maxlength="3" data-suffix=" years old">
+					<span class="age-error error-message"></span></div>
+					<div class="btn-group retirement-status" data-toggle="buttons">
+						<label class="btn btn-default form_options"><input type="radio" name="retirementStatus" id="option1" autocomplete="off">Not retired</label>
+						<label class="btn btn-default form_options"><input type="radio" name="retirementStatus" id="option2" autocomplete="off">Retired</label>
 					</div>
-					<div class="retirement-status">
-						<a href="#" data-married-status="notMarried">Not Married</a>
-						<a href="#" data-married-status="Married">Married</a>
+					<div class="btn-group marrital-status" data-toggle="buttons">
+						<label class="btn btn-default form_options"><input type="radio" name="marritalStatus" id="option1" autocomplete="off">Not Married</label>
+						<label class="btn btn-default form_options"><input type="radio" name="marritalStatus" id="option2" autocomplete="off">Married</label>
 					</div>
 					<span class="retirement-status-error error-message"></span>
-
-					<span class="income-symbol">₹</span>
-					<input name="income" type="tel" placeholder="Enter Income" maxlength="10" data-suffix=" per year" data-type="comma">
+					<div class="income panel"><span class="income-symbol">₹</span>
+					<input name="income" type="tel" placeholder="Enter Income" maxlength="10" data-suffix=" per year" data-type="comma"></div>
 					<span class="income-error error-message"></span>
+					
 				</fieldset>
+					
 			</section>
 		</div>
-        <div class="row">
-            <div class="col-lg-8 col-lg-offset-2 text-center" >
+        
+		<div class="row">
+            <div class="text-center" >
                  <button type="submit" class="btn btn-lg btn-outline " id="get_start" >Start Investment</button>
             </div>
         </div>
-		
         </form>
         
     </div>
