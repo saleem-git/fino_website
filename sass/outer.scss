@@ -30,6 +30,25 @@ h3{padding-bottom:3px;}
 	.intro-text{
 		h2{padding:0.15em 0;}
 		& p{padding:0 20%;}
+		.details{
+		position: relative;
+		.onboarding-mobile-form{
+			
+			display:none; 
+			input{border:1px solid #ddd; padding:10px; text-align:left;}
+		
+		}
+		.onboarding-desktop-form{display:block; }
+		@media(max-width:500px){
+		.onboarding-mobile-form{display:block;}
+		.onboarding-desktop-form{display:none;}
+		}
+		.edit-age {
+			
+			display: inline-block;
+			padding:12px 0px;
+		}
+		}
 	}
 	input{color:#18bb9c; border:none; border-bottom:1px solid gray; text-align:center; }
 	select{border:none; border-bottom:1px solid gray;}
@@ -185,7 +204,7 @@ hr.star-primary:after {
 	background:#18bb9c;
 	transition: all 0.3s ease-in-out 0s;
 	&:hover{background:#fff; color:#18bb9c;}
-	&.get-start{ border-color: #fff; padding:5px 15px; background:#fff; box-shadow: 5px 5px 2px #888; }
+	&.get-start{ border-color: #fff; color:#18BC9C; padding:5px 15px; background:#fff; box-shadow: 5px 5px 2px #888; }
 	&.learn-more{ border-color: #fff; padding:5px 15px;}
 }
 
@@ -236,7 +255,7 @@ section{
 		background-position: center center;
 		min-height:400px;
 		padding:10%;
-		&#logo{background-image: url("../images/benchmark-logo.jpg"); margin-top:-21px; h3{color:white;margin-top:0}}
+		&#logo{background-image: url("../images/benchmark-logo.jpg"); margin-top:-21px; h3{color:white;margin-top:0} h4{font-size:18px;padding-left:2em;} }
 		&#goal-story{
 		.row{width: 70%;margin: auto;}
 			padding:4em;
