@@ -28,16 +28,17 @@ h3{padding-bottom:3px;}
 		img{margin: 3% auto 2%;}
 		}
 	.intro-text{
+		padding-top:7em;
 		h2{padding:0.15em 0;}
 		& p{padding:0 20%;}
 		.details{
 		position: relative;
-		.onboarding-mobile-form{width:50%; margin:auto;
-			fieldset{font-size:0.65em;
+		.onboarding-mobile-form{width:75%; margin:auto;
+			fieldset{font-size:1em;
 			input, .retirement-status, .marrital-status{width:100%;margin-top: 4px;  border:none; font-family:Open Sans;}
-			.income{margin-bottom:0; margin-top: 4px; border:1px solid #ccc; input{width:95%;margin-top: 0px; outline:none; }}
-			input{padding:7px; text-align:left;}
-			.form_options{width:50%; color:#adadad; &.active, &:active, &:hover, &:focus{background:#18bb9c; color:white;} }
+			.income{margin-bottom:0; margin-top: 4px; border:1px solid #ccc; input{width:90%;margin-top: 0px; outline:none; }}
+			input{padding: 15px 7px; text-align:left;}
+			.form_options{width:50%; color:#adadad; padding:15px 7px; &.active, &:active, &:hover, &:focus{background:#18bb9c; color:white;} }
 		}
 		#get_start{width:100%; margin:15px 0;}
 		}
