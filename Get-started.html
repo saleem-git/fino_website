@@ -92,18 +92,18 @@
 			<form method="get" action="onboarding.html" name="onboardinfo_mob">
 				<fieldset>
 					<div class="income panel"><input name="age" type="tel" placeholder="Enter Age" maxlength="3" data-suffix=" years old">
-					<span class="age-error error-message"></span></div>
+					</div>
 					<div class="btn-group retirement-status" data-toggle="buttons">
-						<label class="btn btn-default form_options"><input type="radio" name="retirementStatus" id="option1" autocomplete="off">Not retired</label>
-						<label class="btn btn-default form_options"><input type="radio" name="retirementStatus" id="option2" autocomplete="off">Retired</label>
+						<label class="btn btn-default form_options"><input type="radio" name="retirement" id="option1" autocomplete="off" value="not_retired">Not retired</label>
+						<label class="btn btn-default form_options"><input type="radio" name="retirement" id="option2" autocomplete="off" value="retired">Retired</label>
 					</div>
 					<div class="btn-group marrital-status" data-toggle="buttons">
-						<label class="btn btn-default form_options"><input type="radio" name="marritalStatus" id="option1" autocomplete="off">Not Married</label>
-						<label class="btn btn-default form_options"><input type="radio" name="marritalStatus" id="option2" autocomplete="off">Married</label>
+						<label class="btn btn-default form_options"><input type="radio" name="martial_status" id="option1" autocomplete="off" value="married">Not Married</label>
+						<label class="btn btn-default form_options"><input type="radio" name="martial_status" id="option2" autocomplete="off" value="unmarried">Married</label>
 					</div>
-					<span class="retirement-status-error error-message"></span>
-					<div class="income panel"><span class="income-symbol">₹</span>
-					<input name="income" type="tel" placeholder="Enter Income" maxlength="10" data-suffix=" per year" data-type="comma"></div>
+					
+					<div class="income panel">
+					<input name="income" type="text" placeholder="Enter Income" maxlength="10" data-suffix=" per year" data-type="comma"></div>
 					<span class="income-error error-message"></span>
 					
 				</fieldset>

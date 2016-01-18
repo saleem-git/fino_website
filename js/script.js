@@ -246,8 +246,9 @@ $.fn.serializeObject = function()
 
 
 $("form[name='onboardinfo']").submit(function() {
+	alert("desk version");
 	formobj=JSON.stringify($("form[name='onboardinfo']").serializeObject());
-	$('#result').text(formobj+"print");
+	
 	jsondata = JSON.parse(formobj);    
 	//alert(jsondata.retirement);
 	if((jsondata.age!="") && (jsondata.income !="")) {
@@ -258,6 +259,8 @@ $("form[name='onboardinfo']").submit(function() {
 			// Put the object into storage			
 			sessionStorage.setItem('formdata',formobj);
 			//nextpage();
+			console.log(formobj);
+			alert(formobj);
 			return true;
 	}
 	else {
@@ -271,8 +274,9 @@ $("form[name='onboardinfo']").submit(function() {
 });
 
 $("form[name='onboardinfo_mob']").submit(function() {
-	formobj=JSON.stringify($("form[name='onboardinfo']").serializeObject());
-	$('#result').text(formobj+"print");
+	alert("mob version");
+	formobj=JSON.stringify($("form[name='onboardinfo_mob']").serializeObject());
+	
 	jsondata = JSON.parse(formobj);    
 	//alert(jsondata.retirement);
 	if((jsondata.age!="") && (jsondata.income !="")) {
@@ -283,6 +287,8 @@ $("form[name='onboardinfo_mob']").submit(function() {
 			// Put the object into storage			
 			sessionStorage.setItem('formdata',formobj);
 			//nextpage();
+			console.log(formobj);
+			alert(formobj);
 			return true;
 	}
 	else {
