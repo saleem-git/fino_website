@@ -27,7 +27,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#page-top"><img src="./images/logo_img.jpg " ></a>
+                <a class="navbar-brand" href="http://finotrust.com"><img src="./images/logo_img.jpg " ></a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
@@ -62,47 +62,89 @@
 		</div>
 	</div>
 </div>
-		<div class="intro-text text-center" style="margin-top:4%;">
-		<span class="name"><h5 style="color:gray; text-align:center;  margin-bottom:5%">START YOUR INVESTMENT PLAN</h5></span>
-		<form method="get" action="onboarding.html" name="onboardinfo">
-		<p class="details">
-		I am 
-		<input  type="text" name="age" maxlength="2" size="3" value"4" />
-		years old and <!--  onkeyup="this.value=this.value.replace(/[^\d]/,'')" -->
-		<select class="minimal" id="retired" style="overflow:hidden;" name="retirement">
-    		<option value="not_retired">Not Retired</option>
-            <option value="retired">Retired</option>
-        </select>
-		I am 
-		<select class="minimal" id="married" style="overflow:hidden;" name="martial_status">
-    		<option value="married"> Married </option>
-            <option value="unmarried"> Un-Married</option>
-        </select>
-		with 
-		<select class="minimal" id="kids" style="overflow:hidden;" name="kids" >
-    		<option value="0">0 </option>
-            <option value="1">1 </option>
-            <option value="2">2</option>
-            <option value="3">3 </option>
-            <option value="4">4</option>
-        </select>
-        kids.<br><br>
-		My annual pre tax income is  ₹
-		<input type="text" placeholder="" maxlength="10" name="income" value="" size="10" data-type="comma">
-		<span data-toggle="popover" data-trigger="hover" data-content="Total yearly income before deduction of taxes"><img src="images/i.png"></span>
-        <span class="madlib-error"></span>
-
+				<div class="intro-text text-center">
+		<span class="name"><h5 style="color:gray; text-align:center;  margin-bottom:4%">START YOUR INVESTMENT PLAN</h5></span>
 		
-		</p>
-        <div class="row">
+		<div class="details">
+			<section class="row onboarding-desktop-form hidden-xs">
+			<form method="get" action="onboarding.html" name="onboardinfo">
+			<p><span class="edit-age"> I am 
+				<input  type="text" name="age" maxlength="2" size="3" value"4" />
+				years old and <!--  onkeyup="this.value=this.value.replace(/[^\d]/,'')" -->
+					<select class="minimal" id="retired" style="overflow:hidden;" name="retirement">
+						<option value="not_retired">Not Retired</option>
+						<option value="retired">Retired</option>
+					</select>
+				</span>
+				<span class="edit-age">I am 
+					<select class="minimal" id="married" style="overflow:hidden;" name="martial_status">
+						<option value="married"> Married </option>
+						<option value="unmarried"> Un-Married</option>
+					</select> 
+				</span>
+				<span class="edit-age"> with 
+					<select class="minimal" id="kids" style="overflow:hidden;" name="kids" >
+						<option value="0">0 </option>
+						<option value="1">1 </option>
+						<option value="2">2</option>
+						<option value="3">3 </option>
+						<option value="4">4</option>
+					</select>
+					kids.
+				</span>
+				<span class="edit-age">My annual pre tax income is ₹
+					<input type="text" placeholder="" maxlength="10" name="income" value="" size="10" data-type="comma">
+					<span data-toggle="popover" data-trigger="hover" data-content="Total yearly income before deduction of taxes"><img src="images/i.png"></span>
+				</span></p>	
+				<div class="row">
             <div class="text-center" >
                  <button type="submit" class="btn btn-lg btn-outline " id="get_start" >Start Investment</button>
             </div>
         </div>
         </form>
+			</section>
+			
+			<section class="row onboarding-mobile-form visible-xs">
+			<form method="get" action="onboarding.html" name="onboardinfo_mob">
+				<fieldset>
+					<div class="income panel"><input name="age" type="tel" placeholder="Enter Age" maxlength="3" data-suffix=" years old">
+					</div>
+					<div class="btn-group retirement-status" data-toggle="buttons">
+						<label class="btn btn-default form_options"><input type="radio" name="retirement" id="option1" autocomplete="off" value="not_retired">Not retired</label>
+						<label class="btn btn-default form_options"><input type="radio" name="retirement" id="option2" autocomplete="off" value="retired">Retired</label>
+					</div>
+					<div class="btn-group marrital-status" data-toggle="buttons">
+						<label class="btn btn-default form_options"><input type="radio" name="martial_status" id="option1" autocomplete="off" value="married">Not Married</label>
+						<label class="btn btn-default form_options"><input type="radio" name="martial_status" id="option2" autocomplete="off" value="unmarried">Married</label>
+					</div>
+					<div class="marrital-status" >
+					<select class="minimal panel" id="kids-mob" placeholder="Enter Age"  style="overflow:hidden;" name="kids" >
+						<option value="" selected >Kids </option>
+						<option value="0">0 </option>
+						<option value="1">1 </option>
+						<option value="2">2</option>
+						<option value="3">3 </option>
+						<option value="4">4</option>
+					</select>
+					</div>
+					<div class="income panel">
+					<input name="income" type="text" placeholder="Annual Pre-Tax Income" maxlength="10" data-suffix=" per year" data-type="comma"></div>
+					<span class="income-error error-message"></span>
+					
+				</fieldset>
+					<div class="row">
+            <div class="text-center" >
+                 <button type="submit" class="btn btn-lg btn-outline " id="get_start" >Start Investment</button>
+            </div>
+        </div>
+        </form>
+			</section>
+		</div>
+        
+		
         
     </div>
-        
+       
         <div class="row how-it-works" >
                 <div class="col-lg-12 text-center">
 					<div class="row" >

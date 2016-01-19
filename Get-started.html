@@ -25,7 +25,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#page-top"><img src="./images/logo_img.jpg " ></a>
+                <a class="navbar-brand" href="http://finotrust.com"><img src="./images/logo_img.jpg " ></a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
@@ -46,7 +46,7 @@
 </header>
     <body class="home">
 
-		<div class="intro-text text-center">
+		<div class="intro-text text-center get-started">
 		<span class="name"><h5 style="color:gray; text-align:center;  margin-bottom:4%">START YOUR INVESTMENT PLAN</h5></span>
 		
 		<div class="details">
@@ -98,12 +98,21 @@
 						<label class="btn btn-default form_options"><input type="radio" name="retirement" id="option2" autocomplete="off" value="retired">Retired</label>
 					</div>
 					<div class="btn-group marrital-status" data-toggle="buttons">
-						<label class="btn btn-default form_options"><input type="radio" name="martial_status" id="option1" autocomplete="off" value="married">Not Married</label>
+						<label class="btn btn-default form_options"><input type="radio" name="martial_status" id="option1" autocomplete="off" value="married" autofocus="true">Not Married</label>
 						<label class="btn btn-default form_options"><input type="radio" name="martial_status" id="option2" autocomplete="off" value="unmarried">Married</label>
 					</div>
-					
+					<div class="marrital-status" >
+					<select class="minimal panel" id="kids-mob" placeholder="Enter Age"  style="overflow:hidden;" name="kids" >
+						<option value="" selected >Kids </option>
+						<option value="0">0 </option>
+						<option value="1">1 </option>
+						<option value="2">2</option>
+						<option value="3">3 </option>
+						<option value="4">4</option>
+					</select>
+					</div>
 					<div class="income panel">
-					<input name="income" type="text" placeholder="Enter Income" maxlength="10" data-suffix=" per year" data-type="comma"></div>
+					<input name="income" type="text" placeholder="Annual Pre-Tax Income" maxlength="10" data-suffix=" per year" data-type="comma"></div>
 					<span class="income-error error-message"></span>
 					
 				</fieldset>

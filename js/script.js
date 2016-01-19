@@ -246,7 +246,6 @@ $.fn.serializeObject = function()
 
 
 $("form[name='onboardinfo']").submit(function() {
-	alert("desk version");
 	formobj=JSON.stringify($("form[name='onboardinfo']").serializeObject());
 	
 	jsondata = JSON.parse(formobj);    
@@ -259,8 +258,6 @@ $("form[name='onboardinfo']").submit(function() {
 			// Put the object into storage			
 			sessionStorage.setItem('formdata',formobj);
 			//nextpage();
-			console.log(formobj);
-			alert(formobj);
 			return true;
 	}
 	else {
@@ -274,7 +271,6 @@ $("form[name='onboardinfo']").submit(function() {
 });
 
 $("form[name='onboardinfo_mob']").submit(function() {
-	alert("mob version");
 	formobj=JSON.stringify($("form[name='onboardinfo_mob']").serializeObject());
 	
 	jsondata = JSON.parse(formobj);    
@@ -287,8 +283,6 @@ $("form[name='onboardinfo_mob']").submit(function() {
 			// Put the object into storage			
 			sessionStorage.setItem('formdata',formobj);
 			//nextpage();
-			console.log(formobj);
-			alert(formobj);
 			return true;
 	}
 	else {

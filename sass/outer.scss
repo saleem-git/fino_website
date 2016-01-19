@@ -28,7 +28,8 @@ h3{padding-bottom:3px;}
 		img{margin: 3% auto 2%;}
 		}
 	.intro-text{
-		padding-top:7em;
+		
+		&.get-started{padding-top:7em; }
 		h2{padding:0.15em 0;}
 		& p{padding:0 20%;}
 		.details{
@@ -39,6 +40,14 @@ h3{padding-bottom:3px;}
 			.income{margin-bottom:0; margin-top: 4px; border:1px solid #ccc; input{width:90%;margin-top: 0px; outline:none; }}
 			input{padding: 15px 7px; text-align:left;}
 			.form_options{width:50%; color:#adadad; padding:15px 7px; &.active, &:active, &:hover, &:focus{background:#18bb9c; color:white;} }
+			#kids-mob {
+				width: 100%;
+				border: 1px solid rgb(204, 204, 204);
+				margin-bottom: 0;
+				padding: 12px 35px;
+				&.minimal{background-position: calc(100% - 50px) calc(1.2em + 2px), calc(100% - 45px) calc(1.2em + 2px), calc(100% - 2.5em) ; options{padding-left:2em;}}
+				
+			}
 		}
 		#get_start{width:100%; margin:15px 0;}
 		}
