@@ -13,30 +13,48 @@
     </head>
 
 <body>
-<header>
+	<header>
     <!-- Navigation -->
 <nav class="navbar navbar-default inner-head">
   <div class="container-fluid">
-    <div class="navbar-header">
+    <!--<div class="navbar-header">
       <a class="navbar-brand" href="#">
         <img alt="Brand" src="../images/logo_img.jpg ">
       </a>
-    </div>
-	    <div class="collapse navbar-collapse" id="dropdown-thumbnail-preview">
-      <ul class="nav navbar-nav">
-        <li ><a href="summary.html" >Summary</a></li>
-        <li><a href="invest.html" >invest</a></li>
-        <li><a href="Performance.html">Performance</a></li>
-        <li><a href="#" class="active-now">Benchmark</a></li>
-        <li><a href="Funds.html">Funds</a></li>
+    </div>-->
+ <div class="navbar-header page-scroll">
+	<button type="button" class="navbar-toggle inner-button" data-toggle="collapse" data-target="#dropdown-thumbnail-preview1">
+		<span class="sr-only">Toggle navigation</span>
+		<span class="glyphicon glyphicon-user"></span>
+	</button>
+	<button type="button" class="navbar-toggle inner-button" data-toggle="collapse" data-target="#dropdown-thumbnail-preview">
+		<span class="sr-only">Toggle navigation</span>
+		<span class="icon-bar"></span>
+		<span class="icon-bar"></span>
+		<span class="icon-bar"></span>
+	</button>
+	<a class="navbar-brand" href="http://finotrust.com"><img src="../images/logo_img.jpg " ></a>
+</div>
+	    <div  >
+      <ul class="nav navbar-nav collapse navbar-collapse" id="dropdown-thumbnail-preview">
+		<li class="hidden"><a href="#page-top"></a></li>
+        <li class="page-scroll"><a href="summary.html">Summary</a></li>
+        <li class="page-scroll"><a href="invest.html">invest</a></li>
+        <li class="page-scroll"><a href="Performance.html">Performance</a></li>
+        <li class="page-scroll"><a href="#" class="active-now">Benchmark</a></li>
+        <li class="page-scroll"><a href="Funds.html">Funds</a></li>
+        <li class="page-scroll visible-xs" data-toggle="modal" data-target="#tour_modal"><a>take a Tour</a></li>
 
       </ul>
 
-       <ul class="nav navbar-nav navbar-right">
-        <li class="dropdown" data-toggle="modal" data-target="#tour_modal"><a>take a Tour</a></li>
+	  
+	  
+      <ul class="nav navbar-nav navbar-right " >
+
+        <li class="dropdown hidden-xs" data-toggle="modal" data-target="#tour_modal"><a>take a Tour</a></li>
         <li class="dropdown username" >
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" >Username <span class="caret"></span></a>
-          <ul class="dropdown-menu" role="menu">
+          <a href="#" class="dropdown-toggle hidden-xs" data-toggle="dropdown" >Username <span class="caret"></span></a>
+          <ul class="dropdown-menu  navbar-collapse" role="menu" id="dropdown-thumbnail-preview1">
             <li><a href="#">Total Balance</a></li>
             <li><a href="#">Add a Family Member</a></li>
             <li><a href="#">Settings</a></li>
@@ -48,8 +66,8 @@
   </div>
 </nav>
 </header>
-
-
+	
+	
 
 <div class="benchmark">
 
@@ -101,7 +119,6 @@
 </div>
 <div id="chartdiv5"  ></div>
 </section>
-
     <!-- Modal -->
     <div class="modal fade tour_popup" id="tour_modal" tabindex="-1" role="dialog" aria-labelledby="tour_modal">
               <div class="modal-dialog  modal-lg" role="document">
@@ -117,9 +134,9 @@
                       <ul class="nav nav-tabs" role="tablist" id="tour_tabs">
                         <li role="presentation"><a href="#summary" aria-controls="summary" role="tab" data-toggle="tab">SUMMARY</a></li>
                         <li role="presentation"><a href="#Invest" aria-controls="Invest" role="tab" data-toggle="tab">INVEST</a></li>
-						<li role="presentation"><a href="#Performance" aria-controls="Performance" role="tab" data-toggle="tab">PERFORMANCE</a></li>
-                        <li role="presentation"  class="active"><a href="#benchmark" aria-controls="benchmark" role="tab" data-toggle="tab">BENCHMARK</a></li>
-                        <li role="presentation"><a href="#funds" aria-controls="funds" role="tab" data-toggle="tab">FUNDS</a></li>
+                        <li role="presentation"><a href="#Performance" aria-controls="Performance" role="tab" data-toggle="tab">PERFORMANCE</a></li>
+                        <li role="presentation" class="active"><a href="#benchmark" aria-controls="benchmark" role="tab" data-toggle="tab">BENCHMARK</a></li>
+                        <li role="presentation" ><a href="#funds" aria-controls="funds" role="tab" data-toggle="tab">FUNDS</a></li>
                       </ul>
 
                       <div class="tab-content">
@@ -132,6 +149,7 @@
                             <li data-target="#carousel-tour" data-slide-to="0" class="active"></li>
                             <li data-target="#carousel-tour" data-slide-to="1"></li>
                             <li data-target="#carousel-tour" data-slide-to="2"></li>
+                            <li data-target="#carousel-tour" data-slide-to="3"></li>
                           </ol>
 
                   <!-- Wrapper for slides -->
@@ -176,7 +194,19 @@
 
                     </div>
                     </div>
-                    
+                    <div class="item">
+				      <div class="row">
+				    	<div class="col-md-6">
+				    		<img src="../images/tour/summary/four.png" alt="tour_summary">
+				    	</div>
+				    	<div class="col-md-6">
+				    	<h5>Recent Transactions</h5>
+				    		<p>Track your recent transactions. </p>
+				    	</div>  	
+
+				    </div>
+				    </div>
+				    
                   </div>
 
                   <!-- Controls -->
@@ -279,11 +309,11 @@
 
 					    <!-- start -->
 					    	<!-- Pasting the slider -->
-				        <div id="carousel-tour4" class="carousel slide" data-ride="carousel" data-interval="false">
+				        <div id="carousel-tour5" class="carousel slide" data-ride="carousel" data-interval="false">
 				  <!-- Indicators --> 
 						  <ol class="carousel-indicators">
-						    <li data-target="#carousel-tour4" data-slide-to="0" class="active"></li>
-						    <li data-target="#carousel-tour4" data-slide-to="1"></li>
+						    <li data-target="#carousel-tour5" data-slide-to="0" class="active"></li>
+						    <li data-target="#carousel-tour5" data-slide-to="1"></li>
 						  </ol>
 
 				  <!-- Wrapper for slides -->
@@ -318,11 +348,11 @@
 				  </div>
 
 				  <!-- Controls -->
-				  <a class="left carousel-control" href="#carousel-tour4" role="button" data-slide="prev">
+				  <a class="left carousel-control" href="#carousel-tour5" role="button" data-slide="prev">
 				    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
 				    <span class="sr-only">Previous</span>
 				  </a>
-				  <a class="right carousel-control" href="#carousel-tour4" role="button" data-slide="next">
+				  <a class="right carousel-control" href="#carousel-tour5" role="button" data-slide="next">
 				    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
 				    <span class="sr-only">Next</span>
 				  </a>
@@ -330,7 +360,7 @@
 				        <!-- End of slider -->
 					    <!-- end -->
 					    </div>
-					 
+							
 						<div role="tabpanel" class="tab-pane fade in active" id="benchmark">
 
                             <!-- start -->
@@ -381,7 +411,6 @@
                             <li data-target="#carousel-tour4" data-slide-to="0" class="active"></li>
                             <li data-target="#carousel-tour4" data-slide-to="1"></li>
                             <li data-target="#carousel-tour4" data-slide-to="2"></li>
-                            <li data-target="#carousel-tour4" data-slide-to="3"></li>
                           </ol>
 
                   <!-- Wrapper for slides -->
@@ -399,6 +428,19 @@
                     </div>
                       
                     </div>
+					<div class="item">
+                      <div class="row">
+                        <div class="col-md-6">
+                            <img src="../images/tour/funds/three.png" alt="tour_summary">
+                        </div>
+                        <div class="col-md-6">
+                        <h5>SIP & One Time</h5>
+                            <p>Systematic Investment Planning - SIP is a method of investing a fixed sum, regularly, in a mutual fund scheme allowing you to buy units on a given date each month.</p>
+                            <p> One Time - You can invest lump sum into the mutual fund. </p>
+                        </div>  
+
+                    </div>
+                    </div>
                     <div class="item">
                        <div class="row">
                         <div class="col-md-6">
@@ -412,33 +454,6 @@
                     </div>
                     </div>
 
-                    <div class="item">
-                      <div class="row">
-                        <div class="col-md-6">
-                            <img src="../images/tour/funds/three.png" alt="tour_summary">
-                        </div>
-                        <div class="col-md-6">
-                        <h5>Recent transactions</h5>
-                            <p>A brief summary of your recent transactions is shown here. </p>
-                        </div>  
-
-                    </div>
-                    </div>
-
-                    <div class="item">
-                      <div class="row">
-                        <div class="col-md-6">
-                            <img src="../images/tour/funds/three.png" alt="tour_summary">
-                        </div>
-                        <div class="col-md-6">
-                        <h5>SIP & One Time</h5>
-                            <p>Systematic Investment Planning - SIP is a method of investing a fixed sum, regularly, in a mutual fund scheme allowing you to buy units on a given date each month.</p>
-                            <p> One Time - You can invest lump sum into the mutual fund. </p>
-                        </div>  
-
-                    </div>
-                    </div>
-                    
                   </div>
 
                   <!-- Controls -->
@@ -465,7 +480,7 @@
               </div>
     </div>
         <!-- Ending intro pop up -->
-			
+				
 </div>
 <!-- jQuery --> 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>  

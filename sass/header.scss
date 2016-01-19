@@ -17,16 +17,23 @@
 	.navbar-header {
 		border-right: 2px solid #808080;
 		padding-right: 1em;
-		
 	}
 	.dropdown-toggle {width: 248px;}
-	.username{border-left: 2px solid #808080;}
+	@media(min-width:768px){.username{border-left: 2px solid #808080;}}
+	@media(max-width:768px){.navbar-header{border-right:none;}}
+	@media(max-width:768px){img{margin-top:4px;}}
 	.navbar-right li{cursor:pointer;
 	&:hover,active{background:#263646;}}
 	&.navbar.navbar-default .navbar-nav > li a{
-										color: gray;
-										&:hover{color:white;}
-										&.active-now{color:#fff;}}
+							color: gray;
+							&:hover{color:white;}
+							&.active-now{color:#fff;}}
+	.inner-button {
+    color: #18bb9c;
+    height: 40px;
+	margin-bottom:0;
+	width:43px;
+}
 }
 .navbar{
     position: relative;
@@ -65,6 +72,7 @@
 			&:hover{background-color:white;}
 			}
 		}
+		@media(max-width:768px){ul.dropdown-menu {width:100%;}}
 	}
 	
 	@media (max-width: 950px) {

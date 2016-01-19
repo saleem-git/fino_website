@@ -431,15 +431,15 @@ margin-top:5.5em;
 	}}
 
 .funds{
-	.search-invest-select{height: 29em; .panel{font-size:13px; border:1px solid #808080; padding:6px; margin-bottom:0; width:24em; border-radius:5px} }
+	.search-invest-select{height: 16em; .panel{font-size:13px; border:1px solid #808080; padding:6px; margin-bottom:0; width:24em; border-radius:5px} }
 	.top-table{
-	.tab-content{margin-top:0.5em; h3{font-size:15px; font-weight:600; padding:2em 0 0;} }
+	.tab-content{margin-top:0.5em; h3{font-size:15px; font-weight:600; padding:2em 10px 0;} }
 	.nav-tabs{ background:#ddd;
 	li{width:25%; border-left:2px solid white;
 	color:white; & a{color:#000; font-weight:600;margin: 0;}  
 	&.active a, &.active a:focus, &.active a:hover{color:white;background-color:#18bb9c;}}}
 		.top-table-content{
-		height: 28.3em;
+		height: 16em;
 		border:1px solid #ddd;
 		overflow-y: scroll;}}
 	table{
@@ -476,7 +476,7 @@ margin-top:5.5em;
 		}
 		}
 		.search-invest-head{height:2.6em;h6{font-size:16px; font-weight:600; padding:12px; text-transform:none; font-family:Open Sans}}
-.search-invest-select{padding:20px;border: 1px solid rgb(204, 204, 204);label{padding:0.5em 0; font-weight:500;}}
+.search-invest-select{padding:20px;border: 1px solid rgb(204, 204, 204);margin-top: 11px; label{padding:0.5em 0; font-weight:500;} .search-amc{margin-top:1em;} }
 .search-invest-tab{
 	margin-top:1em;
 	border:1px solid #18bb9c;
