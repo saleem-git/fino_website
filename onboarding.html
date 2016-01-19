@@ -393,11 +393,10 @@
 				var contingency_amt=(0.5*(incomeinfo)).toLocaleString();
 				var philan_year=2+currentYear;
 
-				var low_fd,low_debt,low_equ,low_liq;								
-				low_fd=low_debt=low_equ=low_liq=10;
+				var low_eq_largecap,low_eq_midcap,low_eq_smallcap,low_sector_funds,low_indexfund,low_gold_etf,low_debt_long,low_debt_med,low_liq,low_gilt_long;					
 				var divn;
-				var med_fd,med_debt,med_equ,med_liq;
-				var high_fd,high_debt,high_equ,high_liq;
+				var med_eq_largecap,med_debt,med_equ,med_liq;
+				var high_eq_largecap,high_debt,high_equ,high_liq;
 				
 				$("section.plan_info p.age span").text(ageinfo);
 				
@@ -550,74 +549,74 @@
 					var p=years;
 				if ( p==1 ){
 					var divn=divn;
-					low_fd=70;
-					low_debt=00;
-					low_equ=00;
-					low_liq=30;					
-					drawchart(divn,low_fd,low_debt,low_equ,low_liq);
+					low_eq_largecap=70;
+					low_eq_midcap=00;
+					low_eq_smallcap=00;
+					low_sector_funds=30;					
+					drawchart(divn,low_eq_largecap,low_eq_midcap,low_eq_smallcap,low_sector_funds);
 
 
-					med_fd=40;
+					med_eq_largecap=40;
 					med_debt=00;
 					med_equ=00;
 					med_liq=60;
 					divn++;
-					drawchart(divn,med_fd,med_debt,med_equ,med_liq);
+					drawchart(divn,med_eq_largecap,med_debt,med_equ,med_liq);
 
-					high_fd=20;
+					high_eq_largecap=20;
 					high_deb=00;
 					high_equ=00;
 					high_liq=80;
 					divn++;					
-					drawchart(divn,high_fd,high_deb,high_equ,high_liq);
+					drawchart(divn,high_eq_largecap,high_deb,high_equ,high_liq);
 					}
 
 					else if ((p=>1) && (p<=5) ) {
 					var divn=divn;
-					low_fd=10;
-					low_debt=60;
-					low_equ=20;
-					low_liq=10;					
-					drawchart(divn,low_fd,low_debt,low_equ,low_liq);
+					low_eq_largecap=10;
+					low_eq_midcap=60;
+					low_eq_smallcap=20;
+					low_sector_funds=10;					
+					drawchart(divn,low_eq_largecap,low_eq_midcap,low_eq_smallcap,low_sector_funds);
 
 
-					med_fd=10;
+					med_eq_largecap=10;
 					med_debt=40;
 					med_equ=40;
 					med_liq=10;
 					divn++;
-					drawchart(divn,med_fd,med_debt,med_equ,med_liq);
+					drawchart(divn,med_eq_largecap,med_debt,med_equ,med_liq);
 
-					high_fd=10;
+					high_eq_largecap=10;
 					high_deb=10;
 					high_equ=70;
 					high_liq=10;
 					divn++;					
-					drawchart(divn,high_fd,high_deb,high_equ,high_liq);				
+					drawchart(divn,high_eq_largecap,high_deb,high_equ,high_liq);				
 				}
 				else if ((p>5))
 				 {
 				 	var divn=divn;
-					low_fd=10;
-					low_debt=60;
-					low_equ=30;
-					low_liq=00;					
-					drawchart(divn,low_fd,low_debt,low_equ,low_liq);
+					low_eq_largecap=10;
+					low_eq_midcap=60;
+					low_eq_smallcap=30;
+					low_sector_funds=00;					
+					drawchart(divn,low_eq_largecap,low_eq_midcap,low_eq_smallcap,low_sector_funds);
 
 
-					med_fd=10;
+					med_eq_largecap=10;
 					med_debt=40;
 					med_equ=50;
 					med_liq=00;
 					divn++;
-					drawchart(divn,med_fd,med_debt,med_equ,med_liq);
+					drawchart(divn,med_eq_largecap,med_debt,med_equ,med_liq);
 
-					high_fd=10;
+					high_eq_largecap=10;
 					high_deb=20;
 					high_equ=70;
 					high_liq=00;
 					divn++;			
-					drawchart(divn,high_fd,high_deb,high_equ,high_liq)
+					drawchart(divn,high_eq_largecap,high_deb,high_equ,high_liq)
 						}					
 				}
 
