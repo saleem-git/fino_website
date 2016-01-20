@@ -12,39 +12,63 @@
         
     </head>
     <body>
-	<header>
+	
+		<header>
     <!-- Navigation -->
-	<nav class="navbar navbar-default inner-head">
-	  <div class="container-fluid">
-		<div class="navbar-header">
-		  <a class="navbar-brand" href="#">
-			<img alt="Brand" src="../images/logo_img.jpg ">
-		  </a>
-		</div>
-			<div class="collapse navbar-collapse" id="dropdown-thumbnail-preview">
-		  <ul class="nav navbar-nav">
-			<li ><a href="#" >Summary</a></li>
-			<li><a href="invest.html">invest</a></li>
-			<li><a href="Performance.html">Performance</a></li>
-			<li><a href="Benchmark.html">Benchmark</a></li>
-			<li><a href="Funds.html">Funds</a></li>
+<nav class="navbar navbar-default inner-head">
+  <div class="container-fluid">
+    <!--<div class="navbar-header">
+      <a class="navbar-brand" href="#">
+        <img alt="Brand" src="../images/logo_img.jpg ">
+      </a>
+    </div>-->
+ <div class="navbar-header page-scroll">
+	<button type="button" class="navbar-toggle inner-button" data-toggle="collapse" data-target="#dropdown-thumbnail-preview1">
+		<span class="sr-only">Toggle navigation</span>
+		<span class="glyphicon glyphicon-user"></span>
+	</button>
+	<button type="button" class="navbar-toggle inner-button" data-toggle="collapse" data-target="#dropdown-thumbnail-preview">
+		<span class="sr-only">Toggle navigation</span>
+		<span class="icon-bar"></span>
+		<span class="icon-bar"></span>
+		<span class="icon-bar"></span>
+	</button>
+	<a class="navbar-brand" href="#"><img src="../images/logo_img.jpg " ></a>
+</div>
+	    <div  >
+      <ul class="nav navbar-nav collapse navbar-collapse" id="dropdown-thumbnail-preview">
+		<li class="hidden"><a href="#page-top"></a></li>
+        <li class="page-scroll"><a href="summary.html">Summary</a></li>
+        <li class="page-scroll"><a href="invest.html">invest</a></li>
+        <li class="page-scroll"><a href="Performance.html">Performance</a></li>
+        <li class="page-scroll"><a href="benchmark.html" >Benchmark</a></li>
+        <li class="page-scroll"><a href="Funds.html">Funds</a></li>
+        <li class="page-scroll hidden-lg" data-toggle="modal" data-target="#tour_modal"><a>take a Tour</a></li>
 
-		  </ul>
-		  <ul class="nav navbar-nav navbar-right">
-			<li class="dropdown username" >
-			  <a href="#" class="dropdown-toggle" data-toggle="dropdown" >Username <span class="caret"></span></a>
-			  <ul class="dropdown-menu" role="menu">
-				<li><a href="#">Total Balance</a></li>
-				<li><a href="#">Add a Family Member</a></li>
-				<li><a href="#">Settings</a></li>
-				<li><a href="#">Log Out</a></li>
-			  </ul>
-			</li>
-		  </ul>
-		</div><!-- /.navbar-collapse -->
-	  </div>
-	</nav>
-	</header>
+      </ul>
+	  
+	  
+      <ul class="nav navbar-nav navbar-right " >
+
+        <li class="dropdown visible-lg" data-toggle="modal" data-target="#tour_modal"><a>take a Tour</a></li>
+        <li class="dropdown username" >
+          <a href="#" class="dropdown-toggle visible-lg" data-toggle="dropdown" >Username <span class="caret"></span></a>
+          <ul class="dropdown-menu  navbar-collapse" role="menu" id="dropdown-thumbnail-preview1">
+            <li><a href="#">Total Balance</a></li>
+            <li><a href="#">Add a Family Member</a></li>
+            <li><a href="#">Settings</a></li>
+            <li><a href="#">Log Out</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div>
+</nav>
+</header>
+	
+	
+
+	
 	<div class="payment container text-center">
 		<div class="row secure-pay-head">
 			<h4><span><img src="../images/icons/payment/payment.png"></span>Secure Payment</h4>

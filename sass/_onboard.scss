@@ -128,8 +128,9 @@ section.plan_info{
 			color: #18BB9C;
 			left: 88%;
 			font-size: 22px;
-			top: 25px;			
+			top: 1.7em;			
 		}
+		@media screen and (min-width: 768px){span.down_arrow{left:95%;} }
 	}
 	.goal_metainfo {
 		background-color: #F9F9F9;
@@ -140,6 +141,7 @@ section.plan_info{
 			display: block;
 			&:nth-of-type(2){
 				@include fontm(18);
+				font-size:1.05em;
 			}
 		}
 

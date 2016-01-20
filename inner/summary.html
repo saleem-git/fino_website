@@ -32,7 +32,7 @@
 		<span class="icon-bar"></span>
 		<span class="icon-bar"></span>
 	</button>
-	<a class="navbar-brand" href="http://finotrust.com"><img src="../images/logo_img.jpg " ></a>
+	<a class="navbar-brand" href="#"><img src="../images/logo_img.jpg " ></a>
 </div>
 	    <div  >
       <ul class="nav navbar-nav collapse navbar-collapse" id="dropdown-thumbnail-preview">
@@ -42,17 +42,16 @@
         <li class="page-scroll"><a href="Performance.html">Performance</a></li>
         <li class="page-scroll"><a href="Benchmark.html">Benchmark</a></li>
         <li class="page-scroll"><a href="Funds.html">Funds</a></li>
-        <li class="page-scroll visible-xs" data-toggle="modal" data-target="#tour_modal"><a>take a Tour</a></li>
+        <li class="page-scroll hidden-lg" data-toggle="modal" data-target="#tour_modal"><a>take a Tour</a></li>
 
       </ul>
-
 	  
 	  
       <ul class="nav navbar-nav navbar-right " >
 
-        <li class="dropdown hidden-xs" data-toggle="modal" data-target="#tour_modal"><a>take a Tour</a></li>
+        <li class="dropdown visible-lg" data-toggle="modal" data-target="#tour_modal"><a>take a Tour</a></li>
         <li class="dropdown username" >
-          <a href="#" class="dropdown-toggle hidden-xs" data-toggle="dropdown" >Username <span class="caret"></span></a>
+          <a href="#" class="dropdown-toggle visible-lg" data-toggle="dropdown" >Username <span class="caret"></span></a>
           <ul class="dropdown-menu  navbar-collapse" role="menu" id="dropdown-thumbnail-preview1">
             <li><a href="#">Total Balance</a></li>
             <li><a href="#">Add a Family Member</a></li>
@@ -70,7 +69,7 @@
 	<div class="container summary" >
     	<div class="manage_account row"> 
     	<h1 class="col-sm-6"><span>Saleem's</span>  Personal Account Overview </h1>
-    	<div class="account_controls col-sm-6">
+    	<div class="account_controls col-sm-4 text-center">
     	<div class="deposit_div">
 	    	<div class="deposit_box">
 	    	<a href="invest.html"><button type="button" class="btn deposit_button" >Invest </button></a>	
@@ -84,8 +83,9 @@
 	  <div class="panel-body overview_account">
   		<div class="row"> 	
 	    <div class="earnings col-sm-4 flclear">
-	    	<span class="sign plus-sign" id="earning_info_span"></span>
+	    	
 	    	<div class="earnings_div">
+				<span class="sign plus-sign" id="earning_info_span"></span>
 		    	<h3> CURRENT BALANCE FOR ALL GOALS</h3>
 		    	<h1>₹0.00</h1>
 		    	
@@ -177,10 +177,10 @@
 			<span class="sign plus-sign" id="retirement_info_span"></span>
 			<h2> RETIREMENT </h2> 
 			</div>
-			<div class="col-sm-2 retirement_plan_actions"><div class="deposit"><p>TARGET YEAR</p><span>2024</span></div></div>
-			<div class="col-sm-2 retirement_plan_actions"><div class="deposit"><p>TARGET AMOUNT</p><span>Rs 0.00 </span></div></div>
-			<div class="col-sm-2 retirement_plan_actions"><div class="deposit"><p>CURRENT BALANCE</p><span>Rs 0.00 </span></div></div>
-			<div class="col-sm-2 retirement_plan_actions"><div class="deposit"><p>PROJECTED GAP <span data-toggle="popover" data-placement="top" data-trigger="hover" data-content="Expected value of your investment by your target year minus amount you require for your goal by your target year"><img src="../images/i.png"></span></p><span>Rs 0.00 </span></div></div>
+			<div class="col-sm-2 retirement_plan_actions"><div class="deposit"><p id="target1">TARGET YEAR</p><span class="plan_values">2024</span></div></div>
+			<div class="col-sm-2 retirement_plan_actions"><div class="deposit"><p>TARGET AMOUNT</p><span class="plan_values">Rs 0.00 </span></div></div>
+			<div class="col-sm-2 retirement_plan_actions"><div class="deposit"><p>CURRENT BALANCE</p><span class="plan_values">Rs 0.00 </span></div></div>
+			<div class="col-sm-2 retirement_plan_actions"><div class="deposit"><p>PROJECTED GAP <span data-toggle="popover" data-placement="top" data-trigger="hover" data-content="Expected value of your investment by your target year minus amount you require for your goal by your target year"><img src="../images/i.png"></span></p><span class="plan_values">Rs 0.00 </span></div></div>
 		</div>
 
 		<div class="row" id="retirement_info"> 
