@@ -428,7 +428,7 @@
 			$("#collapseOne .panel-body:nth-child(3) ul").html("<li>Diverse Portfolio of Mutual Funds</li>    <li>Zero Fees</li>   <li>Entire amount withdrawable after 3 years with zero taxes</li> <li>Expected amount after 3 years between 3% to 30%  of current Invested amount</li>");
 
 			//chartConfig3.dataProvider[1].litres=300;
-			updateretirementchart(1,1);
+			updateretirementcharttax(1);
 			
 
 			$("#headingTwo .goal_metainfo label:nth-of-type(2)").text("Retirement");
@@ -673,6 +673,26 @@
 					divn++;					
 					drawchart(divn,high_eq_largecap,high_eq_midcap,high_eq_smallcap,high_sector_funds,high_indexfund,high_gold_etf,high_debt_long,high_debt_med,high_liq,high_gilt_long);
 						}					
+				}
+
+				function updateretirementcharttax (divn) {
+					var low_elss,med_elss,high_elss;
+					low_elss=70;
+					med_elss=30;
+					high_elss=0;
+					drawcharttax(divn,low_elss,med_elss,high_elss);
+
+					low_elss=30;
+					med_elss=50;
+					high_elss=20;
+					divn++;
+					drawcharttax(divn,low_elss,med_elss,high_elss);
+
+					low_elss=20;
+					med_elss=30;
+					high_elss=50;
+					divn++;
+					drawcharttax(divn,low_elss,med_elss,high_elss);
 				}
 
 			$('[data-toggle="popover"]').popover(); 	

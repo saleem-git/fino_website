@@ -142,6 +142,7 @@ chartConfigsum2.dataProvider = [
 
 // create the chart
 AmCharts.makeChart("sumchartdiv2", chartConfigsum2);
+
         function drawchart(divval,equity_large_cap,equity_mid_cap,equity_small_cap,sector_funds,index_fund,gold_etf,debt_long_term,debt_medium_term,liquid,gilt_long_term_fund)            
         {
           //console.log("In Fn");
@@ -194,4 +195,31 @@ AmCharts.makeChart("sumchartdiv2", chartConfigsum2);
         AmCharts.makeChart(divch,chartconfigno);
         }
 
+
+
 /**********************************************/
+
+/*For Tax only*/
+function drawcharttax(divval,l_elss,m_elss,h_elss)            
+        {
+          //console.log("In Fn");
+          var divch="chartdiv"+divval;
+          var chartconfigno="chartConfig"+divval;
+          var chartconfigno = clone(chartConfig);
+          chartconfigno.dataProvider = [
+                  {
+                    "product": "Low Risk ELSS",
+                    "investment": l_elss
+                  },
+                  {
+                    "product": "Medium Risk ELSS",
+                    "investment": m_elss
+                  },
+                  {
+                    "product": "High Risk ELSS",
+                    "investment": h_elss
+                  }             
+
+        ];
+        AmCharts.makeChart(divch,chartconfigno);
+        }
