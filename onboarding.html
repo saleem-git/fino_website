@@ -395,9 +395,10 @@
 
 				var low_eq_largecap,low_eq_midcap,low_eq_smallcap,low_sector_funds,low_indexfund,low_gold_etf,low_debt_long,low_debt_med,low_liq,low_gilt_long;					
 				var divn;
-				var med_eq_largecap,med_debt,med_equ,med_liq;
-				var high_eq_largecap,high_debt,high_equ,high_liq;
+				var med_eq_largecap,med_eq_midcap,med_eq_smallcap,med_sector_funds,med_indexfund,med_gold_etf,med_debt_long,med_debt_med,med_liq,med_gilt_long;	
 				
+				var high_eq_largecap,high_eq_midcap,high_eq_smallcap,high_sector_funds,high_indexfund,high_gold_etf,high_debt_long,high_debt_med,high_liq,high_gilt_long;	
+				//med_indexfund,med_gold_etf,med_debt_long,med_debt_med,med_liq,med_gilt_long;	
 				$("section.plan_info p.age span").text(ageinfo);
 				
 
@@ -549,74 +550,128 @@
 					var p=years;
 				if ( p==1 ){
 					var divn=divn;
-					low_eq_largecap=70;
+					low_eq_largecap=10;
 					low_eq_midcap=00;
 					low_eq_smallcap=00;
-					low_sector_funds=30;					
-					drawchart(divn,low_eq_largecap,low_eq_midcap,low_eq_smallcap,low_sector_funds);
+					low_sector_funds=00;
+					low_indexfund=0;		
+					low_gold_etf=0;
+					low_debt_long=15;	
+					low_debt_med=15;	
+					low_liq=55;
+					low_gilt_long=5;
+					drawchart(divn,low_eq_largecap,low_eq_midcap,low_eq_smallcap,low_sector_funds,low_indexfund,low_gold_etf,low_debt_long,low_debt_med,low_liq,low_gilt_long);
 
 
-					med_eq_largecap=40;
-					med_debt=00;
-					med_equ=00;
-					med_liq=60;
+					med_eq_largecap=10;
+					med_eq_midcap=05;
+					med_eq_smallcap=05;
+					med_sector_funds=0;
+					med_indexfund=0;
+					med_gold_etf=0;
+					med_debt_long=20;
+					med_debt_med=20;
+					med_liq=35;
+					med_gilt_long=5;
 					divn++;
-					drawchart(divn,med_eq_largecap,med_debt,med_equ,med_liq);
+					drawchart(divn,med_eq_largecap,med_eq_midcap,med_eq_smallcap,med_sector_funds,med_indexfund,med_gold_etf,med_debt_long,med_debt_med,med_liq,med_gilt_long);
 
-					high_eq_largecap=20;
-					high_deb=00;
-					high_equ=00;
-					high_liq=80;
+					high_eq_largecap=15;
+					high_eq_midcap=08;
+					high_eq_smallcap=07;
+					high_sector_funds=0;
+					high_indexfund=0;
+					high_gold_etf=0;
+					high_debt_long=20;
+					high_debt_med=20;
+					high_liq=25;
+					high_gilt_long=5;
 					divn++;					
-					drawchart(divn,high_eq_largecap,high_deb,high_equ,high_liq);
+					drawchart(divn,high_eq_largecap,high_eq_midcap,high_eq_smallcap,high_sector_funds,high_indexfund,high_gold_etf,high_debt_long,high_debt_med,high_liq,high_gilt_long);
 					}
 
 					else if ((p=>1) && (p<=5) ) {
 					var divn=divn;
-					low_eq_largecap=10;
-					low_eq_midcap=60;
-					low_eq_smallcap=20;
-					low_sector_funds=10;					
-					drawchart(divn,low_eq_largecap,low_eq_midcap,low_eq_smallcap,low_sector_funds);
+					low_eq_largecap=12;
+					low_eq_midcap=5;
+					low_eq_smallcap=05;
+					low_sector_funds=00;
+					low_indexfund=0;		
+					low_gold_etf=0;
+					low_debt_long=18;	
+					low_debt_med=18;	
+					low_liq=37;
+					low_gilt_long=5;
+					drawchart(divn,low_eq_largecap,low_eq_midcap,low_eq_smallcap,low_sector_funds,low_indexfund,low_gold_etf,low_debt_long,low_debt_med,low_liq,low_gilt_long);
 
 
-					med_eq_largecap=10;
-					med_debt=40;
-					med_equ=40;
-					med_liq=10;
+					med_eq_largecap=16;
+					med_eq_midcap=07;
+					med_eq_smallcap=07;
+					med_sector_funds=0;
+					med_indexfund=0;
+					med_gold_etf=0;
+					med_debt_long=20;
+					med_debt_med=20;
+					med_liq=25;
+					med_gilt_long=5;
 					divn++;
-					drawchart(divn,med_eq_largecap,med_debt,med_equ,med_liq);
+					drawchart(divn,med_eq_largecap,med_eq_midcap,med_eq_smallcap,med_sector_funds,med_indexfund,med_gold_etf,med_debt_long,med_debt_med,med_liq,med_gilt_long);
 
-					high_eq_largecap=10;
-					high_deb=10;
-					high_equ=70;
-					high_liq=10;
+					high_eq_largecap=18;
+					high_eq_midcap=12;
+					high_eq_smallcap=12;
+					high_sector_funds=4;
+					high_indexfund=4;
+					high_gold_etf=3;
+					high_debt_long=20;
+					high_debt_med=20;
+					high_liq=5;
+					high_gilt_long=2;
 					divn++;					
-					drawchart(divn,high_eq_largecap,high_deb,high_equ,high_liq);				
+					drawchart(divn,high_eq_largecap,high_eq_midcap,high_eq_smallcap,high_sector_funds,high_indexfund,high_gold_etf,high_debt_long,high_debt_med,high_liq,high_gilt_long);			
 				}
 				else if ((p>5))
 				 {
 				 	var divn=divn;
-					low_eq_largecap=10;
-					low_eq_midcap=60;
-					low_eq_smallcap=30;
-					low_sector_funds=00;					
-					drawchart(divn,low_eq_largecap,low_eq_midcap,low_eq_smallcap,low_sector_funds);
+					low_eq_largecap=14;
+					low_eq_midcap=06;
+					low_eq_smallcap=06;
+					low_sector_funds=02;
+					low_indexfund=2;		
+					low_gold_etf=0;
+					low_debt_long=13;	
+					low_debt_med=13;	
+					low_liq=39;
+					low_gilt_long=5;
+					drawchart(divn,low_eq_largecap,low_eq_midcap,low_eq_smallcap,low_sector_funds,low_indexfund,low_gold_etf,low_debt_long,low_debt_med,low_liq,low_gilt_long);
 
 
-					med_eq_largecap=10;
-					med_debt=40;
-					med_equ=50;
-					med_liq=00;
+					med_eq_largecap=17;
+					med_eq_midcap=10;
+					med_eq_smallcap=10;
+					med_sector_funds=4;
+					med_indexfund=7;
+					med_gold_etf=0;
+					med_debt_long=16;
+					med_debt_med=16;
+					med_liq=15;
+					med_gilt_long=5;
 					divn++;
-					drawchart(divn,med_eq_largecap,med_debt,med_equ,med_liq);
+					drawchart(divn,med_eq_largecap,med_eq_midcap,med_eq_smallcap,med_sector_funds,med_indexfund,med_gold_etf,med_debt_long,med_debt_med,med_liq,med_gilt_long);
 
-					high_eq_largecap=10;
-					high_deb=20;
-					high_equ=70;
-					high_liq=00;
-					divn++;			
-					drawchart(divn,high_eq_largecap,high_deb,high_equ,high_liq)
+					high_eq_largecap=20;
+					high_eq_midcap=13;
+					high_eq_smallcap=13;
+					high_sector_funds=4;
+					high_indexfund=10;
+					high_gold_etf=5;
+					high_debt_long=10;
+					high_debt_med=10;
+					high_liq=10;
+					high_gilt_long=5;
+					divn++;					
+					drawchart(divn,high_eq_largecap,high_eq_midcap,high_eq_smallcap,high_sector_funds,high_indexfund,high_gold_etf,high_debt_long,high_debt_med,high_liq,high_gilt_long);
 						}					
 				}
 

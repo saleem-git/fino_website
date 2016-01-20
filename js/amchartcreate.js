@@ -89,27 +89,6 @@ AmCharts.addInitHandler(function(chartConfig) {
 
 
 /*Charts for onboarding page start*/
-
-/**
- * Create first chart
- */
-
- // create a copy of the universal config
-
-
-
-
-
-/*Charts for onboarding page end*/
-
-
-
-
-/*
-******************************************************************
-*/
-/*Charts for Summary page*/
-
 // create a copy of the universal config
 var chartConfigsum1 = clone(chartConfig);
 
@@ -163,31 +142,52 @@ chartConfigsum2.dataProvider = [
 
 // create the chart
 AmCharts.makeChart("sumchartdiv2", chartConfigsum2);
-
-
-/*******************************************/
-//chart Dynamic
-        function drawchart(divval,fdv,mfdebtv,mfeqv,mfliqv) {
+        function drawchart(divval,equity_large_cap,equity_mid_cap,equity_small_cap,sector_funds,index_fund,gold_etf,debt_long_term,debt_medium_term,liquid,gilt_long_term_fund)            
+        {
           //console.log("In Fn");
           var divch="chartdiv"+divval;
           var chartconfigno="chartConfig"+divval;
           var chartconfigno = clone(chartConfig);
           chartconfigno.dataProvider = [
                   {
-                    "product": "FD",
-                    "investment": fdv
+                    "product": "Equity Large Cap",
+                    "investment": equity_large_cap
                   },
                   {
-                    "product": "MF Debt",
-                    "investment": mfdebtv
+                    "product": "Equity Mid Cap",
+                    "investment": equity_mid_cap
                   },
                   {
-                    "product": "MF Equity",
-                    "investment": mfeqv
+                    "product": "Equity Small Cap",
+                    "investment": equity_small_cap
                   },           
                   {
-                    "product": "MF Liquid",
-                    "investment": mfliqv
+                    "product": "Sector Funds",
+                    "investment": sector_funds
+                  },
+                  {
+                    "product": "Index Fund",
+                    "investment": index_fund
+                  },                  
+                  {
+                    "product": "Gold ETF",
+                    "investment": gold_etf
+                  },
+                  {
+                    "product": "Debt Long Term",
+                    "investment": debt_long_term
+                  },
+                  {
+                    "product": "Debt Medium Term",
+                    "investment": debt_medium_term
+                  },
+                  {
+                    "product": "Liquid",
+                    "investment": liquid
+                  },
+                  {
+                    "product": "Gilt Long Term Fund",
+                    "investment": gilt_long_term_fund
                   }
 
         ];
