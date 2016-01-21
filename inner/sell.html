@@ -1,0 +1,214 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Funds</title>
+        <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600' rel='stylesheet' type='text/css'>
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha256-7s5uDGW3AHqw6xtJmNNtr+OBRJUlgkNJEo78P4b0yRw= sha512-nNo+yCHEyn0smMxSswnf/OnX6/KwJuZTlNZBjauKhTK0c+zT+q5JOCx0UFhXQ6rJR9jg6Es8gPuD2uZcYDLqSw==" crossorigin="anonymous">
+        <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+		<link rel="stylesheet" href="../style/global.css">
+        <link rel="stylesheet" href="../style/header.css">
+        <link rel="stylesheet" href="../style/outer.css">
+    </head>
+    <body>
+	<header>
+    <!-- Navigation -->
+<nav class="navbar navbar-default inner-head">
+  <div class="container-fluid">
+    <!--<div class="navbar-header">
+      <a class="navbar-brand" href="#">
+        <img alt="Brand" src="../images/logo_img.jpg ">
+      </a>
+    </div>-->
+ <div class="navbar-header page-scroll">
+	<button type="button" class="navbar-toggle inner-button" data-toggle="collapse" data-target="#dropdown-thumbnail-preview1">
+		<span class="sr-only">Toggle navigation</span>
+		<span class="glyphicon glyphicon-user"></span>
+	</button>
+	<button type="button" class="navbar-toggle inner-button" data-toggle="collapse" data-target="#dropdown-thumbnail-preview">
+		<span class="sr-only">Toggle navigation</span>
+		<span class="icon-bar"></span>
+		<span class="icon-bar"></span>
+		<span class="icon-bar"></span>
+	</button>
+	<a class="navbar-brand" href="summary.html"><img src="../images/logo_img.jpg " ></a>
+</div>
+	    <div  >
+      <ul class="nav navbar-nav collapse navbar-collapse" id="dropdown-thumbnail-preview">
+		<li class="hidden"><a href="#page-top"></a></li>
+        <li class="page-scroll"><a href="summary.html">Summary</a></li>
+        <li class="page-scroll"><a href="invest.html">invest</a></li>
+        <li class="page-scroll"><a href="Performance.html">Performance</a></li>
+        <li class="page-scroll"><a href="Benchmark.html">Benchmark</a></li>
+        <li class="page-scroll"><a href="funds.html">Funds</a></li>
+        <li class="page-scroll hidden-lg" data-toggle="modal" data-target="#tour_modal"><a>take a Tour</a></li>
+
+      </ul>
+	  
+	  
+      <ul class="nav navbar-nav navbar-right " >
+
+        <li class="dropdown visible-lg" data-toggle="modal" data-target="#tour_modal"><a>take a Tour</a></li>
+        <li class="dropdown username" >
+          <a href="#" class="dropdown-toggle visible-lg" data-toggle="dropdown" >Username <span class="caret"></span></a>
+          <ul class="dropdown-menu  navbar-collapse" role="menu" id="dropdown-thumbnail-preview1">
+            <li><a href="#">Total Balance</a></li>
+            <li><a href="#">Add a Family Member</a></li>
+            <li><a href="#">Settings</a></li>
+            <li><a href="#">Log Out</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div>
+</nav>
+</header>
+	
+	
+<div class="container sell-funds">
+		
+	<div class="row sell-funds-table" >
+	  <ul class="nav nav-tabs">
+			<li class="active"><a data-toggle="tab" href="#Account_Selection">1. Account Selection</a></li>
+			<li><a data-toggle="tab" href="#Select_scheme">2. Select scheme & Amount</a></li>
+			<li><a data-toggle="tab" href="#Verify">3. Verify & confirm</a></li>
+	  </ul>
+
+	  <div class="tab-content sell-funds-content">
+		<div id="Account_Selection" class="tab-pane fade in active">
+		<table>
+			<thead>
+				<tr>
+					<th><div class="">select </div></th> 
+					<th><div class="">folio</div></th> 
+					<th ><div>portfolio</div></th> 
+					<th ><div>scheme name</div></th> 
+					<th ><div>available<br> amount</div></th>
+					<th ><div>available<br> units</div></th>
+					<th><div class="">redemption</div></th> 
+					<th><div class="">amount(Rs.)</div></th> 
+					<th><div class="">units</div></th> 
+				</tr>
+			</thead>
+
+			<tbody>
+				<tr>
+
+					<td ><input type="checkbox" onclick="OnChangeCheckbox (this)" id="myCheckbox" /></td>
+					<td >1025252</td>
+					<td >Varun Gupta</td>
+					<td >Birla - Long term plan - Growth</td>
+					<td >12,000.43</td>
+					<td >28.2030</td>
+					<td ><select class="minimal"></select></td>
+					<td ><input type="text"></td>
+					<td ><input type="text"></td>
+				</tr>
+				<tr>
+
+					<td ><input type="checkbox" onclick="OnChangeCheckbox (this)" id="myCheckbox" /></td>
+					<td >1025252</td>
+					<td >Varun Gupta</td>
+					<td >Birla - Long term plan - Growth</td>
+					<td >12,000.43</td>
+					<td >28.2030</td>
+					<td ><select class="minimal"></select></td>
+					<td ><input type="text"></td>
+					<td ><input type="text"></td>
+				</tr>
+				<tr>
+
+					<td ><input type="checkbox" onclick="OnChangeCheckbox (this)" id="myCheckbox" /></td>
+					<td >1025252</td>
+					<td >Varun Gupta</td>
+					<td >Birla - Long term plan - Growth</td>
+					<td >12,000.43</td>
+					<td >28.2030</td>
+					<td ><select class="minimal"></select></td>
+					<td ><input type="text"></td>
+					<td ><input type="text"></td>
+				</tr>
+				</tbody>
+		</table>
+
+		</div>
+		<div id="Select_scheme" class="tab-pane">
+		  <table>
+			<thead>
+				<tr>
+					<th><div class="">select </div></th> 
+					<th><div class="">folio</div></th> 
+					<th ><div>portfolio</div></th> 
+					<th ><div>scheme name</div></th> 
+					<th ><div>available<br> amount</div></th>
+					<th ><div>available<br> units</div></th>
+					<th><div class="">redemption</div></th> 
+					<th><div class="">amount(Rs.)</div></th> 
+					<th><div class="">units</div></th> 
+				</tr>
+			</thead>
+
+			<tbody>
+				<tr>
+
+					<td ><input type="checkbox" onclick="OnChangeCheckbox (this)" id="myCheckbox" /></td>
+					<td >1025252</td>
+					<td >Varun Gupta</td>
+					<td >Birla - Long term plan - Growth</td>
+					<td >12,000.43</td>
+					<td >28.2030</td>
+					<td ><select class="minimal"></select></td>
+					<td ><input type="text"></td>
+					<td ><input type="text"></td>
+				</tr>
+				<tr>
+
+					<td ><input type="checkbox" onclick="OnChangeCheckbox (this)" id="myCheckbox" /></td>
+					<td >1025252</td>
+					<td >Varun Gupta</td>
+					<td >Birla - Long term plan - Growth</td>
+					<td >12,000.43</td>
+					<td >28.2030</td>
+					<td ><select class="minimal"></select></td>
+					<td ><input type="text"></td>
+					<td ><input type="text"></td>
+				</tr>
+				<tr>
+
+					<td ><input type="checkbox" onclick="OnChangeCheckbox (this)" id="myCheckbox" /></td>
+					<td >1025252</td>
+					<td >Varun Gupta</td>
+					<td >Birla - Long term plan - Growth</td>
+					<td >12,000.43</td>
+					<td >28.2030</td>
+					<td ><select class="minimal"></select></td>
+					<td ><input type="text"></td>
+					<td ><input type="text"></td>
+				</tr>
+				</tbody>
+		</table>
+		
+		</div>
+		<div id="Verify" class="tab-pane fade">
+		  <h3>Verify & confirm</h3>
+		</div>
+	  </div>
+	</div>
+
+</div>  
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>  
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha256-KXn5puMvxCw+dAYznun+drMdG1IFl3agK0p/pqT9KAo= sha512-2e8qq0ETcfWRI4HJBzQiA3UoyFk6tbNyG+qSaIBZLyW9Xf3sWZHN/lxe9fTh1U45DpPf07yj94KsUHHWe4Yk1A==" crossorigin="anonymous"></script>	 
+    <script type="text/javascript">
+        function OnChangeCheckbox (checkbox) {
+            if (checkbox.checked) {
+                alert ("The check box is checked.");
+            }
+            else {
+                alert ("The check box is not checked.");
+            }
+        }
+    </script>
+	</body>
+</html>

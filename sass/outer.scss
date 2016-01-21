@@ -675,3 +675,21 @@ p{font-size:15px;}
 		}
 		}
 }
+.sell-funds{
+	.sell-funds-table{
+	padding:1em;
+	.sell-funds-content{
+		padding:1em;
+		table{
+			width:100%;border: 1px solid #ddd;
+			th, td{text-align:center; @include fontl(14);border-left: 1px solid #ddd;border-bottom: 1px solid #ddd;}
+			tbody{padding:10px 0;}
+			thead{background:#2C3E51;}
+			th{text-transform:uppercase; font-family:Montserrat; font-weight:400; color:white; padding:5px; &:first-child{width:5%;}}
+			td{padding:10px 5px;}
+			select, input{width:7em;border:1px solid #ddd; border-radius:4px; padding:4px; outline:none; }
+			}
+		}
+	}
+
+}
