@@ -362,7 +362,7 @@
         <script src="js/amchartcreate.js"></script>
 		<script src="js/script.js"></script>
 		<script type="text/javascript">
-				console.log("going in onboarding");
+				//console.log("going in onboarding");
 				var localData = JSON.parse(sessionStorage.getItem('formdata'));
 				/*console.log(localData.kids);
 				console.log(localData.income);*/
@@ -382,7 +382,15 @@
 
 				/*Computed Variables*/		
 				var currentYear =(new Date).getFullYear();
-				var ageto_retire=60-ageinfo;
+				var ageto_retire;
+				if ((ageinfo)=> 60) {
+					
+					ageto_retire=5;
+				}
+				else {
+					
+					ageto_retire=60-ageinfo;
+				}
 				var yearto_retire=currentYear+ageto_retire;
 
 				var salaryto_save=(ageto_retire*incomeinfo);
