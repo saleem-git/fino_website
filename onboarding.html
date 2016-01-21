@@ -393,12 +393,12 @@
 				var contingency_amt=(0.5*(incomeinfo)).toLocaleString();
 				var philan_year=2+currentYear;
 
-				var low_fd,low_debt,low_equ,low_liq;								
-				//low_fd=low_debt=low_equ=low_liq=10;
+				var low_eq_largecap,low_eq_midcap,low_eq_smallcap,low_sector_funds,low_indexfund,low_gold_etf,low_debt_long,low_debt_med,low_liq,low_gilt_long;					
 				var divn;
-				var med_fd,med_debt,med_equ,med_liq;
-				var high_fd,high_debt,high_equ,high_liq;
+				var med_eq_largecap,med_eq_midcap,med_eq_smallcap,med_sector_funds,med_indexfund,med_gold_etf,med_debt_long,med_debt_med,med_liq,med_gilt_long;	
 				
+				var high_eq_largecap,high_eq_midcap,high_eq_smallcap,high_sector_funds,high_indexfund,high_gold_etf,high_debt_long,high_debt_med,high_liq,high_gilt_long;	
+				//med_indexfund,med_gold_etf,med_debt_long,med_debt_med,med_liq,med_gilt_long;	
 				$("section.plan_info p.age span").text(ageinfo);
 				
 
@@ -428,7 +428,7 @@
 			$("#collapseOne .panel-body:nth-child(3) ul").html("<li>Diverse Portfolio of Mutual Funds</li>    <li>Zero Fees</li>   <li>Entire amount withdrawable after 3 years with zero taxes</li> <li>Expected amount after 3 years between 3% to 30%  of current Invested amount</li>");
 
 			//chartConfig3.dataProvider[1].litres=300;
-			updateretirementchart(1,1);
+			updateretirementcharttax(1);
 			
 
 			$("#headingTwo .goal_metainfo label:nth-of-type(2)").text("Retirement");
@@ -550,75 +550,149 @@
 					var p=years;
 				if ( p==1 ){
 					var divn=divn;
-					low_fd=70;
-					low_debt=00;
-					low_equ=00;
-					low_liq=30;					
-					drawchart(divn,low_fd,low_debt,low_equ,low_liq);
+					low_eq_largecap=10;
+					low_eq_midcap=0;
+					low_eq_smallcap=0;
+					low_sector_funds=0;
+					low_indexfund=0;		
+					low_gold_etf=0;
+					low_debt_long=15;	
+					low_debt_med=15;	
+					low_liq=55;
+					low_gilt_long=5;
+					drawchart(divn,low_eq_largecap,low_eq_midcap,low_eq_smallcap,low_sector_funds,low_indexfund,low_gold_etf,low_debt_long,low_debt_med,low_liq,low_gilt_long);
 
 
-					med_fd=40;
-					med_debt=00;
-					med_equ=00;
-					med_liq=60;
+					med_eq_largecap=10;
+					med_eq_midcap=05;
+					med_eq_smallcap=05;
+					med_sector_funds=0;
+					med_indexfund=0;
+					med_gold_etf=0;
+					med_debt_long=20;
+					med_debt_med=20;
+					med_liq=35;
+					med_gilt_long=5;
 					divn++;
-					drawchart(divn,med_fd,med_debt,med_equ,med_liq);
+					drawchart(divn,med_eq_largecap,med_eq_midcap,med_eq_smallcap,med_sector_funds,med_indexfund,med_gold_etf,med_debt_long,med_debt_med,med_liq,med_gilt_long);
 
-					high_fd=20;
-					high_deb=00;
-					high_equ=00;
-					high_liq=80;
+					high_eq_largecap=15;
+					high_eq_midcap=8;
+					high_eq_smallcap=7;
+					high_sector_funds=0;
+					high_indexfund=0;
+					high_gold_etf=0;
+					high_debt_long=20;
+					high_debt_med=20;
+					high_liq=25;
+					high_gilt_long=5;
 					divn++;					
-					drawchart(divn,high_fd,high_deb,high_equ,high_liq);
+					drawchart(divn,high_eq_largecap,high_eq_midcap,high_eq_smallcap,high_sector_funds,high_indexfund,high_gold_etf,high_debt_long,high_debt_med,high_liq,high_gilt_long);
 					}
 
 					else if ((p=>1) && (p<=5) ) {
 					var divn=divn;
-					low_fd=10;
-					low_debt=60;
-					low_equ=20;
-					low_liq=10;					
-					drawchart(divn,low_fd,low_debt,low_equ,low_liq);
+					low_eq_largecap=12;
+					low_eq_midcap=5;
+					low_eq_smallcap=05;
+					low_sector_funds=0;
+					low_indexfund=0;		
+					low_gold_etf=0;
+					low_debt_long=18;	
+					low_debt_med=18;	
+					low_liq=37;
+					low_gilt_long=5;
+					drawchart(divn,low_eq_largecap,low_eq_midcap,low_eq_smallcap,low_sector_funds,low_indexfund,low_gold_etf,low_debt_long,low_debt_med,low_liq,low_gilt_long);
 
 
-					med_fd=10;
-					med_debt=40;
-					med_equ=40;
-					med_liq=10;
+					med_eq_largecap=16;
+					med_eq_midcap=7;
+					med_eq_smallcap=7;
+					med_sector_funds=0;
+					med_indexfund=0;
+					med_gold_etf=0;
+					med_debt_long=20;
+					med_debt_med=20;
+					med_liq=25;
+					med_gilt_long=5;
 					divn++;
-					drawchart(divn,med_fd,med_debt,med_equ,med_liq);
+					drawchart(divn,med_eq_largecap,med_eq_midcap,med_eq_smallcap,med_sector_funds,med_indexfund,med_gold_etf,med_debt_long,med_debt_med,med_liq,med_gilt_long);
 
-					high_fd=10;
-					high_deb=10;
-					high_equ=70;
-					high_liq=10;
+					high_eq_largecap=18;
+					high_eq_midcap=12;
+					high_eq_smallcap=12;
+					high_sector_funds=4;
+					high_indexfund=4;
+					high_gold_etf=3;
+					high_debt_long=20;
+					high_debt_med=20;
+					high_liq=5;
+					high_gilt_long=2;
 					divn++;					
-					drawchart(divn,high_fd,high_deb,high_equ,high_liq);				
+					drawchart(divn,high_eq_largecap,high_eq_midcap,high_eq_smallcap,high_sector_funds,high_indexfund,high_gold_etf,high_debt_long,high_debt_med,high_liq,high_gilt_long);			
 				}
 				else if ((p>5))
 				 {
 				 	var divn=divn;
-					low_fd=10;
-					low_debt=60;
-					low_equ=30;
-					low_liq=00;					
-					drawchart(divn,low_fd,low_debt,low_equ,low_liq);
+					low_eq_largecap=14;
+					low_eq_midcap=6;
+					low_eq_smallcap=6;
+					low_sector_funds=2;
+					low_indexfund=2;		
+					low_gold_etf=0;
+					low_debt_long=13;	
+					low_debt_med=13;	
+					low_liq=39;
+					low_gilt_long=5;
+					drawchart(divn,low_eq_largecap,low_eq_midcap,low_eq_smallcap,low_sector_funds,low_indexfund,low_gold_etf,low_debt_long,low_debt_med,low_liq,low_gilt_long);
 
 
-					med_fd=10;
-					med_debt=40;
-					med_equ=50;
-					med_liq=00;
+					med_eq_largecap=17;
+					med_eq_midcap=10;
+					med_eq_smallcap=10;
+					med_sector_funds=4;
+					med_indexfund=7;
+					med_gold_etf=0;
+					med_debt_long=16;
+					med_debt_med=16;
+					med_liq=15;
+					med_gilt_long=5;
 					divn++;
-					drawchart(divn,med_fd,med_debt,med_equ,med_liq);
+					drawchart(divn,med_eq_largecap,med_eq_midcap,med_eq_smallcap,med_sector_funds,med_indexfund,med_gold_etf,med_debt_long,med_debt_med,med_liq,med_gilt_long);
 
-					high_fd=10;
-					high_deb=20;
-					high_equ=70;
-					high_liq=00;
-					divn++;			
-					drawchart(divn,high_fd,high_deb,high_equ,high_liq)
+					high_eq_largecap=20;
+					high_eq_midcap=13;
+					high_eq_smallcap=13;
+					high_sector_funds=4;
+					high_indexfund=10;
+					high_gold_etf=5;
+					high_debt_long=10;
+					high_debt_med=10;
+					high_liq=10;
+					high_gilt_long=5;
+					divn++;					
+					drawchart(divn,high_eq_largecap,high_eq_midcap,high_eq_smallcap,high_sector_funds,high_indexfund,high_gold_etf,high_debt_long,high_debt_med,high_liq,high_gilt_long);
 						}					
+				}
+
+				function updateretirementcharttax (divn) {
+					var low_elss,med_elss,high_elss;
+					low_elss=70;
+					med_elss=30;
+					high_elss=0;
+					drawcharttax(divn,low_elss,med_elss,high_elss);
+
+					low_elss=30;
+					med_elss=50;
+					high_elss=20;
+					divn++;
+					drawcharttax(divn,low_elss,med_elss,high_elss);
+
+					low_elss=20;
+					med_elss=30;
+					high_elss=50;
+					divn++;
+					drawcharttax(divn,low_elss,med_elss,high_elss);
 				}
 
 			$('[data-toggle="popover"]').popover(); 	

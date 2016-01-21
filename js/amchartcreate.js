@@ -17,11 +17,19 @@ var chartConfig = {
             "valueText": ""
           },
           "titles": [],
-            "colors": [
-              "#67b7dc",
-              "#84b761",
-              "#cc4748",            
-              "#913167"
+            "colors": [           
+              "#56e2cf",
+              "#56aee2",
+              "#5668e2",
+              "#8a56e2",
+              "#cf56e2",
+              "#e256ae",
+              "#e25668",
+              "#e28956",
+              "#e2cf56",
+              "#aee256",
+              "#68e256",
+              "#56e289"
             ],
           "sequencedAnimation": false,
           "startEffect": "easeOutSine",
@@ -89,27 +97,6 @@ AmCharts.addInitHandler(function(chartConfig) {
 
 
 /*Charts for onboarding page start*/
-
-/**
- * Create first chart
- */
-
- // create a copy of the universal config
-
-
-
-
-
-/*Charts for onboarding page end*/
-
-
-
-
-/*
-******************************************************************
-*/
-/*Charts for Summary page*/
-
 // create a copy of the universal config
 var chartConfigsum1 = clone(chartConfig);
 
@@ -164,34 +151,83 @@ chartConfigsum2.dataProvider = [
 // create the chart
 AmCharts.makeChart("sumchartdiv2", chartConfigsum2);
 
-
-/*******************************************/
-//chart Dynamic
-        function drawchart(divval,fdv,mfdebtv,mfeqv,mfliqv) {
+        function drawchart(divval,equity_large_cap,equity_mid_cap,equity_small_cap,sector_funds,index_fund,gold_etf,debt_long_term,debt_medium_term,liquid,gilt_long_term_fund)            
+        {
           //console.log("In Fn");
           var divch="chartdiv"+divval;
           var chartconfigno="chartConfig"+divval;
           var chartconfigno = clone(chartConfig);
           chartconfigno.dataProvider = [
                   {
-                    "product": "FD",
-                    "investment": fdv
+                    "product": "Equity Large Cap",
+                    "investment": equity_large_cap
                   },
                   {
-                    "product": "MF Debt",
-                    "investment": mfdebtv
+                    "product": "Equity Mid Cap",
+                    "investment": equity_mid_cap
                   },
                   {
-                    "product": "MF Equity",
-                    "investment": mfeqv
+                    "product": "Equity Small Cap",
+                    "investment": equity_small_cap
                   },           
                   {
-                    "product": "MF Liquid",
-                    "investment": mfliqv
+                    "product": "Sector Funds",
+                    "investment": sector_funds
+                  },
+                  {
+                    "product": "Index Fund",
+                    "investment": index_fund
+                  },                  
+                  {
+                    "product": "Gold ETF",
+                    "investment": gold_etf
+                  },
+                  {
+                    "product": "Debt Long Term",
+                    "investment": debt_long_term
+                  },
+                  {
+                    "product": "Debt Medium Term",
+                    "investment": debt_medium_term
+                  },
+                  {
+                    "product": "Liquid",
+                    "investment": liquid
+                  },
+                  {
+                    "product": "Gilt Long Term Fund",
+                    "investment": gilt_long_term_fund
                   }
 
         ];
         AmCharts.makeChart(divch,chartconfigno);
         }
 
+
+
 /**********************************************/
+
+/*For Tax only*/
+function drawcharttax(divval,l_elss,m_elss,h_elss)            
+        {
+          //console.log("In Fn");
+          var divch="chartdiv"+divval;
+          var chartconfigno="chartConfig"+divval;
+          var chartconfigno = clone(chartConfig);
+          chartconfigno.dataProvider = [
+                  {
+                    "product": "Low Risk ELSS",
+                    "investment": l_elss
+                  },
+                  {
+                    "product": "Medium Risk ELSS",
+                    "investment": m_elss
+                  },
+                  {
+                    "product": "High Risk ELSS",
+                    "investment": h_elss
+                  }             
+
+        ];
+        AmCharts.makeChart(divch,chartconfigno);
+        }
