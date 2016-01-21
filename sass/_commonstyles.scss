@@ -537,12 +537,12 @@
 	.item p{
 		width: 95%;
 		margin: 5px auto;
-		@include fontm(14);		
+		@include fontm(19);		
 	} 
 	img {
     max-width: 400px;
     max-height: 300px;
-    margin:60px 0px 80px 0px;
+    margin:30px 0px 80px 0px;
   }
   .carousel-indicators li {
   	border: 1px solid #999;
@@ -566,7 +566,7 @@
 		padding:0px;
 
 		h5 {
-			@include fontsb(14);
+			@include fontsb(19);
 		}
 	}
 	

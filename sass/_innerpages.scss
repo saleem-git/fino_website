@@ -6,7 +6,7 @@
 	.manage_account{
 		h1{
 				line-height: 35px;
-				padding: 0px;
+				padding: 10px 20px;
 				color: #17406B;
 				@include fontsb(21);
 			}
@@ -45,7 +45,7 @@
 	.modal-dialog{
 	&.add-goal{
 		.modal-header{background-color:#2C3E51; color:white; font-weight:600; text-transform:uppercase;}
-		.modal-body{background-color:#ebebeb; height:23em;&.step-2{.target{padding:15px}}}
+		.modal-body{overflow-y:scroll ; background-color:#ebebeb; height:23em;&.step-2{.target{padding:15px}}}
 		.modal-footer{background-color:#ebebeb;}
 		width:70%;
 		top:5em;
@@ -114,7 +114,6 @@
 .overview_account{
 	.earnings{
 		.earnings_div{
-			float: left;
 			h3{
 				@include fontl(14);
 				margin-left: 10px;
@@ -180,7 +179,8 @@
 			h1{
 				@include fontm(32);
 			}
-			
+			@media (min-width: 768px) and (max-width: 991px){#target1{height:38px;} }
+			.plan_values{@include fontm(22)}
 		}
 	button {
 			padding: 2px 12px;		
@@ -222,7 +222,6 @@
 	margin-top: 0px;
 	}
 	.panel {
-		.Current-Value{padding-left:14em;}
 		.Current-Value.\32 {padding-left:12.5em;}
 		.Current-Value span{padding-left:1em;font-weight:700;}
 		.panel-fake-heading{			
@@ -284,6 +283,7 @@
 				}
 			}
 			.portfolio_large_info{
+				.Current-Value{float:right;}
 				.heading {
 					padding: 20px 15px;
 					a:focus, a:hover {
@@ -291,13 +291,15 @@
 					}
 				}
 				table {
+					&#current_investment td{padding:4px 0; &:first-child{padding-left:5px;}}
 					width: 100%;
 					th {
 						@include fontsb(14);
 						border-bottom: 1px solid rgb(204, 204, 204);
+						padding:6px;
 						padding-bottom: 15px;
 						&:first-child{
-							width:350px;
+							width:35%;
 						}
 					}
 					td,td p, td a {
@@ -308,9 +310,11 @@
 						line-height: auto;											
 					}
 					td{
-						padding: 4px 0px;
+						padding: 6px;
 						vertical-align: middle;
-
+						&:first-child{
+							padding-left:5px;
+						}
 						.btn{
 							padding:5px 20px;
 							margin-right: 5px;
@@ -347,6 +351,7 @@
 						font-size: 13px;
 						text-transform: uppercase;
 						color:#000;
+						padding-left:0;
 					}
 					.action{
 						width:100px;
@@ -449,6 +454,8 @@
 					}
 				}
 			}
+			@media (min-width: 1100px) {#chartdiv, #chartdiv1, #chartdiv2{width: 80%; height: 350px;}}
+			@media (max-width: 1100px) {#chartdiv, #chartdiv1, #chartdiv2{width: 100%; height: 300px;}}
 		}
 	}
 
@@ -465,6 +472,9 @@
 			height: 60px;
 			width: 40px;
 			margin: 25px auto 16px;
+			background-image: url("../images/small_icons-s33d3f5b6ee.png");
+			background-repeat: no-repeat;
+			background-position: 0px -197px;
 		}
 		border-radius: 50%;
 		text-align: center;
@@ -547,9 +557,6 @@
 				@include fontl(14);
 				padding-top: 2px;
 			}
-			input[name="phone_number"]{
-				display: inline-block;				
-			}
 			h4{
 				width: 49%;
 				display: inline-block !important;				
@@ -579,11 +586,7 @@
 		}
 }	
 
-.modal-body{
-	&.step-1 .info_icon{
-		@include small_icons-sprite(sign_up);			
-	}
-} 
+ 
 
 }
 .add-scheme{
