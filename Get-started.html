@@ -153,6 +153,10 @@
 		$(".btn.form_options").slice(3,4).button("toggle");
 
 		$().ready(function() {
+			  $.validator.addMethod("loginRegex", function(value, element) {
+		        return this.optional(element) || /^[0-9\,\s]+$/i.test(value);
+		    }, "Username must contain only letters, numbers, or dashes.");
+
 		$("form[name='onboardinfo']").validate({
 			rules: {
 			age: {
@@ -162,9 +166,9 @@
 			},
 			income: {
 				required:true,
-				digits:true,
 				minlength: 5,
-				maxlength: 9
+				maxlength: 9,
+				loginRegex:true
 			}
 		},
 		 messages: {
@@ -175,8 +179,8 @@
 		 	},
 		 	income:{
 		 		required:"Please enter your income",
-		 		digits: "Enter income numbers only",
-		 		minlength: "Your Annual income must be greater than 10000"
+		 		minlength: "Please enter your Annual income",
+		 		loginRegex:"Enter income only in numbers"
 		 	}
 		 },
 			errorLabelContainer: $("form[name='onboardinfo'] div.error"),
@@ -191,9 +195,10 @@
 			},
 			income: {
 				required:true,
-				digits:true,
 				minlength: 5,
-				maxlength: 9
+				maxlength: 9,
+				loginRegex:true
+
 			}
 		},
 		 messages: {
@@ -204,8 +209,9 @@
 		 	},
 		 	income:{
 		 		required:"Please enter your income",
-		 		digits: "Enter numbers only",
-		 		minlength: "Your Annual income must be greater than 10000"
+		 		minlength: "Please enter your Annual income",
+		 		loginRegex:"Enter income only in numbers"
+
 		 	}
 		 },
 			errorLabelContainer: $("form[name='onboardinfo_mob'] div.error"),
