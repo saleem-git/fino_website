@@ -178,7 +178,10 @@ section.plan_info{
 			}
 			h3{
 				@include fontsb(16);
-
+			}
+			.chartdiv_dimens{
+				width: 80%;
+				min-height: 210px;
 			}
 			button[type="button"] {
 				background-color: rgb(242, 255, 229);
@@ -205,3 +208,11 @@ section.plan_info{
 
 }
 /* End Accordion */
+
+/* For Index forms */
+form[name="onboardinfo"] div.error,form[name="onboardinfo_mob"] div.error {
+	display:none;
+	label {
+		display: block;
+	}
+}

@@ -14,7 +14,7 @@
         <link rel="stylesheet" href="style/outer.css">
        
     </head>
-    <body class="home">
+    <body class="home"> 
 	   	<header> 
 		    <!-- Navigation -->
     <nav class="navbar navbar-default navbar-fixed-top"  >
@@ -67,9 +67,14 @@
 		
 		<div class="details">
 			<section class="row onboarding-desktop-form hidden-xs">
-			<form method="get" action="onboarding.html" name="onboardinfo">
+			<form method="get" action="onboarding.html" name="onboardinfo" >
+			<div class="error alert alert-warning">
+				<p>
+					Error
+				</p>	
+			</div>
 			<p><span class="edit-age"> I am 
-				<input  type="text" name="age" maxlength="2" size="3" value"4" />
+				<input  type="text" name="age" size="2" required />
 				years old and <!--  onkeyup="this.value=this.value.replace(/[^\d]/,'')" -->
 					<select class="minimal" id="retired" style="overflow:hidden;" name="retirement">
 						<option value="not_retired">Not Retired</option>
@@ -93,12 +98,12 @@
 					kids.
 				</span>
 				<span class="edit-age">My annual pre tax income is ₹
-					<input type="text" placeholder="" maxlength="10" name="income" value="" size="10" data-type="comma">
+					<input type="text" name="income" data-type="comma" size="6">
 					<span data-toggle="popover" data-trigger="hover" data-content="Total yearly income before deduction of taxes"><img src="images/i.png"></span>
 				</span></p>	
 				<div class="row">
             <div class="text-center" >
-                 <button type="submit" class="btn btn-lg btn-outline " id="get_start" >Start Investment</button>
+                 <button type="submit" class="btn btn-lg btn-outline " id="get_start">Start Investment</button>
             </div>
         </div>
         </form>
@@ -106,8 +111,13 @@
 			
 			<section class="row onboarding-mobile-form visible-xs">
 			<form method="get" action="onboarding.html" name="onboardinfo_mob">
+				<div class="error alert alert-warning">
+					<p>
+						Error
+					</p>	
+				</div>
 				<fieldset>
-					<div class="income panel"><input name="age" type="tel" placeholder="Enter Age" maxlength="3" data-suffix=" years old">
+					<div class="income panel"><input name="age" type="tel" placeholder="Enter Age" maxlength="3" >
 					</div>
 					<div class="btn-group retirement-status" data-toggle="buttons">
 						<label class="btn btn-default form_options"><input type="radio" name="retirement" id="option1" autocomplete="off" value="not_retired">Not retired</label>
@@ -128,13 +138,12 @@
 					</select>
 					</div>
 					<div class="income panel">
-					<input name="income" type="text" placeholder="Annual Pre-Tax Income" maxlength="10" data-suffix=" per year" data-type="comma"></div>
-					<span class="income-error error-message"></span>
+					<input name="income" type="text" placeholder="Annual Pre-Tax Income" maxlength="10" data-type="comma"></div>
 					
 				</fieldset>
 					<div class="row">
             <div class="text-center" >
-                 <button type="submit" class="btn btn-lg btn-outline " id="get_start" >Start Investment</button>
+                 <button type="submit" class="btn btn-lg btn-outline " id="get_startmob" >Start Investment</button>
             </div>
         </div>
         </form>
@@ -289,11 +298,78 @@
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha256-KXn5puMvxCw+dAYznun+drMdG1IFl3agK0p/pqT9KAo= sha512-2e8qq0ETcfWRI4HJBzQiA3UoyFk6tbNyG+qSaIBZLyW9Xf3sWZHN/lxe9fTh1U45DpPf07yj94KsUHHWe4Yk1A==" crossorigin="anonymous"></script>	 
 	<script src="js/script.js"></script>
 	<script src="js/readmore.js"></script>
+    <script src="js/jquery.validate.js"></script>  
+
 <script>
     $('[data-toggle="popover"]').popover(); 
 	$(".btn.form_options").slice(0,1).button("toggle");
 	$(".btn.form_options").slice(3,4).button("toggle");
+	
+	$().ready(function() {
+	  $.validator.addMethod("loginRegex", function(value, element) {
+	    return this.optional(element) || /^[0-9\,\s]+$/i.test(value);
+	}, "Username must contain only letters, numbers, or dashes.");
 
+		$("form[name='onboardinfo']").validate({
+			rules: {
+			age: {
+				required:true,
+				digits:true,
+				max:80
+			},
+			income: {
+				required:true,
+				minlength: 5,
+				maxlength: 9,
+				loginRegex:true
+			}
+		},
+		 messages: {
+		 	age:{
+		 		required:"Please enter your age",
+		 		digits: "Enter age in numbers only",
+		 		max:"Please enter age less than or equal to 80"
+		 	},
+		 	income:{
+		 		required:"Please enter your income",
+		 		minlength: "Please enter your Annual income",
+		 		loginRegex:"Enter income only in numbers"
+		 	}
+		 },
+			errorLabelContainer: $("form[name='onboardinfo'] div.error"),
+		});
+
+		 $("form[name='onboardinfo_mob']").validate({
+			rules: {
+			age: {
+				required:true,
+				digits:true,
+				max:80
+			},
+			income: {
+				required:true,
+				minlength: 5,
+				maxlength: 9,
+				loginRegex:true
+
+			}
+		},
+		 messages: {
+		 	age:{
+		 		required:"Please enter your age",
+		 		digits: "Enter age in numbers only",
+		 		max:"Please enter age less than or equal to 80"
+		 	},
+		 	income:{
+		 		required:"Please enter your income",
+		 		minlength: "Please enter your Annual income",
+		 		loginRegex:"Enter income only in numbers"
+
+		 	}
+		 },
+			errorLabelContainer: $("form[name='onboardinfo_mob'] div.error"),
+		});
+	});
 </script>
 	</body>
 </html>

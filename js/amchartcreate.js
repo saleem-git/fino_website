@@ -32,7 +32,7 @@ var chartConfig = {
               "#56e289"
             ],
           "sequencedAnimation": false,
-          "startEffect": "easeOutSine",
+            "startDuration": 0,
           "titleField": "product",
           "valueField": "investment",
           "percentPrecision": 0,
