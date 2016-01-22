@@ -10,7 +10,7 @@
  font: 300 $size+px Open Sans;
 }
 
-
+select, input, button, .btn{outline:none !important;}
 .home, .what-we-do, .about-us, .benchmark, .safe, .transparent, .funds, .policy, .tlh, .why-fino, .career{
 	h1, h2, h3, h4, h5, h6 {font-family: Montserrat; font-weight:700; text-transform:uppercase; padding:1em 0;}
 	h2{font-size:30px}
@@ -675,21 +675,74 @@ p{font-size:15px;}
 		}
 		}
 }
-.sell-funds{
-	.sell-funds-table{
-	padding:1em;
-	.sell-funds-content{
-		padding:1em;
+.sell, .switch, .buy{
+	#text-right{text-align:right;padding-right:1.5em; }
+	.income-symbol {
+		position: relative;
+		left: 16px;
+	}
+	.funds-content{
+		border: 1px solid #dedede;
+		border-top:none;
+		width: 99.9%;
+		background: white;
+		padding:2em 1em;
+		min-height: 300px;
+		&.buy-content{width:100%;}
 		table{
-			width:100%;border: 1px solid #ddd;
+			width:100%;border: 1px solid #ddd; background:white;
 			th, td{text-align:center; @include fontl(14);border-left: 1px solid #ddd;border-bottom: 1px solid #ddd;}
 			tbody{padding:10px 0;}
 			thead{background:#2C3E51;}
-			th{text-transform:uppercase; font-family:Montserrat; font-weight:400; color:white; padding:5px; &:first-child{width:5%;}}
+			th{text-transform:uppercase; font-family:Montserrat; font-weight:400; color:white; padding:5px; }
 			td{padding:10px 5px;}
-			select, input{width:7em;border:1px solid #ddd; border-radius:4px; padding:4px; outline:none; }
+			&#Verify_switchTable{ th, td{text-align:left; &:first-child{width:15em;}} tr:nth-child(even) {background: #CCC}}
 			}
+			&.buy-content{table{ th{height:50px;} &#verify_table{th {width: 150px;} }} #note{@include fontsb(12);}}
 		}
+	.nav-tabs li{
+		
+		border:1px solid #ddd;
+		border-bottom:none;
+		width:33.3%;
+		font-size:14px;
+		text-align:center;
+		background: #f3f3f3 none repeat scroll 0% 0%;&.active{background:white; a{color:#2C3E51;}}
+		a{border-radius:0; color:#2C3E51; @include fontm(1em); font-family:Montserrat; background:transparent; border:none !important; &:hover{border:none !important;} }
+		}
+	.confirm_btn {
+    text-align: right;
+    padding: 1em;
 	}
-
+	}
+.buy-funds{
+	.nav-tabs li{width:25%}
+table{
+	
+	select, input[type="text"]{width:8em;border:1px solid #ddd; border-radius:4px; padding:4px; outline:none; }
+	input[type="text"]{padding:4px 4px 4px 20px;}
+	th{&:first-child{width:30%;}} }	
+	#make_payment{h2{padding:0;} td{text-align:left;border:none; background:#ebebeb; padding-left:3em; } #i_accept{@include fontm(12); padding-left:1em;} }
+	.tab-info {
+    padding: 1em 0;
+	h2{@include fontsb(16); text-transform:uppercase; padding:1em 0;}
+	#make_payment_bank{width:40%;}
+	}
+	}
+.switch-funds{
+	.switch-funds-table{
+	#Switch_scheme{ div{padding:1em;} }
+	select, input[type="text"] {width:40%;border:1px solid #ddd; border-radius:4px; padding:4px; outline:none; }
+	table{select, input{width:7em !important;border:1px solid #ddd; border-radius:4px; padding:4px; outline:none; } input[type="text"]{padding:4px 4px 4px 20px;}}
+	}
+	}
+.sell-funds{
+	.sell-funds-table{
+	border:1px solid #ddd;
+	background:#ececec;
+	min-height:450px;
+	padding:1em;
+	table{select, input[type="text"]{width:7em;border:1px solid #ddd; border-radius:4px; padding:4px; outline:none; } th{&:first-child{width:8%;}} }
+	input[type="text"]{padding:4px 4px 4px 20px;}
+	}
 }

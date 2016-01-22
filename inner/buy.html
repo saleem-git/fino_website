@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Sell</title>
+        <title>Buy</title>
         <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600' rel='stylesheet' type='text/css'>
         <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha256-7s5uDGW3AHqw6xtJmNNtr+OBRJUlgkNJEo78P4b0yRw= sha512-nNo+yCHEyn0smMxSswnf/OnX6/KwJuZTlNZBjauKhTK0c+zT+q5JOCx0UFhXQ6rJR9jg6Es8gPuD2uZcYDLqSw==" crossorigin="anonymous">
         <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
@@ -67,103 +67,164 @@
 </header>
 	
 	
-<div class="container sell sell-funds">
+<div class="container buy buy-funds">
 		
-	<div class="row sell-funds-table" >
+	<div class="row buy-funds-table" >
 	  <ul class="nav nav-tabs">
 			<li><a data-toggle="tab" href="#Account_Selection">1. Account Selection</a></li>
 			<li class="active"><a data-toggle="tab" href="#Select_scheme">2. Select scheme & Amount</a></li>
 			<li><a data-toggle="tab" href="#Verify">3. Verify & confirm</a></li>
+			<li><a data-toggle="tab" href="#make_payment">4. Make Payment</a></li>
 	  </ul>
-
-	  <div class="tab-content funds-content">
+		
+	  <div class="tab-content funds-content buy-content">
 		<div id="Account_Selection" class="tab-pane fade">
 			<input type="radio" value="1" name="1" /><label>&nbsp;&nbsp; Varun Gupta 1</label><br />
 			<input type="radio" value="2" name="1" /><label>&nbsp;&nbsp; Varun Gupta 1</label>
 		</div>
 		<div id="Select_scheme" class="tab-pane  in active">
-		  <table>
+		 <div class="tab-info">
+		 <h2>One Time Investment</h2>
+		 <table>
 			<thead>
 				<tr>
-					<th><div class="">select </div></th> 
-					<th><div class="">folio</div></th> 
-					<th ><div>portfolio</div></th> 
 					<th ><div>scheme name</div></th> 
-					<th ><div>available<br> amount</div></th>
-					<th ><div>available<br> units</div></th>
-					<th><div class="">redemption</div></th> 
+					<th ><div>folio no</div></th> 
 					<th><div class="">amount(Rs.)</div></th> 
-					<th><div class="">units</div></th> 
+					<th><div class="">goal tagged to</div></th> 
 				</tr>
 			</thead>
 
 			<tbody>
 				<tr>
-
-					<td ><input type="checkbox"/></td>
-					<td >1025252</td>
-					<td >Varun Gupta</td>
+					
 					<td >Birla - Long term plan - Growth</td>
-					<td >12,000.43</td>
-					<td >28.2030</td>
-					<td ><select class="minimal"></select></td>
+					<td ><select class="minimal"><option value="12332">12332</option></select></td>
 					<td ><span class="income-symbol">&#x20B9;</span><input type="text" data-type="comma"></td>
-					<td ><input type="text"></td>
+					<td ><select class="minimal"><option value="retirement">Retirement</option></select></td>
 				</tr>
 				<tr>
-
-					<td ><input type="checkbox"/></td>
-					<td >1025252</td>
-					<td >Varun Gupta</td>
-					<td >Birla - Long term plan - Growth</td>
-					<td >12,000.43</td>
-					<td >28.2030</td>
-					<td ><select class="minimal"></select></td>
-					<td ><span class="income-symbol">&#x20B9;</span><input type="text" data-type="comma"></td>
-					<td ><input type="text"></td>
-				</tr>
-				<tr>
-
-					<td ><input type="checkbox"/></td>
-					<td >1025252</td>
-					<td >Varun Gupta</td>
-					<td >Birla - Long term plan - Growth</td>
-					<td >12,000.43</td>
-					<td >28.2030</td>
-					<td ><select class="minimal"></select></td>
-					<td ><span class="income-symbol">&#x20B9;</span><input type="text" data-type="comma"></td>
-					<td ><input type="text"></td>
+					
+					<td><span class="btn-primary btn-sm">Add Scheme</span></td>
+					<td colspan="5" style="border-left-color: white;"></td>
 				</tr>
 				</tbody>
-		</table>
-		<div class="confirm_btn"><a class="btn btn-primary btn-sm" href="#" id="btnReview">CONTINUE</a> </div>
+		</table></div>
+		<div class="tab-info">
+		<h2>Systematic Investment Plan </h2>
+		<table>
+			<thead>
+				<tr>
+					<th ><div>scheme name</div></th> 
+					<th ><div>folio no</div></th> 
+					<th ><div>monthly investment<br /> amount</div></th> 
+					<th ><div>number of months</div></th> 
+					<th><div class="">sip date</div></th> 
+					<th><div class="">goal tagged to</div></th> 
+				</tr>
+				
+			</thead>
+
+			<tbody>
+				<tr>
+					
+					<td >Birla - Long term plan - Growth</td>
+					<td ><select class="minimal"></select></td>
+					<td ><input type="text" data-type="comma"></td>
+					<td ><input type="text"></td>
+					<td ><select class="minimal"></select></td>
+					<td ><select class="minimal"></select></td>
+				</tr>
+				<tr>
+					
+					<td ><span class="btn-primary btn-sm">Add Scheme</span></td>
+					<td colspan="5" style="border-left-color: white;"></td>
+				</tr>
+				</tbody>
+		</table></div>
+		
 		</div>
 		<div id="Verify" class="tab-pane fade">
-		  <table>
+		 <div class="tab-info">
+		 <h2>One Time Investment</h2>
+		 <table id="verify_table">
 			<thead>
 				<tr>
-					<th><div class="">folio</div></th> 
 					<th ><div>scheme name</div></th> 
-					<th><div class="">redemption</div></th> 
 					<th><div class="">amount(Rs.)</div></th> 
-					<th><div class="">units</div></th> 
+					<th ><div></div></th> 
+					<th ><div>folio no</div></th> 
+					<th><div class="">goal tagged to</div></th> 
 				</tr>
 			</thead>
 
 			<tbody>
 				<tr>
-
-					<td >1025252</td>
+					
 					<td >Birla - Long term plan - Growth</td>
-					<td >Partial</td>
-					<td >Rs. 28,2030</td>
-					<td >2.2</td>
+					<td ><input type="text" data-type="comma" value="25,000" disabled></td>
+					<td ></td>
+					<td ><input type="text" value="102155" disabled></td>
+					<td ><input type="text" value="Retirement" disabled></td>
 				</tr>
 				</tbody>
-		</table>
-		<div class="confirm_btn"><button class="btn btn-primary btn-sm"> CONFIRM</button></div>
+		</table></div>
+		<div class="tab-info">
+		<h2>Systematic Investment Plan </h2>
+		<table id="verify_table">
+			<thead>
+				<tr>
+					<th ><div>scheme name</div></th> 
+					<th ><div>monthly investment<br /> amount</div></th> 
+					<th ><div>number of months</div></th> 
+					<th><div class="">sip date</div></th>
+					<th><div class="">goal tagged to</div></th>
+				</tr>
+				
+			</thead>
+
+			<tbody>
+				<tr>
+					
+					<td >Birla - Long term plan - Growth</td>
+					<td ><input type="text" value="25,000" disabled></td>
+					<td ><input type="text" value="24" disabled></td>
+					<td ><input type="text" value="6" disabled></td>
+					<td ><input type="text" value="Retirement" disabled></td>
+				</tr>
+				</tbody>
+		</table></div>
+				</div>
+		<div id="make_payment" class="tab-pane fade">
+		 <div class="tab-info">
+		 <table>
+			<thead>
+				<tr>
+					<th colspan="2"><div>transaction referance id: 25325545</div></th> 
+					<th colspan="2" id="text-right"><div>total amount: 50,000.00</div></th> 
+				</tr>
+			</thead>
+
+			<tbody>
+				
+				<tr>
+				<td colspan="4"><h2>NET BANKING</h2></td>
+				</tr>
+				<tr>
+				<td colspan="2"><h2>Select bank for payment: </h2></td>
+				<td colspan="2"><select class="minimal" id="make_payment_bank"></select></td>
+				</tr>
+				<tr>
+				<td colspan="4"><input type="checkbox" ><span id="i_accept">I am not using a third-party bank account to fund mutual fund investments.</span></td>
+				</tr>
+				</tbody>
+		</table></div> 
+		<span id="note">Please note: If the payment confirmation page does not appear and your account gets debited, you can view the confirmation in Payment Reports available under Reports section.</span><br/>
+<span id="note">* Please Keep this Transaction Reference ID, for further communication..</span>
 		</div>
+	  <div class="footer confirm_btn"><a class="btn btn-primary btn-sm" href="#" id="btnReview">CONTINUE</a> </div>
 	  </div>
+	
 	</div>
 
 </div>  

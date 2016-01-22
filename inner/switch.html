@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Sell</title>
+        <title>Switch</title>
         <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600' rel='stylesheet' type='text/css'>
         <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha256-7s5uDGW3AHqw6xtJmNNtr+OBRJUlgkNJEo78P4b0yRw= sha512-nNo+yCHEyn0smMxSswnf/OnX6/KwJuZTlNZBjauKhTK0c+zT+q5JOCx0UFhXQ6rJR9jg6Es8gPuD2uZcYDLqSw==" crossorigin="anonymous">
         <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
@@ -67,12 +67,11 @@
 </header>
 	
 	
-<div class="container sell sell-funds">
-		
-	<div class="row sell-funds-table" >
+<div class="container switch switch-funds">
+	<div class="row switch-funds-table" >
 	  <ul class="nav nav-tabs">
 			<li><a data-toggle="tab" href="#Account_Selection">1. Account Selection</a></li>
-			<li class="active"><a data-toggle="tab" href="#Select_scheme">2. Select scheme & Amount</a></li>
+			<li class="active"><a data-toggle="tab" href="#Switch_scheme">2. Switch your scheme</a></li>
 			<li><a data-toggle="tab" href="#Verify">3. Verify & confirm</a></li>
 	  </ul>
 
@@ -81,83 +80,83 @@
 			<input type="radio" value="1" name="1" /><label>&nbsp;&nbsp; Varun Gupta 1</label><br />
 			<input type="radio" value="2" name="1" /><label>&nbsp;&nbsp; Varun Gupta 1</label>
 		</div>
-		<div id="Select_scheme" class="tab-pane  in active">
-		  <table>
+		<div id="Switch_scheme" class="tab-pane  in active">
+			<div class="col-sm-3"><label for="" >Scheme to switch from</label></div>
+			<div class="col-sm-7">
+				<select class="minimal">
+					<option value="0">0 </option>
+					<option value="1">1 </option>
+					<option value="2">2</option>
+					<option value="3">3 </option>
+					<option value="4">4</option>
+				</select>
+			</div><br />
+			<div class="col-sm-3"><label for="" >Scheme to switch to</label></div>
+			<div class="col-sm-7"><input type="text" ><button class="btn btn-primary btn-sm choose-scheme-btn" style="margin-left:30px">CHOOSE SCHEME</button></div>
+		  <div id="item" style="display:none"><table id="switchTable" >
 			<thead>
 				<tr>
-					<th><div class="">select </div></th> 
-					<th><div class="">folio</div></th> 
-					<th ><div>portfolio</div></th> 
-					<th ><div>scheme name</div></th> 
-					<th ><div>available<br> amount</div></th>
-					<th ><div>available<br> units</div></th>
-					<th><div class="">redemption</div></th> 
-					<th><div class="">amount(Rs.)</div></th> 
-					<th><div class="">units</div></th> 
+					<th><div>S.No</div></th> 
+					<th><div>from scheme</div></th> 
+					<th ><div>switch option</div></th> 
+					<th ><div>available<br> amount/units</div></th>
+					<th><div>To scheme</div></th> 
+					<th><div>dividend option</div></th> 
+					<th><div>units</div></th> 
+					<th><div>amount(Rs.)</div></th> 
 				</tr>
 			</thead>
 
 			<tbody>
 				<tr>
-
-					<td ><input type="checkbox"/></td>
-					<td >1025252</td>
-					<td >Varun Gupta</td>
+					<td >1</td>
 					<td >Birla - Long term plan - Growth</td>
-					<td >12,000.43</td>
-					<td >28.2030</td>
 					<td ><select class="minimal"></select></td>
-					<td ><span class="income-symbol">&#x20B9;</span><input type="text" data-type="comma"></td>
-					<td ><input type="text"></td>
-				</tr>
-				<tr>
-
-					<td ><input type="checkbox"/></td>
-					<td >1025252</td>
-					<td >Varun Gupta</td>
+					<td >28.2030/25,253</td>
 					<td >Birla - Long term plan - Growth</td>
-					<td >12,000.43</td>
-					<td >28.2030</td>
 					<td ><select class="minimal"></select></td>
-					<td ><span class="income-symbol">&#x20B9;</span><input type="text" data-type="comma"></td>
 					<td ><input type="text"></td>
-				</tr>
-				<tr>
-
-					<td ><input type="checkbox"/></td>
-					<td >1025252</td>
-					<td >Varun Gupta</td>
-					<td >Birla - Long term plan - Growth</td>
-					<td >12,000.43</td>
-					<td >28.2030</td>
-					<td ><select class="minimal"></select></td>
 					<td ><span class="income-symbol">&#x20B9;</span><input type="text" data-type="comma"></td>
-					<td ><input type="text"></td>
 				</tr>
+				
 				</tbody>
 		</table>
 		<div class="confirm_btn"><a class="btn btn-primary btn-sm" href="#" id="btnReview">CONTINUE</a> </div>
 		</div>
+		</div>
 		<div id="Verify" class="tab-pane fade">
-		  <table>
+		  <table id="Verify_switchTable">
 			<thead>
 				<tr>
-					<th><div class="">folio</div></th> 
-					<th ><div>scheme name</div></th> 
-					<th><div class="">redemption</div></th> 
-					<th><div class="">amount(Rs.)</div></th> 
-					<th><div class="">units</div></th> 
+					<th colspan="2"><div class="">Varun Gupta</div></th>  
 				</tr>
 			</thead>
 
 			<tbody>
 				<tr>
 
-					<td >1025252</td>
+					<td >Switch from : </td>
 					<td >Birla - Long term plan - Growth</td>
+				</tr>
+				<tr>
+
+					<td >Switch to : </td>
+					<td >Birla - Long term plan - Growth</td>
+				</tr>
+				<tr>
+
+					<td >Dividend option : </td>
+					<td >Re-investment</td>
+				</tr>
+				<tr>
+
+					<td >Switch Amount (Rs.) : </td>
+					<td >5,000.00</td>
+				</tr>
+				<tr>
+
+					<td >Switch option : </td>
 					<td >Partial</td>
-					<td >Rs. 28,2030</td>
-					<td >2.2</td>
 				</tr>
 				</tbody>
 		</table>
@@ -171,9 +170,13 @@
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha256-KXn5puMvxCw+dAYznun+drMdG1IFl3agK0p/pqT9KAo= sha512-2e8qq0ETcfWRI4HJBzQiA3UoyFk6tbNyG+qSaIBZLyW9Xf3sWZHN/lxe9fTh1U45DpPf07yj94KsUHHWe4Yk1A==" crossorigin="anonymous"></script>	 
 	<script src="../js/readmore.js"></script>
 	<script>
+	$( ".choose-scheme-btn" ).click(function() {
+    $( "#item" ).toggle();
+	});
 	$('#btnReview').click(function(){
 	$('.nav-tabs > .active').next('li').find('a').trigger('click');
 	});
 	</script>
+	
 	</body>
 </html>
