@@ -84,7 +84,7 @@ $('#collapse6').on('hide.bs.collapse', function () {
       }    
       var $this = $(this);      
       var num = $this.val().replace(/,/gi, "");
-      var num2 = Number(num).toLocaleString();
+      var num2 = (num).toLocaleString();
       
       $this.val(num2);
   });
