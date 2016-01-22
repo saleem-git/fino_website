@@ -205,3 +205,11 @@ section.plan_info{
 
 }
 /* End Accordion */
+
+/* For Index forms */
+form[name="onboardinfo"] div.error,form[name="onboardinfo_mob"] div.error {
+	display:none;
+	label {
+		display: block;
+	}
+}
